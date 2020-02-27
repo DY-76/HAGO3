@@ -463,6 +463,7 @@ EntryStatic.getAllBlocks = function() {
             blocks: [
                /* 'wait_second',
                 'repeat_basic', */
+                'next_popup',
                 'repeat_inf',
               /*  'repeat_while_true',
                 'stop_repeat',
