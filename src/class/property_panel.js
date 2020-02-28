@@ -3,7 +3,6 @@
  */
 'use strict';
 
-console.log('a');
 
 Entry.PropertyPanel = function() {
     this.modes = {};
@@ -62,7 +61,13 @@ Entry.PropertyPanel = function() {
 
                     break;
                 case 2 :
+<<<<<<< Updated upstream
                     $(this).before($('<div>').html("<div class='help_size' style='overflow:auto; width:800px;';><font size='6'> test1<br>test<br>test3<br>test<br>test<br>test6<br>test </font></div>"));
+=======
+                  
+                    Entry.stage.custom_bg_sel(1);
+                    $(this).before($('<div>').html("<div class='help_size' style='overflow:auto; width:800px; top:500px; bottom:0;';><font size='6'> test1<br>test<br>test3<br>test<br>test<br>test6<br>test </font></div>"));
+>>>>>>> Stashed changes
                     
                     break;
                 case 3 :

@@ -303,21 +303,39 @@ Entry.Stage.prototype.sortZorderRun = function() {
 /**
  * Initialize coordinate on canvas. It is toggle by Engine.
  */
+var img_link;
+var img_link_text = img_link_text = `${Entry.mediaFilePath}/custom_bg/1.png`;
+Entry.Stage.prototype.custom_bg_sel = function(num) {
+    img_link = Number(num);
+};
+
+switch (img_link){
+    case 1:
+        img_link_text = `${Entry.mediaFilePath}/custom_bg/1.png`;
+
+    case 2:
+
+    default:
+
+}
+
+
+
+
 Entry.Stage.prototype.initCoordinator = function() {
-    const tex = GEHelper.newSpriteWithCallback(`${Entry.mediaFilePath}workspace_coordinate.png`);
+    const tex = GEHelper.newSpriteWithCallback(img_link_text);
     this.coordinator = Object.assign(tex, {
-        scaleX: 0.5,
-        scaleY: 0.5,
-        x: -240,
-        y: -135,
-        visible: false,
+        scaleX: 1,
+        scaleY: 1,
+        x: -480,
+        y: -275,
+        visible: true,
     });
     if (!GEHelper.isWebGL) {
         this.coordinator.tickEnabled = false;
     }
     this.canvas.addChild(this.coordinator);
 };
-
 /**
  * Toggle coordinator
  */
