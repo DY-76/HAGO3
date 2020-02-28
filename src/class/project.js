@@ -521,6 +521,56 @@ Entry.getStartProject = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
+
+            {
+                id: '7y0555',
+                name: Lang.Blocks.Domino4,
+                label: {
+                    ko: '배경',
+                    en: 'Background',
+                },
+                script: [
+                   
+                    
+                
+               
+                     ],
+                selectedPictureId: 'vx810',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx810',
+                            fileurl: `${mediaFilePath}media/123.png`,
+                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            scale: 100,
+                            dimension: {
+                                width: 3200,
+                                height: 1800,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 1600,
+                    regY: 900,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 3200,
+                    height: 1800,
+                    visible: true,
+                },
+                lock: true,
+                active: false,
+            },
         ],
         
 
