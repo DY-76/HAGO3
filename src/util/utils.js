@@ -225,7 +225,7 @@ Entry.loadInterfaceState = function(interfaceState) {
         } else {
             interfaceState = {
                 menuWidth: 280,
-                canvasWidth: 480,
+                canvasWidth: 800,
             };
         }
         this.resizeElement(interfaceState);
@@ -357,13 +357,15 @@ Entry.resizeElement = function(interfaceModel) {
 
         let canvasSize = interfaceModel.canvasWidth;
         if (!canvasSize) {
-            canvasSize = 324;
-        } else if (canvasSize < 324) {
-            canvasSize = 324;
+            //canvasSize = 800;
+        } else if (canvasSize < 300) {
+            canvasSize = 300;
         } else if (canvasSize > 1280) {
             canvasSize = 1280;
         }
-        interfaceModel.canvasWidth = canvasSize;
+
+        // 캔버스 사이즈는 요놈 바꿀거
+        interfaceModel.canvasWidth = 800;
 
         const engineContainer = Entry.engine.view_.parentElement;
         engineContainer.style.width = `${canvasSize}px`;
