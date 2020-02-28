@@ -38,25 +38,48 @@ Entry.PropertyPanel = function() {
             
         });
 
-        
+        var now_link = window.location.href.split("stage=")
+        var now_num = Number(now_link[1]);
         $('.propertyPanelCover').each(function() { 
-         
+
+            switch (now_num){
+                case 1:
+                    $(this).before($('<span>').html("<style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"6\" color=\"#DE6449\" face=\"Black Han Sans\"> 성취기준:<br> 정보[9정03-01], [9정04-04]</font><br/>"));
             
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#754F44\" face=\"Do Hyeon\">▶'앞으로 한칸'블록을 블록 꾸러미에서<br> 블록 조립소로 옮기셈</font><br/>"));
 
-            $(this).before($('<span>').html("<style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#DE6449\" face=\"Black Han Sans\"> 골드버그란 명칭은 미국의 만화가, 루브 골드버그의 이름에서 유래되었습니다.</font><br/>"));
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#754F44\" face=\"Do Hyeon\">▶블록을 완성시켜, 바구니에 넣으셈</font><br/>"));
+
+                    break;
+                case 2 :
+                    $(this).before($('<span>').html("<style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#DE6449\" face=\"Black Han Sans\"> 골드버그란 명칭은 미국의 만화가, 루브 골드버그의 이름에서 유래되었습니다.</font><br/>"));
             
-            $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#754F44\" face=\"Do Hyeon\">간단한 결과에 도달하기까지의 과정을 다양하고 복잡하게 창의적으로 설계하여 끊어짐 없이 연속된 동작을 만들어내는 장치를 골드버그 장치라고 할 수 있습니다.</font><br/>"));
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#754F44\" face=\"Do Hyeon\">간단한 결과에 도달하기까지의 과정을 다양하고 복잡하게 창의적으로 설계하여 끊어짐 없이 연속된 동작을 만들어내는 장치를 골드버그 장치라고 할 수 있습니다.</font><br/>"));
 
-            $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><style=\"text-align:center\";><font size=\"5\"  color=\"#eb9f9f\" face=\"Do Hyeon\">골드버그의 제약조건은</font></style><br/>"));
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><style=\"text-align:center\";><font size=\"5\"  color=\"#eb9f9f\" face=\"Do Hyeon\">골드버그의 제약조건은</font></style><br/>"));
 
-            $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#eb9f9f\" face=\"Do Hyeon\">복잡한 기계의 사용이 아닌 실생활에서 흔히 볼 수 있는 여러 사물들을 사용해야 합니다.</font><br/>"));
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#eb9f9f\" face=\"Do Hyeon\">복잡한 기계의 사용이 아닌 실생활에서 흔히 볼 수 있는 여러 사물들을 사용해야 합니다.</font><br/>"));
 
-            $(this).before($('<span>').html(" <style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#eb9f9f\" face=\"Do Hyeon\">여러가지 단계가 존재해야 합니다.</font><br/>"));
+                    $(this).before($('<span>').html(" <style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#eb9f9f\" face=\"Do Hyeon\">여러가지 단계가 존재해야 합니다.</font><br/>"));
 
-            $(this).before($('<span>').html(" <style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#eb9f9f\" face=\"Do Hyeon\">여러 단계를 거쳐간다 하더라도 목표달성을 반드시 해야 합니다.</font><br/>"));
+                    $(this).before($('<span>').html(" <style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#eb9f9f\" face=\"Do Hyeon\">여러 단계를 거쳐간다 하더라도 목표달성을 반드시 해야 합니다.</font><br/>"));
 
-            $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#d68189\" face=\"Do Hyeon\">골드버그 장치를 제작하다 보면 어려 연관성 없는 사물을 연관 지어야 하다 보니 창의성 개발에 도움을 주며, 개인이 아닌 팀플레이로 제작하기 때문에 협동심, 커뮤니케이션을 길러주고 직접 제작을 하다 보니 듣기만 하는 주입식 교육보다는 좀 더 효과적으로 교육이 가능하고, 여러 과학적 사고력을 크게 키울 수 있다는 장점이 있습니다.       </font>     <br/>"));
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#d68189\" face=\"Do Hyeon\">골드버그 장치를 제작하다 보면 어려 연관성 없는 사물을 연관 지어야 하다 보니 창의성 개발에 도움을 주며, 개인이 아닌 팀플레이로 제작하기 때문에 협동심, 커뮤니케이션을 길러주고 직접 제작을 하다 보니 듣기만 하는 주입식 교육보다는 좀 더 효과적으로 교육이 가능하고, 여러 과학적 사고력을 크게 키울 수 있다는 장점이 있습니다.       </font>     <br/>"));
+                    break;
+                case 3 :
+                    console.log(now_num);
+                    break;
+                case 4 :
+                    console.log(now_num);
+                    break;
+                case 5 :
+                    console.log(now_num);
+                    break;
+                default :
+                    console.log("도움말 case파트 현 번호 찾을 수 없음");
+            }
 
+            
         
             
         });

@@ -37,8 +37,7 @@
 
         
         <section>
-                <br>
-            <Div style="height: auto; width: 1800px; margin:auto; padding: 10px;" >          
+            <Div style="height: auto; width: auto; margin:auto;" >          
                            <!--
                 <a href="http://127.0.0.1:8080/?stage=1" class="btn">처음 스테이지</a>
                 <a href="http://127.0.0.1:8080/?stage=2" class="btn">다음 스테이지</a> -->
@@ -46,10 +45,49 @@
                 <link rel="stylesheet" href="src/css/m.css"> 
                 <link rel="stylesheet" href="src/css/modal.css"> 
                 <script src="../entry-tool/dist/entry-tool.js"></script>
-                &nbsp;<button class="btn" id="btn" type="submit"><img class="btn-img" src="../images/media/HAGO.png"width="200" height="80" onclick="location.href='https://codinghago.imweb.me/index?preview_mode=1'"></button>
-                 
+
                 
-                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'" class="learn-more">stage.1</button> &nbsp; &nbsp;
+
+                <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+                    
+                    <a class="navbar-brand" href="#">
+                        <img class="btn-img" src="../images/media/HAGO.png"width="200" height="auto" onclick="location.href='https://codinghago.imweb.me/index?preview_mode=1'">
+                    </a>
+                    
+                    
+                    <form class="form-inline">
+                        <li class="nav-item dropdown" style="text-align: center;">
+                            <button class="nav-link dropdown-toggle btn-lg" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                subject
+                              </button>
+                            <div class="dropdown-menu" aria-labelledby="subject_DD">
+                              <a class="dropdown-item" href="http://127.0.0.1:8080/?stage=1">속도</a>
+                              <a class="dropdown-item" href="http://127.0.0.1:8080/?stage=2">질량</a>
+                              <a class="dropdown-item" href="http://127.0.0.1:8080/?make.stage=10">test_make</a>
+                            </div>
+                          </li>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'">Stage1</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=2'">Stage2</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'">Stage3</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=4'">Stage4</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=5'">Stage5</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=6'">Stage6</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=7'">Stage7</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=8'">Stage8</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=9'">Stage9</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">Stage10</button>
+                        
+                      </form>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                  </nav>
+                <!--
+                &nbsp;<button class="btn" id="btn" type="submit"><img class="btn-img" src="../images/media/HAGO.png"width="200" height="80" onclick="location.href='https://codinghago.imweb.me/index?preview_mode=1'"></button>
+                    
+                    
+                
+                <button type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'" class="learn-more">stage.1</button> &nbsp; &nbsp;
                 <button type="button" onclick="location.href='http://127.0.0.1:8080/?stage=2'" class="learn-more">stage.2</button> &nbsp; &nbsp;
                 <button type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'" class="learn-more">stage.3</button>&nbsp; &nbsp;
                 <button type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'" class="learn-more">stage.4</button>&nbsp; &nbsp;
@@ -59,12 +97,12 @@
                 <button type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'" class="learn-more">stage.8</button>&nbsp; &nbsp;
                 <button type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'" class="learn-more">stage.9</button>&nbsp; &nbsp;
                 <button type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'" class="learn-more">stage.10</button>
+
+                -->
                 <!--<button type="button" onclick="location.href='http://127.0.0.1:8080/physics/demo/physics.html#avalanche'" class="learn-more">물리엔진</button>-->
-           
+                          
             
             </Div>
-            
-            <Br>
             <!--
             <button style="border: 1px solid black" onclick="changeWorkspaceMode('block')">블럭 모드</button> 
             <button style="border: 1px solid black" onclick="changeWorkspaceMode('python')">Python Mode</button>
@@ -173,6 +211,8 @@
             var now_link = window.location.href.split("stage=")
             var next_num = Number(now_link[1])+1;
             var next_stage = now_link[0]+'stage='+ next_num;
+
+            export var now_link;
         </script>
 
         <div id="myModal" class="modal">
@@ -197,7 +237,9 @@
  
         </div>
         
-        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="/src/class/modal.js"></script>
 
     </body>
