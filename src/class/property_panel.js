@@ -98,7 +98,7 @@ Entry.PropertyPanel = function() {
         
 
         const splitter = Entry.Dom('div', {
-            class: 'entryObjectSelectedImgWorkspace',
+            class: ''/*'entryObjectSelectedImgWorkspace'*/,
             parent: container,
         }); 
         this.initializeSplitter(splitter);
