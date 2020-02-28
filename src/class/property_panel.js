@@ -19,7 +19,6 @@ Entry.PropertyPanel = function() {
       //* 이거 주석처리해서 밑에 안나옴 밑 파티션
         this._view = Entry.Dom('div', {
             class: 'propertyPanel',
-            id: 'help_list',
             parent: container,
         }); 
      
