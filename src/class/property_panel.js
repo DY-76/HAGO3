@@ -34,11 +34,14 @@ Entry.PropertyPanel = function() {
             parent: this._view,
         });   */
 
+        /*
+
         this._cover = Entry.Dom('div', {
-            classes: ['propertyPanelCover',  /*'entryRemove' */],
+            classes: ['propertyPanelCover',],
             parent: this._view,
-            
         });
+        */
+
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -47,9 +50,13 @@ Entry.PropertyPanel = function() {
         }
 
         $('.propertyPanel').each(function() { 
+            
+            var win_H = $(window).height()*0.7;
             $(window).resize(function() {
+                
                 $('.help_size').height($(window).height()-750);
            });
+           
 
             switch (Number(getParameterByName('stage'))){
                 case 1:
@@ -62,7 +69,7 @@ Entry.PropertyPanel = function() {
 
                     break;
                 case 2 :
-                    $(this).before($('<div>').html("<div class='help_size' style='overflow:auto; width:800px;';><font size='6'> test1<br>test<br>test3<br>test<br>test<br>test6<br>test </font></div>"));
+                    $(this).before($('<div>').html("<div class='help_size' style='overflow:auto; width:800px; top:500px; bottom:0;';><font size='6'> test1<br>test<br>test3<br>test<br>test<br>test6<br>test </font></div>"));
                     
                     break;
                 case 3 :
