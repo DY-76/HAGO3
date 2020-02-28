@@ -38,11 +38,11 @@ Entry.PropertyPanel = function() {
             
         });
 
-        var now_link = window.location.href.split("stage=")
-        var now_num = Number(now_link[1]);
+        var now_link_panel = window.location.href.split("stage=")
+        var now_num_panel = Number(now_link_panel[1]);
         $('.propertyPanelCover').each(function() { 
 
-            switch (now_num){
+            switch (now_num_panel){
                 case 1:
                     $(this).before($('<span>').html("<style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"6\" color=\"#DE6449\" face=\"Black Han Sans\"> 성취기준:<br> 정보[9정03-01], [9정04-04]</font><br/>"));
             
