@@ -303,20 +303,67 @@ Entry.Stage.prototype.sortZorderRun = function() {
 /**
  * Initialize coordinate on canvas. It is toggle by Engine.
  */
-Entry.Stage.prototype.initCoordinator = function() {
-    const tex = GEHelper.newSpriteWithCallback(`${Entry.mediaFilePath}workspace_coordinate.png`);
-    this.coordinator = Object.assign(tex, {
-        scaleX: 0.5,
-        scaleY: 0.5,
-        x: -240,
-        y: -135,
-        visible: false,
-    });
-    if (!GEHelper.isWebGL) {
-        this.coordinator.tickEnabled = false;
-    }
-    this.canvas.addChild(this.coordinator);
-};
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+switch (Number(getParameterByName('stage'))){
+    case 1:
+        Entry.Stage.prototype.initCoordinator = function() {
+            const tex = GEHelper.newSpriteWithCallback(`${Entry.mediaFilePath}workspace_coordinate.png`);
+            this.coordinator = Object.assign(tex, {
+                scaleX: 0.5,
+                scaleY: 0.5,
+                x: -240,
+                y: -135,
+                visible: true,
+            });
+            if (!GEHelper.isWebGL) {
+                this.coordinator.tickEnabled = false;
+            }
+            this.canvas.addChild(this.coordinator);
+        };
+        
+        
+        break;
+    case 2 :
+        Entry.Stage.prototype.initCoordinator = function() {
+            const tex = GEHelper.newSpriteWithCallback(`${Entry.mediaFilePath}123.png`);
+            this.coordinator = Object.assign(tex, {
+                scaleX: 0.5,
+                scaleY: 0.5,
+                x: -240,
+                y: -135,
+                visible: true,
+            });
+            if (!GEHelper.isWebGL) {
+                this.coordinator.tickEnabled = false;
+            }
+            this.canvas.addChild(this.coordinator);
+        };
+        
+        break;
+    case 3 :
+        console.log(getParameterByName('stage'));
+        break;
+    case 4 :
+        console.log(getParameterByName('stage'));
+        break;
+    case 5 :
+        console.log(getParameterByName('stage'));
+        break;
+    default :
+        console.log("도움말 case파트 현 번호 찾을 수 없음");
+}
+
+
+
+
 
 /**
  * Toggle coordinator
