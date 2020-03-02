@@ -2913,7 +2913,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             },
                             {
                                 type: 'number',
-                                params: ['150'],
+                                params: ['400'],
                             },
                             {
                                 type: 'number',
