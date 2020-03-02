@@ -3044,6 +3044,18 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             y: 50,
                         },
                         {
+                            
+                        params: [
+                            'gravity1',
+                            {
+                                type: 'text',
+                                params: ['0'],
+                            },
+                            null,
+                        ],
+                        type: 'set_variable',
+                        },
+                        {
                             type : 'repeat_inf',
 
                             
