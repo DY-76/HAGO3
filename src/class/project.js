@@ -3552,7 +3552,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 3200,
+                                width: 3100,
                                 height: 1800,
                             },
                         },
@@ -3568,7 +3568,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 3200,
+                    width: 3100,
                     height: 1800,
                     visible: true,
                 },
