@@ -2981,11 +2981,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                        {
-                            type: 'hide',
-                            
-                           
-                        },
+                      
                        
                     ],
                     [
@@ -3001,180 +2997,34 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}media/fire.png`,
+                            fileurl: `${mediaFilePath}media/bar.png`,
                             name: `${Lang.Blocks.walking_entryBot}2`,
                             scale: 50,
                             dimension: {
-                                width: 270,
-                                height: 407,
+                                width: 1500,
+                                height: 300,
                             },
                         },
                        
                     ],
                 },
                 entity: {
-                    x: 400,
-                    y: -190,
-                    regX: 118,
-                    regY: 135,
+                    x: -144,
+                    y: 45,
+                    regX: 750,
+                    regY: 150,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 180,
                     direction: 0,
-                    width: 270,
-                    height: 407,
+                    width: 1500,
+                    height: 300,
                     visible: true,
                 },
                 lock: false,
                 active: true,
             },
-            {
-                id: '7y0y3',
-                name: Lang.Blocks.entry_bot_name,
-                label: {
-                    ko: '쇠구슬',
-                    en: 'Entrybot1',
-                },
-                script: [
-                    [
-                       
-                       
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/trem.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
-                            scale: 50,
-                            dimension: {
-                                width: 650,
-                                height: 370,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: 60,
-                    y: -150,
-                    regX: 327.5,
-                    regY: 185,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 650,
-                    height: 370,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
-            {
-                id: '7y0y7',
-                name: Lang.Blocks.entry_bot_name,
-                label: {
-                    ko: '쇠구슬',
-                    en: 'Entrybot1',
-                },
-                script: [
-                    [
-                        
-                       
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/trem.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
-                            scale: 50,
-                            dimension: {
-                                width: 650,
-                                height: 370,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: -180,
-                    y: -150,
-                    regX: 327.5,
-                    regY: 185,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 650,
-                    height: 370,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
-            {
-                id: '7y0y4',
-                name: Lang.Blocks.entry_bot_name,
-                label: {
-                    ko: '쇠구슬',
-                    en: 'Entrybot1',
-                },
-                script: [
-                    [
-                        
-                       
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/eovh.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
-                            scale: 50,
-                            dimension: {
-                                width: 450,
-                                height: 480,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: -420,
-                    y: -165,
-                    regX: 225,
-                    regY: 240,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: -30,
-                    direction: 90,
-                    width: 450,
-                    height: 480,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
+           
             {
                 id: '7y0y5',
                 name: Lang.Blocks.entry_bot_name,
@@ -3183,218 +3033,133 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     en: 'Entrybot1',
                 },
 
-                //params: [null],
-                //type: 'get_variable',
+              
                 script: [
                     [
+                        
+
                         {
-                            params: [Lang.Blocks.START_press_some_key_space, '32'],
-                            type: 'when_some_key_pressed',
-                        },
-                        {
-                            params: [
-                                's2ds2d',
-                                {
-                                    type: 'text',
-                                    params: ['15'],
-                                },
-                                null,
-                            ],
-                            type: 'set_variable',
-                            
-                           
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
                         },
                         {
                             type : 'repeat_inf',
 
+                            
+                            
+                        
+                        
                             statements: [[
                                 { 
-                                    params: [
-                                        {
-                                            params: ['s2ds2d'],
-                                            type: 'get_variable',
-                                        },
-                                        null,
-                                    ],
-                                    type: 'move_y',
-
-                                },
-                                {params: [
-                                    's2ds2d',
-                                    {
-                                        type: 'text',
-                                        params: ['-0.6'],
-                                    },
-                                    null,
-                                ],
-                                type: 'change_variable',},
-                               
-                               
-
-                                { 
                                     type: '_if',
                        
                 params: [
                     {
                         type: 'reach_something',
-                        params: [null, '7y0y3'],
+                        params: [null, '7y0y1'],
                         
                     },
                     
                 ],
                 statements: 
                 [[
-                    { params: [
-                        's2ds2d',
-                        {
-                            type: 'text',
-                            params: ['15'],
-                        },
-                        null,
-                    ],
-                    type: 'set_variable',},
-                    
-                ]]
-                                },
-                                { 
-                                    type: '_if',
-                       
-                params: [
                     {
-                        type: 'reach_something',
-                        params: [null, '7y0y7'],
-                        
-                    },
-                    
-                ],
-                statements: 
-                [[
-                    { params: [
-                        's2ds2d',
-                        {
-                            type: 'text',
-                            params: ['15'],
-                        },
-                        null,
-                    ],
-                    type: 'set_variable',},
-                    
-                ]]
-                                },
-                                { 
-                                    type: '_if',
-                       
-                params: [
-                    {
-                        type: 'reach_something',
-                        params: [null,'wall_down'],
-                        
-                    },
-                    
-                ],
-                statements: 
-                [[
-                    { params: [
-                        's2ds2d',
-                        {
-                            type: 'text',
-                            params: ['0'],
-                        },
-                        null,
-                    ],
-                    type: 'set_variable',},
-                    { 
-                        type: 'stop_repeat' },
-                ]]
-                                }
-                                
-                                    
-                                
-                            ]],
+                        type : 'repeat_inf',
 
+                        statements: 
+                [[
+                    {
+                        params: [
+                            'gravity1',
+                            {
+                                type: 'text',
+                                params: ['-0.1'],
+                            },
+                            null,
+                        ],
+                        type: 'change_variable',
+                    },
+                    {
+                        params: [
+                            {
+                                params: ['s2ds2d'],
+                                 type: 'get_variable',
+                            },
+                            null,
+                        ],
+                        type: 'move_x',
+                    },
+                    {
+                        params: [
+                            {
+                                params: ['gravity1'],
+                                type: 'get_variable',
+                            },
+                            null,
+                        ],
+                        type: 'move_y',
+                    },
+                ]]
+                    },
+                ]]
+                                }]]
                             
                         },
-
-                                
                         
                         
                     
                     
                 ],
                [
+                {
+                    type: 'when_run_button_click',
+                    x: 50,
+                    y: 400,
+                },
 
                 {
-                    params: [Lang.Blocks.START_press_some_key_space, '32'],
-                    type: 'when_some_key_pressed',
-                    x:400,
-                    y:50,
-                },
-               
-                {
+
                     type : 'repeat_inf',
-    
-                    
-                    
-                
-                
+
                     statements: [[
-                        { 
+                        {
                             params: [
                                 {
-                                    type: 'number',
-                                    params: ['2'],
-                                },
-                                {
-                                    type: 'number',
-                                    params: ['300'],
-                                },
-                                {
-                                    type: 'number',
-                                    params: ['0'],
+                                    params: [
+                                        {
+                                            params: ['gravity1'],
+                                            type: 'get_variable',
+                                        },
+                                        'LESS_OR_EQUAL',
+                                        {
+                                            type: 'text',
+                                            params: ['-10'],
+                                        },
+                                    ],
+                                    type: 'boolean_basic_operator',
+                                
+                    
                                 },
                                 null,
                             ],
-                            type: 'move_xy_time',},
-                        ]]
-            },
+                            type: '_if',
 
-               ],
-               [
-                   {
-                type: 'when_run_button_click',
-                x: 700,
-                y: 50,
-            },
-            {
-                type : 'repeat_inf',
+                            statements:[[
+
+                                {params: ['all', null],
+                                type: 'stop_object',}
+                            ]]
+                        
+                            
+                        }
+
+
+                    ]]
+                },
+
 
                 
-                
-            
-            
-                statements: [[
-                    { 
-                        type: '_if',
-           
-    params: [
-        {
-            type: 'reach_something',
-            params: [null, '7y0y6'],
-            
-        },
-        
-    ],
-    statements: 
-    [[
-        
-        { params: ['thisOnly', null],
-            type: 'stop_object' },
-    ]]
-                    }]]
-                
-            },
-
-
                ],
                 
             ],
@@ -3425,7 +3190,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     ],
                 },
                 entity: {
-                    x: -335,
+                    x: 45,
                     y: 130,
                     regX: 85,
                     regY: 86,
@@ -3440,94 +3205,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-            {
-                id: '7y0y6',
-                name: Lang.Blocks.entry_bot_name,
-                label: {
-                    ko: '쇠구슬',
-                    en: 'Entrybot1',
-                },
-                script: [
-                    [
-                        {
-                            type: 'when_run_button_click',
-                            x: 40,
-                            y: 50,
-                        },
-
-                        {
-                            type : 'repeat_inf',
-
-                            
-                            
-                        
-                        
-                            statements: [[
-                                { 
-                                    type: '_if',
-                       
-                params: [
-                    {
-                        type: 'reach_something',
-                        params: [null, '7y0y5'],
-                        
-                    },
-                    
-                ],
-               
-                                }]]
-                            
-                        },
-                       
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/firebutton.png`,
-                            name: `버튼`,
-                            scale: 50,
-                            dimension: {
-                                width: 256,
-                                height: 256,
-                            },
-                        },
-
-                        {
-                            id: 'b2b22',
-                            fileurl: `${mediaFilePath}media/firebutton2.png`,
-                            name: `클릭된 버튼`,
-                            scale: 50,
-                            dimension: {
-                                width: 256,
-                                height: 256,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: 250,
-                    y: -165,
-                    regX: 118,
-                    regY: 135,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 256,
-                    height: 256,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
+            
 
             {
                 id: '7y0555',
@@ -3577,8 +3255,10 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
             },
            
         ],
-
-       
+        
+        
+    
+    
         variables: [ // 프로젝트 변수
             {
                 name: 'Speed', // 변수명
@@ -3600,8 +3280,31 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 array: [{ // 변수형이 list일 경우 값 목록
                     data: 'Speed' // 값 데이터
                 }]
+            },
+            {
+                name: 'Gravity', // 변수명
+                variableType: 'variable', // 변수형. (일반변수: variable, 타이머: timer, 대답: answer, 슬라이드: slide, 리스트: list)
+                id: 'gravity1', // 변수ID. Unique.
+                value: 0, // 변수 값
+                minValue: 5, // 최소값
+                maxValue: 5, // 최대값
+                visible: false, // 캔버스에 표시여부
+                x: 0, // 컨버스 위치 x좌표
+                y: 0, // 캔버스 위치 y좌표
+                width: 100, // 넓이
+                height: 200, // 높이
+                isCloud: { // 공유 변수 여부
+                    type: false,
+                    default: false
+                },
+               
+                array: [{ // 변수형이 list일 경우 값 목록
+                    data: 'Gravity' // 값 데이터
+                }]
             }
         ],
+
+        
 
 
         expansionBlocks: [],
