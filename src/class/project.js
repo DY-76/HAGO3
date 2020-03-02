@@ -2874,13 +2874,61 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     en: 'Entrybot1',
                 },
                 script: [
-                    [
+[
+                    {
+                        type: 'when_run_button_click',
+                        x: 40,
+                        y: 50,
+                    },
+
+                    {
+
+                        params: [
+                            's2ds2d',
+                            {
+                                type: 'text',
+                                params: ['0'],
+                            },
+                            null,
+                        ],
+                        type: 'set_variable',
+                    },
+
+                    {
+
+                        params: [
+                            {
+                                params: [
+                                    {
+                                        type: 'number',
+                                        params: ['2'],
+                                    },
+                                    'DIVIDE',
+                                    {
+                                        params: ['s2ds2d'],
+                                        type: 'get_variable',
+                                    },
+                                ],
+                                type: 'calc_basic',
+                            },
+                            {
+                                type: 'number',
+                                params: ['150'],
+                            },
+                            {
+                                type: 'number',
+                                params: ['0'],
+                            },
+                            null,
+                        ],
+                        type: 'move_xy_time',
                         
-                        
-                        
-                       
-                       
-                    ],
+                    },
+
+                 
+
+                   
+                ],
                 ],
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
@@ -2891,28 +2939,28 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}media/roket.png`,
+                            fileurl: `${mediaFilePath}media/eovhball.png`,
                             name: `${Lang.Blocks.walking_entryBot}2`,
                             scale: 50,
                             dimension: {
-                                width: 440,
-                                height: 840,
+                                width: 170,
+                                height: 172,
                             },
                         },
                        
                     ],
                 },
                 entity: {
-                    x: 400,
-                    y: -24,
-                    regX: 220,
-                    regY: 420,
+                    x: -330,
+                    y: 130,
+                    regX: 85,
+                    regY: 86,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 440,
-                    height: 840,
+                    width: 170,
+                    height: 172,
                     visible: true,
                 },
                 lock: false,
@@ -3524,7 +3572,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     height: 1800,
                     visible: true,
                 },
-                lock: false,
+                lock: true,
                 active: true,
             },
            
@@ -3554,9 +3602,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 }]
             }
         ],
-      
 
-        
+
         expansionBlocks: [],
         speed: 60,
     };
