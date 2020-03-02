@@ -521,6 +521,53 @@ Entry.getStartProject = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
+
+            {
+                id: '7y0555',
+                name: Lang.Blocks.Domino4,
+                label: {
+                    ko: '배경',
+                    en: 'Background',
+                },
+                script: [
+                    
+                     ],
+                selectedPictureId: 'vx280',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx280',
+                            fileurl: `${mediaFilePath}media/123.png`,
+                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            scale: 100,
+                            dimension: {
+                                width: 3200,
+                                height: 1800,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 1600,
+                    regY: 900,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 3200,
+                    height: 1800,
+                    visible: true,
+                },
+                lock: true,
+                active: true,
+            },
         ],
         
 
@@ -2776,6 +2823,738 @@ Entry.getStartProject4 = function(mediaFilePath) {
             },
         ],
         
+
+        
+        expansionBlocks: [],
+        speed: 60,
+    };
+};
+
+Entry.getStartProjectGS1 = function(mediaFilePath) {
+    return {
+        category: Lang.Menus.other,
+        scenes: [
+            {
+                name: `${Lang.Blocks.SCENE} 2`,
+                id: '7dwq',
+            },
+        ],
+        variables: [
+            {
+                name: Lang.Workspace.Variable_Timer,
+                id: 'brih',
+                visible: false,
+                value: '0',
+                variableType: 'timer',
+                x: 134,
+                y: -70,
+                array: [],
+                object: null,
+                isCloud: false,
+            },
+            {
+                name: Lang.Blocks.VARIABLE_get_canvas_input_value,
+                id: '1vu8',
+                visible: false,
+                value: '0',
+                variableType: 'answer',
+                x: 150,
+                y: -100,
+                array: [],
+                object: null,
+                isCloud: false,
+            },
+        ],
+        objects: [
+            {
+                id: '7y0y1',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        
+                        
+                        
+                       
+                       
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/roket.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 50,
+                            dimension: {
+                                width: 440,
+                                height: 840,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 400,
+                    y: -24,
+                    regX: 220,
+                    regY: 420,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 0,
+                    width: 440,
+                    height: 840,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+
+            {
+                id: '7y0y2',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                        {
+                            type: 'hide',
+                            
+                           
+                        },
+                       
+                    ],
+                    [
+                        
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/fire.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 50,
+                            dimension: {
+                                width: 270,
+                                height: 407,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 400,
+                    y: -190,
+                    regX: 118,
+                    regY: 135,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 180,
+                    direction: 0,
+                    width: 270,
+                    height: 407,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0y3',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                       
+                       
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/trem.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 50,
+                            dimension: {
+                                width: 650,
+                                height: 370,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 60,
+                    y: -150,
+                    regX: 327.5,
+                    regY: 185,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 650,
+                    height: 370,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0y7',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        
+                       
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/trem.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 50,
+                            dimension: {
+                                width: 650,
+                                height: 370,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: -180,
+                    y: -150,
+                    regX: 327.5,
+                    regY: 185,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 650,
+                    height: 370,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0y4',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        
+                       
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/eovh.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 50,
+                            dimension: {
+                                width: 450,
+                                height: 480,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: -420,
+                    y: -165,
+                    regX: 225,
+                    regY: 240,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: -30,
+                    direction: 90,
+                    width: 450,
+                    height: 480,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0y5',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+
+                //params: [null],
+                //type: 'get_variable',
+                script: [
+                    [
+                        {
+                            params: [Lang.Blocks.START_press_some_key_space, '32'],
+                            type: 'when_some_key_pressed',
+                        },
+                        {
+                            params: [
+                                's2ds2d',
+                                {
+                                    type: 'text',
+                                    params: ['15'],
+                                },
+                                null,
+                            ],
+                            type: 'set_variable',
+                            
+                           
+                        },
+                        {
+                            type : 'repeat_inf',
+
+                            statements: [[
+                                { 
+                                    params: [
+                                        {
+                                            params: ['s2ds2d'],
+                                            type: 'get_variable',
+                                        },
+                                        null,
+                                    ],
+                                    type: 'move_y',
+
+                                },
+                                {params: [
+                                    's2ds2d',
+                                    {
+                                        type: 'text',
+                                        params: ['-0.6'],
+                                    },
+                                    null,
+                                ],
+                                type: 'change_variable',},
+                               
+                               
+
+                                { 
+                                    type: '_if',
+                       
+                params: [
+                    {
+                        type: 'reach_something',
+                        params: [null, '7y0y3'],
+                        
+                    },
+                    
+                ],
+                statements: 
+                [[
+                    { params: [
+                        's2ds2d',
+                        {
+                            type: 'text',
+                            params: ['15'],
+                        },
+                        null,
+                    ],
+                    type: 'set_variable',},
+                    
+                ]]
+                                },
+                                { 
+                                    type: '_if',
+                       
+                params: [
+                    {
+                        type: 'reach_something',
+                        params: [null, '7y0y7'],
+                        
+                    },
+                    
+                ],
+                statements: 
+                [[
+                    { params: [
+                        's2ds2d',
+                        {
+                            type: 'text',
+                            params: ['15'],
+                        },
+                        null,
+                    ],
+                    type: 'set_variable',},
+                    
+                ]]
+                                },
+                                { 
+                                    type: '_if',
+                       
+                params: [
+                    {
+                        type: 'reach_something',
+                        params: [null,'wall_down'],
+                        
+                    },
+                    
+                ],
+                statements: 
+                [[
+                    { params: [
+                        's2ds2d',
+                        {
+                            type: 'text',
+                            params: ['0'],
+                        },
+                        null,
+                    ],
+                    type: 'set_variable',},
+                    { 
+                        type: 'stop_repeat' },
+                ]]
+                                }
+                                
+                                    
+                                
+                            ]],
+
+                            
+                        },
+
+                                
+                        
+                        
+                    
+                    
+                ],
+               [
+
+                {
+                    params: [Lang.Blocks.START_press_some_key_space, '32'],
+                    type: 'when_some_key_pressed',
+                    x:400,
+                    y:50,
+                },
+               
+                {
+                    type : 'repeat_inf',
+    
+                    
+                    
+                
+                
+                    statements: [[
+                        { 
+                            params: [
+                                {
+                                    type: 'number',
+                                    params: ['2'],
+                                },
+                                {
+                                    type: 'number',
+                                    params: ['300'],
+                                },
+                                {
+                                    type: 'number',
+                                    params: ['0'],
+                                },
+                                null,
+                            ],
+                            type: 'move_xy_time',},
+                        ]]
+            },
+
+               ],
+               [
+                   {
+                type: 'when_run_button_click',
+                x: 700,
+                y: 50,
+            },
+            {
+                type : 'repeat_inf',
+
+                
+                
+            
+            
+                statements: [[
+                    { 
+                        type: '_if',
+           
+    params: [
+        {
+            type: 'reach_something',
+            params: [null, '7y0y6'],
+            
+        },
+        
+    ],
+    statements: 
+    [[
+        
+        { params: ['thisOnly', null],
+            type: 'stop_object' },
+    ]]
+                    }]]
+                
+            },
+
+
+               ],
+                
+            ],
+            
+
+
+                            
+         
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/eovhball.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 50,
+                            dimension: {
+                                width: 170,
+                                height: 172,
+                            },
+                        },
+                        
+                       
+                    ],
+                },
+                entity: {
+                    x: -335,
+                    y: 130,
+                    regX: 85,
+                    regY: 86,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 170,
+                    height: 172,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0y6',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+
+                        {
+                            type : 'repeat_inf',
+
+                            
+                            
+                        
+                        
+                            statements: [[
+                                { 
+                                    type: '_if',
+                       
+                params: [
+                    {
+                        type: 'reach_something',
+                        params: [null, '7y0y5'],
+                        
+                    },
+                    
+                ],
+               
+                                }]]
+                            
+                        },
+                       
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/firebutton.png`,
+                            name: `버튼`,
+                            scale: 50,
+                            dimension: {
+                                width: 256,
+                                height: 256,
+                            },
+                        },
+
+                        {
+                            id: 'b2b22',
+                            fileurl: `${mediaFilePath}media/firebutton2.png`,
+                            name: `클릭된 버튼`,
+                            scale: 50,
+                            dimension: {
+                                width: 256,
+                                height: 256,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 250,
+                    y: -165,
+                    regX: 118,
+                    regY: 135,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 256,
+                    height: 256,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+
+            {
+                id: '7y0555',
+                name: Lang.Blocks.Domino4,
+                label: {
+                    ko: '배경',
+                    en: 'Background',
+                },
+                script: [
+                    
+                     ],
+                selectedPictureId: 'vx280',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx280',
+                            fileurl: `${mediaFilePath}media/bg.png`,
+                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            scale: 100,
+                            dimension: {
+                                width: 3200,
+                                height: 1800,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 30,
+                    y: -18,
+                    regX: 1600,
+                    regY: 900,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 3200,
+                    height: 1800,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+           
+        ],
+
+       
+        variables: [ // 프로젝트 변수
+            {
+                name: 'Speed', // 변수명
+                variableType: 'variable', // 변수형. (일반변수: variable, 타이머: timer, 대답: answer, 슬라이드: slide, 리스트: list)
+                id: 's2ds2d', // 변수ID. Unique.
+                value: 0, // 변수 값
+                minValue: 5, // 최소값
+                maxValue: 5, // 최대값
+                visible: false, // 캔버스에 표시여부
+                x: 0, // 컨버스 위치 x좌표
+                y: 0, // 캔버스 위치 y좌표
+                width: 100, // 넓이
+                height: 200, // 높이
+                isCloud: { // 공유 변수 여부
+                    type: false,
+                    default: false
+                },
+               
+                array: [{ // 변수형이 list일 경우 값 목록
+                    data: 'Speed' // 값 데이터
+                }]
+            }
+        ],
+      
 
         
         expansionBlocks: [],

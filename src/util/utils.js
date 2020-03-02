@@ -27,6 +27,7 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+
 Entry.loadProject = function(project) {
     {
        if (getParameterByName('stage') == 2)
@@ -39,7 +40,7 @@ Entry.loadProject = function(project) {
          else if  (getParameterByName('stage') == 0)
          project = Entry.getStartProject2(Entry.mediaFilePath);
          else if  (getParameterByName('stage') == 4)
-         project = Entry.getStartProject4(Entry.mediaFilePath);   
+         project = Entry.getStartProjectGS1(Entry.mediaFilePath);
        
         
 
