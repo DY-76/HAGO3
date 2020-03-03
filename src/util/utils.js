@@ -41,6 +41,7 @@ Entry.loadProject = function(project) {
          project = Entry.getStartProject2(Entry.mediaFilePath);
          else if  (getParameterByName('stage') == 4)
          project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+        
        
         
 
