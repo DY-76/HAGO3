@@ -3,9 +3,15 @@
  */
 'use strict';
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 Entry.PropertyPanel = function() {
     this.modes = {};
     this.selected = null;
+    
 };
 
 (function(p) {
