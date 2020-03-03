@@ -541,7 +541,7 @@
     text-align: right;
     font-size: 9pt;
     color: #61abdb;
-    .backgroundImage('playbutton_edit.png');
+    .backgroundImage('start.png');
 }
 
 .entryRunButtonMinimize {
@@ -557,16 +557,16 @@
     position: relative;
     // top: 192px;
     // left: -1px;
-    width: 157px;
-    height: 32px;
+    width: 100px;
+    height: 50px;
     padding: 0;
     border: 1px solid @baseblue;
     border-radius: 0 0 0 5px;
     background: #fff no-repeat 50% 50%;
-    background-size: 14px auto;
+    background-size: 170px auto;
     font-size: 0;
     text-align: center;
-    .backgroundImage('layers_icon_button_plus_nor.png');
+    .backgroundImage('retry.png');
 }
 
 .entryRunButtonWorkspace_w {
@@ -577,14 +577,14 @@
     width: 114px;
     height: 50px;
     padding: 0;
-    border: 0px solid @baseblue;
+    border: 1px solid @baseblue;
     border-left: 0;
     border-radius: 0 0 5px 0;
     background: #fff no-repeat 50% 50%;
     background-size: 170px auto;
     font-size: 0;
     text-align: center;
-    .backgroundImage('on_off.png');
+    .backgroundImage('start.png');
 }
 
 .collapsed > .entryRunButtonWorkspace_w {
@@ -597,7 +597,7 @@
 }
 
 .entryEngineBlueWorkspace > .entryRunButtonWorkspace {
-    .backgroundImage('playbutton_play.png');
+    .backgroundImage('start.png');
     color: white;
 }
 
@@ -610,7 +610,7 @@
     text-align: right;
     font-size: 9pt;
     color: #61abdb;
-    .backgroundImage('stopbutton_pause.png');
+    .backgroundImage('pause.png');
 }
 
 .entryStopButtonMinimize {
@@ -621,14 +621,14 @@
     text-align: right;
     font-size: 9pt;
     color: @lightBora;
-    .backgroundImage('stop_btn.png');
+    .backgroundImage('stop.png');
 }
 
 .entryStopButtonWorkspace_w {
     flex: 1;
     order: 5;
     width: 114px;
-    height: 32px;
+    height: 50px;
     font-size: 0;
     border: 1px solid #4f80ff;
     border-left: 0;
@@ -637,8 +637,8 @@
     font-size: 0;
     text-align: center;
     background: #fff no-repeat 50% 50%;
-    background-size: 12px auto;
-    .backgroundImage('layers_icon_button_stop_nor_2.png');
+    background-size: 170px auto;
+    .backgroundImage('stop.png');
 }
 .entryStopButtonWorkspace_w2 {
     display: none;
@@ -671,7 +671,7 @@
 }
 
 .entryEngineBigButtonMinimize_popup.entryEngineBigButtonMinimize_popup_run {
-    .backgroundImage('play_btn.png');
+    .backgroundImage('start.png');
 }
 
 .entryPopupWindow .entryEngineBigButtonMinimize_popup {
@@ -679,13 +679,13 @@
 }
 
 .entryPauseButtonWorkspace_w:extend(.entryAddButtonWorkspace_w) {
-    background-size: 12px auto;
-    .backgroundImage('layers_icon_button_pause_nor.png');
+    background-size: 170px auto;
+    .backgroundImage('pause.png');
 }
 
 .entryRestartButtonWorkspace_w:extend(.entryAddButtonWorkspace_w) {
-    background-size: 10px auto;
-    .backgroundImage('layers_icon_button_play_nor_1.png');
+    background-size: 170px auto;
+    .backgroundImage('start.png');
 }
 
 .entryPopupWindow .entryPauseButtonWorkspace_w {
