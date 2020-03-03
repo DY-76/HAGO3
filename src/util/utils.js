@@ -169,8 +169,10 @@ Entry.exportProject = function(project) {
     if (!objects || !objects.length) {
         return false;
     }
-
+    
     return project;
+   
+
 };
 
 /**

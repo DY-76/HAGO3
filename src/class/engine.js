@@ -886,6 +886,10 @@ Entry.Engine = class Engine {
 
     toggleFullScreen(popupClassName) {
         i = 'on';
+        var test = Entry.exportProject();
+        Entry.loadProject(test);
+        
+
         console.log(i);
         if (!this.popup) {
             this.popup = new Entry.Popup(popupClassName);
