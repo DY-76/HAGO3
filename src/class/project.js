@@ -2901,7 +2901,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                                 params: [
                                     {
                                         type: 'number',
-                                        params: ['2'],
+                                        params: ['7'],
                                     },
                                     'DIVIDE',
                                     {
@@ -2984,9 +2984,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                       
                        
                     ],
-                    [
-                        
-                    ],
+                    
+                    
                 ],
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
@@ -3019,6 +3018,63 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     direction: 0,
                     width: 1500,
                     height: 300,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y021',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                      
+                       
+                    ],
+                    [
+                        
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/trash.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 50,
+                            dimension: {
+                                width: 371,
+                                height: 400,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 360,
+                    y: -130,
+                    regX: 185.5,
+                    regY: 200,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: -45,
+                    direction: 0,
+                    width: 371,
+                    height: 400,
                     visible: true,
                 },
                 lock: false,
@@ -3086,7 +3142,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             'gravity1',
                             {
                                 type: 'text',
-                                params: ['-0.1'],
+                                params: ['-0.2'],
                             },
                             null,
                         ],
@@ -3146,7 +3202,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                                         'LESS_OR_EQUAL',
                                         {
                                             type: 'text',
-                                            params: ['-10'],
+                                            params: ['-30'],
                                         },
                                     ],
                                     type: 'boolean_basic_operator',
@@ -3242,8 +3298,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 3100,
-                                height: 1800,
+                                width: 3000,
+                                height: 1685,
                             },
                         },
                        
@@ -3258,8 +3314,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 3100,
-                    height: 1800,
+                    width: 3000,
+                    height: 1685,
                     visible: true,
                 },
                 lock: true,
