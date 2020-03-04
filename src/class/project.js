@@ -3932,8 +3932,8 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
         functions: [ // 함수 목록
             {
                 id: 'moving_once', // 함수 ID. Unique.
-                block:[[{type: 'move_xy_time2'}, ]],// 함수 블록 정보
-                content: [[{type: 'move_xy_time2'},]], // 함수 실행 정보
+                block:'function_create',// 함수 블록 정보
+                content: {type: 'move_xy_time2'}, // 함수 실행 정보
                     id: 'moving_once',
                     name: '한칸이동'
                 
