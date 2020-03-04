@@ -567,7 +567,7 @@ module.exports = {
                 outerLine: EntryStatic.colorSet.block.darken.MOVING,
                 skeleton: 'basic',
                 statements: [],
-                params: [
+                /*params: [
                     {
                         type: 'Block',
                         accept: 'string',
@@ -592,17 +592,53 @@ module.exports = {
                         size: 11,
                     },
                     
+                ],*/
+                params: [
+                    {
+                        params: [
+                            {
+                                type: 'number',
+                                params: ['3'],
+                            },
+                            'DIVIDE',
+                            {
+                                params: ['s2ds2d'],
+                                type: 'get_variable',
+                            },
+                        ],
+                        type: 'calc_basic',
+                    },
+                    {
+                        type: 'number',
+                        params: ['95'],
+                    },
+                    {
+                        type: 'number',
+                        params: ['0'],
+                    },
+                    null,
                 ],
+                type: 'move_xy_time',
                 events: {},
                 def: {
                     params: [
                         {
-                            type: 'number',
-                            params: ['0.5'],
+                            params: [
+                                {
+                                    type: 'number',
+                                    params: ['3'],
+                                },
+                                'DIVIDE',
+                                {
+                                    params: ['s2ds2d'],
+                                    type: 'get_variable',
+                                },
+                            ],
+                            type: 'calc_basic',
                         },
                         {
                             type: 'number',
-                            params: ['180'],
+                            params: ['95'],
                         },
                         {
                             type: 'number',
@@ -610,25 +646,35 @@ module.exports = {
                         },
                         null,
                     ],
-                    type: 'move_xy_time2',
+                    type: 'move_xy_time',
                 },
                 pyHelpDef: {
                     params: [
                         {
-                            type: 'number',
-                            params: ['C&value'],
+                            params: [
+                                {
+                                    type: 'number',
+                                    params: ['3'],
+                                },
+                                'DIVIDE',
+                                {
+                                    params: ['s2ds2d'],
+                                    type: 'get_variable',
+                                },
+                            ],
+                            type: 'calc_basic',
                         },
                         {
                             type: 'number',
-                            params: ['A&value'],
+                            params: ['95'],
                         },
                         {
                             type: 'number',
-                            params: ['B&value'],
+                            params: ['0'],
                         },
                         null,
                     ],
-                    type: 'move_xy_time2',
+                    type: 'move_xy_time',
                 },
                 paramsKeyMap: {
                     VALUE1: 0,
