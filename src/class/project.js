@@ -2830,6 +2830,8 @@ Entry.getStartProject4 = function(mediaFilePath) {
     };
 };
 
+//스테이지 1-2
+
 Entry.getStartProjectGS1 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
@@ -2952,7 +2954,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 },
                 entity: {
                     x: -330,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -2987,7 +2989,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     
                     
                 ],
-                
+                id: 'bar',
+                name: '바닥',
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3045,7 +3048,9 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                         
                     ],
                 ],
-                selectedPictureId: 'vx80',
+                id: '7y02y',
+                name: `쓰레기통`,
+                selectedPictureId: '7y02y',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3053,9 +3058,9 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     
                     pictures: [
                         {
-                            id: 'vx80',
+                            id: '7y02y',
                             fileurl: `${mediaFilePath}media/trash.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            name: `123`,
                             scale: 50,
                             dimension: {
                                 width: 371,
@@ -3083,7 +3088,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
             },
            
             {
-                id: '7y0y5',
+                id: 'play012',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
                     ko: '쇠구슬',
@@ -3230,13 +3235,81 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
 
                 
                ],
-                
+
+                [
+                    {
+                        type: 'when_run_button_click',
+                        x: 50,
+                        y: 600,
+                    },
+                    {
+                        type: 'repeat_inf',
+
+                        statements:[[
+                            {
+                                type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, '7y02y'],
+                                        
+                                    },
+                                    
+                                ],
+                                statements:[[
+                                    {   
+                                        type: 'next_popup'
+                                    },
+                                    {
+                                        params: ['all', null],
+                                        type: 'stop_object',
+                                    },
+                                    
+                                ]],
+                                
+                            },
+                            {
+                            type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, 'bar'],
+                                        
+                                    },
+                                    
+                                ],
+                                statements:[[
+                                    {
+                                        type: 'set_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0'],
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        type: 'change_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0.2'],
+                                            },
+                                        ],
+                                    }
+                                ]]
+                            }
+                        ]]
+                    },
+                ],
             ],
             
 
 
                             
-         
+
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3260,7 +3333,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 },
                 entity: {
                     x: 45,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -3275,10 +3348,10 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 active: true,
             },
             
-
+            
             {
-                id: '7y0555',
-                name: Lang.Blocks.Domino4,
+                id: 'bg',
+                name: `배경`,
                 label: {
                     ko: '배경',
                     en: 'Background',
@@ -3286,7 +3359,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 script: [
                     
                      ],
-                selectedPictureId: 'vx280',
+                selectedPictureId: 'bg',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3294,9 +3367,9 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     
                     pictures: [
                         {
-                            id: 'vx280',
+                            id: 'bg',
                             fileurl: `${mediaFilePath}media/bg.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            name: `123123`,
                             scale: 100,
                             dimension: {
                                 width: 3000,
@@ -3322,6 +3395,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 lock: true,
                 active: true,
             },
+            
            
         ],
         
@@ -3379,6 +3453,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
         expansionBlocks: [],
         speed: 60,
     };
+
 };
 
 Entry.getStartProjectGS1_1= function(mediaFilePath) {
@@ -3947,4 +4022,5 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
         expansionBlocks: [],
         speed: 60,
     };
+
 };

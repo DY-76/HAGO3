@@ -22,7 +22,7 @@
         <% } %>
         <link href="https://playentry.org/lib/entry-tool/dist/entry-tool.css" rel="stylesheet"/>
 
-        <link rel="stylesheet" type="text/css" href="/src/css/modal.css">
+        <link rel="stylesheet" type="text/css" href="/modal.css">
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
@@ -35,8 +35,11 @@
     
     <body>
         <script src="/src/util/utils.js" ></script>
-       
+        <a class='btn' class='exportProject'><script>Entry.exportProject(project)</script>적용</a>
+        <a  href="../src/class/project.js" download class='btn_workspace_save'> 다운로드</a>
         
+        <script>Entry.exportProject(project)</script>
+       
  
         
         <section>
