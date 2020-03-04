@@ -3432,61 +3432,21 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                         y: 50,
                     },
 
-                 
-
                     {
 
-                        params: [
-                            {
-                                params: [
-                                    {
-                                        type: 'number',
-                                        params: ['7'],
-                                    },
-                                    'DIVIDE',
-                                    {
-                                        params: ['s2ds2d'],
-                                        type: 'get_variable',
-                                    },
-                                ],
-                                type: 'calc_basic',
-                            },
-                            {
-                                type: 'number',
-                                params: ['400'],
-                            },
-                            {
-                                type: 'number',
-                                params: ['0'],
-                            },
-                            null,
-                        ],
-                        type: 'move_xy_time',
-                        
+                       type: 'func_123123'
                     },
+
+                 
+
+                    
 
                  
 
                    
                 ],
-                [{
-                    type: 'when_run_button_click',
-                    x: 5000,
-                    y: 3000,
-                },
-
-                {
-
-                    params: [
-                        's2ds2d',
-                        {
-                            type: 'text',
-                            params: ['5'],
-                        },
-                        null,
-                    ],
-                    type: 'set_variable',
-                },]
+               
+                
                 ],
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
@@ -3929,18 +3889,44 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
             }
         ],
 
-        functions: [ // 함수 목록
+      /*  functions: [ // 함수 목록
             {
-                id: 'moving_once', // 함수 ID. Unique.
-                block:'function_create',// 함수 블록 정보
-                content: {type: 'move_xy_time2'}, // 함수 실행 정보
-                    id: 'moving_once',
-                    name: '한칸이동'
-                
-            }
-                 ],
-        
+                id: 'move_once', // 함수 ID. Unique.
+                block: '', // 함수 블록 정보
+                content: '', // 함수 실행 정보
+                    id: 'move_once',
+                    name: '한번'
+                }], 
+                */
 
+               functions: [ // 함수 목록
+                {
+                    id: '이건 아님 밑에꺼가 ㄹㅇ', // 함수 ID. Unique.
+                    block: {type:'move_x'}, // 함수 블록 정보
+                    content: [{
+                        type: 'function_create',
+                        copyable: false,
+                        deletable: false,
+                        x: 40,
+                        y: 40,
+                    },
+                    
+                      {
+  
+                          params: [
+                              's2ds2d',
+                              {
+                                  type: 'text',
+                                  params: ['5'],
+                              },
+                              null,
+                          ],
+                          type: 'set_variable',
+                      },
+                    ], // 함수 실행 정보
+                        id: '123123',
+                        name: '잉?'
+                    }],
         
 
 
