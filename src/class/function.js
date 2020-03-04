@@ -26,6 +26,32 @@ Entry.Func = function(func) {
                       x: 40,
                       y: 40,
                   },
+                 {params: [
+                    {
+                        params: [
+                            {
+                                type: 'number',
+                                params: ['3'],
+                            },
+                            'DIVIDE',
+                            {
+                                params: ['s2ds2d'],
+                                type: 'get_variable',
+                            },
+                        ],
+                        type: 'calc_basic',
+                    },
+                    {
+                        type: 'number',
+                        params: ['95'],
+                    },
+                    {
+                        type: 'number',
+                        params: ['0'],
+                    },
+                    null,
+                ],
+                type: 'move_xy_time',}
               ],
           ]);
     this.block = null;
