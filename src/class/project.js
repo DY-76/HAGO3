@@ -3275,10 +3275,17 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 active: true,
             },
             
+<<<<<<< HEAD
 
             {
                 id: '7y0555',
                 name: Lang.Blocks.Domino4,
+=======
+            
+            {
+                id: 'bg',
+                name: `배경`,
+>>>>>>> parent of 8b09f9c... stage 2배경 삭제
                 label: {
                     ko: '배경',
                     en: 'Background',
@@ -3286,7 +3293,11 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 script: [
                     
                      ],
+<<<<<<< HEAD
                 selectedPictureId: 'vx280',
+=======
+                selectedPictureId: 'bg',
+>>>>>>> parent of 8b09f9c... stage 2배경 삭제
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3294,9 +3305,15 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     
                     pictures: [
                         {
+<<<<<<< HEAD
                             id: 'vx280',
                             fileurl: `${mediaFilePath}media/bg.png`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
+=======
+                            id: 'bg',
+                            fileurl: `${mediaFilePath}media/bg.png`,
+                            name: `123123`,
+>>>>>>> parent of 8b09f9c... stage 2배경 삭제
                             scale: 100,
                             dimension: {
                                 width: 3000,
@@ -3322,6 +3339,10 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 lock: true,
                 active: true,
             },
+<<<<<<< HEAD
+=======
+            
+>>>>>>> parent of 8b09f9c... stage 2배경 삭제
            
         ],
         
