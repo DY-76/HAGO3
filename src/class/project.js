@@ -4,7 +4,7 @@ import { get, pick, isMatch } from 'lodash';
 import { GEHelper } from '../graphicEngine/GEHelper';
 
 function nextstage() {
- 
+
     //팝업창출력
     //width : 300px크기
     //height : 300px크기
@@ -31,7 +31,7 @@ function scriptCheck(script) {
         statements.length !== 1 ||
         statements[0].length !== 1 ||
         move !== 'move_xy_time2'
-        
+
     ) {
         return false;
     }
@@ -77,7 +77,7 @@ Entry.isDefaultProject = function(project) {
         ]);
 
         return isMatch(Entry.getStartProject(), pickData);
-        
+
     } catch (e) {
         return false;
     }
@@ -119,7 +119,7 @@ Entry.getStartProject = function(mediaFilePath) {
                 isCloud: false,
             },
         ],
-        
+
         objects: [
             {
                 id: '7y0y1',
@@ -128,7 +128,7 @@ Entry.getStartProject = function(mediaFilePath) {
                     ko: '쇠구슬',
                     en: 'Entrybot1',
                 },
-            
+
                 script: [
                     [
                         {
@@ -138,13 +138,13 @@ Entry.getStartProject = function(mediaFilePath) {
                         },
                         {
                             type: 'move_xy_time2',
-                           
-                          
+
+
                         },
 
-                        
-                        
-                       
+
+
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -152,7 +152,7 @@ Entry.getStartProject = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -164,7 +164,7 @@ Entry.getStartProject = function(mediaFilePath) {
                                 height: 512,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -197,42 +197,42 @@ Entry.getStartProject = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                        
-                    
-                       
+
+
+
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y1'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object',
-                    
-                
+
+
                     },
                 ]]
                                 }]]
-                            
+
                         },
 
-                     
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -240,7 +240,7 @@ Entry.getStartProject = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -252,7 +252,7 @@ Entry.getStartProject = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -288,30 +288,30 @@ Entry.getStartProject = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y11'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object' },
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                 ],
@@ -320,7 +320,7 @@ Entry.getStartProject = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -332,7 +332,7 @@ Entry.getStartProject = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -368,30 +368,30 @@ Entry.getStartProject = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y12'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object' },
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                 ],
@@ -400,7 +400,7 @@ Entry.getStartProject = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -412,7 +412,7 @@ Entry.getStartProject = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -448,40 +448,40 @@ Entry.getStartProject = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y13'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     {type: 'next_popup'},
-                    
-                  
-                    
+
+
+
                     { params: ['thisOnly', null],
                         type: 'stop_object'
-                         
-                        
+
+
                     },
-                    
-                        
-                        
+
+
+
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                      ],
@@ -490,7 +490,7 @@ Entry.getStartProject = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -502,7 +502,7 @@ Entry.getStartProject = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -530,14 +530,14 @@ Entry.getStartProject = function(mediaFilePath) {
                     en: 'Background',
                 },
                 script: [
-                    
+
                      ],
                 selectedPictureId: 'vx280',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx280',
@@ -549,7 +549,7 @@ Entry.getStartProject = function(mediaFilePath) {
                                 height: 1800,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -569,9 +569,9 @@ Entry.getStartProject = function(mediaFilePath) {
                 active: true,
             },
         ],
-        
 
-        
+
+
         expansionBlocks: [],
         speed: 60,
     };
@@ -613,7 +613,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
             },
         ],
         objects: [
-            
+
             {
                 id: '7y0y11',
                 name: Lang.Blocks.Domino1,
@@ -628,26 +628,26 @@ Entry.getStartProject2 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                        
-                    
-                       
+
+
+
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
                                 {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object',
-                
+
                                 }]]
-                            
+
                         },
 
-                     
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -655,7 +655,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -667,7 +667,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -686,7 +686,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-            
+
             {
                 id: '7y0y12',
                 name: Lang.Blocks.Domino2,
@@ -704,30 +704,30 @@ Entry.getStartProject2 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y11'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object' },
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                 ],
@@ -736,7 +736,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -748,7 +748,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -785,32 +785,32 @@ Entry.getStartProject2 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y12'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'move_xy_time3'},
-                    
+
                 ]]
                                 }]]
-                            
+
                         },
-                    
-                       
+
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -818,7 +818,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -830,7 +830,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                                 height: 227,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -866,30 +866,30 @@ Entry.getStartProject2 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y21'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object' },
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                 ],
@@ -898,7 +898,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -910,7 +910,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -936,7 +936,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                     ko: '도미노4',
                     en: 'Domino',
                 },
-                
+
                 script: [
                     [
                         {
@@ -947,23 +947,23 @@ Entry.getStartProject2 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y13'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     {type: 'next_popup'},
@@ -971,7 +971,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                         type: 'stop_object' },
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                 ],
@@ -979,9 +979,9 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
-                
+
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -993,7 +993,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1012,16 +1012,16 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-            
-        ],
-        
 
-        
+        ],
+
+
+
         expansionBlocks: [],
         speed: 60,
-        
+
     };
-     
+
 };
 
 Entry.getStartProject3 = function(mediaFilePath) {
@@ -1093,13 +1093,13 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 null,
                             ],
                             type: 'move_xy_time',
-                        
+
                         }
-                        
-                        
-                        
-                       
-                       
+
+
+
+
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1107,7 +1107,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1119,7 +1119,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 height: 840,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1155,10 +1155,10 @@ Entry.getStartProject3 = function(mediaFilePath) {
                         },
                         {
                             type: 'hide',
-                            
-                           
+
+
                         },
-                       
+
                     ],
                     [
                         {
@@ -1193,7 +1193,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1205,7 +1205,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 height: 407,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1233,8 +1233,8 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 },
                 script: [
                     [
-                       
-                       
+
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1242,7 +1242,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1254,7 +1254,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 height: 370,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1282,8 +1282,8 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 },
                 script: [
                     [
-                        
-                       
+
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1291,7 +1291,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1303,7 +1303,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 height: 370,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1331,8 +1331,8 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 },
                 script: [
                     [
-                        
-                       
+
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1340,7 +1340,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1352,7 +1352,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 height: 480,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1397,14 +1397,14 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 null,
                             ],
                             type: 'set_variable',
-                            
-                           
+
+
                         },
                         {
                             type : 'repeat_inf',
 
                             statements: [[
-                                { 
+                                {
                                     params: [
                                         {
                                             params: ['s2ds2d'],
@@ -1424,21 +1424,21 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                     null,
                                 ],
                                 type: 'change_variable',},
-                               
-                               
 
-                                { 
+
+
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y3'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     { params: [
                         's2ds2d',
@@ -1449,21 +1449,21 @@ Entry.getStartProject3 = function(mediaFilePath) {
                         null,
                     ],
                     type: 'set_variable',},
-                    
+
                 ]]
                                 },
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y7'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     { params: [
                         's2ds2d',
@@ -1474,21 +1474,21 @@ Entry.getStartProject3 = function(mediaFilePath) {
                         null,
                     ],
                     type: 'set_variable',},
-                    
+
                 ]]
                                 },
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null,'wall_down'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     { params: [
                         's2ds2d',
@@ -1499,23 +1499,23 @@ Entry.getStartProject3 = function(mediaFilePath) {
                         null,
                     ],
                     type: 'set_variable',},
-                    { 
+                    {
                         type: 'stop_repeat' },
                 ]]
                                 }
-                                
-                                    
-                                
+
+
+
                             ]],
 
-                            
+
                         },
 
-                                
-                        
-                        
-                    
-                    
+
+
+
+
+
                 ],
                [
 
@@ -1525,16 +1525,16 @@ Entry.getStartProject3 = function(mediaFilePath) {
                     x:400,
                     y:50,
                 },
-               
+
                 {
                     type : 'repeat_inf',
-    
-                    
-                    
-                
-                
+
+
+
+
+
                     statements: [[
-                        { 
+                        {
                             params: [
                                 {
                                     type: 'number',
@@ -1564,47 +1564,47 @@ Entry.getStartProject3 = function(mediaFilePath) {
             {
                 type : 'repeat_inf',
 
-                
-                
-            
-            
+
+
+
+
                 statements: [[
-                    { 
+                    {
                         type: '_if',
-           
+
     params: [
         {
             type: 'reach_something',
             params: [null, '7y0y6'],
-            
+
         },
-        
+
     ],
-    statements: 
+    statements:
     [[
-        
+
         { params: ['thisOnly', null],
             type: 'stop_object' },
     ]]
                     }]]
-                
+
             },
 
 
                ],
-                
+
             ],
-            
 
 
-                            
-         
+
+
+
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1616,8 +1616,8 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 height: 172,
                             },
                         },
-                        
-                       
+
+
                     ],
                 },
                 entity: {
@@ -1654,27 +1654,27 @@ Entry.getStartProject3 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y5'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {params: ['sin1', 'Button'],
-                        type: 'message_cast', 
-                       
+                        type: 'message_cast',
+
                     },
                     {
                         params: [
@@ -1688,12 +1688,12 @@ Entry.getStartProject3 = function(mediaFilePath) {
                     },
                     { params: ['thisOnly', null],
                         type: 'stop_object' }
-                    
+
                 ]]
                                 }]]
-                            
+
                         },
-                       
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1701,7 +1701,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1724,7 +1724,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                                 height: 256,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1743,10 +1743,10 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-           
+
         ],
 
-       
+
         variables: [ // 프로젝트 변수
             {
                 name: 'Speed', // 변수명
@@ -1764,7 +1764,7 @@ Entry.getStartProject3 = function(mediaFilePath) {
                     type: false,
                     default: false
                 },
-               
+
                 array: [{ // 변수형이 list일 경우 값 목록
                     data: 'Speed' // 값 데이터
                 }]
@@ -1776,9 +1776,9 @@ Entry.getStartProject3 = function(mediaFilePath) {
                 id: 'sin1' // 신호 ID. Unique.
             },
         ],
-        
 
-        
+
+
         expansionBlocks: [],
         speed: 60,
     };
@@ -1835,10 +1835,10 @@ Entry.getStartProject5 = function(mediaFilePath) {
                         },
                         {
                             type: 'move_xy_time2',
-                            
-                           
+
+
                         },
-                       
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1846,7 +1846,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1858,7 +1858,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 512,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1893,10 +1893,10 @@ Entry.getStartProject5 = function(mediaFilePath) {
                         },
                         {
                             type: 'move_xy_time2',
-                            
-                           
+
+
                         },
-                       
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1904,7 +1904,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1916,7 +1916,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 512,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -1951,10 +1951,10 @@ Entry.getStartProject5 = function(mediaFilePath) {
                         },
                         {
                             type: 'move_xy_time2',
-                            
-                           
+
+
                         },
-                       
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -1962,7 +1962,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -1974,7 +1974,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 512,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2007,7 +2007,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                       
+
                         {
                             type: 'move_xy_time',
                         },
@@ -2018,7 +2018,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2030,7 +2030,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 240,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2063,7 +2063,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                       
+
                         {
                             type: 'move_xy_time',
                         },
@@ -2074,7 +2074,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2086,7 +2086,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 240,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2118,7 +2118,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                       
+
                         {
                             type: 'move_xy_time',
                         },
@@ -2129,7 +2129,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2141,7 +2141,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 316,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2174,9 +2174,9 @@ Entry.getStartProject5 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                       
+
                         {
-                            type: 
+                            type:
                             'move_xy_time',
                         },
                     ],
@@ -2186,7 +2186,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2198,7 +2198,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 316,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2230,7 +2230,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                       
+
                         {
                             type: 'move_xy_time',
                         },
@@ -2241,7 +2241,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2253,7 +2253,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 240,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2287,7 +2287,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                             y: 50,
                         },
                         {
-                          
+
                         },
                     ],
                 ],
@@ -2296,7 +2296,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2308,7 +2308,7 @@ Entry.getStartProject5 = function(mediaFilePath) {
                                 height: 350,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2327,11 +2327,11 @@ Entry.getStartProject5 = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-            
-        ],
-        
 
-        
+        ],
+
+
+
         expansionBlocks: [],
         speed: 60,
     };
@@ -2374,7 +2374,7 @@ Entry.isDefaultProject = function(project) {
         ]);
 
         return isMatch(Entry.getStartProject(), pickData);
-        
+
     } catch (e) {
         return false;
     }
@@ -2415,7 +2415,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                 isCloud: false,
             },
         ],
-        
+
         objects: [
             {
                 id: '7y0y1',
@@ -2433,15 +2433,15 @@ Entry.getStartProject4 = function(mediaFilePath) {
                         },
                         {
                             type: 'move_xy_time2',
-                          
+
                         },
                         {type: 'move_x',},
-                        
-                      
 
-                        
-                        
-                       
+
+
+
+
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -2449,7 +2449,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2461,7 +2461,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                                 height: 512,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2494,42 +2494,42 @@ Entry.getStartProject4 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                        
-                    
-                       
+
+
+
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y1'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object',
-                    
-                
+
+
                     },
                 ]]
                                 }]]
-                            
+
                         },
 
-                     
+
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -2537,7 +2537,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2549,7 +2549,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2585,30 +2585,30 @@ Entry.getStartProject4 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y11'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object' },
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                 ],
@@ -2617,7 +2617,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2629,7 +2629,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2665,30 +2665,30 @@ Entry.getStartProject4 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y12'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
                     { params: ['thisOnly', null],
                         type: 'stop_object' },
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                 ],
@@ -2697,7 +2697,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2709,7 +2709,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2745,43 +2745,43 @@ Entry.getStartProject4 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y13'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {type: 'rotate_by_time'},
-                    
-                  
-                    
+
+
+
                     { params: ['thisOnly', null],
                         type: 'stop_object'
-                         
-                        
+
+
                     },
 
                     {
                         console
                     },
-                    
-                        
-                        
+
+
+
                 ]]
                                 }]]
-                            
+
                         },
                     ],
                      ],
@@ -2790,7 +2790,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2802,7 +2802,7 @@ Entry.getStartProject4 = function(mediaFilePath) {
                                 height: 545,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -2822,13 +2822,15 @@ Entry.getStartProject4 = function(mediaFilePath) {
                 active: true,
             },
         ],
-        
 
-        
+
+
         expansionBlocks: [],
         speed: 60,
     };
 };
+
+//스테이지 1-2.
 
 Entry.getStartProjectGS1 = function(mediaFilePath) {
     return {
@@ -2922,12 +2924,12 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             null,
                         ],
                         type: 'move_xy_time',
-                        
+
                     },
 
-                 
 
-                   
+
+
                 ],
                 ],
                 selectedPictureId: 'vx80',
@@ -2935,7 +2937,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -2947,12 +2949,12 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                                 height: 172,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
                     x: -330,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -2981,19 +2983,20 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                      
-                       
+
+
                     ],
-                    
-                    
+
+
                 ],
-                
+                id: 'bar',
+                name: '바닥',
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -3005,7 +3008,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                                 height: 300,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -3038,31 +3041,33 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                      
-                       
+
+
                     ],
                     [
-                        
+
                     ],
                 ],
-                selectedPictureId: 'vx80',
+                id: '7y02y',
+                name: `쓰레기통`,
+                selectedPictureId: '7y02y',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
-                            id: 'vx80',
+                            id: '7y02y',
                             fileurl: `${mediaFilePath}media/trash.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            name: `123`,
                             scale: 50,
                             dimension: {
                                 width: 371,
                                 height: 400,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -3081,19 +3086,19 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-           
+
             {
-                id: '7y0y5',
+                id: 'play012',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
                     ko: '쇠구슬',
                     en: 'Entrybot1',
                 },
 
-              
+
                 script: [
                     [
-                        
+
 
                         {
                             type: 'when_run_button_click',
@@ -3101,7 +3106,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                             y: 50,
                         },
                         {
-                            
+
                         params: [
                             'gravity1',
                             {
@@ -3115,28 +3120,28 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y1'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {
                         type : 'repeat_inf',
 
-                        statements: 
+                        statements:
                 [[
                     {
                         params: [
@@ -3173,12 +3178,12 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     },
                 ]]
                                 }]]
-                            
+
                         },
-                        
-                        
-                    
-                    
+
+
+
+
                 ],
                [
                 {
@@ -3207,8 +3212,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                                         },
                                     ],
                                     type: 'boolean_basic_operator',
-                                
-                    
+
+
                                 },
                                 null,
                             ],
@@ -3219,8 +3224,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                                 {params: ['all', null],
                                 type: 'stop_object',}
                             ]]
-                        
-                            
+
+
                         }
 
 
@@ -3228,21 +3233,89 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 },
 
 
-                
+
                ],
-                
+
+                [
+                    {
+                        type: 'when_run_button_click',
+                        x: 50,
+                        y: 600,
+                    },
+                    {
+                        type: 'repeat_inf',
+
+                        statements:[[
+                            {
+                                type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, '7y02y'],
+
+                                    },
+
+                                ],
+                                statements:[[
+                                    {
+                                        type: 'next_popup'
+                                    },
+                                    {
+                                        params: ['all', null],
+                                        type: 'stop_object',
+                                    },
+
+                                ]],
+
+                            },
+                            {
+                            type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, 'bar'],
+
+                                    },
+
+                                ],
+                                statements:[[
+                                    {
+                                        type: 'set_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0'],
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        type: 'change_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0.2'],
+                                            },
+                                        ],
+                                    }
+                                ]]
+                            }
+                        ]]
+                    },
+                ],
             ],
-            
 
 
-                            
-         
+
+
+
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -3254,13 +3327,13 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                                 height: 172,
                             },
                         },
-                        
-                       
+
+
                     ],
                 },
                 entity: {
                     x: 45,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -3274,17 +3347,21 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
+
+
+
+
         ],
-        
-        
-    
-    
+
+
+
+
         variables: [ // 프로젝트 변수
             {
                 name: 'Speed', // 변수명
                 variableType: 'variable', // 변수형. (일반변수: variable, 타이머: timer, 대답: answer, 슬라이드: slide, 리스트: list)
                 id: 's2ds2d', // 변수ID. Unique.
-                value: 0, // 변수 값
+                value: 7, // 변수 값
                 minValue: 5, // 최소값
                 maxValue: 5, // 최대값
                 visible: false, // 캔버스에 표시여부
@@ -3296,7 +3373,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     type: false,
                     default: false
                 },
-               
+
                 array: [{ // 변수형이 list일 경우 값 목록
                     data: 'Speed' // 값 데이터
                 }]
@@ -3317,22 +3394,20 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     type: false,
                     default: false
                 },
-               
+
                 array: [{ // 변수형이 list일 경우 값 목록
                     data: 'Gravity' // 값 데이터
                 }]
             }
         ],
 
-        
 
 
         expansionBlocks: [],
         speed: 60,
     };
 };
-
-Entry.getStartProjectGS1_1= function(mediaFilePath) {
+Entry.getStartProjectGS1_1 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3383,68 +3458,19 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                         y: 50,
                     },
 
-                 
+                   {type:'func_123123'}
 
-                    {
 
-                        params: [
-                            {
-                                params: [
-                                    {
-                                        type: 'number',
-                                        params: ['7'],
-                                    },
-                                    'DIVIDE',
-                                    {
-                                        params: ['s2ds2d'],
-                                        type: 'get_variable',
-                                    },
-                                ],
-                                type: 'calc_basic',
-                            },
-                            {
-                                type: 'number',
-                                params: ['400'],
-                            },
-                            {
-                                type: 'number',
-                                params: ['0'],
-                            },
-                            null,
-                        ],
-                        type: 'move_xy_time',
-                        
-                    },
 
-                 
 
-                   
                 ],
-                [{
-                    type: 'when_run_button_click',
-                    x: 5000,
-                    y: 3000,
-                },
-
-                {
-
-                    params: [
-                        's2ds2d',
-                        {
-                            type: 'text',
-                            params: ['5'],
-                        },
-                        null,
-                    ],
-                    type: 'set_variable',
-                },]
                 ],
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -3456,12 +3482,12 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                                 height: 172,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
                     x: -330,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -3490,18 +3516,20 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                      
-                       
+
+
                     ],
-                    
-                    
+
+
                 ],
+                id: 'bar',
+                name: '바닥',
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -3513,7 +3541,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                                 height: 300,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -3546,31 +3574,33 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                             x: 40,
                             y: 50,
                         },
-                      
-                       
+
+
                     ],
                     [
-                        
+
                     ],
                 ],
-                selectedPictureId: 'vx80',
+                id: '7y02y',
+                name: `쓰레기통`,
+                selectedPictureId: '7y02y',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
-                            id: 'vx80',
+                            id: '7y02y',
                             fileurl: `${mediaFilePath}media/trash.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            name: `123`,
                             scale: 50,
                             dimension: {
                                 width: 371,
                                 height: 400,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -3589,19 +3619,19 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-           
+
             {
-                id: '7y0y5',
+                id: 'play012',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
                     ko: '쇠구슬',
                     en: 'Entrybot1',
                 },
 
-              
+
                 script: [
                     [
-                        
+
 
                         {
                             type: 'when_run_button_click',
@@ -3609,7 +3639,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                             y: 50,
                         },
                         {
-                            
+
                         params: [
                             'gravity1',
                             {
@@ -3623,28 +3653,28 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                         {
                             type : 'repeat_inf',
 
-                            
-                            
-                        
-                        
+
+
+
+
                             statements: [[
-                                { 
+                                {
                                     type: '_if',
-                       
+
                 params: [
                     {
                         type: 'reach_something',
                         params: [null, '7y0y1'],
-                        
+
                     },
-                    
+
                 ],
-                statements: 
+                statements:
                 [[
                     {
                         type : 'repeat_inf',
 
-                        statements: 
+                        statements:
                 [[
                     {
                         params: [
@@ -3681,12 +3711,12 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                     },
                 ]]
                                 }]]
-                            
+
                         },
-                        
-                        
-                    
-                    
+
+
+
+
                 ],
                [
                 {
@@ -3715,8 +3745,8 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                                         },
                                     ],
                                     type: 'boolean_basic_operator',
-                                
-                    
+
+
                                 },
                                 null,
                             ],
@@ -3727,8 +3757,8 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                                 {params: ['all', null],
                                 type: 'stop_object',}
                             ]]
-                        
-                            
+
+
                         }
 
 
@@ -3736,21 +3766,89 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 },
 
 
-                
+
                ],
-                
+
+                [
+                    {
+                        type: 'when_run_button_click',
+                        x: 50,
+                        y: 600,
+                    },
+                    {
+                        type: 'repeat_inf',
+
+                        statements:[[
+                            {
+                                type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, '7y02y'],
+
+                                    },
+
+                                ],
+                                statements:[[
+                                    {
+                                        type: 'next_popup'
+                                    },
+                                    {
+                                        params: ['all', null],
+                                        type: 'stop_object',
+                                    },
+
+                                ]],
+
+                            },
+                            {
+                            type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, 'bar'],
+
+                                    },
+
+                                ],
+                                statements:[[
+                                    {
+                                        type: 'set_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0'],
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        type: 'change_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0.2'],
+                                            },
+                                        ],
+                                    }
+                                ]]
+                            }
+                        ]]
+                    },
+                ],
             ],
-            
 
 
-                            
-         
+
+
+
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
                             id: 'vx80',
@@ -3762,13 +3860,13 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                                 height: 172,
                             },
                         },
-                        
-                       
+
+
                     ],
                 },
                 entity: {
                     x: 45,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -3782,36 +3880,36 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 lock: false,
                 active: true,
             },
-            
+
 
             {
-                id: '7y0555',
-                name: Lang.Blocks.Domino4,
+                id: 'bg',
+                name: `배경`,
                 label: {
                     ko: '배경',
                     en: 'Background',
                 },
                 script: [
-                    
+
                      ],
-                selectedPictureId: 'vx280',
+                selectedPictureId: 'bg',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
+
                     pictures: [
                         {
-                            id: 'vx280',
+                            id: 'bg',
                             fileurl: `${mediaFilePath}media/bg.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            name: `123123`,
                             scale: 100,
                             dimension: {
                                 width: 3000,
                                 height: 1685,
                             },
                         },
-                       
+
                     ],
                 },
                 entity: {
@@ -3830,17 +3928,19 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 lock: true,
                 active: true,
             },
-           
+
+
         ],
 
 
-    
+
+
         variables: [ // 프로젝트 변수
             {
                 name: 'Speed', // 변수명
                 variableType: 'variable', // 변수형. (일반변수: variable, 타이머: timer, 대답: answer, 슬라이드: slide, 리스트: list)
                 id: 's2ds2d', // 변수ID. Unique.
-                value: 0, // 변수 값
+                value: 7, // 변수 값
                 minValue: 5, // 최소값
                 maxValue: 5, // 최대값
                 visible: false, // 캔버스에 표시여부
@@ -3852,7 +3952,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                     type: false,
                     default: false
                 },
-               
+
                 array: [{ // 변수형이 list일 경우 값 목록
                     data: 'Speed' // 값 데이터
                 }]
@@ -3873,7 +3973,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                     type: false,
                     default: false
                 },
-               
+
                 array: [{ // 변수형이 list일 경우 값 목록
                     data: 'Gravity' // 값 데이터
                 }]
@@ -3882,18 +3982,12 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
 
         functions: [ // 함수 목록
             {
-                id: 'moving_once', // 함수 ID. Unique.
-                block:[[{type: 'move_xy_time2'}, ]],// 함수 블록 정보
-                content: [[{type: 'move_xy_time2'},]], // 함수 실행 정보
-                    id: 'moving_once',
-                    name: '한칸이동'
-                
-            }
-                 ],
-        
-
-        
-
+                id: String, // 함수 ID. Unique.
+                block: String, // 함수 블록 정보
+                content: String, // 함수 실행 정보
+                    id: '123123',
+                    name: String
+                }],
 
         expansionBlocks: [],
         speed: 60,
