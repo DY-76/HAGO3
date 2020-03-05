@@ -2952,7 +2952,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 },
                 entity: {
                     x: -330,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -2987,7 +2987,8 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     
                     
                 ],
-                
+                id: 'bar',
+                name: '바닥',
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3045,7 +3046,9 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                         
                     ],
                 ],
-                selectedPictureId: 'vx80',
+                id: '7y02y',
+                name: `쓰레기통`,
+                selectedPictureId: '7y02y',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3053,9 +3056,9 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     
                     pictures: [
                         {
-                            id: 'vx80',
+                            id: '7y02y',
                             fileurl: `${mediaFilePath}media/trash.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            name: `123`,
                             scale: 50,
                             dimension: {
                                 width: 371,
@@ -3083,7 +3086,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
             },
            
             {
-                id: '7y0y5',
+                id: 'play012',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
                     ko: '쇠구슬',
@@ -3230,13 +3233,81 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
 
                 
                ],
-                
+
+                [
+                    {
+                        type: 'when_run_button_click',
+                        x: 50,
+                        y: 600,
+                    },
+                    {
+                        type: 'repeat_inf',
+
+                        statements:[[
+                            {
+                                type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, '7y02y'],
+                                        
+                                    },
+                                    
+                                ],
+                                statements:[[
+                                    {   
+                                        type: 'next_popup'
+                                    },
+                                    {
+                                        params: ['all', null],
+                                        type: 'stop_object',
+                                    },
+                                    
+                                ]],
+                                
+                            },
+                            {
+                            type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, 'bar'],
+                                        
+                                    },
+                                    
+                                ],
+                                statements:[[
+                                    {
+                                        type: 'set_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0'],
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        type: 'change_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0.2'],
+                                            },
+                                        ],
+                                    }
+                                ]]
+                            }
+                        ]]
+                    },
+                ],
             ],
             
 
 
                             
-         
+
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3260,7 +3331,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 },
                 entity: {
                     x: 45,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -3275,10 +3346,10 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 active: true,
             },
             
-
+            
             {
-                id: '7y0555',
-                name: Lang.Blocks.Domino4,
+                id: 'bg',
+                name: `배경`,
                 label: {
                     ko: '배경',
                     en: 'Background',
@@ -3286,7 +3357,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 script: [
                     
                      ],
-                selectedPictureId: 'vx280',
+                selectedPictureId: 'bg',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3294,9 +3365,9 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                     
                     pictures: [
                         {
-                            id: 'vx280',
+                            id: 'bg',
                             fileurl: `${mediaFilePath}media/bg.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            name: `123123`,
                             scale: 100,
                             dimension: {
                                 width: 3000,
@@ -3322,6 +3393,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 lock: true,
                 active: true,
             },
+            
            
         ],
         
@@ -3333,7 +3405,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
                 name: 'Speed', // 변수명
                 variableType: 'variable', // 변수형. (일반변수: variable, 타이머: timer, 대답: answer, 슬라이드: slide, 리스트: list)
                 id: 's2ds2d', // 변수ID. Unique.
-                value: 0, // 변수 값
+                value: 7, // 변수 값
                 minValue: 5, // 최소값
                 maxValue: 5, // 최대값
                 visible: false, // 캔버스에 표시여부
@@ -3373,15 +3445,20 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
             }
         ],
 
-        
-
+        functions: [ // 함수 목록
+            {
+                id: String, // 함수 ID. Unique.
+                block: String, // 함수 블록 정보
+                content: String, // 함수 실행 
+            }
+        ],
 
         expansionBlocks: [],
         speed: 60,
     };
 };
 
-Entry.getStartProjectGS1_1= function(mediaFilePath) {
+Entry.getStartProjectGS1_1 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3431,22 +3508,12 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                         x: 40,
                         y: 50,
                     },
-
                     {
 
-                       type: 'func_123123'
-                    },
-
-                 
-
-                    
-
-                 
-
+                        type: 'func_123123'
+                     },
                    
                 ],
-               
-                
                 ],
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
@@ -3470,7 +3537,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 },
                 entity: {
                     x: -330,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -3505,6 +3572,8 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                     
                     
                 ],
+                id: 'bar',
+                name: '바닥',
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3562,7 +3631,9 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                         
                     ],
                 ],
-                selectedPictureId: 'vx80',
+                id: '7y02y',
+                name: `쓰레기통`,
+                selectedPictureId: '7y02y',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3570,9 +3641,9 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                     
                     pictures: [
                         {
-                            id: 'vx80',
+                            id: '7y02y',
                             fileurl: `${mediaFilePath}media/trash.png`,
-                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            name: `123`,
                             scale: 50,
                             dimension: {
                                 width: 371,
@@ -3600,7 +3671,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
             },
            
             {
-                id: '7y0y5',
+                id: 'play012',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
                     ko: '쇠구슬',
@@ -3747,13 +3818,81 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
 
                 
                ],
-                
+
+                [
+                    {
+                        type: 'when_run_button_click',
+                        x: 50,
+                        y: 600,
+                    },
+                    {
+                        type: 'repeat_inf',
+
+                        statements:[[
+                            {
+                                type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, '7y02y'],
+                                        
+                                    },
+                                    
+                                ],
+                                statements:[[
+                                    {   
+                                        type: 'next_popup'
+                                    },
+                                    {
+                                        params: ['all', null],
+                                        type: 'stop_object',
+                                    },
+                                    
+                                ]],
+                                
+                            },
+                            {
+                            type: '_if',
+                                params: [
+                                    {
+                                        type: 'reach_something',
+                                        params: [null, 'bar'],
+                                        
+                                    },
+                                    
+                                ],
+                                statements:[[
+                                    {
+                                        type: 'set_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0'],
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        type: 'change_variable',
+                                        params: [
+                                            'gravity1',
+                                            {
+                                                type: 'text',
+                                                params: ['0.2'],
+                                            },
+                                        ],
+                                    }
+                                ]]
+                            }
+                        ]]
+                    },
+                ],
             ],
             
 
 
                             
-         
+
                 selectedPictureId: 'vx80',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3777,7 +3916,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 },
                 entity: {
                     x: 45,
-                    y: 130,
+                    y: 120,
                     regX: 85,
                     regY: 86,
                     scaleX: 0.3154574132492113,
@@ -3792,10 +3931,10 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 active: true,
             },
             
-
+            
             {
-                id: '7y0555',
-                name: Lang.Blocks.Domino4,
+                id: 'bg',
+                name: `배경`,
                 label: {
                     ko: '배경',
                     en: 'Background',
@@ -3803,7 +3942,7 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 script: [
                     
                      ],
-                selectedPictureId: 'vx280',
+                selectedPictureId: 'bg',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3811,9 +3950,9 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                     
                     pictures: [
                         {
-                            id: 'vx280',
+                            id: 'bg',
                             fileurl: `${mediaFilePath}media/bg.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            name: `123123`,
                             scale: 100,
                             dimension: {
                                 width: 3000,
@@ -3839,17 +3978,19 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
                 lock: true,
                 active: true,
             },
+            
            
         ],
-
-
+        
+        
+    
     
         variables: [ // 프로젝트 변수
             {
                 name: 'Speed', // 변수명
                 variableType: 'variable', // 변수형. (일반변수: variable, 타이머: timer, 대답: answer, 슬라이드: slide, 리스트: list)
                 id: 's2ds2d', // 변수ID. Unique.
-                value: 0, // 변수 값
+                value: 7, // 변수 값
                 minValue: 5, // 최소값
                 maxValue: 5, // 최대값
                 visible: false, // 캔버스에 표시여부
@@ -3889,46 +4030,14 @@ Entry.getStartProjectGS1_1= function(mediaFilePath) {
             }
         ],
 
-      /*  functions: [ // 함수 목록
+        functions: [ // 함수 목록
             {
-                id: 'move_once', // 함수 ID. Unique.
-                block: '', // 함수 블록 정보
-                content: '', // 함수 실행 정보
-                    id: 'move_once',
-                    name: '한번'
-                }], 
-                */
-
-               functions: [ // 함수 목록
-                {
-                    id: '이건 아님 밑에꺼가 ㄹㅇ', // 함수 ID. Unique.
-                    block: {type:'move_x'}, // 함수 블록 정보
-                    content: [{
-                        type: 'function_create',
-                        copyable: false,
-                        deletable: false,
-                        x: 40,
-                        y: 40,
-                    },
-                    
-                      {
-  
-                          params: [
-                              's2ds2d',
-                              {
-                                  type: 'text',
-                                  params: ['5'],
-                              },
-                              null,
-                          ],
-                          type: 'set_variable',
-                      },
-                    ], // 함수 실행 정보
-                        id: '123123',
-                        name: '잉?'
-                    }],
-        
-
+                id: String, // 함수 ID. Unique.
+                block: String, // 함수 블록 정보
+                content: String, // 함수 실행 정보
+                    id: '123123',
+                    name: String
+                }],
 
         expansionBlocks: [],
         speed: 60,
