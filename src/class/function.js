@@ -26,23 +26,7 @@ Entry.Func = function(func) {
                       x: 40,
                       y: 40,
                   },
-                  
-                    {
-
-                        params: [
-                            's2ds2d',
-                            {
-                                type: 'text',
-                                params: ['5'],
-                            },
-                            null,
-                        ],
-                        type: 'set_variable',
-                    },
-                  
-                 {
-                     
-                    params: [
+                 {params: [
                     {
                         params: [
                             {

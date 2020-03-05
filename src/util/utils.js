@@ -31,12 +31,12 @@ function getParameterByName(name) {
 Entry.loadProject = function(project) {
     {
        if (getParameterByName('stage') == 2)
-       project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+            project = Entry.getStartProject2(Entry.mediaFilePath);
          
          else if  (getParameterByName('stage') == 3)
          project = Entry.getStartProject3(Entry.mediaFilePath);
          else if  (getParameterByName('stage') == 1)
-         project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
+         project = Entry.getStartProject(Entry.mediaFilePath);   
          else if  (getParameterByName('stage') == 0)
          project = Entry.getStartProject2(Entry.mediaFilePath);
          else if  (getParameterByName('stage') == 4)
