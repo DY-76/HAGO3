@@ -3347,52 +3347,7 @@ Entry.getStartProjectGS1 = function(mediaFilePath) {
             },
             
             
-            {
-                id: 'bg',
-                name: `배경`,
-                label: {
-                    ko: '배경',
-                    en: 'Background',
-                },
-                script: [
-                    
-                     ],
-                selectedPictureId: 'bg',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'bg',
-                            fileurl: `${mediaFilePath}media/bg.png`,
-                            name: `123123`,
-                            scale: 100,
-                            dimension: {
-                                width: 3000,
-                                height: 1685,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: 30,
-                    y: -18,
-                    regX: 1600,
-                    regY: 900,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 3000,
-                    height: 1685,
-                    visible: true,
-                },
-                lock: true,
-                active: true,
-            },
+          
             
            
         ],
