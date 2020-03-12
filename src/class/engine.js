@@ -5,6 +5,8 @@
 
 import { GEHelper } from '../graphicEngine/GEHelper';
 
+
+
 var i = 'off';
 var test;
 export var test;
@@ -889,12 +891,13 @@ Entry.Engine = class Engine {
     toggleFullScreen(popupClassName) {
         i = 'on';
         test = Entry.exportProject();
-
+        
+     
         var save = require('../test/save_test.js');
         save.save_test();
 
 
-        console.log(i);
+        
         if (!this.popup) {
             this.popup = new Entry.Popup(popupClassName);
             //console.log('FullSC_start1');

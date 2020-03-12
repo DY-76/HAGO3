@@ -37,7 +37,7 @@ Entry.PropertyPanel = function() {
         /*
 
         this._cover = Entry.Dom('div', {
-            classes: ['propertyPanelCover',],
+            classes: ['propertyPanelCover','entryRemove'],
             parent: this._view,
         });
         */
@@ -90,7 +90,7 @@ Entry.PropertyPanel = function() {
             
         });
 
-         
+    
 
         /*  $('.propertyPanelCover').each(function() {
            
