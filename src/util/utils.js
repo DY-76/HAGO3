@@ -29,28 +29,31 @@ function getParameterByName(name) {
 
 
 Entry.loadProject = function(project) {
-        if (!project){
-       if (getParameterByName('stage') == 2){
-        project = Entry.getStartProjectGS1(Entry.mediaFilePath);
-        }
-         
-       else if  (getParameterByName('stage') == 3){
-       project = Entry.getStartProject3(Entry.mediaFilePath);
-       }
-       else if  (getParameterByName('stage') == 1){
-       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
-       }
-       else if  (getParameterByName('stage') == 0){
-       project = Entry.getStartProject2(Entry.mediaFilePath);
-       }
-       else if  (getParameterByName('stage') == 4){
+   if (!project){ {
+       if (getParameterByName('stage') == 2)
        project = Entry.getStartProjectGS1(Entry.mediaFilePath);
-       }
-       else if  (getParameterByName('stage') == 5){
-       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
-       }
-    }
+         
+         else if  (getParameterByName('stage') == 3)
+         project = Entry.getStartProject3(Entry.mediaFilePath);
+         else if  (getParameterByName('stage') == 1)
+         project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
+         else if  (getParameterByName('stage') == 0)
+         project = Entry.getStartProject2(Entry.mediaFilePath);
+         else if  (getParameterByName('stage') == 4)
+         project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+         else if  (getParameterByName('stage') == 5)
+         project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
        
+       
+        
+
+    }}
+
+
+
+
+    
+
     if (this.type === 'workspace') {
         Entry.stateManager.startIgnore();
     }
@@ -143,6 +146,8 @@ Entry.clearProject = function() {
     }
 };
 
+
+
 /**
  * Export project
  * @param {?Project} project
@@ -172,9 +177,35 @@ Entry.exportProject = function(project) {
     
     return project;
 };
+/*
+Entry.addobjectProject = function(project) {
+    if (!project) {
+        project = {};
+    }
 
-module.exports = Entry.exportProject
+    if (!Entry.engine.isState('stop')) {
+        Entry.engine.toggleStop();
+    }
+    project.objects = Entry.container.toJSON();
+    const objects = project.objects;
+    project.scenes = Entry.scene.toJSON();
+    project.variables = Entry.variableContainer.getVariableJSON();
+    project.messages = Entry.variableContainer.getMessageJSON();
+    project.functions = Entry.variableContainer.getFunctionJSON();
+    project.speed = Entry.FPS;
+    project.interface = Entry.captureInterfaceState();
+    project.expansionBlocks = Entry.expansionBlocks;
+    project.externalModules = Entry.EXTERNAL_MODULE_LIST;
 
+    if (!objects || !objects.length) {
+        return false;
+    }
+    
+    return project;
+   
+
+};
+*/
 /**
  * inject blocks to Entry menu.
  * Available block is different by object type.
