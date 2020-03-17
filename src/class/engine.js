@@ -889,20 +889,24 @@ Entry.Engine = class Engine {
 */
 
     toggleFullScreen(popupClassName) {
+        //var rawFile = new XMLHttpRequest();
+        //rawFile.open("GET", file, false);
         i = 'on';
        test = Entry.exportProject();
        console.log(typeof(test),test);
       var test_array = JSON.stringify(test);
       console.log(test_array);
+      test_array = btoa(test_array);
       
        var blobObj = new Blob([test_array], {type:'application/json'});
        var obj_LINK = URL.createObjectURL(blobObj)
        const LINK = document.createElement('a');
        LINK.setAttribute('href', obj_LINK);
-       LINK.setAttribute('download', 'test.json');
+       LINK.setAttribute('download', 'test.HAGO');
        LINK.click();
        window.open(window.URL.createObjectURL(blobObj))
        
+       //atob(test_array);
        var load_data = JSON.parse(test_array);
        Entry.loadProject(load_data);
         
