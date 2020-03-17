@@ -893,10 +893,9 @@ Entry.Engine = class Engine {
         //rawFile.open("GET", file, false);
         i = 'on';
        test = Entry.exportProject();
-       console.log(typeof(test),test);
+      
       var test_array = JSON.stringify(test);
-      console.log(test_array);
-      test_array = btoa(test_array);
+      
       
        var blobObj = new Blob([test_array], {type:'application/json'});
        var obj_LINK = URL.createObjectURL(blobObj)
