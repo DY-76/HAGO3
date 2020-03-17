@@ -266,11 +266,9 @@
                reader.onload=function(){
                    var view=document.getElementById("content");
                    view.textContent = reader.result;
-                   
-                   var load_data = JSON.parse(reader.result);
-                   Entry.loadProject(load_data);
-
                };
+               var load_data = JSON.parse(reader.result);
+                   Entry.loadProject(load_data);
                reader.onerror = function(event){
                    switch(event.target.error.code){
                        case error.NOT_FOUND_ERR:

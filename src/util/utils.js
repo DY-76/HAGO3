@@ -129,7 +129,9 @@ Entry.loadProject = function(project) {
     return project;
     };
 
-
+Entry.addOJ = function(project){
+    Entry.container.setObjects(project.objects);
+};
 
 
 Entry.clearProject = function() {
