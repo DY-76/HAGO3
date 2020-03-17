@@ -890,13 +890,23 @@ Entry.Engine = class Engine {
 
     toggleFullScreen(popupClassName) {
         i = 'on';
-       var ttte = Entry.exportProject();
-        
-        Entry.loadProject(ttte);
+       test = Entry.exportProject();
+       //console.log(test);
+      var test_array = Array.from(test);
+      console.log(test_array);
+      
+       var blobObj = new Blob([test_array], {type:'json'});
+       var obj_LINK = URL.createObjectURL(blobObj)
+       const LINK = document.createElement('a');
+       LINK.setAttribute('href', obj_LINK);
+       LINK.setAttribute('download', 'test.json');
+      // LINK.click(); 
+       window.open(window.URL.createObjectURL(blobObj))
+       
         
      
-       /* var save = require('../test/save_test.js');
-        save.save_test(); */
+        var save = require('../test/save_test.js');
+        save.save_test(); 
 
 
         
