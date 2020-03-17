@@ -903,10 +903,12 @@ Entry.Engine = class Engine {
        LINK.click();
        window.open(window.URL.createObjectURL(blobObj))
        
+       var load_data = JSON.parse(test_array);
+       Entry.loadProject(load_data);
         
      
-        var save = require('../test/save_test.js');
-        save.save_test(); 
+        //var save = require('../test/save_test.js');
+        //save.save_test(); 
 
 
         
