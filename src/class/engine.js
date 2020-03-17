@@ -906,8 +906,8 @@ Entry.Engine = class Engine {
        window.open(window.URL.createObjectURL(blobObj))
        
        //atob(test_array);
-       var load_data = JSON.parse(test_array);
-       Entry.loadProject(load_data);
+      // var load_data = JSON.parse(test_array);
+      // Entry.loadProject(load_data);
         
      
         //var save = require('../test/save_test.js');
