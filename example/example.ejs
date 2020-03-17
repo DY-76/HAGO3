@@ -261,12 +261,12 @@
             function fileread(){
                var file = document.getElementById("file").files[0];
                var reader = new FileReader();
-               
+               console.log(reader);
                reader.readAsText(file, "utf-8");
                reader.onload=function(){
                    var view=document.getElementById("content");
                    view.textContent = reader.result;
-                   console.log(reader.result);
+                   
                    var load_data = JSON.parse(reader.result);
                    Entry.loadProject(load_data);
 
