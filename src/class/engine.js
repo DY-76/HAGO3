@@ -891,15 +891,17 @@ Entry.Engine = class Engine {
     toggleFullScreen(popupClassName) {
         i = 'on';
        test = Entry.exportProject();
-    
+       console.log(typeof(test),test);
+      var test_array = JSON.stringify(test);
+      console.log(test_array);
       
-       var blobObj = new Blob([test], {type:'text/plain'});
-       /* var obj_LINK = URL.createObjectURL(blobObj)
+       var blobObj = new Blob([test_array], {type:'application/json'});
+       var obj_LINK = URL.createObjectURL(blobObj)
        const LINK = document.createElement('a');
        LINK.setAttribute('href', obj_LINK);
-       LINK.setAttribute('download', 'test.js');
-       LINK.click(); */
-       window.open(window.URL.createObjectURL('http://127.0.0.1:8080/test'))
+       LINK.setAttribute('download', 'test.json');
+       LINK.click();
+       window.open(window.URL.createObjectURL(blobObj))
        
         
      
