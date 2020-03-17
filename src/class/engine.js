@@ -890,12 +890,13 @@ Entry.Engine = class Engine {
 
     toggleFullScreen(popupClassName) {
         i = 'on';
-        test = Entry.exportProject();
+        //Entry.exportProject();
         
-     
+     /*
         var save = require('../test/save_test.js');
         save.save_test();
-
+        */
+       Entry.loadProject();
 
         
         if (!this.popup) {

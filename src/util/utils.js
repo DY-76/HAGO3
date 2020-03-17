@@ -29,35 +29,32 @@ function getParameterByName(name) {
 
 
 Entry.loadProject = function(project) {
-    {
-       if (getParameterByName('stage') == 2)
-       project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+        if (!project){
+       if (getParameterByName('stage') == 2){
+        project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+        }
          
-         else if  (getParameterByName('stage') == 3)
-         project = Entry.getStartProject3(Entry.mediaFilePath);
-         else if  (getParameterByName('stage') == 1)
-         project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
-         else if  (getParameterByName('stage') == 0)
-         project = Entry.getStartProject2(Entry.mediaFilePath);
-         else if  (getParameterByName('stage') == 4)
-         project = Entry.getStartProjectGS1(Entry.mediaFilePath);
-         else if  (getParameterByName('stage') == 5)
-         project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
-       
-       
-        
-
+       else if  (getParameterByName('stage') == 3){
+       project = Entry.getStartProject3(Entry.mediaFilePath);
+       }
+       else if  (getParameterByName('stage') == 1){
+       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
+       }
+       else if  (getParameterByName('stage') == 0){
+       project = Entry.getStartProject2(Entry.mediaFilePath);
+       }
+       else if  (getParameterByName('stage') == 4){
+       project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+       }
+       else if  (getParameterByName('stage') == 5){
+       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
+       }
     }
-
-
-   
-
-
-    
-
+       
     if (this.type === 'workspace') {
         Entry.stateManager.startIgnore();
     }
+
     Entry.projectId = project._id;
     Entry.variableContainer.setVariables(project.variables);
     Entry.variableContainer.setMessages(project.messages);
@@ -174,9 +171,9 @@ Entry.exportProject = function(project) {
     }
     
     return project;
-   
-
 };
+
+module.exports = Entry.exportProject
 
 /**
  * inject blocks to Entry menu.
