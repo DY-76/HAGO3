@@ -43,7 +43,8 @@ Entry.loadProject = function(project) {
          project = Entry.getStartProjectGS1(Entry.mediaFilePath);
          else if  (getParameterByName('stage') == 5)
          project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
-       
+         else if  (getParameterByName('stage') == 20)
+         project = Entry.getStartProject20(Entry.mediaFilePath);
        
         
 
@@ -179,6 +180,7 @@ Entry.exportProject = function(project) {
     
     return project;
 };
+
 /*
 Entry.addobjectProject = function(project) {
     if (!project) {

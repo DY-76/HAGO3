@@ -579,7 +579,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
         variables: [
             {
                 name: Lang.Workspace.Variable_Timer,
-                id: 'brih',
+                id: 'bri2',
                 visible: false,
                 value: '0',
                 variableType: 'timer',
@@ -591,7 +591,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
             },
             {
                 name: Lang.Blocks.VARIABLE_get_canvas_input_value,
-                id: '1vu8',
+                id: '1vu2',
                 visible: false,
                 value: '0',
                 variableType: 'answer',
@@ -605,7 +605,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
         objects: [
             
             {
-                id: '7y0y11',
+                id: '7yzy11',
                 name: Lang.Blocks.Domino1,
                 label: {
                     ko: '도미노1',
@@ -678,7 +678,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
             },
             
             {
-                id: '7y0y12',
+                id: '7yzy12',
                 name: Lang.Blocks.Domino2,
                 label: {
                     ko: '도미노2',
@@ -705,7 +705,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 params: [
                     {
                         type: 'reach_something',
-                        params: [null, '7y0y11'],
+                        params: [null, '7yzy11'],
                         
                     },
                     
@@ -759,7 +759,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
             },
 
             {
-                id: '7y0y21',
+                id: '7yzy21',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
                     ko: '자동차',
@@ -786,7 +786,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 params: [
                     {
                         type: 'reach_something',
-                        params: [null, '7y0y12'],
+                        params: [null, '7yzy12'],
                         
                     },
                     
@@ -840,7 +840,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 active: true,
             },
             {
-                id: '7y0y13',
+                id: '7yzy13',
                 name: Lang.Blocks.Domino3,
                 label: {
                     ko: '도미노3',
@@ -867,7 +867,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 params: [
                     {
                         type: 'reach_something',
-                        params: [null, '7y0y21'],
+                        params: [null, '7yzy21'],
                         
                     },
                     
@@ -920,7 +920,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 active: true,
             },
             {
-                id: '7y0y14',
+                id: '7yzy14',
                 name: Lang.Blocks.Domino4,
                 label: {
                     ko: '도미노4',
@@ -948,7 +948,7 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 params: [
                     {
                         type: 'reach_something',
-                        params: [null, '7y0y13'],
+                        params: [null, '7yzy13'],
                         
                     },
                     
@@ -3986,6 +3986,126 @@ Entry.getStartProjectGS1_1 = function(mediaFilePath) {
                 }],
 
         expansionBlocks: [],
+        speed: 60,
+    };
+};
+
+Entry.getStartProject20 = function(mediaFilePath) {
+    return {
+        category: Lang.Menus.other,
+        scenes: [
+            {
+                name: `${Lang.Blocks.SCENE} `,
+                id: '7dwq',
+            },
+        ],
+        variables: [
+            {
+                name: Lang.Workspace.Variable_Timer,
+                id: 'brih',
+                visible: false,
+                value: '0',
+                variableType: 'timer',
+                x: 134,
+                y: -70,
+                array: [],
+                object: null,
+                isCloud: false,
+            },
+            {
+                name: Lang.Blocks.VARIABLE_get_canvas_input_value,
+                id: '1vu8',
+                visible: false,
+                value: '0',
+                variableType: 'answer',
+                x: 150,
+                y: -100,
+                array: [],
+                object: null,
+                isCloud: false,
+            },
+        ],
+        objects: [
+            {
+                id: '7y0y',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '엔트리봇',
+                    en: 'Entrybot',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                        {
+                            type: 'repeat_basic',
+                            statements: [[{ type: 'move_direction' }]],
+                        },
+                    ],
+                ],
+                selectedPictureId: 'vx80',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    sounds: [
+                        {
+                            duration: 1.3,
+                            ext: '.mp3',
+                            id: '8el5',
+                            fileurl: `${mediaFilePath}media/bark.mp3`,
+                            name: Lang.Blocks.doggi_bark,
+                            label: {
+                                ko: '강아지 짖는소리',
+                                en: "Doggi's Bark",
+                            },
+                        },
+                    ],
+                    pictures: [
+                        {
+                            id: 'vx80',
+                            fileurl: `${mediaFilePath}media/entrybot1.png`,
+                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            scale: 100,
+                            dimension: {
+                                width: 284,
+                                height: 350,
+                            },
+                        },
+                        {
+                            id: '4t48',
+                            fileurl: `${mediaFilePath}media/entrybot2.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 100,
+                            dimension: {
+                                width: 284,
+                                height: 350,
+                            },
+                        },
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 142,
+                    regY: 175,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 90,
+                    width: 284,
+                    height: 350,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+        ],
+        expansionBlocks: [],
+        aiUtilizeBlocks: [],
         speed: 60,
     };
 };

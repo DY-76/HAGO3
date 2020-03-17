@@ -41,7 +41,7 @@
     <input type="button" onclick="fileread()" value="파일 내용 확인">
     <br/>
     <table id="table"></table>
-    <textarea id="content" readonly style="width:600px; height:500px;"></textarea>
+    <textarea id="content" readonly ></textarea>
  
         
         <section>
@@ -210,6 +210,7 @@
                     textCodingEnable: true,
                 };
                 Entry.init(document.getElementById('workspace'), initOption);
+               
                 Entry.loadProject();
             });
           
@@ -266,6 +267,11 @@
                reader.onload=function(){
                    var view=document.getElementById("content");
                    view.textContent = reader.result;
+                   
+                   var load_data = JSON.parse(reader.result);
+                   Entry.clearProject();
+                   Entry.loadProject(load_data);
+
                };
                var load_data = JSON.parse(reader.result);
                    Entry.loadProject(load_data);
