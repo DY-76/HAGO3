@@ -84,13 +84,12 @@
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">Stage10</button>
 
 
+                        <%var SV_data = require('../src/save_PJ_data.js');%>
                         <script>
-                            var entry = require('../src');
-                            console.log(entry.save());
-                            var blobObj = new Blob(['test'], {type:'text/plain'});
+                            var blobObj = new Blob([], {type:'text/plain'});
 
                         </script>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="window.open(window.URL.createObjectURL(blobObj))">save_test</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="window.open(window.URL.createObjectURL(blobObj))">save</button>
                       </form>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_data" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -185,7 +184,6 @@
                 }
 
                 const workspace = Entry.getMainWS();
-
                 if (workspace) {
                     workspace.setMode(option);
                 } else {
