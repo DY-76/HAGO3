@@ -891,9 +891,9 @@ Entry.Engine = class Engine {
     toggleFullScreen(popupClassName) {
         i = 'on';
        test = Entry.exportProject();
-       console.log(typeof(test),test);
+      
       var test_array = JSON.stringify(test);
-      console.log(test_array);
+      
       
        var blobObj = new Blob([test_array], {type:'application/json'});
        var obj_LINK = URL.createObjectURL(blobObj)

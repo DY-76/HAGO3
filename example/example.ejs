@@ -36,7 +36,12 @@
     <body>
         <script src="/src/util/utils.js" ></script>
        
-        
+         <input id="file" type="file">
+    <input type="button" onclick="fileinfo()" value="파일 정보확인">
+    <input type="button" onclick="fileread()" value="파일 내용 확인">
+    <br/>
+    <table id="table"></table>
+    <textarea id="content" readonly style="width:600px; height:500px;"></textarea>
  
         
         <section>
@@ -49,9 +54,7 @@
             <!--<link rel="stylesheet" href="src/css/modal.css"> --> 
                 <script src="../entry-tool/dist/entry-tool.js"></script>
 
-                
-                   
-                     
+            
                    
 
                 <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #e3f2fd;">
@@ -246,7 +249,48 @@
             </div>
  
         </div>
+        <script type="text/javascript">
+            function fileinfo(){
+                   var file = document.getElementById("file").files[0];
+               document.getElementById("table").innerHTML += "<tr><td>파일이름</td><td>"+file.name+"</td></tr>";
+               document.getElementById("table").innerHTML += "<tr><td>파일크기</td><td>"+file.size+"</td></tr>";
+               document.getElementById("table").innerHTML += "<tr><td>파일타입</td><td>"+file.type+"</td></tr>";
+               document.getElementById("table").innerHTML += "<tr><td>파일수정날짜</td><td>"+file.lastModifiedDate+"</td></tr>";
         
+        
+            }
+            function fileread(){
+               var file = document.getElementById("file").files[0];
+               var reader = new FileReader();
+               
+               reader.readAsText(file, "utf-8");
+               reader.onload=function(){
+                   var view=document.getElementById("content");
+                   view.textContent = reader.result;
+                   console.log(reader.result);
+                   var load_data = JSON.parse(reader.result);
+                   Entry.loadProject(load_data);
+
+               };
+               reader.onerror = function(event){
+                   switch(event.target.error.code){
+                       case error.NOT_FOUND_ERR:
+                           alert("읽을 파일을 찾지 못하였습니다..");break;
+                       case error.SECURITY_ERR:
+                           alert("보안상 안전하지 않습니다..");break;
+                       case error.ABORT_ERR:
+                           alert("읽기가 중지되었습니다."); break;
+                       case error.NOT_READABLE_ERR:
+                           alert("읽기 권한이 없습니다."); break;
+                       case error.ENCODING_ERR:
+                           alert("파일 용량이 상한을 초과하였습니다."); break;
+        
+                   }
+              
+               };
+            }
+         </script>
+         
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
