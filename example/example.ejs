@@ -85,9 +85,15 @@
 
 
                         <script>
+<<<<<<< HEAD
                             
                             console.log();
                             var blobObj = new Blob(['aaaaa'], {type:'text/plain'});
+=======
+                            var entry = require('../src');
+                            console.log(entry.save());
+                            var blobObj = new Blob(['test'], {type:'text/plain'});
+>>>>>>> parent of e8d9efc... 다운로드 진행중
 
                         </script>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="window.open(window.URL.createObjectURL(blobObj))">save</button>
