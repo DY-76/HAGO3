@@ -892,9 +892,11 @@ Entry.Engine = class Engine {
         //var rawFile = new XMLHttpRequest();
         //rawFile.open("GET", file, false);
         i = 'on';
-       test = Entry.exportProject();
-      
-      var test_array = JSON.stringify(test);
+      // test = Entry.exportProject();
+      test = Entry.addobjectProject();
+      console.log(test);
+       Entry.Utils.addNewObject(test);
+      /*var test_array = JSON.stringify(test);
       
       
        var blobObj = new Blob([test_array], {type:'application/json'});
@@ -903,7 +905,7 @@ Entry.Engine = class Engine {
        LINK.setAttribute('href', obj_LINK);
        LINK.setAttribute('download', 'test.HAGO');
        LINK.click();
-       window.open(window.URL.createObjectURL(blobObj))
+       window.open(window.URL.createObjectURL(blobObj)) */
        
        //atob(test_array);
       // var load_data = JSON.parse(test_array);

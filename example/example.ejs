@@ -270,7 +270,8 @@
                    
                    var load_data = JSON.parse(reader.result);
                    Entry.clearProject();
-                   Entry.loadProject(load_data);
+                   Entry.Utils.addNewObject(load_data);
+                  //Entry.loadProject(load_data);
 
                };
                var load_data = JSON.parse(reader.result);
