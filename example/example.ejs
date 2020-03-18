@@ -269,8 +269,9 @@
                    view.textContent = reader.result;
                    
                    var load_data = JSON.parse(reader.result);
-                   //Entry.clearProject();
-                   Entry.addOJ(load_data);
+                   Entry.clearProject();
+                   Entry.Utils.addNewObject(load_data);
+                  //Entry.loadProject(load_data);
 
                };
                var load_data = JSON.parse(reader.result);
