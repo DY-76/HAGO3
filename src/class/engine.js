@@ -888,6 +888,74 @@ Entry.Engine = class Engine {
 
 */
 
+addobjectproject(){
+  var
+   addobject = Entry.exportProject();
+    Entry.Utils.addNewObject(addobject);
+}
+saveobjectproject(){
+    test = Entry.exportProject();
+    var test_array = JSON.stringify(test);
+
+    var blobObj = new Blob([test_array], {type:'application/json'});
+       var obj_LINK = URL.createObjectURL(blobObj)
+       const LINK = document.createElement('a');
+       LINK.setAttribute('href', obj_LINK);
+       LINK.setAttribute('download', 'test.HAGO');
+       LINK.click();
+       //window.open(window.URL.createObjectURL(blobObj))
+       
+}
+fileinfo(){
+    var file = document.getElementById("file").files[0];
+document.getElementById("table").innerHTML += "<tr><td>파일이름</td><td>"+file.name+"</td></tr>";
+document.getElementById("table").innerHTML += "<tr><td>파일크기</td><td>"+file.size+"</td></tr>";
+document.getElementById("table").innerHTML += "<tr><td>파일타입</td><td>"+file.type+"</td></tr>";
+document.getElementById("table").innerHTML += "<tr><td>파일수정날짜</td><td>"+file.lastModifiedDate+"</td></tr>";
+
+
+}
+
+fileread(){
+    var file = document.getElementById("file").files[0];
+    var reader = new FileReader();
+    console.log(reader);
+    reader.readAsText(file, "utf-8");
+    reader.onload=function(){
+        var view=document.getElementById("content");
+        view.textContent = reader.result;
+        
+        var load_data = JSON.parse(reader.result);
+        Entry.clearProject();
+        
+       Entry.loadProject(load_data);
+
+    };
+    var load_data = JSON.parse(reader.result);
+        Entry.loadProject(load_data);
+    reader.onerror = function(event){
+        switch(event.target.error.code){
+            case error.NOT_FOUND_ERR:
+                alert("읽을 파일을 찾지 못하였습니다..");break;
+            case error.SECURITY_ERR:
+                alert("보안상 안전하지 않습니다..");break;
+            case error.ABORT_ERR:
+                alert("읽기가 중지되었습니다."); break;
+            case error.NOT_READABLE_ERR:
+                alert("읽기 권한이 없습니다."); break;
+            case error.ENCODING_ERR:
+                alert("파일 용량이 상한을 초과하였습니다."); break;
+
+        }
+   
+    };
+ }
+loadobjectproject(){
+   
+    fileread();
+ 
+}
+
     toggleFullScreen(popupClassName) {
         //var rawFile = new XMLHttpRequest();
         //rawFile.open("GET", file, false);

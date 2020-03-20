@@ -36,12 +36,7 @@
     <body>
         <script src="/src/util/utils.js" ></script>
        
-         <input id="file" type="file">
-    <input type="button" onclick="fileinfo()" value="파일 정보확인">
-    <input type="button" onclick="fileread()" value="파일 내용 확인">
-    <br/>
-    <table id="table"></table>
-    <textarea id="content" readonly ></textarea>
+        
  
         
         <section>
@@ -75,6 +70,21 @@
                               <a class="dropdown-item" href="http://127.0.0.1:8080/?make.stage=10">test_make</a>
                             </div>
                           </li>
+                          <li class="nav-item dropdown" style="text-align: center;">
+                            <button class="nav-link dropdown-toggle btn-lg" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                저장 및 불러오기
+                              </button>
+                            <div class="dropdown-menu" aria-labelledby="subject_DD">
+                              <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">저장</a>
+                              <input id="file" type="file">
+                              <input type="button" onclick="fileread()" value="파일 내용 확인">
+                              <br/>
+                              <table id="table"></table>
+                              <textarea id="content" readonly ></textarea>
+                              <a class="dropdown-item" onclick="Entry.engine.loadobjectproject()">불러오기</a>
+                              <a class="dropdown-item" href="http://127.0.0.1:8080/?make.stage=10">test_make</a>
+                            </div>
+                          </li>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'">Stage1</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=2'">Stage2</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'">Stage3</button>
@@ -93,7 +103,7 @@
                             var blobObj = new Blob(['test'], {type:'text/plain'});
 
                         </script>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.toggleFullScreen()">load</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.addobjectproject()">load</button>
                       </form>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_data" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
