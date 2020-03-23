@@ -3,6 +3,7 @@
 import { GEHelper } from '../graphicEngine/GEHelper';
 import _uniq from 'lodash/uniq';
 import FontFaceOnload from 'fontfaceonload';
+import * as sgm from '../stage/stagemanager.js';
 
 
 Entry.Utils = {};
@@ -22,7 +23,6 @@ Entry.clipboard = null;
  * @param {?Project} project
  */
 
-import { alone_stage1 } from '../stage/alone_stage1';
 
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -36,24 +36,22 @@ Entry.loadProject = function(project) {
    if (!project){ {
        if (getParameterByName('stage') == 2){
       // project = Entry.getStartProjectGS1(Entry.mediaFilePath);
-      var alone_stage2 = JSON.stringify(alone_stage1);
-    var load_data2 = JSON.parse(alone_stage2);
-    console.log(load_data2);
-    project = load_data2;
+      project = sgm.alone_Stage(2);
+      
        }
+       else if  (getParameterByName('stage') == 3)
+       project = Entry.getStartProject3(Entry.mediaFilePath);
+       else if  (getParameterByName('stage') == 1)
+       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
+       else if  (getParameterByName('stage') == 0)
+       project = Entry.getStartProject2(Entry.mediaFilePath);
+       else if  (getParameterByName('stage') == 4)
+       project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+       else if  (getParameterByName('stage') == 5)
+       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
+       else if  (getParameterByName('stage') == 20)
+       project = Entry.getStartProject20(Entry.mediaFilePath);
          
-         else if  (getParameterByName('stage') == 3)
-         project = Entry.getStartProject3(Entry.mediaFilePath);
-         else if  (getParameterByName('stage') == 1)
-         project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
-         else if  (getParameterByName('stage') == 0)
-         project = Entry.getStartProject2(Entry.mediaFilePath);
-         else if  (getParameterByName('stage') == 4)
-         project = Entry.getStartProjectGS1(Entry.mediaFilePath);
-         else if  (getParameterByName('stage') == 5)
-         project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
-         else if  (getParameterByName('stage') == 20)
-         project = Entry.getStartProject20(Entry.mediaFilePath);
        
         
     }}
