@@ -963,19 +963,10 @@ loadobjectproject(){
  
 }
 
- getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-
     toggleFullScreen(popupClassName) {
         //var rawFile = new XMLHttpRequest();
         //rawFile.open("GET", file, false);
         i = 'on';
-        console.log(this.getParameterByName('stage'));
        test = Entry.exportProject();
       /* test = Entry.addobjectProject();
       console.log(test);

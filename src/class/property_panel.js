@@ -2,7 +2,7 @@
  * @fileoverview PropertyPanel shows project's property
  */
 'use strict';
-import { stage_01 } from '../stage/1.js';
+
 console.log('a');
 
 Entry.PropertyPanel = function() {
@@ -66,6 +66,7 @@ Entry.PropertyPanel = function() {
                     $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#754F44\" face=\"Do Hyeon\">▶'앞으로 한칸'블록을 블록 꾸러미에서<br> 블록 조립소로 옮기셈</font><br/>"));
 
                     $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#754F44\" face=\"Do Hyeon\">▶블록을 완성시켜, 바구니에 넣으셈</font><br/>"));
+
                     break;
                 case 2 :
                     $(this).before($('<div>').html("<div class='help_size' style='overflow:auto; width:800px; top:500px; bottom:0;';><font size='6'> test1<br>test<br>test3<br>test<br>test<br>test6<br>test </font></div>"));
