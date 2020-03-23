@@ -4,6 +4,7 @@ import { GEHelper } from '../graphicEngine/GEHelper';
 import _uniq from 'lodash/uniq';
 import FontFaceOnload from 'fontfaceonload';
 
+
 Entry.Utils = {};
 
 Entry.TEXT_ALIGN_CENTER = 0;
@@ -20,6 +21,9 @@ Entry.clipboard = null;
  * Load project
  * @param {?Project} project
  */
+
+import { alone_stage1 } from '../stage/alone_stage1';
+
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -30,8 +34,13 @@ function getParameterByName(name) {
 
 Entry.loadProject = function(project) {
    if (!project){ {
-       if (getParameterByName('stage') == 2)
-       project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+       if (getParameterByName('stage') == 2){
+      // project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+      var alone_stage2 = JSON.stringify(alone_stage1);
+    var load_data2 = JSON.parse(alone_stage2);
+    console.log(load_data2);
+    project = load_data2;
+       }
          
          else if  (getParameterByName('stage') == 3)
          project = Entry.getStartProject3(Entry.mediaFilePath);
@@ -47,13 +56,7 @@ Entry.loadProject = function(project) {
          project = Entry.getStartProject20(Entry.mediaFilePath);
        
         
-
     }}
-
-
-
-
-    
 
     if (this.type === 'workspace') {
         Entry.stateManager.startIgnore();
@@ -181,7 +184,7 @@ Entry.exportProject = function(project) {
     return project;
 };
 
-
+/*
 Entry.addobjectProject = function(project) {
     if (!project) {
         project = {};
@@ -192,10 +195,14 @@ Entry.addobjectProject = function(project) {
     }
     project.objects = Entry.container.toJSON();
     const objects = project.objects;
+    project.scenes = Entry.scene.toJSON();
     project.variables = Entry.variableContainer.getVariableJSON();
     project.messages = Entry.variableContainer.getMessageJSON();
     project.functions = Entry.variableContainer.getFunctionJSON();
+    project.speed = Entry.FPS;
+    project.interface = Entry.captureInterfaceState();
     project.expansionBlocks = Entry.expansionBlocks;
+    project.externalModules = Entry.EXTERNAL_MODULE_LIST;
 
     if (!objects || !objects.length) {
         return false;
@@ -205,7 +212,7 @@ Entry.addobjectProject = function(project) {
    
 
 };
-
+*/
 /**
  * inject blocks to Entry menu.
  * Available block is different by object type.

@@ -4,7 +4,6 @@
 'use strict';
 
 import { GEHelper } from '../graphicEngine/GEHelper';
-//import { test } from '../class/engine';
 import { alone_stage1 } from '../stage/alone_stage1';
 
 var i = 'off';
