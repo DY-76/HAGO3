@@ -4,8 +4,8 @@
 'use strict';
 
 import { GEHelper } from '../graphicEngine/GEHelper';
-
-
+//import { test } from '../class/engine';
+import { alone_stage1 } from '../stage/alone_stage1';
 
 var i = 'off';
 var test;
@@ -887,6 +887,13 @@ Entry.Engine = class Engine {
     }
 
 */
+openproject(){
+    var alone_stage2 = JSON.stringify(alone_stage1);
+    var load_data2 = JSON.parse(alone_stage2);
+    console.log(load_data2);
+    Entry.clearProject();
+    Entry.loadProject(load_data2);
+}
 
 addobjectproject(){
   var
