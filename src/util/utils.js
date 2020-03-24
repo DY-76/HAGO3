@@ -36,7 +36,7 @@ Entry.loadProject = function(project) {
    if (!project){ {
        if (getParameterByName('stage') == 2){
       // project = Entry.getStartProjectGS1(Entry.mediaFilePath);
-      project = sgm.alone_Stage(2);
+      project = sgm.Stage_out('alone',2);
       
        }
        else if  (getParameterByName('stage') == 3)

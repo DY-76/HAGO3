@@ -1,20 +1,17 @@
 'use strict';
-import { alone_stage1 } from '../stage/alone_stage1';
+import * as alone_stage from './alone_stage.js';
 
-export function alone_Stage(i){
-    switch (i) {
-        case 1:
-
+export function Stage_out(name,i){
+    switch (name) {
+        case 'alone':
+            var load_data = JSON.parse(alone_stage.alone_stage_sel(i));
             break;
-        case 2:
-            var alone_stage2 = JSON.stringify(alone_stage1);
+        case 'test':
+            
             break;
-
         default :
+            console.log(load_data);
     }
-    var load_data2 = JSON.parse(alone_stage2);
-    console.log(load_data2);
-
-   return load_data2;
-
+    
+   return load_data;
 }
