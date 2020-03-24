@@ -96,7 +96,7 @@
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=9'">Stage9</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">Stage10</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.openproject()">test</button>
-
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';">add object</button>
                         <script>
                             window.PUBLIC_PATH_FOR_ENTRYJS = 'lib/entry-js/dist/';
                             var test1 = new FileReader();
@@ -256,6 +256,22 @@
                         <td><button type="button" class="btn btn-primary" id="Btn_next" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=next_stage">NEXT</button></td>
 
                     </tr>
+                </table>
+            </div>
+ 
+        </div>
+        <div id="addobjectmodal" class="OBmodal">  
+            <!-- Modal content -->
+            <div class="OBmodal-content" style="width: 50%;height: 60%;margin-top: 10em">
+                <span class="OBclose">&times;</span>
+                <table border="0" style="text-align: center">
+	                <tr>
+	                    <td colspan="2"><br><h1>test</h1><br></td>
+	                </tr>
+	                <tr>
+	                    <td colspan="2"><img src="/images/media/test_ing.png" alt width="420" height="auto">    </td>
+	                </tr>
+
                 </table>
             </div>
  
