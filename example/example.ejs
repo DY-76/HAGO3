@@ -103,7 +103,11 @@
                             var blobObj = new Blob(['test'], {type:'text/plain'});
 
                         </script>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.addobjectproject()">load</button>
+                        <script src='../src/object/objects.js'></script>
+                            
+                        </script>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.addobjectproject('box')">load</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.addobjectproject('testman')">testman</button>
                       </form>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_data" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

@@ -5,6 +5,7 @@
 
 import { GEHelper } from '../graphicEngine/GEHelper';
 import { alone_stage1 } from '../stage/alone_stage';
+import * as add from '../object/objects.js';
 
 var i = 'off';
 var test;
@@ -894,10 +895,10 @@ openproject(){
     Entry.loadProject(load_data2);
 }
 
-addobjectproject(){
-  var
-   addobject = Entry.exportProject();
-    Entry.Utils.addNewObject(addobject);
+addobjectproject(n){
+    
+    add.objectadd(n);
+
 }
 saveobjectproject(){
     test = Entry.exportProject();
