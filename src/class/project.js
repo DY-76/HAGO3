@@ -4030,8 +4030,8 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 id: '7y0y',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
-                    ko: 'ㅎㅎ',
-                    en: 'haha',
+                    ko: '피카츄',
+                    en: 'pikachu',
                 },
                 script: [
                     [
@@ -4060,12 +4060,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}object/testman.png`,
+                            fileurl: `${mediaFilePath}object/pikachu.gif`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 504,
-                                height: 284,
+                                width: 800,
+                                height: 800,
                             },
                         },
                     ],
@@ -4073,14 +4073,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 252,
-                    regY: 142,
+                    regX: 400,
+                    regY: 400,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 504,
-                    height: 284,
+                    width: 800,
+                    height: 800,
                     visible: true,
                 },
                 lock: false,
