@@ -33,11 +33,13 @@
             width: 50%; /* Could be more or less, depending on screen size */                          
         }
         .OBmodal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 50%; /* Could be more or less, depending on screen size */                          
+            height: 610px; 
+            width: 680px; 
+            margin:-300px 0px 0px -315px; 
+            top: 50%; 
+            left: 50%; 
+            position: absolute; 
+            background-color:silver
         }
         /* The Close Button */
         .close {

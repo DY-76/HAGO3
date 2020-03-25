@@ -6,8 +6,8 @@
         //var btn = document.getElementById("myBtn");"
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];                                          
-        var OBspan = document.getElementsByClassName("OBclose")[0]; 
+        var span = document.getElementsByClassName("close")[0];   
+        var OBspan = document.getElementsByClassName("OBclose");                                       
         // When the user clicks on the button, open the modal 
         /*
         btn.onclick = function() {
@@ -17,10 +17,13 @@
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
+            
         }
         OBspan.onclick = function() {
             OBmodal.style.display = "none";
         }
+        
+        
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
