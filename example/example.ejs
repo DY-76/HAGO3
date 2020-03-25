@@ -23,16 +23,23 @@
         <link href="https://playentry.org/lib/entry-tool/dist/entry-tool.css" rel="stylesheet"/>
 
         <link rel="stylesheet" type="text/css" href="/src/css/modal.css">
+        <link rel="stylesheet" type="text/css" href="/example/sample.css">
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready( function() {
+	            $("#addobjectmodal").load("/example/addobjectmodal.html");
+            });
+        </script>
+
     </head>
     
-   
 
-
-    
     <body>
         <script src="/src/util/utils.js" ></script>
        
@@ -60,7 +67,7 @@
                     
                     
                     <form class="collapse navbar-collapse" id="nav_data">
-                        <li class="nav-item dropdown" style="text-align: center;">
+                        <ul class="nav-item dropdown" style="text-align: center;">
                             <button class="nav-link dropdown-toggle btn-lg" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 subject
                               </button>
@@ -69,8 +76,8 @@
                               <a class="dropdown-item" href="http://127.0.0.1:8080/?stage=2">질량</a>
                               <a class="dropdown-item" href="http://127.0.0.1:8080/?make.stage=10">test_make</a>
                             </div>
-                          </li>
-                          <li class="nav-item dropdown" style="text-align: center;">
+                        </ul>
+                          <ul class="nav-item dropdown" style="text-align: center;">
                             <button class="nav-link dropdown-toggle btn-lg" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 저장 및 불러오기
                               </button>
@@ -84,7 +91,7 @@
                               <a class="dropdown-item" onclick="Entry.engine.loadobjectproject()">불러오기</a>
                               <a class="dropdown-item" href="http://127.0.0.1:8080/?make.stage=10">test_make</a>
                             </div>
-                          </li>
+                        </ul>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'">Stage1</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=2'">Stage2</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'">Stage3</button>
@@ -265,21 +272,7 @@
  
         </div>
         <div id="addobjectmodal" class="OBmodal">  
-            <!-- Modal content -->
-            <div class="OBmodal-content" style="width: 50%;height: 60%;margin-top: 10em">
-                <span class="OBclose">&times;</span>
-                <table border="0" style="text-align: center">
-	                <tr>
-	                    <td colspan="2"><br><h1>test</h1><br></td>
-	                </tr>
-	                <tr>
-                        <td><button type="button" class="btn btn-primary" id="Btn_back" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="Entry.engine.addobjectproject('testman')" ><img src="/images/object/testman.png"></button></td>
-                        <td><button type="button" class="btn btn-primary" id="Btn_next" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="Entry.engine.addobjectproject('box')"><img src="/images/object/box.png"></button></td>
-	                </tr>
-
-                </table>
-            </div>
- 
+            
         </div>
         <script type="text/javascript">
             function fileinfo(){
@@ -330,7 +323,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="/src/class/modal.js"></script>
+    <script src="/src/class/modal.js"></script>
 
 
 
