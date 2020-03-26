@@ -82,16 +82,14 @@
                                 저장 및 불러오기
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
-                              <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a>
-                              <input id="fileSel" type="file" accept=".HAGO">
-                              <button onclick="Entry.engine.loadobjectproject()">vkdlf</button>
-                              <div style="display: none;">
-                              <input id="fileSel" type="file" accept=".HAGO" onchange="Entry.engine.loadobjectproject()">
-                            </div>
-                              <label for="fileSel">이곳을 누르세요</label>
+                              <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">저장</a>
+                              <input id="file" type="file">
+                              <input type="button" onclick="fileread()" value="파일 내용 확인">
                               <br/>
                               <table id="table"></table>
-                              <div style="display:none"> <textarea id="content" readonly ></textarea> </div>
+                              <textarea id="content" readonly ></textarea>
+                              <a class="dropdown-item" onclick="Entry.engine.loadobjectproject()">불러오기</a>
+                              <a class="dropdown-item" href="http://127.0.0.1:8080/?make.stage=10">test_make</a>
                             </div>
                         </ul>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'">Stage1</button>
@@ -104,6 +102,7 @@
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=8'">Stage8</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=9'">Stage9</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">Stage10</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.openproject()">test</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';">add object</button>
                         <script>
                             window.PUBLIC_PATH_FOR_ENTRYJS = 'lib/entry-js/dist/';
@@ -114,6 +113,8 @@
                         <script src='../src/object/objects.js'></script>
                             
                         </script>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.addobjectproject('box')">load</button>
+                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="Entry.engine.addobjectproject('testman')">testman</button>
                       </form>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_data" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -216,6 +217,9 @@
             };
         </script>
 
+        
+
+ 
         
         </div>
         
