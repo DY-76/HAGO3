@@ -603,204 +603,17 @@ Entry.getStartProject2 = function(mediaFilePath) {
             },
         ],
         objects: [
-            
             {
-                id: '7yzy11',
-                name: Lang.Blocks.Domino1,
-                label: {
-                    ko: '도미노1',
-                    en: 'Domino1',
-                },
-                script: [
-                    [
-                        {
-                            type: 'when_run_button_click',
-                            x: 40,
-                            y: 50,
-                        },
-                        
-                    
-                       
-                        {
-                            type : 'repeat_inf',
-
-                            
-                            
-                        
-                        
-                            statements: [[
-                                {type: 'rotate_by_time'},
-                    { params: ['thisOnly', null],
-                        type: 'stop_object',
-                
-                                }]]
-                            
-                        },
-
-                     
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/domino.png`,
-                            name: `${Lang.Blocks.Domino1}1`,
-                            scale: 100,
-                            dimension: {
-                                width: 326,
-                                height: 545,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: -400,
-                    y: -180,
-                    regX: 142,
-                    regY: 500,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 326,
-                    height: 545,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
-            
-            {
-                id: '7yzy12',
-                name: Lang.Blocks.Domino2,
-                label: {
-                    ko: '도미노2',
-                    en: 'Domino',
-                },
-                script: [
-                    [
-                        {
-                            type: 'when_run_button_click',
-                            x: 40,
-                            y: 50,
-                        },
-                        {
-                            type : 'repeat_inf',
-
-                            
-                            
-                        
-                        
-                            statements: [[
-                                { 
-                                    type: '_if',
-                       
-                params: [
-                    {
-                        type: 'reach_something',
-                        params: [null, '7yzy11'],
-                        
-                    },
-                    
-                ],
-                statements: 
-                [[
-                    {type: 'rotate_by_time'},
-                    { params: ['thisOnly', null],
-                        type: 'stop_object' },
-                ]]
-                                }]]
-                            
-                        },
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/domino.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
-                            scale: 100,
-                            dimension: {
-                                width: 326,
-                                height: 545,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: -250,
-                    y: -180,
-                    regX: 142,
-                    regY: 500,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 326,
-                    height: 545,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
-
-            {
-                id: '7yzy21',
+                id: '7y0y',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
-                    ko: '자동차',
-                    en: 'car',
+                    ko: '피카츄',
+                    en: 'pikachu',
                 },
                 script: [
                     [
-                        {
-                            type: 'when_run_button_click',
-                            x: 40,
-                            y: 50,
-                        },
-                        {
-                            type : 'repeat_inf',
-
-                            
-                            
                         
                         
-                            statements: [[
-                                { 
-                                    type: '_if',
-                       
-                params: [
-                    {
-                        type: 'reach_something',
-                        params: [null, '7yzy12'],
-                        
-                    },
-                    
-                ],
-                statements: 
-                [[
-                    {type: 'move_xy_time3'},
-                    
-                ]]
-                                }]]
-                            
-                        },
-                    
-                       
                     ],
                 ],
                 selectedPictureId: 'vx80',
@@ -808,200 +621,50 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    
-                    pictures: [
+                    sounds: [
                         {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/car.png`,
-                            name: `${Lang.Blocks.car}2`,
-                            scale: 50,
-                            dimension: {
-                                width: 500,
-                                height: 227,
+                            duration: 1.3,
+                            ext: '.mp3',
+                            id: '8el5',
+                            fileurl: `${mediaFilePath}media/bark.mp3`,
+                            name: Lang.Blocks.doggi_bark,
+                            label: {
+                                ko: '강아지 짖는소리',
+                                en: "Doggi's Bark",
                             },
                         },
-                       
                     ],
-                },
-                entity: {
-                    x: -150,
-                    y: -180,
-                    regX: 118,
-                    regY: 135,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 500,
-                    height: 227,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
-            {
-                id: '7yzy13',
-                name: Lang.Blocks.Domino3,
-                label: {
-                    ko: '도미노3',
-                    en: 'Domino',
-                },
-                script: [
-                    [
-                        {
-                            type: 'when_run_button_click',
-                            x: 40,
-                            y: 50,
-                        },
-                        {
-                            type : 'repeat_inf',
-
-                            
-                            
-                        
-                        
-                            statements: [[
-                                { 
-                                    type: '_if',
-                       
-                params: [
-                    {
-                        type: 'reach_something',
-                        params: [null, '7yzy21'],
-                        
-                    },
-                    
-                ],
-                statements: 
-                [[
-                    {type: 'rotate_by_time'},
-                    { params: ['thisOnly', null],
-                        type: 'stop_object' },
-                ]]
-                                }]]
-                            
-                        },
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                sprite: {
-                    
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}media/domino.png`,
+                            fileurl: `${mediaFilePath}object/pikachu.gif`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 326,
-                                height: 545,
+                                width: 800,
+                                height: 800,
                             },
                         },
-                       
                     ],
                 },
                 entity: {
-                    x: 250,
-                    y: -180,
-                    regX: 142,
-                    regY: 500,
+                    x: 0,
+                    y: 0,
+                    regX: 400,
+                    regY: 400,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 326,
-                    height: 545,
+                    width: 800,
+                    height: 800,
                     visible: true,
                 },
                 lock: false,
                 active: true,
             },
-            {
-                id: '7yzy14',
-                name: Lang.Blocks.Domino4,
-                label: {
-                    ko: '도미노4',
-                    en: 'Domino',
-                },
-                
-                script: [
-                    [
-                        {
-                            type: 'when_run_button_click',
-                            x: 40,
-                            y: 50,
-                        },
-                        {
-                            type : 'repeat_inf',
-
-                            
-                            
-                        
-                        
-                            statements: [[
-                                { 
-                                    type: '_if',
-                       
-                params: [
-                    {
-                        type: 'reach_something',
-                        params: [null, '7yzy13'],
-                        
-                    },
-                    
-                ],
-                statements: 
-                [[
-                    {type: 'rotate_by_time'},
-                    {type: 'next_popup'},
-                    { params: ['thisOnly', null],
-                        type: 'stop_object' },
-                ]]
-                                }]]
-                            
-                        },
-                    ],
-                ],
-                selectedPictureId: 'vx80',
-                objectType: 'sprite',
-                rotateMethod: 'free',
-                scene: '7dwq',
-                
-                sprite: {
-                    
-                    pictures: [
-                        {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}media/domino.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
-                            scale: 100,
-                            dimension: {
-                                width: 326,
-                                height: 545,
-                            },
-                        },
-                       
-                    ],
-                },
-                entity: {
-                    x: 400,
-                    y: -180,
-                    regX: 142,
-                    regY: 500,
-                    scaleX: 0.3154574132492113,
-                    scaleY: 0.3154574132492113,
-                    rotation: 0,
-                    direction: 90,
-                    width: 326,
-                    height: 545,
-                    visible: true,
-                },
-                lock: false,
-                active: true,
-            },
+           
+           
             
         ],
         

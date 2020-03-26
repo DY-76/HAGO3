@@ -23,7 +23,7 @@ Entry.PropertyPanel = function() {
         }); 
      
       
-/*
+
         this._tabView = Entry.Dom('div', {
             class: 'propertyTab',
             parent: this._view,
@@ -32,7 +32,7 @@ Entry.PropertyPanel = function() {
         this._contentView = Entry.Dom('div', {
             class: 'propertyContent',
             parent: this._view,
-        });   */
+        });   
 
         /*
 

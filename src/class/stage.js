@@ -37,8 +37,8 @@ Entry.Stage = function() {
  Entry.Stage.prototype.initStage = function(canvas) {
      this._app = GEHelper.newApp(canvas);
      this.canvas = this._app.stage;
-     this.canvas.x = 1920 / 1.5 / 2;
-     this.canvas.y = 1080 / 1.5 / 2;
+     this.canvas.x = 960 / 1.5 / 2;
+     this.canvas.y = 480 / 1.5 / 2;
      this.canvas.scaleX = this.canvas.scaleY = 2 / 1.5;
 
      this.background = GEHelper.newGraphic();
@@ -529,8 +529,8 @@ Entry.Stage.prototype.initWall = function() {
     };
 
     wall.up = newSide(-480, -270 - 30, 960 / 30, 0);
-      wall.down = newSide(-240, 405, 960 / 30, 0);
-      wall.right = newSide(720, -135, 0, 540 / 30);
+      wall.down = newSide(-480, 270, 960 / 30, 0);
+      wall.right = newSide(480, -270, 0, 540 / 30);
       wall.left = newSide(-480 - 30, -270, 0, 540 / 30);
 
     this.canvas.addChild(wall);

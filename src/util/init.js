@@ -301,8 +301,8 @@ Entry.createDom = function(container, option) {
         const canvas = Entry.createElement('canvas');
         canvas.addClass('entryCanvasWorkspace');
         canvas.id = 'entryCanvas';
-        canvas.width = 1280;
-        canvas.height = 720;
+        canvas.width = 640;
+        canvas.height = 360;
         engineView.insertBefore(canvas, this.engine.buttonWrapper);
 
         canvas.addEventListener('mousewheel', (evt) => {

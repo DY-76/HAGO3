@@ -24,6 +24,7 @@
 
         <link rel="stylesheet" type="text/css" href="/src/css/modal.css">
         <link rel="stylesheet" type="text/css" href="/example/sample.css">
+     
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
@@ -103,6 +104,8 @@
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=9'">Stage9</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">Stage10</button>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';">add object</button>
+
+                        
                         <script>
                             window.PUBLIC_PATH_FOR_ENTRYJS = 'lib/entry-js/dist/';
                             var test1 = new FileReader();
@@ -213,7 +216,13 @@
                 }
             };
         </script>
+<script>
+    objectmanager1.onclick = function() {
+        propertyContent.style.display = "none";
 
+                            
+                        }
+</script>
         
         </div>
         
