@@ -83,9 +83,8 @@
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
                               <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">저장</a>
-                              <input type="file"id="FileSel" onchange="Entry.engine.loadobjectproject()" accept=".HAGO">
-                              <label for="FileSel">aaavvav</label>
-
+                              <input id="file" type="file">
+                              <input type="button" onclick="fileread()" value="파일 내용 확인">
                               <br/>
                               <table id="table"></table>
                               <textarea id="content" readonly ></textarea>
