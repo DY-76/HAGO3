@@ -83,11 +83,13 @@
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
                               <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a>
-                              <input id="fileSel" type="file" accept=".HAGO" onchange="Entry.engine.loadobjectproject()">
-                              <label for="fileSel">이곳을 누르세요</label>
+                              <div style="display: none;">
+                              <input id="file" type="file" onchange="Entry.engine.loadobjectproject()" accept=".HAGO">
+                              <textarea id="content" readonly ></textarea>
+                            </div>
+                              <label for="file">이곳을 누르세요</label>
                               <br/>
-                              <table id="table"></table>
-                              <div style="display:none"> <textarea id="content" readonly ></textarea> </div>
+                              
                             </div>
                         </ul>
                         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'">Stage1</button>
