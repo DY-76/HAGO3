@@ -6,8 +6,7 @@
         //var btn = document.getElementById("myBtn");"
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];   
-        var OBspan = document.getElementsByClassName("OBclose");                                       
+        var span = document.getElementsByClassName("close")[0];                                         
         // When the user clicks on the button, open the modal 
         /*
         btn.onclick = function() {
@@ -19,9 +18,6 @@
             modal.style.display = "none";
             
         }
-        OBspan.onclick = function() {
-            OBmodal.style.display = "none";
-        }
         
         
         // When the user clicks anywhere outside of the modal, close it
@@ -31,5 +27,7 @@
             }
             if (event.target == OBmodal) {
                 OBmodal.style.display = "none";
+                $("#DPS-tab").get(0).click();
+                $("#showall-tab").get(0).click();
             }
         }
