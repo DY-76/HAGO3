@@ -167,18 +167,19 @@ Entry.Playground = class Playground {
             .bindOnClick(() => {
                 Entry.do('playgroundChangeViewMode', 'picture', that.selectedViewMode);
             })
-           // .appendTo(tabList);  모양 텝
-           .appendTo();  
+        //.appendTo(tabList); 모양 텝
+           .appendTo(tabList);  
         pictureTab.innerHTML = Lang.Workspace.tab_picture;
         this.tabViewElements.picture = pictureTab;
         this.pictureTab = pictureTab; 
 
         const textboxTab = Entry.createElement('li', 'entryTextboxTab')
             .addClass('entryTabListItemWorkspace entryRemove')
-            .appendTo() 
+            .appendTo() //텍스트 텝
             .bindOnClick(() => {
                 Entry.do('playgroundChangeViewMode', 'text', that.selectedViewMode);
             });
+            
         textboxTab.innerHTML = Lang.Workspace.tab_text;
         this.tabViewElements.text = textboxTab;
         this.textboxTab = textboxTab;
@@ -189,6 +190,7 @@ Entry.Playground = class Playground {
             .bindOnClick(() => {
                 Entry.do('playgroundChangeViewMode', 'sound', that.selectedViewMode);
             });
+            
         soundTab.innerHTML = Lang.Workspace.tab_sound;
         this.tabViewElements.sound = soundTab;
         this.soundTab = soundTab;
