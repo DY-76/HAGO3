@@ -67,53 +67,53 @@ html {
 .home {
   background-color: #1ba5cd;
   top: 0%;
-  left: 225%;
+  left: -225%;
   background-image: url(https://bennettfeely.com/cdpn/home.svg);
   -webkit-transition-duration: 0.525s;
           transition-duration: 0.525s;
 }
 .closed .home {
-  -webkit-transform: translate3d(-225%, -10%, 0) rotate(-180deg);
-          transform: translate3d(-225%, -10%, 0) rotate(-180deg);
+  -webkit-transform: translate3d(225%, -10%, 0) rotate(-180deg);
+          transform: translate3d(225%, -10%, 0) rotate(-180deg);
 }
 
 .music {
   background-color: #1ab254;
   top: 86.103675%;
-  left: 207.873%;
+  left: -207.873%;
   background-image: url(https://bennettfeely.com/cdpn/music.svg);
   -webkit-transition-duration: 0.675s;
           transition-duration: 0.675s;
 }
 .closed .music {
-  -webkit-transform: translate3d(-198.36244%, -89.193835%, 0) rotate(-180deg);
-          transform: translate3d(-198.36244%, -89.193835%, 0) rotate(-180deg);
+  -webkit-transform: translate3d(198.36244%, -89.193835%, 0) rotate(-180deg);
+          transform: translate3d(198.36244%, -89.193835%, 0) rotate(-180deg);
 }
 
 .messages {
   background-color: #fec72e;
   top: 159.099075%;
-  left: 159.099075%;
+  left: -159.099075%;
   background-image: url(https://bennettfeely.com/cdpn/messages.svg);
   -webkit-transition-duration: 0.825s;
           transition-duration: 0.825s;
 }
 .closed .messages {
-  -webkit-transform: translate3d(-153.221215%, -151.008915%, 0) rotate(-180deg);
-          transform: translate3d(-153.221215%, -151.008915%, 0) rotate(-180deg);
+  -webkit-transform: translate3d(153.221215%, -151.008915%, 0) rotate(-180deg);
+          transform: translate3d(153.221215%, -151.008915%, 0) rotate(-180deg);
 }
 
 .places {
   background-color: #fa7d39;
   top: 207.873%;
-  left: 86.103675%;
+  left: -86.103675%;
   background-image: url(https://bennettfeely.com/cdpn/places.svg);
   -webkit-transition-duration: 0.975s;
           transition-duration: 0.975s;
 }
 .closed .places {
-  -webkit-transform: translate3d(-91.981535%, -199.78284%, 0) rotate(-180deg);
-          transform: translate3d(-91.981535%, -199.78284%, 0) rotate(-180deg);
+  -webkit-transform: translate3d(91.981535%, -199.78284%, 0) rotate(-180deg);
+          transform: translate3d(91.981535%, -199.78284%, 0) rotate(-180deg);
 }
 
 .bookmark {
@@ -125,6 +125,6 @@ html {
           transition-duration: 1.125s;
 }
 .closed .bookmark {
-  -webkit-transform: translate3d(-9.51056%, -228.09016%, 0) rotate(-180deg);
-          transform: translate3d(-9.51056%, -228.09016%, 0) rotate(-180deg);
+  -webkit-transform: translate3d(9.51056%, -228.09016%, 0) rotate(-180deg);
+          transform: translate3d(9.51056%, -228.09016%, 0) rotate(-180deg);
 }
