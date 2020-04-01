@@ -28,6 +28,7 @@
             if (event.target == OBmodal) {
                 OBmodal.style.display = "none";
                 $("#DPS-tab").get(0).click();
-                $("#showall-tab").get(0).click();
+                
+               
             }
         }
