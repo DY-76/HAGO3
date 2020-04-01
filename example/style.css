@@ -8,18 +8,21 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+          transform: rotate(45deg);
     z-index: 10000000;
 }
 
 .OBMM .menu {
   position: relative;
-  top: 20%;
+  top: 35px;
   -webkit-transition: -webkit-transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92);
   transition: -webkit-transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92);
   transition: transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92);
   transition: transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92), -webkit-transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92);
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
+          transform: rotate(-45deg);
+          
   -webkit-transform-origin: top left;
           transform-origin: top left;
   cursor: pointer;
@@ -68,6 +71,7 @@
   background-image: url(https://bennettfeely.com/cdpn/home.svg);
   -webkit-transition-duration: 0.525s;
           transition-duration: 0.525s;
+          
 }
 .closed .home {
   -webkit-transform: translate3d(225%, -10%, 0) rotate(-180deg);
