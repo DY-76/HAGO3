@@ -34,13 +34,14 @@ function getParameterByName(name) {
 
 Entry.loadProject = function(project) {
    if (!project){ {
-       if (getParameterByName('stage') == 2){
+       if (getParameterByName('stage') == 1){
       // project = Entry.getStartProjectGS1(Entry.mediaFilePath);
-      project = sgm.Stage_out('alone',2);
+      project = sgm.Stage_out('alone',1);
       
        }
-       else if  (getParameterByName('stage') == 3)
-       project = Entry.getStartProject3(Entry.mediaFilePath);
+       
+       else if  (getParameterByName('stage') == 2)
+       project = sgm.Stage_out('alone',2);
        else if  (getParameterByName('stage') == 1)
        project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
        else if  (getParameterByName('stage') == 0)

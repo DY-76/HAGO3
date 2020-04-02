@@ -3689,16 +3689,22 @@ Entry.getStartProject20 = function(mediaFilePath) {
             },
         ],
         objects: [
+           
             {
                 id: '7y0y',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
-                    ko: '피카츄',
-                    en: 'pikachu',
+                    ko: '작은도둑',
+                    en: 'thief',
                 },
                 script: [
                     [
-                        
+                        {
+                            type: 'when_run_button_click',
+                            x: 50,
+                            y: 600,
+                        },
+                        {type: 'move_xy_time3'}
                         
                     ],
                 ],
@@ -3712,7 +3718,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                             duration: 1.3,
                             ext: '.mp3',
                             id: '8el5',
-                            fileurl: `${mediaFilePath}media/bark.mp3`,
+                            fileurl: `${mediaFilePath}media/intro.mp3`,
                             name: Lang.Blocks.doggi_bark,
                             label: {
                                 ko: '강아지 짖는소리',
@@ -3723,12 +3729,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}object/pikachu.gif`,
+                            fileurl: `${mediaFilePath}object/thief2.png`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 800,
-                                height: 800,
+                                width: 920,
+                                height: 920,
                             },
                         },
                     ],
@@ -3736,14 +3742,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 400,
-                    regY: 400,
+                    regX: 460,
+                    regY: 460,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 800,
-                    height: 800,
+                    width: 920,
+                    height: 920,
                     visible: true,
                 },
                 lock: false,

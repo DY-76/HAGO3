@@ -27,47 +27,7 @@ Entry.Func = function(func) {
                       y: 40,
                   },
                   
-                    {
-
-                        params: [
-                            's2ds2d',
-                            {
-                                type: 'text',
-                                params: ['5'],
-                            },
-                            null,
-                        ],
-                        type: 'set_variable',
-                    },
-                  
-                 {
-                     
-                    params: [
-                    {
-                        params: [
-                            {
-                                type: 'number',
-                                params: ['3'],
-                            },
-                            'DIVIDE',
-                            {
-                                params: ['s2ds2d'],
-                                type: 'get_variable',
-                            },
-                        ],
-                        type: 'calc_basic',
-                    },
-                    {
-                        type: 'number',
-                        params: ['95'],
-                    },
-                    {
-                        type: 'number',
-                        params: ['0'],
-                    },
-                    null,
-                ],
-                type: 'move_xy_time',}
+                   
               ],
           ]);
     this.block = null;

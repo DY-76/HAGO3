@@ -428,7 +428,7 @@ EntryStatic.getAllBlocks2 = function() {
 
 EntryStatic.getAllBlocks = function() {
     return [
-      /*  {
+        {
             category: 'start',
             blocks: [
                 'when_run_button_click',
@@ -457,7 +457,7 @@ EntryStatic.getAllBlocks = function() {
                 'wildcard_boolean',
                 'register_score',
             ], 
-        }, */
+        }, 
         {
             category: 'flow',
             blocks: [
