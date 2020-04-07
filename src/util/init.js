@@ -363,8 +363,8 @@ Entry.createDom = function(container, option) {
         const canvas = Entry.createElement('canvas');
         canvas.className = 'entryCanvasWorkspace minimize';
         canvas.id = 'entryCanvas';
-        canvas.width = 1280;
-        canvas.height = 720;
+        canvas.width = 640;
+        canvas.height = 360;
         const canvasWrapper = Entry.createElement('div', 'entryCanvasWrapper');
         canvasWrapper.appendChild(canvas);
         container.appendChild(canvasWrapper);
@@ -393,8 +393,8 @@ Entry.createDom = function(container, option) {
         const canvas = Entry.createElement('canvas');
         canvas.addClass('entryCanvasPhone');
         canvas.id = 'entryCanvas';
-        canvas.width = 1280;
-        canvas.height = 720;
+        canvas.width = 640;
+        canvas.height = 360;
 
         engineView.insertBefore(canvas, this.engine.footerView_);
         /** @type {!Element} */

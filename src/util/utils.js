@@ -400,8 +400,8 @@ Entry.resizeElement = function(interfaceModel) {
             //canvasSize = 800;
         } else if (canvasSize < 300) {
             canvasSize = 300;
-        } else if (canvasSize > 1280) {
-            canvasSize = 1280;
+        } else if (canvasSize > 640) {
+            canvasSize = 640;
         }
 
         // 캔버스 사이즈는 요놈 바꿀거

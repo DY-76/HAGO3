@@ -3,7 +3,6 @@
  */
 'use strict';
 
-console.log('a');
 
 Entry.PropertyPanel = function() {
     this.modes = {};
@@ -27,20 +26,20 @@ Entry.PropertyPanel = function() {
         this._tabView = Entry.Dom('div', {
             class: 'propertyTab',
             parent: this._view,
-        });
+        }); 
 
-        this._contentView = Entry.Dom('div', {
+         this._contentView = Entry.Dom('div', {
             class: 'propertyContent',
             parent: this._view,
         });   
 
-        /*
+        
 
         this._cover = Entry.Dom('div', {
             classes: ['propertyPanelCover','entryRemove'],
             parent: this._view,
         });
-        */
+        
 
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");

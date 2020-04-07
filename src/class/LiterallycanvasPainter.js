@@ -37,8 +37,8 @@ Entry.LiterallycanvasPainter = class LiterallycanvasPainter {
         const bgImage = new Image();
         bgImage.src = `${imgURL}/transparent-pattern.png`;
 
-        const WIDTH = 960;
-        const HEIGHT = 540;
+        const WIDTH = 480;
+        const HEIGHT = 270;
         that.lc = LC.init(that.view, {
             imageURLPrefix: imgURL,
             zoomMax: 3.0,

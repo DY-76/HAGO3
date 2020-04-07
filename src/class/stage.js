@@ -106,10 +106,10 @@ Entry.Stage = function() {
         const scrollPos = Entry.Utils.getScrollPos();
         this.mouseCoordinate = {
             x: Entry.Utils.toFixed(
-                ((pageX - roundRect.left - scrollPos.left) / roundRect.width - 0.5) * 960
+                ((pageX - roundRect.left - scrollPos.left) / roundRect.width - 0.5) * 480
             ),
             y: Entry.Utils.toFixed(
-                ((pageY - roundRect.top - scrollPos.top) / roundRect.height - 0.5) * -540
+                ((pageY - roundRect.top - scrollPos.top) / roundRect.height - 0.5) * -270
             ),
         };
         Entry.dispatchEvent('stageMouseMove');
