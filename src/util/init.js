@@ -272,6 +272,7 @@ Entry.createDom = function(container, option) {
     const textCanvasContainer = Entry.createElement('div', 'textCanvasContainer');
     textCanvasContainer.style.display = 'none';
     container.appendChild(textCanvasContainer);
+    
 
     if (!option || option === 'workspace') {
         Entry.documentMousedown.attach(that, that.cancelObjectEdit);
@@ -336,6 +337,7 @@ Entry.createDom = function(container, option) {
         //container.appendChild(containerView);
         this.propertyPanel.generateView(engineContainer, option);
 
+        
 
         
         /** @type {!Element} */

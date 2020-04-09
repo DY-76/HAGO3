@@ -168,7 +168,7 @@ Entry.Container = class Container {
             class: 'entryContainerExtensions',
         });
 
-        const listView = Entry.createElement('ul').addClass('entryContainerListWorkspace');
+        var listView = Entry.createElement('ul').addClass('entryContainerListWorkspace');
         scrollWrapper.appendChild(listView);
         this.listView_ = listView;
 

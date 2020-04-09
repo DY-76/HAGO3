@@ -3,6 +3,8 @@
  */
 'use strict';
 
+import { block } from "../playground/block_entry";
+
 
 Entry.PropertyPanel = function() {
     this.modes = {};
@@ -18,8 +20,17 @@ Entry.PropertyPanel = function() {
       //* 이거 주석처리해서 밑에 안나옴 밑 파티션
         this._view = Entry.Dom('div', {
             class: 'propertyPanel',
+            id: 'stagedisplaypanel',
             parent: container,
         }); 
+        var now_link = window.location.href.split("stage=")
+
+        if(Number(now_link[1]) == 10){
+            document.getElementById("stagedisplaypanel").style.display="block";
+        }
+        else{
+            document.getElementById("stagedisplaypanel").style.display="none";
+        }
      
       
 
@@ -31,9 +42,7 @@ Entry.PropertyPanel = function() {
          this._contentView = Entry.Dom('div', {
             class: 'propertyContent',
             parent: this._view,
-        });   
-
-        
+        });  
 
         this._cover = Entry.Dom('div', {
             classes: ['propertyPanelCover','entryRemove'],
@@ -79,6 +88,9 @@ Entry.PropertyPanel = function() {
                     break;
                 case 5 :
                     console.log(getParameterByName('stage'));
+                    break;
+                case 0 :
+
                     break;
                 default :
                     console.log("도움말 case파트 현 번호 찾을 수 없음");
