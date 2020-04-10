@@ -168,7 +168,7 @@ Entry.Playground = class Playground {
                 Entry.do('playgroundChangeViewMode', 'picture', that.selectedViewMode);
             })
         //.appendTo(tabList); 모양 텝
-           .appendTo(tabList);  
+          
         pictureTab.innerHTML = Lang.Workspace.tab_picture;
         this.tabViewElements.picture = pictureTab;
         this.pictureTab = pictureTab; 

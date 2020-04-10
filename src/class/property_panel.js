@@ -3,8 +3,6 @@
  */
 'use strict';
 
-import { block } from "../playground/block_entry";
-
 
 Entry.PropertyPanel = function() {
     this.modes = {};
