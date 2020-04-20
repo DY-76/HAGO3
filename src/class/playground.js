@@ -584,6 +584,7 @@ Entry.Playground = class Playground {
             Entry.hw.refreshHardwareBlockMenu();
         }
     }
+    
 
     /**
      * Generate picture view.

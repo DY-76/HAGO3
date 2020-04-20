@@ -1,9 +1,9 @@
-.entryWorkspaceBlockMenu {
+/*.entryWorkspaceBlockMenu {
     background-color: #fff;
     position: absolute;
     top: 0;
     bottom: 0;
-}
+}*/
 
 .entryWorkspaceBlockMenu.entryRemove.init {
     opacity: 0 !important;
@@ -39,7 +39,8 @@
     position: relative;
     min-width: 58px;
     overflow: hidden;
-    height: 100%;
+    //height: 100%;
+    width: 100%;
     display: inline-block;
     background-color: rgb(186, 242, 248);
     list-style-type: none;
@@ -93,15 +94,17 @@
     vertical-align: top;
     width: 194px;
     margin-left:2px;
-    height: 100%;
+    height: 700px;
     background-color:rgb(186, 242, 248);
     border:1px solid #d6e9f4;
     border-radius: 0 0 0 6px;
+    
 
     .blockMenuWrapper {
         overflow: hidden;
         height: 100%;
         transition: width ease 0.2s;
+        position: absolute;
     }
 
     .block.selected > g > .blockPath,
@@ -132,6 +135,7 @@
 .entryCategoryElementWorkspace {
     padding: 34px 0 4px;
     min-width: 58px;
+    float: left;
     text-align: center;
     background-color: #ecf8ff;
     font-size: 12px;

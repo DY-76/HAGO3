@@ -397,7 +397,7 @@ Entry.resizeElement = function(interfaceModel) {
 
         let canvasSize = interfaceModel.canvasWidth;
         if (!canvasSize) {
-            //canvasSize = 800;
+            canvasSize = 800;
         } else if (canvasSize < 300) {
             canvasSize = 300;
         } else if (canvasSize > 640) {
@@ -409,8 +409,8 @@ Entry.resizeElement = function(interfaceModel) {
 
         const engineContainer = Entry.engine.view_.parentElement;
         engineContainer.style.width = `${canvasSize}px`;
-        Entry.engine.view_.style.width = `${canvasSize - 24}px`;
-        Entry.stage.canvas.canvas.style.width = `${canvasSize - 26}px`;
+        Entry.engine.view_.style.width = `${canvasSize + 102}px`;
+        Entry.stage.canvas.canvas.style.width = `${canvasSize + 84.5}px`;
 
         let menuWidth = interfaceModel.menuWidth;
         if (!menuWidth) {
