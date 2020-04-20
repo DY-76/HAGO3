@@ -428,7 +428,7 @@ Entry.resizeElement = function(interfaceModel) {
         $('.blockMenuContainer').css({ width: `${menuWidth + adjust}px` });
         $('.blockMenuContainer>div').css({ width: `${menuWidth + adjust - 2}px` });
         blockMenu.setWidth();
-        $('.entryWorkspaceBoard').css({ left: `${menuWidth - 4}px` });
+        $('.entryWorkspaceBoard').css({ left: `${menuWidth - 60}px` });
         Entry.playground.resizeHandle_.style.left = `${menuWidth - 4}px`;
         Entry.playground.variableViewWrapper_.style.width = `${menuWidth - 4}px`;
 
