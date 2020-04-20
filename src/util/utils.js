@@ -425,10 +425,10 @@ Entry.resizeElement = function(interfaceModel) {
         const blockMenu = mainWorkspace.blockMenu;
         const adjust = blockMenu.hasCategory() ? -64 : 0;
 
-        $('.blockMenuContainer').css({ width: `${menuWidth + adjust}px` });
-        $('.blockMenuContainer>div').css({ width: `${menuWidth + adjust - 2}px` });
+        $('.blockMenuContainer').css({ width: `${menuWidth + 10}px` });
+        $('.blockMenuContainer>div').css({ width: `${menuWidth + 10}px` });
         blockMenu.setWidth();
-        $('.entryWorkspaceBoard').css({ left: `${menuWidth - 4}px` });
+        $('.entryWorkspaceBoard').css({ left: `${menuWidth - 50}px` });
         Entry.playground.resizeHandle_.style.left = `${menuWidth - 4}px`;
         Entry.playground.variableViewWrapper_.style.width = `${menuWidth - 4}px`;
 

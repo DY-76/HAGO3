@@ -16,12 +16,12 @@
     .scrollIndicator {
         position: absolute;
         width: 58px;
-        height: 16px;
+        height: 100%;
         opacity: 0.8;
         .backgroundImage("block_menu/scroll_indicator_arrow.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-color: #aad5c1;
+        background-color: #ffffff;
         z-index: 6;
         display: none;
         cursor: pointer;
@@ -37,20 +37,20 @@
         }
     }
     position: relative;
-    min-width: 58px;
+    min-width: 40px;
     overflow: hidden;
     //height: 100%;
     width: 100%;
     display: inline-block;
-    background-color: rgb(186, 242, 248);
+    background-color: rgb(255, 255, 255);
     list-style-type: none;
-    border-radius: 0 0 6px 6px;
     margin: 0;
     padding: 0;
     -ms-overflow-style: none;  // IE 10+
     overflow: -moz-scrollbars-none;  // Firefox
 
     .entryCategoryList {
+        margin-left: -10px;
         height: 100%;
         overflow: hidden;
         overflow-y: scroll;
@@ -70,15 +70,14 @@
   right: 0;
   top: 0;
   bottom: 0;
-  border: 1px solid #d6f4ea;
-  border-radius: 0 0 6px 6px;
   content: '';
 }
 
 .entryCategoryListWorkspace li {
+    margin-left: 10px;
     position: relative;
     margin-top: -1px;
-    background-color: rgb(186, 242, 248);
+    background-color: rgb(255, 255, 255);
     z-index: 5;
 }
 .entryCategoryListWorkspace li:first-child {
