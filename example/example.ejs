@@ -59,28 +59,45 @@
                 <script src="../entry-tool/dist/entry-tool.js"></script>
              
 
-                <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #ffffff;">
+            <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #ffffff;">
                     
-                    <a class="navbar-brand" href="#">
-                        <img class="btn-img" src="../images/media/HAGO.png"width="200" height="auto" onclick="location.href='https://codinghago.imweb.me/index?preview_mode=1'">
+                    <a class="navbar-brand" href="#" style="margin-bottom: 45px;">
+                        <img class="btn-img" src="../images/media/HAGO.png"width="200" height="auto" onclick="location.href='http://www.codinghago.com/main.do'">
                     </a>
                     
                     
-                    <form class="collapse navbar-collapse" id="nav_data">
-                        <ul class="nav-item dropdown" style="text-align: center;">
-                            <button class="nav-link dropdown-toggle btn-lg" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="../images/media/select.png" style="width: 70px; height: auto;" >
+            <form class="collapse navbar-collapse" id="nav_data">
+                <ul style="float: none;">
+                    <style>
+                        .btn-outline-secondary {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                    </style>
+                <div>
+                    <ul style="text-align: center; margin-bottom: 20px; margin-top: 10px;">
+                        <li></li>
+                        <li class="nav-item dropdown" style="display: inline-block; margin-right: 50px;">
+                            <button class="nav-link dropdown-toggle btn-lg btn-outline-secondary" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                주제
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
                               <a class="dropdown-item" href="http://127.0.0.1:8080/?stage=1">1단계 일과 에너지(W = Fs)</a>
                               <a class="dropdown-item" href="http://127.0.0.1:8080/?stage=2">2단계 힘과 무게(F = ma)</a>
                               <a class="dropdown-item" href="http://127.0.0.1:8080/?make.stage=10">3단계 속도 (P = mv))</a>
                             </div>
-                        </ul>
-                          <ul class="nav-item dropdown" style="text-align: center;">
-                            <img class="btn-img" src="../images/media/computer.png" width="50" height="50">
-                            <button class="nav-link dropdown-toggle btn-lg" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               
+                        </li>
+                          <li class="nav-item dropdown" style="display: inline-block;">
+                            <button class="nav-link dropdown-toggle btn-lg btn-outline-secondary" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                불러오기
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
                               <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a>
@@ -90,21 +107,31 @@
                             </div>
                               <label for="file">이곳을 누르세요</label>
                               <br/>
-                              
                             </div>
-                        </ul>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'">1 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=2'">2 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'">3 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=4'">4 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=5'">5 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=6'">6 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=7'">7 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=8'">8 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=9'">9 단계</button>
-                        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">10 단계</button>
-                       <button class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();">add object</button>
-                      <!--   <link rel="stylesheet" href="example/style.css">
+                        </li>
+                    </ul>
+                </div>
+
+
+                    <li>
+                        <div>      
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=1'">1 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=2'">2 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=3'">3 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=4'">4 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=5'">5 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=6'">6 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=7'">7 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=8'">8 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=9'">9 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">10 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();">add object</button>
+                        </div> 
+                    </li>
+
+                </ul>
+
+                       <!--   <link rel="stylesheet" href="example/style.css">
                         <div class="OBMM">
                             
                             
@@ -131,11 +158,11 @@
                         </script>
                         
                         
-                      </form>
+            </form>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_data" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
-                  </nav>
+            </nav>
                 <!--
                 &nbsp;<button class="btn" id="btn" type="submit"><img class="btn-img" src="../images/media/HAGO.png"width="200" height="80" onclick="location.href='https://codinghago.imweb.me/index?preview_mode=1'"></button>
                     
