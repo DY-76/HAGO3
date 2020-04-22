@@ -133,7 +133,7 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?stage=9'">9 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://127.0.0.1:8080/?make.stage=10'">10 Step</button>
                     
-                    <button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();">add object</button>
+                    <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();">add object</button>-->
                             
                     
                         </div> 
@@ -377,10 +377,10 @@
          </script>
          <script>
             if(Number(now_link[1]) == 10){
-                $('#addOBJ_BTN_onoff').css('display', 'block');
+                $('#steponoff').css('display', 'block');
             }
             else{
-                $('#addOBJ_BTN_onoff').css('display', 'none');
+                $('#steponoff').css('display', 'none');
             }
             </script>
 

@@ -559,7 +559,7 @@
 }
 
 .entryAddButtonWorkspace_w {
-display: none;//다시하기 버튼
+    display: block;//다시하기 버튼
 
     flex: 1;
     position: relative;
@@ -610,6 +610,7 @@ display: none;//다시하기 버튼
 }
 
 .entryStopButtonWorkspace {
+    display: none;
     float: right;
     width: 80px;
     background-position: 7px 50%;
@@ -687,6 +688,7 @@ display: none;//다시하기 버튼
 }
 
 .entryPauseButtonWorkspace_w:extend(.entryAddButtonWorkspace_w) {
+    display: none;
     background-size: 170px auto;
     .backgroundImage('pause.png');
 }

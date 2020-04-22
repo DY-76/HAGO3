@@ -139,15 +139,25 @@ Entry.Engine = class Engine {
             this.addButton = Entry.createElement('button')
                 .addClass('entryEngineButtonWorkspace_w')
                 .addClass('entryAddButtonWorkspace_w')
-
                 .bindOnClick(function() {
-                    Entry.do('addObjectButtonClick');
-                    
+                    OBmodal.style.display = 'block';$('#showall-tab').get(0).click();
                     /* + 클릭시 실행되는 부분 */
                     this.blur();
                 })
                 .appendTo(this.buttonWrapper);
+            this.addButton.id = 'steponoff';
             this.addButton.innerHTML = Lang.Workspace.add_object;
+
+            //오브젝트 추가버튼 step컨트롤
+            var now_link = window.location.href.split("stage=")
+            if(Number(now_link[1]) == 10){
+                this.addButton.style.display = 'block';
+            }
+            else{
+                this.addButton.style.display = 'none';
+            }
+            // step컨트롤 여기까지
+        
             if (!Entry.objectAddable) {
                 this.addButton.addClass('entryRemove');
             }  //이거는 오브젝트 추가 버튼
@@ -1241,3 +1251,4 @@ Entry.Engine.computeThread = function(entity, script) {
     return script;
 };
 
+    
