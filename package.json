@@ -30,11 +30,6 @@
         "test": "jest --colors",
         "clean": "rimraf ./dist",
         "dist": "webpack",
-        "ionic:build": "node --max-old-space-size=8192 --stack-size=1968 node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build"
-    
-    
- 
-
   },
     "license": "MIT",
     "dependencies": {
