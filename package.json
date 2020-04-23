@@ -29,7 +29,7 @@
         "dev": "webpack -w",
         "test": "jest --colors",
         "clean": "rimraf ./dist",
-        "dist": "webpack",
+        "dist": "webpack"
   },
     "license": "MIT",
     "dependencies": {
