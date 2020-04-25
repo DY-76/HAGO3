@@ -16,7 +16,7 @@ const templateName = (() => {
     }
 })();
 const template = path.resolve('example', templateName);
-const devServerPort = 8080;
+const devServerPort = 3000;
 
 
 
