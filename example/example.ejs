@@ -134,7 +134,7 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=9'">9 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="test()">test</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="scandb()">DB_Scan</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="mysql()">DB_Scan</button>
                            <!-- <script type="text/javascript" src="/src/db/db.js"></script>-->
 
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();">add object</button>-->
@@ -380,7 +380,8 @@
             }
          </script>
          <script>
-             var mysql = require('mysql');
+             function mysql(){
+var mysql = require('mysql');
 
 var connection = mysql.createConnection({
     host:'localhost',
@@ -409,6 +410,7 @@ connection.end();
 
 function test() {
     console.log("Done!");
+}
 }
 
          </script>
