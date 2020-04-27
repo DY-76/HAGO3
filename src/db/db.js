@@ -1,7 +1,6 @@
+'use strict';
 
-export function scan_db() {
-
-}
+function scan_db() {
 
 var mysql = require('mysql');
 
