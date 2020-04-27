@@ -6,6 +6,7 @@
 import { GEHelper } from '../graphicEngine/GEHelper';
 import { alone_stage1 } from '../stage/alone_stage';
 import * as add from '../object/objects.js';
+import { db_c } from  '../db/db.js';
 
 var i = 'off';
 var test;
@@ -835,6 +836,8 @@ Entry.Engine = class Engine {
         return entity.parent.script.raiseEvent(eventName, entity, String(keyCode));
     }
 
+
+
     /**
      * Update mouse coordinate
      */
@@ -931,6 +934,10 @@ document.getElementById("table").innerHTML += "<tr><td>파일타입</td><td>"+fi
 document.getElementById("table").innerHTML += "<tr><td>파일수정날짜</td><td>"+file.lastModifiedDate+"</td></tr>";
 
 
+}
+
+click_db(){
+    db_c.scandb();
 }
 
 fileread(){
