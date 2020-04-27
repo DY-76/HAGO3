@@ -1,10 +1,7 @@
-'use strict';
 
+//    var scandb = document.getElementById('scan_db');
 
-
-var scandb = document.getElementById('scan_db');
-
-scandb.onclick = function(){
+//scandb.onclick = function(){
     var mysql = require('mysql');
 
     var connection = mysql.createConnection({
@@ -29,5 +26,5 @@ scandb.onclick = function(){
 
 connection.end();
 
-}
+//}
 
