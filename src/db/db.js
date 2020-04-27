@@ -1,7 +1,6 @@
 
-var scandb = document.getElementById('scan_db');
 
-scandb.onclick = function() {
+function scandb() {
     var mysql = require('mysql');
 
     var connection = mysql.createConnection({
