@@ -26,4 +26,6 @@ function scandb() {
 connection.end();
 
 }
-
+function test() {
+    console.log("Done!");
+}
