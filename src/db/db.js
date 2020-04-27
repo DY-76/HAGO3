@@ -1,16 +1,19 @@
 'use strict';
 
-var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'jjuny1977',
-    port:'3309',
-    database:'hagoproject'
-});
 
-export function scan_db(){
+var scandb = document.getElementById('scan_db');
+
+scandb.onclick = function scan_db(){
+    var mysql = require('mysql');
+
+    var connection = mysql.createConnection({
+        host:'localhost',
+        user:'root',
+        password:'jjuny1977',
+        port:'3309',
+        database:'hagoproject'
+    });
 
     connection.connect();
 
@@ -27,5 +30,4 @@ export function scan_db(){
 connection.end();
 
 }
-export function db_compare(){
-}
+
