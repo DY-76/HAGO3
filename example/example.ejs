@@ -123,6 +123,35 @@
                     <li>
                         <div>
 
+                            <%
+
+                            var mysql = require('mysql');
+
+                            var connection = mysql.createConnection({
+                                host:'localhost',
+                                user:'root',
+                                password:'jjuny1977',
+                                port:'3306',
+                                database:'hagoproject'
+                            });
+
+                            function scan_db() {
+
+                                connection.connect();
+
+                                connection.query('select * from user', function (err, rows, fields) {
+                                    if (!err) {
+                                        console.log(rows);
+                                    } else {
+                                        console.log('Error!', err);
+                                    }
+
+                                });
+
+                                connection.end();
+                            }
+                            %>
+
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=1'">1 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=2'">2 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=3'">3 Step</button>
@@ -136,34 +165,7 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="test()">test</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="scan_db()">DB_Scan</button>
                            <!-- <script type="text/javascript" src="/src/db/db.js"></script>-->
-                    <%
 
-                    var mysql = require('mysql');
-
-                    var connection = mysql.createConnection({
-                        host:'localhost',
-                        user:'root',
-                        password:'jjuny1977',
-                        port:'3306',
-                        database:'hagoproject'
-                    });
-
-                    function scan_db() {
-
-                        connection.connect();
-
-                        connection.query('select * from user', function (err, rows, fields) {
-                            if (!err) {
-                                console.log(rows);
-                            } else {
-                                console.log('Error!', err);
-                            }
-
-                        });
-
-                        connection.end();
-                    }
-                    %>
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();">add object</button>-->
                             
                     
