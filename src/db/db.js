@@ -1,15 +1,16 @@
 'use strict';
 
-function scandb() {
-    var mysql = require('mysql');
+var mysql = require('mysql');
 
-    var connection = mysql.createConnection({
-        host:'localhost',
-        user:'root',
-        password:'jjuny1977',
-        port:'3306',
-        database:'hagoproject'
-    });
+var connection = mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'jjuny1977',
+    port:'3306',
+    database:'hagoproject'
+});
+
+function scandb() {
 
     connection.connect();
 
