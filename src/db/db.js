@@ -14,7 +14,7 @@
 
     connection.connect();
 
-    connection.query('select * from user', function(err, row, fields){
+    connection.query('select * from user', function(err, rows, fields){
         if(!err) {
             console.log(rows);
         }
