@@ -6,6 +6,7 @@
 import { GEHelper } from '../graphicEngine/GEHelper';
 import { alone_stage1 } from '../stage/alone_stage';
 import * as add from '../object/objects.js';
+import { scan_db } from '../db/db.js';
 
 var i = 'off';
 var test;
@@ -972,6 +973,11 @@ loadobjectproject(){
     fileread();
  
 }
+
+db_scan(){
+    scan_db();
+}
+
 
     toggleFullScreen(popupClassName) {
         //var rawFile = new XMLHttpRequest();
