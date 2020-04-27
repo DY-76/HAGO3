@@ -937,7 +937,7 @@ document.getElementById("table").innerHTML += "<tr><td>파일수정날짜</td><t
 }
 
 click_db(){
-    scandb();
+    scandb.scandb();
 }
 
 fileread(){
