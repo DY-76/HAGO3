@@ -1,6 +1,6 @@
 'use strict';
 
-export function scandb() {
+function scandb() {
     var mysql = require('mysql');
 
     var connection = mysql.createConnection({
