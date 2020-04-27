@@ -1,5 +1,5 @@
 
-function scan_db() {
+export function scan_db() {
 
 }
 
