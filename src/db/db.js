@@ -1,4 +1,4 @@
-'use strict';
+
 
 var mysql = require('mysql');
 
@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     database:'hagoproject'
 });
 
-function scandb() {
+
 
     connection.connect();
 
@@ -26,7 +26,7 @@ function scandb() {
 
 connection.end();
 
-}
+
 function test() {
     console.log("Done!");
 }
