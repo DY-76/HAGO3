@@ -1,4 +1,7 @@
 
+function scan_db() {
+
+}
 
 var mysql = require('mysql');
 
@@ -25,7 +28,7 @@ var connection = mysql.createConnection({
 });
 
 connection.end();
-
+}
 
 function test() {
     console.log("Done!");

@@ -24,15 +24,15 @@
 
         <link rel="stylesheet" type="text/css" href="/src/css/modal.css">
         <link rel="stylesheet" type="text/css" href="/example/sample.css">
-        
-     
-        
+
+
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
+        <script type="text/javascript" src="require.js"></script>
         <script type="text/javascript">
             $(document).ready( function() {
 	            $("#addobjectmodal").load("/example/addobjectmodal.html");
@@ -123,34 +123,6 @@
                     <li>
                         <div>
 
-                            <%
-
-                            var mysql = require('mysql');
-
-                            var connection = mysql.createConnection({
-                                host:'localhost',
-                                user:'root',
-                                password:'jjuny1977',
-                                port:'3306',
-                                database:'hagoproject'
-                            });
-
-                            function scan_db() {
-
-                                connection.connect();
-
-                                connection.query('select * from user', function (err, rows, fields) {
-                                    if (!err) {
-                                        console.log(rows);
-                                    } else {
-                                        console.log('Error!', err);
-                                    }
-
-                                });
-
-                                connection.end();
-                            }
-                            %>
 
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=1'">1 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=2'">2 Step</button>
@@ -455,6 +427,6 @@ function test() {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/src/class/modal.js"></script>
-
+            <script src="/node_modules/loader-utils/node_modules/json5/lib/require.js"></script>
     </body>
 </html>
