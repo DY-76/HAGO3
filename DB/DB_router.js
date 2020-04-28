@@ -10,12 +10,12 @@ var connection = mysql.createConnection({
     port     : '3306'
   });
   connection.connect();
-  var test;
+  var tests;
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
       if (!err){
       console.log('The solution is: ', rows);
-      test = rows;
+      tests = rows;
       
       }
     else{
@@ -53,3 +53,8 @@ exports.solo=function(){
   consol.log(JSON.stringify(test));
 }
 module.exports = router;
+module.exports = {
+  router,
+  tests: tests
+
+};
