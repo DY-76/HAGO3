@@ -32,7 +32,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-    res.render( example , {DBdata:'Done!'});
+    res.render( 'example' , {DBdata:'Done!'});
     
   /*
   connection.query('SELECT * FROM user', (err, rows) => {
