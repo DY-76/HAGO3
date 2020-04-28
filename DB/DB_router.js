@@ -32,7 +32,7 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 // define the home page route
-router.get('/', function(req, res) {
+router.get('/test', function(req, res) {
     res.render( 'mid' , {DBdata:'Done!'});
     
   /*
