@@ -28,7 +28,7 @@
 
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        
+        <script type="text/javascript" src="../src/class/DB_connecter.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -120,7 +120,14 @@
 
                     <li>
                         <div>
+                    
+                    <script>
+                        import { test } from '../DB/DB_router.js';
 
+                            function DB_in(){
+                                console.log(JSON.stringify(test));
+                            }
+                    </script>
 
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=1'">1 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=2'">2 Step</button>
@@ -132,8 +139,8 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=8'">8 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=9'">9 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="scan_db()"><%= DBdata %></button>
-
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="DB_in()">111</button>
+                    
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();">add object</button>-->
                             
                     
