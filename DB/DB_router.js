@@ -53,8 +53,7 @@ router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
 
-router.get('/aaa', function(req, res) {
-  connection.connect();
+router.get('/id', function(req, res) {
   connection.query('SELECT DISTINCT User_Id FROM user', 
   function (err, result, fields) {
       if (!err){
@@ -69,7 +68,6 @@ router.get('/aaa', function(req, res) {
     }
   })
 })
-connection.end();
 
 
 exports.solo=function(){
