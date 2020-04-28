@@ -1,6 +1,6 @@
 'use strict';
-import { tests } from '../../DB/DB_router';
 
-function DB_in(){
-    return JSON.stringify(tests);
-}
+const solo = require('../../DB/DB_router.js').solo;
+
+console.log(solo);
+
