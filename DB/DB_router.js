@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     port     : '3306'
   });
   connection.connect();
-  export var tests
+  //export var tests
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
       if (!err){
