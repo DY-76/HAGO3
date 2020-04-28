@@ -5,7 +5,7 @@ const api = require('./DB_router');
 
 
 app.set('views','./views');
-app.set('view engine', 'ejs');
+app.set('view engine', 'html');
 app.use(bodyParser.json());
 app.use('/DB', api);
 
