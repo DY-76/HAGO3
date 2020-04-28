@@ -11,7 +11,7 @@ var i = 'off';
 var test;
 export var test;
 export var i;
-const tests = require('../../DB/DB_router').tests;
+
 
 /**
  * Class for a engine.
@@ -970,8 +970,8 @@ fileread(){
     };
  }
 loadobjectproject(){
-    console.log(JSON.stringify(tests));
-    //fileread();
+   console.log('123123');
+    fileread();
  
 }
 
