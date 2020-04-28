@@ -1,6 +1,29 @@
 var express = require('express');
 var router = express.Router();
 
+var sql = require('mysql');
+
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'jjuny1977',
+    database : 'hagoproject',
+    port     : '3306'
+  });
+  connection.connect();
+  
+  connection.query('SELECT * FROM user', 
+  function (err, rows, fields) {
+      if (!err)
+      console.log('The solution is: ', rows);
+
+      var data = rows;
+    else
+      console.log('Error while performing Query.', err);
+  })
+  
+  connection.end();
+
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
@@ -8,7 +31,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-  res.send('제발 ㅠㅠ');
+  res.send('제발 ㅠㅠ\n',data);
 });
 // define the about route
 router.get('/about', function(req, res) {
