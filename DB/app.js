@@ -8,3 +8,6 @@ app.use('/DB', api);
 
 const port = process.env.PORT || 5050;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
+
+app.set('views', './example');
+app.set('view engine', 'ejs');
