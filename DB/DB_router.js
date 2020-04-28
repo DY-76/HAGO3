@@ -10,11 +10,12 @@ var connection = mysql.createConnection({
     port     : '3306'
   });
   connection.connect();
- 
+  var test;
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
       if (!err){
       console.log('The solution is: ', rows);
+      test = rows;
       
       }
     else{
@@ -23,7 +24,7 @@ var connection = mysql.createConnection({
   })
   
   connection.end();
-  const test = rows;
+  
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
