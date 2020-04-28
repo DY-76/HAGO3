@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+export var tests;
 
 var connection = mysql.createConnection({
     host     : 'localhost',
@@ -10,7 +11,7 @@ var connection = mysql.createConnection({
     port     : '3306'
   });
   connection.connect();
-  export var tests;
+  
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
       if (!err){
