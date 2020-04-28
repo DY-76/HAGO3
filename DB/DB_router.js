@@ -33,7 +33,9 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/test', function(req, res) {
-    res.render( 'example' , {DBdata:'Done!'});
+    res.render( 'mid' , {DBdata:'Done!',
+                         All:JSON.stringify(rows)
+                        });
     
   /*
   connection.query('SELECT * FROM user', (err, rows) => {
