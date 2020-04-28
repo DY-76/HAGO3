@@ -51,4 +51,5 @@ router.get('/about', function(req, res) {
 });
 
 module.exports = router;
-exports var test;
+
+export var test;
