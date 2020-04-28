@@ -10,11 +10,12 @@ var connection = mysql.createConnection({
     port     : '3306'
   });
   connection.connect();
-  
+ 
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
       if (!err){
       console.log('The solution is: ', rows);
+      
       }
     else{
       console.log('Error while performing Query.', err);
@@ -22,7 +23,7 @@ var connection = mysql.createConnection({
   })
   
   connection.end();
-
+  var test = rows;
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
@@ -31,6 +32,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/', function(req, res) {
     res.send('제발 ㅠㅠ\n');
+    res.send(test);
   /*
   connection.query('SELECT * FROM user', (err, rows) => {
     connection.release(); // 연결세션 반환.
