@@ -30,15 +30,9 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-  res.send('제발 ㅠㅠ\n');
-  connection.query('SELECT * FROM user', (err, rows) => {
-    connection.release(); // 연결세션 반환.
-    if (err) {
-      throw err;
-    }
-
-    return res.send({ data: rows }); // 결과는 rows에 담아 전송
-  });
+    connection.connect();
+    res.send('제발 ㅠㅠ\n');
+  
 });
 // define the about route
 router.get('/about', function(req, res) {
