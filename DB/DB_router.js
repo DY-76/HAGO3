@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-export var tests;
+var tests;
 
 var connection = mysql.createConnection({
     host     : 'localhost',
