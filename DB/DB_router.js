@@ -51,9 +51,7 @@ router.get('/', function(req, res) {
 router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
-
-const DB_test_console = function () {
-  console.log(JSON.stringify(test));
+exports.solo=function(){
+  consol.log(JSON.stringify(test));
 }
-
-module.exports = {router}
+module.exports = router;
