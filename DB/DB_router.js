@@ -33,7 +33,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/', function(req, res) {
     var link = "abc";
-    location.href=link;
+    window.location.href=link;
     res.render( 'example' , {DBdata:'Done!'});
     
   /*
