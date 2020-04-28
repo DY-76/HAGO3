@@ -1,7 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+<<<<<<< HEAD
 var out = require('./DB_out');
+=======
+export var tests;
+>>>>>>> parent of f08babe... 1
 
 var connection = mysql.createConnection({
     host     : 'localhost',
