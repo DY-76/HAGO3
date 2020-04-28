@@ -14,12 +14,14 @@ var connection = mysql.createConnection({
   
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
-      if (!err)
+      if (!err){
       console.log('The solution is: ', rows);
 
       var data = rows;
-    else
+      }
+    else{
       console.log('Error while performing Query.', err);
+    }
   })
   
   connection.end();
