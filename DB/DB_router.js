@@ -32,7 +32,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-    res.send('제발 ㅠㅠ\n',test[0]);
+    res.send('제발 ㅠㅠ\n',test[User_ID]);
     
   /*
   connection.query('SELECT * FROM user', (err, rows) => {
