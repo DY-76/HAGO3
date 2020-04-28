@@ -54,7 +54,7 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/aaa', function(req, res) {
-  connection.query('SELECT User_ID FROM user', 
+  connection.query('SELECT DISTNCT User_Id FROM user', 
   function (err, result, fields) {
       if (!err){
       res.render( 'mid' , {DBdata:'Done!',
