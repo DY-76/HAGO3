@@ -49,5 +49,7 @@ router.get('/', function(req, res) {
 router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
-
+exports.solo=function(){
+  consol.log(JSON.stringify(test));
+}
 module.exports = router;
