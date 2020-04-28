@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
   function (err, rows, fields) {
       if (!err){
       console.log('The solution is: ', rows);
-      test = res.Json(rows);
+      test = rows;
       
       }
     else{
@@ -32,7 +32,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-    res.send(test);
+    res.send(JSON.parse(test));
     
   /*
   connection.query('SELECT * FROM user', (err, rows) => {
