@@ -34,7 +34,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/test', function(req, res) {
     res.render( 'mid' , {DBdata:'Done!',
-                         All:JSON.stringify(rows)
+                         All:JSON.stringify(test)
                         });
     
   /*
