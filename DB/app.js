@@ -6,7 +6,7 @@ const api = require('./DB_router');
 app.use(bodyParser.json());
 app.use('/DB', api);
 
-app.set('views', '../example');
+app.set('views', __dirname + '../example');
 app.set('view engine', 'ejs');
 
 const port = process.env.PORT || 5050;
