@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var tests;
 
 var connection = mysql.createConnection({
     host     : 'localhost',
@@ -33,7 +32,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-    res.render( 'example' , {DBdata:'Done!'});
+    res.send(JSON.stringify(test));
     
   /*
   connection.query('SELECT * FROM user', (err, rows) => {
