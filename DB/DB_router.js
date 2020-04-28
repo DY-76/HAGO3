@@ -32,7 +32,7 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 // define the home page route
-router.get('/test', function(req, res) {
+router.get('/all', function(req, res) {
     res.render( 'mid' , {DBdata:'Done!',
                          All:JSON.stringify(test)
                         });
@@ -52,6 +52,23 @@ router.get('/test', function(req, res) {
 router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
+
+router.get('/aaa', function(req, res) {
+  connection.query('SELECT User_ID FROM user', 
+  function (err, result, fields) {
+      if (!err){
+      res.render( 'mid' , {DBdata:'Done!',
+                         All:JSON.stringify(result)
+                        });
+      
+      }
+    else{
+      console.log('Error while performing Query.', err);
+    }
+  })
+})
+
+
 exports.solo=function(){
   consol.log(JSON.stringify(test));
 }
