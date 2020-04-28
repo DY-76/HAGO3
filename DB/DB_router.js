@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     database : 'hagoproject',
     port     : '3306'
   });
-  connection.connect();
+  //connection.connect();
   var test;
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
@@ -24,7 +24,7 @@ var connection = mysql.createConnection({
     }
   })
   
-  connection.end();
+  //connection.end();
   
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
