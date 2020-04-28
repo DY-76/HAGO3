@@ -33,7 +33,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/', function(req, res) {
     res.send('제발 ㅠㅠ\n');
-    res.send(test);
+    res.send(test,'test');
   /*
   connection.query('SELECT * FROM user', (err, rows) => {
     connection.release(); // 연결세션 반환.
