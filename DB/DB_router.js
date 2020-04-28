@@ -10,12 +10,12 @@ var connection = mysql.createConnection({
     port     : '3306'
   });
   connection.connect();
-  
+  var test;
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
       if (!err){
       console.log('The solution is: ', rows);
-      tests = rows;
+      test = rows;
       
       }
     else{
@@ -32,7 +32,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-    res.send(JSON.stringify(test));
+    res.render( 'example' , {DBdata:'Done!'});
     
   /*
   connection.query('SELECT * FROM user', (err, rows) => {

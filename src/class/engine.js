@@ -6,7 +6,6 @@
 import { GEHelper } from '../graphicEngine/GEHelper';
 import { alone_stage1 } from '../stage/alone_stage';
 import * as add from '../object/objects.js';
-import { tests } from '../class/DB_connecter';
 
 var i = 'off';
 var test;
@@ -971,7 +970,7 @@ fileread(){
     };
  }
 loadobjectproject(){
-   
+   console.log('123123');
     fileread();
  
 }
