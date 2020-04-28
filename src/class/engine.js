@@ -970,14 +970,14 @@ fileread(){
     };
  }
 loadobjectproject(){
-   console.log('123123');
-    fileread();
+    console.log(JSON.stringify(tests));
+    //fileread();
  
 }
 
 
- DB_in(){
-    return JSON.stringify(tests);
+db_in(){
+    
 }
 
     toggleFullScreen(popupClassName) {
