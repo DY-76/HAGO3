@@ -10,12 +10,12 @@ var connection = mysql.createConnection({
     port     : '3306'
   });
   connection.connect();
-  var test;
+  export var tests;
   connection.query('SELECT * FROM user', 
   function (err, rows, fields) {
       if (!err){
       console.log('The solution is: ', rows);
-      test = rows;
+      tests = rows;
       
       }
     else{
