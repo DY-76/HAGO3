@@ -55,7 +55,7 @@ router.get('/about', function(req, res) {
 
 router.get('/aaa', function(req, res) {
   connection.connect();
-  connection.query('SELECT DISTNCT User_Id FROM user', 
+  connection.query('SELECT DISTINCT User_Id FROM user', 
   function (err, result, fields) {
       if (!err){
       
