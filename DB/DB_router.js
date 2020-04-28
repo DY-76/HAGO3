@@ -32,6 +32,8 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
+    var link = "abc";
+    location.href=link;
     res.render( 'example' , {DBdata:'Done!'});
     
   /*
@@ -50,4 +52,8 @@ router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
 
-module.exports = router;
+const DB_test_console = function () {
+  console.log(JSON.stringify(test));
+}
+
+module.exports = {router}
