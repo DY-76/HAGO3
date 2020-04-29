@@ -4,16 +4,6 @@ const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const express = require('express');
-const bodyParser = require('body-parser')
-const app = express();
-const api = require('./DB_router');
-
-serve.set('views',__dirname+'/views');
-serve.set('view engine', 'ejs');
-serve.use(bodyParser.json());
-serve.use('/DB', api);
-
 
 const isWebGLEnabled = process.argv.some(
     (arg) => arg.startsWith('--webgl') && arg.split('=')[1] === 'true'
