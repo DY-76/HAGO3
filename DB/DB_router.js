@@ -65,7 +65,7 @@ router.get('/id', function(req, res) {
   function (err, result, fields) {
       if (!err){
       
-      res.render( 'mid' , {DBdata:express.query("id"),
+      res.render( 'mid' , {DBdata:req.param.id,
                          All:JSON.stringify(result)
                         });
       
