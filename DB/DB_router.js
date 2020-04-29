@@ -61,13 +61,13 @@ router.get('/about', function(req, res) {
 
 router.get('/id', function(req, res) {
   var tagId = req.query.tagid;
-  connection.query('SELECT User_Id FROM User', 
+  connection.query('SELECT User_Id FROM User WHERE id=tagId', 
   function (err, result, fields) {
       if (!err){
       
       console.log(tagId);// 1234
       console.log(req.query.tagid);// 1234
-      res.render( 'mid' , {DBdata:req.param.id,
+      res.render( 'mid' , {DBdata:tagId,
                          All:JSON.stringify(result)
                         });
       
