@@ -1,4 +1,4 @@
-import * as alone_stage from '../src/stage/alone_stage.js';
+
 
 var express = require('express');
 var router = express.Router();

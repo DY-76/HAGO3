@@ -1,4 +1,4 @@
-export var alone_stage1;
+
 
 
 export function alone_stage_sel(i){
