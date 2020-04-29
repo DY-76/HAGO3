@@ -86,4 +86,5 @@ router.get('/id', function(req, res) {
 exports.solo=function(){
   consol.log(JSON.stringify(test));
 }
-module.exports = router;
+DB_router.solo();
+module.exports = router();
