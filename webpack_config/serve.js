@@ -9,11 +9,10 @@ const bodyParser = require('body-parser')
 const app = express();
 const api = require('./DB_router');
 
-
-app.set('views',__dirname+'/views');
-app.set('view engine', 'ejs');
-app.use(bodyParser.json());
-app.use('/DB', api);
+serve.set('views',__dirname+'/views');
+serve.set('view engine', 'ejs');
+serve.use(bodyParser.json());
+serve.use('/DB', api);
 
 
 const isWebGLEnabled = process.argv.some(
