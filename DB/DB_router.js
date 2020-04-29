@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+var get_info = require('./utils');
 
 
 var connection = mysql.createConnection({
@@ -29,21 +30,7 @@ var connection = mysql.createConnection({
 
 
 var input_id;
-function getParam(sname) {
-  var params = location.search.substr(location.search.indexOf("?") + 1);
 
-  var sval = "";
-
-  params = params.split("&");
-
-  for (var i = 0; i < params.length; i++) {
-      var temp = params[i].split("=");
-      if ([temp[0]] == sname) {
-          sval = temp[1];
-      }
-  }
-  return sval;
-}
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
@@ -73,7 +60,7 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/id', function(req, res) {
-  input_id = getParam('id');
+  input_id = get_info.getParam('id');
   connection.query('SELECT User_Id FROM User WHERE id=input_id', 
   function (err, result, fields) {
       if (!err){
