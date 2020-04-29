@@ -60,7 +60,7 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/id', function(req, res) {
-  console.log(req.query("id"));
+  console.log(express.query("id"));
   connection.query('SELECT User_Id FROM User', 
   function (err, result, fields) {
       if (!err){
