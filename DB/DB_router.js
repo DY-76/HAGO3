@@ -1,9 +1,6 @@
-
-
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-
 //var get_info = require('./utils');
 
 
@@ -59,11 +56,11 @@ router.get('/all', function(req, res) {
 });
 // define the about route
 router.get('/about', function(req, res) {
-  res.send(alone_stage.alone_stage1);
+  res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
 
 router.get('/id', function(req, res) {
-  var tagId = req.query.id; //req.qurey get방식 
+  var tagId = req.query.id;
   connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   function (err, result, fields) {
       if (!err){
@@ -86,5 +83,4 @@ router.get('/id', function(req, res) {
 exports.solo=function(){
   consol.log(JSON.stringify(test));
 }
-
-module.exports = router();
+module.exports = router;
