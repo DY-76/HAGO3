@@ -60,11 +60,12 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/id', function(req, res) {
-  console.log(express.query("id"));
   connection.query('SELECT User_Id FROM User', 
   function (err, result, fields) {
       if (!err){
-      
+      var tagId = req.query.tagid;
+      console.log(tagId);// 1234
+      console.log(req.query.tagid);// 1234
       res.render( 'mid' , {DBdata:req.param.id,
                          All:JSON.stringify(result)
                         });
