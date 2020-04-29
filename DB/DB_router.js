@@ -1,6 +1,9 @@
+import * as alone_stage from '../src/stage/alone_stage.js';
+
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+
 //var get_info = require('./utils');
 
 
@@ -56,7 +59,7 @@ router.get('/all', function(req, res) {
 });
 // define the about route
 router.get('/about', function(req, res) {
-  res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
+  res.send(alone_stage.alone_stage1);
 });
 
 router.get('/id', function(req, res) {
