@@ -1,4 +1,4 @@
-export function getParam(sname) {
+function getParam(sname) {
     var params = location.search.substr(location.search.indexOf("?") + 1);
   
     var sval = "";
@@ -14,4 +14,4 @@ export function getParam(sname) {
     return sval;
   }
 
-  module.exports = getParam();
+  modules.exports = getParam();
