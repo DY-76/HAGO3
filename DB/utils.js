@@ -14,4 +14,4 @@ function getParam(sname) {
     return sval;
   }
 
-  modules.exports = getParam();
+  module.exports = getParam();
