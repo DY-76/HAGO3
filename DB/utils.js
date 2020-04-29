@@ -1,4 +1,5 @@
 function getParam(sname) {
+    location = ''+'';
     var params = location.search.substr(location.search.indexOf("?") + 1);
   
     var sval = "";

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var get_info = require('./utils');
+//var get_info = require('./utils');
 
 
 var connection = mysql.createConnection({
@@ -60,8 +60,8 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/id', function(req, res) {
-  input_id = get_info.getParam('id');
-  connection.query('SELECT User_Id FROM User WHERE id=input_id', 
+  console.log(req.query("id"));
+  connection.query('SELECT User_Id FROM User', 
   function (err, result, fields) {
       if (!err){
       
