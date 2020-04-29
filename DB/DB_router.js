@@ -26,6 +26,25 @@ var connection = mysql.createConnection({
   
   //connection.end();
   
+
+
+var input_id;
+function getParam(sname) {
+  var params = location.search.substr(location.search.indexOf("?") + 1);
+
+  var sval = "";
+
+  params = params.split("&");
+
+  for (var i = 0; i < params.length; i++) {
+      var temp = params[i].split("=");
+      if ([temp[0]] == sname) {
+          sval = temp[1];
+      }
+  }
+  return sval;
+}
+
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
@@ -54,7 +73,8 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/id', function(req, res) {
-  connection.query('SELECT DISTINCT User_Id FROM user', 
+  input_id = getParam('id');
+  connection.query('SELECT User_Id FROM User WHERE id=input_id', 
   function (err, result, fields) {
       if (!err){
       
