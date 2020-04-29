@@ -114,5 +114,6 @@
         "reportPath": "reports",
         "reportFile": "report.xml",
         "indent": 4
-    }
+    },
+    "proxy" : "http://localhost:5050"
 }
