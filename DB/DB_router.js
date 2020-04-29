@@ -60,7 +60,7 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/id', function(req, res) {
-  var tagId = req.query.id+'';
+  var tagId = req.query.id;
   connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   function (err, result, fields) {
       if (!err){
