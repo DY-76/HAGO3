@@ -61,7 +61,7 @@ router.get('/about', function(req, res) {
 
 router.get('/id', function(req, res) {
   var tagId = req.query.tagid;
-  connection.query('SELECT User_Id FROM User WHERE User_Id=tagId', 
+  connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   function (err, result, fields) {
       if (!err){
       
