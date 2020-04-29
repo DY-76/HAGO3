@@ -4,32 +4,6 @@ const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const express = require('express');
-const router = express.Router();
-const mysql = require("mysql");   // mysql 모듈 require
-
-// 커넥션 연결
-let connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'jjuny1977',
-    database : 'hagoproject',
-    port     : '3306'
-})
-var test;
-  connection.query('SELECT * FROM user', 
-  function (err, rows, fields) {
-      if (!err){
-      console.log('The solution is: ', rows);
-      test = rows;
-      
-      }
-    else{
-      console.log('Error while performing Query.', err);
-    }
-  })
-
-
 
 const isWebGLEnabled = process.argv.some(
     (arg) => arg.startsWith('--webgl') && arg.split('=')[1] === 'true'
@@ -82,5 +56,5 @@ module.exports = merge(common, {
 });
 
 
-module.exports = router();
+
 
