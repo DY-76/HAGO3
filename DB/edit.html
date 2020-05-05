@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Page</title>
+</head>
+<body>
+	<h1>Edit Page</h1>
+	<form method='post'>
+		<fieldset>
+			<legend>EDIT DATA</legend>
+			<table>
+				<tr>
+					<td><lable>Id</lable></td>
+					<td><input type="text" name="id" value="<%= user.id  %>" disable /></td>
+				</tr>			
+				<tr>
+					<td><lable>Name</lable></td>
+					<td><input type="text" name="name" value="<%= user.No  %>" /></td>
+				</tr>
+				<tr>
+					<td><lable>Model Number</lable></td>
+					<td><input type="text" name="modelnumber" value="<%= user.Password %>" /></td>
+				</tr>
+				<tr>
+					<td><lable>Series</lable></td>
+					<td><input type="text" name="series"  value="<%= user.NickName %>" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="Update"/>
+		</fieldset>
+	</form>
+</body>
+</html>

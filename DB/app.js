@@ -20,7 +20,7 @@ app.use(session({
   }))
 
 app.set('views',__dirname+'/views');
-//app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use('/DB', api);
 

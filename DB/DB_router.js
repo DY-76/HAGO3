@@ -79,7 +79,7 @@ router.get('/id', function(req, res) {
       console.log('Error while performing Query.', err);
     }
   })
-})
+});
 
 
 exports.solo=function(){
