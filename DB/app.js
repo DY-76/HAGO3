@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use('/DB', api);
 app.use(session({
-    ​	secret: '',
+    ​	
     ​	resave: false,
     ​	saveUninitialized: true
     }));
