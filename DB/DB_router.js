@@ -81,13 +81,13 @@ router.get('/id', function(req, res) {
   })
 });
 router.get('/login', function(req,rsp){    
-  var post = req.body;
+
   var tagId = req.query.id;
   connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   
-  [post.id,post.password], function(err,result){
-      if(err) throw err;
-      if(result[1]!==undefined){
+  function(err,result){
+      if(err);
+      if(result==1){
           req.session.isLogined = true;
           //세션 스토어가 이루어진 후 redirect를 해야함.
           req.session.save(function(){                               
