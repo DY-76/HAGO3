@@ -92,6 +92,8 @@ router.get('/login', function(req,rsp){
         res.render( 'mid' , {DBdata:tagId,
           All:JSON.stringify(result)
          });
+         req.session.uid = result.id;                            
+            req.session.user_ID = result.user_id;
           req.session.isLogined = true;
           //세션 스토어가 이루어진 후 redirect를 해야함.
           req.session.save(function(){                               
@@ -101,8 +103,15 @@ router.get('/login', function(req,rsp){
       }
   })
 });
-
-
+router.get('/logout', function(req,rsp){  
+  delete req.session.uid;
+  delete req.session.isLogined;
+  delete req.session.user_ID;
+  
+  req.session.save(function(){
+      rsp.redirect('/');
+  });
+});
 
 exports.solo=function(){
   consol.log(JSON.stringify(test));
