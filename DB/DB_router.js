@@ -29,7 +29,7 @@ var connection = mysql.createConnection({
     var sessionStore = new MySQLStore(options);
 
     app.use(session({
-      ​	secret: '12sdfwerwersdfserwerwef', //keboard cat (랜덤한 값)
+      ​	secret: 'aqs456', //keboard cat (랜덤한 값)
       ​	resave: false,
       ​	saveUninitialized: true,
       ​	store: sessionStore
