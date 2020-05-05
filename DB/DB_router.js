@@ -55,7 +55,7 @@ app.post('/auth/register', function(req, res){
   ​		AuthId: req.body.authId,
   ​		Password: req.body.password
   ​	};
-  ​	var sql = 'INSERT INTO users SET ?';
+  ​	var sql = 'INSERT INTO user SET ?';
   ​	conn.query(sql, user, function(err, results){
   ​		if(err){
   ​			console.log(err);
