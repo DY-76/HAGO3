@@ -92,6 +92,7 @@ router.get('/login', function(req,rsp){
           //세션 스토어가 이루어진 후 redirect를 해야함.
           req.session.save(function(){                               
               rsp.redirect('/');
+              console.log("세션쓰")
           });
       }
   })
