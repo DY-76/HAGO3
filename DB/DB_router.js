@@ -1,16 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var session = require('express-session');  
-var MySQLStore = require('express-mysql-session')(session);
-//var get_info = require('./utils');
 
-app.use(session({                                             
-    secret:"asdfasffdas",
-    resave:false,
-    saveUninitialized:true,
-    store: sessionStore                                       
-  }))
+//var get_info = require('./utils');
 
 
 var connection = mysql.createConnection({
@@ -20,7 +12,6 @@ var connection = mysql.createConnection({
     database : 'hagoproject',
     port     : 3306
   });
-  var sessionStore = new MySQLStore(connection);  
   //connection.connect();
   var test;
   connection.query('SELECT * FROM user', 
