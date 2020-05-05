@@ -6,9 +6,11 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var mySqlClient = mysql.createConnection({
+    host     : 'localhost',
 	user : 'root',
 	password : 'jjuny1977',
-	database : 'hagoproject'
+    database : 'hagoproject',
+    port     : 3306
 });
 
 var app = express();
