@@ -32,10 +32,6 @@ var connection = mysql.createConnection({
 var input_id;
 
 
-
-
-
-
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
@@ -84,9 +80,7 @@ router.get('/id', function(req, res) {
 })
 
 
-
 exports.solo=function(){
   consol.log(JSON.stringify(test));
 }
 module.exports = router;
-
