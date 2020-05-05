@@ -82,7 +82,9 @@ router.get('/id', function(req, res) {
 });
 router.get('/login', function(req,rsp){    
   var post = req.body;
+  console.log("succses?");
   connection.query('select user.id as id, password, author_id, name from user left join author on user.author_id = author.id where user.id=? and password=?',
+  
   [post.id,post.password], function(err,result){
       if(err) throw err;
       if(result[0]!==undefined){
