@@ -59,13 +59,7 @@ router.get('/all', function(req, res) {
 router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
-app.get('/login', function(req, res){
-  ​	if(req.session.authId)
-  ​		res.send(authId+'님 로그인되었습니다');
-  ​	else
-  ​		res.send('로그인하세요!');
-  });
-  
+
  
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
