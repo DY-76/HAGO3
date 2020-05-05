@@ -1,8 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-
+var session = require('express-session');  
+var MySQLStore = require('express-mysql-session')(session);
 //var get_info = require('./utils');
+var sessionStore = new MySQLStore(options);  
+app.use(session({                                             
+    secret:"asdfasffdas",
+    resave:false,
+    saveUninitialized:true,
+    store: sessionStore                                       
+  }))
 
 
 var connection = mysql.createConnection({
