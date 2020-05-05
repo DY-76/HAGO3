@@ -18,6 +18,7 @@ app.use(session({
     saveUninitialized:true,
     store: sessionStore                                       
   }))
+ 
 
 app.set('views',__dirname+'/views');
 //app.set('view engine', 'ejs');

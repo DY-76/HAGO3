@@ -58,6 +58,31 @@ router.get('/all', function(req, res) {
 router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
+app.get('/login', function(req, res){
+  ​	if(req.session.authId)
+  ​		res.send(authId+'님 로그인되었습니다');
+  ​	else
+  ​		res.send('로그인하세요!');
+  });
+  
+  app.post('/auth/register', function(req, res){
+    ​	var user={
+    ​		AuthId: req.body.authId,
+    ​		Password: req.body.password
+    ​	};
+    ​	var sql = 'INSERT INTO user SET ?';
+    ​	conn.query(sql, user, function(err, results){
+    ​		if(err){
+    ​			console.log(err);
+    ​		}else{
+    ​			//사용자 아이디를 세션 데이터로 저장
+    ​			req.session.authId = req.body.authId;
+    ​			req.session.save(function(){
+    ​				res.redirect('/');		
+    ​			});
+    ​		}		
+    ​	})
+    });
 
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
