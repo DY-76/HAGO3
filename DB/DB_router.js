@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+
 //var get_info = require('./utils');
 
 
@@ -65,25 +66,7 @@ app.get('/login', function(req, res){
   ​		res.send('로그인하세요!');
   });
   
-  app.post('/auth/register', function(req, res){
-    ​	var user={
-    ​		AuthId: req.body.authId,
-    ​		Password: req.body.password
-    ​	};
-    ​	var sql = 'INSERT INTO user SET ?';
-    ​	conn.query(sql, user, function(err, results){
-    ​		if(err){
-    ​			console.log(err);
-    ​		}else{
-    ​			//사용자 아이디를 세션 데이터로 저장
-    ​			req.session.authId = req.body.authId;
-    ​			req.session.save(function(){
-    ​				res.redirect('/');		
-    ​			});
-    ​		}		
-    ​	})
-    });
-
+ 
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
   connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
