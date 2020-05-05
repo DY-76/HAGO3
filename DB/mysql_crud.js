@@ -68,7 +68,7 @@ app.get( '/edit/:id', function(req, res){
 						console.log('readFile Error');
 					}else{
 						res.send( ejs.render(data, { 
-							product : result[0] 
+							user : result[0] 
 						}));
 					}
 				});
