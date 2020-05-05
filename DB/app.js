@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use('/DB', api);
 app.use(session({
-    ​	secret: '12sdfwerwersdfserwerwef', //keboard cat (랜덤한 값)
+    ​	secret: 'aqs456', //keboard cat (랜덤한 값)
     ​	resave: false,
     ​	saveUninitialized: true
     }));
