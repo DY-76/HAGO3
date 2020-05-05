@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     user     : 'root',
     password : 'jjuny1977',
     database : 'hagoproject',
-    port     : '3306'
+    port     : 3306
   });
   //connection.connect();
   var test;
