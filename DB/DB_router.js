@@ -83,6 +83,9 @@ router.get('/id', function(req, res) {
 router.get('/login', function(req,rsp){    
 
   var tagId = req.query.id;
+  res.render( 'mid' , {DBdata:tagId,
+    All:JSON.stringify(result)
+   });
   connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   
   function(err,result){
