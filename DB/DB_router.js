@@ -82,14 +82,12 @@ router.get('/id', function(req, res) {
 });
 router.get('/login', function(req,rsp){    
   var post = req.body;
-  console.log("succses?");
-  connection.query('select user.id as id, password, user_id, name from user left join user on user.user_id = user.id where user.id=? and password=?',
+  var tagId = req.query.id;
+  connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   
   [post.id,post.password], function(err,result){
       if(err) throw err;
-      if(result[0]!==undefined){
-          req.session.uid = result[0].id;                            
-          req.session.user_id = result[0].user_id;
+      if(result[1]!==undefined){
           req.session.isLogined = true;
           //세션 스토어가 이루어진 후 redirect를 해야함.
           req.session.save(function(){                               
