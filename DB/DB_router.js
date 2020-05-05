@@ -83,14 +83,15 @@ router.get('/id', function(req, res) {
 router.get('/login', function(req,rsp){    
 
   var tagId = req.query.id;
-  res.render( 'mid' , {DBdata:tagId,
-    All:JSON.stringify(result)
-   });
+  
   connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   
   function(err,result){
       if(err);
       if(result==1){
+        res.render( 'mid' , {DBdata:tagId,
+          All:JSON.stringify(result)
+         });
           req.session.isLogined = true;
           //세션 스토어가 이루어진 후 redirect를 해야함.
           req.session.save(function(){                               
