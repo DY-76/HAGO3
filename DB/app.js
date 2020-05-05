@@ -9,11 +9,7 @@ app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use('/DB', api);
-app.use(session({
-    ​	
-    ​	resave: false,
-    ​	saveUninitialized: true
-    }));
+app.use(session());
 
 
 const port = process.env.PORT || 5050;
