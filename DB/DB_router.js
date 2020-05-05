@@ -31,6 +31,25 @@ var connection = mysql.createConnection({
 
 var input_id;
 
+app.get('/login', function(req,rsp){    
+  var post = req.body;
+  db.query('select user.id as id, password, author_id, name from user left join author on user.author_id = author.id where user.id=? and password=?',
+  [post.id,post.password], function(err,result){
+      if(err) throw err;
+      if(result[0]!==undefined){
+          req.session.uid = result[0].id;                           
+          req.session.author_id = result[0].author_id;
+          req.session.isLogined = true;
+          //세션 스토어가 이루어진 후 redirect를 해야함.
+          req.session.save(function(){                             
+              rsp.redirect('/');
+          });
+      }
+  });
+}
+
+
+
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
