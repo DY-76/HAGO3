@@ -87,13 +87,9 @@ router.get('/login', function(req,rsp){
   connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
   
   function(err,result){
-      if(err);
-      if(result==1){
-        res.render( 'mid' , {DBdata:tagId,
-          All:JSON.stringify(result)
-         });
-         req.session.uid = result.id;                            
-            req.session.user_ID = result.user_id;
+     
+                        
+            req.session.user_ID = tagId;
           req.session.isLogined = true;
           //세션 스토어가 이루어진 후 redirect를 해야함.
           req.session.save(function(){                               
@@ -101,7 +97,7 @@ router.get('/login', function(req,rsp){
               console.log("세션쓰")
           });
       }
-  })
+  )
 });
 router.get('/logout', function(req,rsp){  
   delete req.session.uid;
