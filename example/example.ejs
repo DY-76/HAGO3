@@ -137,13 +137,21 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=9'">9 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="console.log(document.cookie)">DB로가기</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openInNewTab('http://codinghago.com:85/DB/all')">DB로가기real</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openInNewTab(first())">DB로가기real</button>
                     <script>
                         function openInNewTab(url) {
                             var win = window.open(url, 'width=400,height=400,left=600');
                             win.focus();
                         }
                     </script>
+                     <script>
+                     function first(){
+                     location = "http://codinghago.com";
+                     location.href = "http://codinghago.com:85/DB/all";
+                     location.assign("http://codinghago.com:85/DB/all");
+                     location.replace("http://codinghago.com:85/DB/all");
+                     history.back();</script>
+                 }
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();" target="_blank">add object</button>-->
                             
                     
