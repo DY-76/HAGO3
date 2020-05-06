@@ -55,6 +55,38 @@ router.get('/all', function(req, res) {
   });
   */
 });
+
+/** session 확인 */
+router.route('/confirmSession').get(function (req, res) {
+  console.log('세션을 확인해보자!!');
+  let msg = `세션이 존재하지 않습니다.`
+  if (req.session.user) {
+      msg = `${req.session.user.name}님의 나이는 ${req.session.user.age}살 입니다. 세션의 생성된 시간 : ${req.session.user.createCurTime}`;
+  }
+
+  res.send(msg);
+
+});
+
+router.route('/').get(function (req, res) {
+  console.log('루트접속');
+
+  if(req.session.user){
+      console.log(`세션이 이미 존재합니다.`);
+  }else{
+      req.session.user = {
+          "name" : "Master Yunjin",
+          "age" : 25,
+          "createCurTime" : new Date()
+      }
+      console.log(`세션 저장 완료! `);
+  }
+  res.redirect(`/confirmSession`);
+
+});
+
+
+
 // define the about route
 router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
