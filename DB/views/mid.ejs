@@ -9,13 +9,16 @@
         <h1>당신의 아이디 : <%=DBdata%></h1>
         <h4><%=All%></h4>
         <button >hi</button>
-        <a id='closetab' onclick="JavaScript:window.close()">확인했고 닫기</a>
+        <a id='closetab' onclick="WinClose()">확인했고 닫기</a>
 
 
 
 
         <script>
-            closetab.click();
+            function WinClose()
+            {
+                window.open('','_self').close();
+            }
         </script>
     </body>
 </html>
