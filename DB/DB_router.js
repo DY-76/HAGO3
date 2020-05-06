@@ -86,14 +86,14 @@ router.get('/id', function(req, res) {
     }
   });
 });
-router.get('/login', function(req,rsp){    
+router.get('/login', function(req,rsp) {
 
-  var tagId = req.query.id;
-  
-  connection.query('select EXISTS (select hagoproject from User where User_Id=' +tagId+ ') as success',
-      function (err, rows, fields){
-          console.log("aaaa");
+    var tagId = req.query.id;
+
+    connection.query('select EXISTS (select hagoproject from User where User_Id=' + tagId + ') as success',
+        function (err, rows, fields) {
+            console.log("aaaa");
+        });
 });
 
-
-  module.exports = router;
+module.exports = router;
