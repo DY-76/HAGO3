@@ -69,6 +69,7 @@ router.get('/about', function(req, res) {
 
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
+
   connection.query('select EXISTS (select hagoproject from User where User_Id='+tagId+') as success',
   function (err, result, fields) {
       if (!err){
@@ -85,15 +86,7 @@ router.get('/id', function(req, res) {
       console.log('Error while performing Query.', err);
     }
   });
-});
-router.get('/login', function(req,rsp) {
-
-    var tagId = req.query.id;
-
-    connection.query('select EXISTS (select hagoproject from User where User_Id=' + tagId + ') as success',
-        function (err, rows, fields) {
-            console.log("aaaa");
-        });
+  
 });
 
 module.exports = router;
