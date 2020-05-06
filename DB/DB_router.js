@@ -20,7 +20,7 @@ var connection = mysql.createConnection({
       if (!err){
       console.log('The solution is: ', rows);
       test = rows;
-      
+
       }
     else{
       console.log('Error while performing Query.', err);
@@ -120,7 +120,8 @@ router.get('/login', function(req,rsp){
 
   var tagId = req.query.id;
   
-  connection.query('select EXISTS (select * from User where User_Id=' +tagId+') as success');
+  connection.query('select EXISTS (select * from User where User_Id=' +tagId+') as success',
+      function (err, rows, fields){
 
 });
 router.get('/logout', function(req,rsp){  
