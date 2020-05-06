@@ -39,9 +39,8 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/all', function(req, res) {
-    sess = req.session;
     res.render( 'mid' , {DBdata:'Done!',
-                         All:sess
+                         All:'test'
                         });
     
   /*
@@ -57,7 +56,7 @@ router.get('/all', function(req, res) {
 });
 
 router.get('/DBin', function(req, res) {
-
+    console.log("aaaa");
 
 });
 
@@ -67,11 +66,6 @@ router.get('/DBin', function(req, res) {
 router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
-
-router.get('/about', function(req, res) {
-    res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
-});
-
 
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
@@ -83,7 +77,7 @@ router.get('/id', function(req, res) {
       console.log(req.query.id);// 인식된 값 확인
 
       res.render( 'mid' , {DBdata:tagId,
-                         All:JSON.stringify(result.success)
+                         All:JSON.stringify(result)
                         });
       
       }
@@ -98,21 +92,8 @@ router.get('/login', function(req,rsp){
   
   connection.query('select EXISTS (select hagoproject from User where User_Id=' +tagId+ ') as success',
       function (err, rows, fields){
-
-});
-router.get('/logout', function(req,rsp){  
-  delete req.session.uid;
-  delete req.session.isLogined;
-  delete req.session.user_ID;
-  
-  req.session.save(function(){
-      rsp.redirect('/');
-  });
+          console.log("aaaa");
 });
 
-exports.solo=function(){
-  consol.log(JSON.stringify(test));
-}
 
-
-module.exports = router;
+  module.exports = router;
