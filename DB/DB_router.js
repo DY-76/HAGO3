@@ -42,6 +42,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/all', function(req, res) {
     sess = req.session;
+    req.session.destroy(req.session);
     res.render( 'mid' , {DBdata:'Done!',
                          All:sess
                         });
