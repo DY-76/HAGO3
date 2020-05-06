@@ -77,7 +77,7 @@ router.get('/id', function(req, res) {
       console.log(req.query.id);// 인식된 값 확인
 
       res.render( 'mid' , {DBdata:tagId,
-                         All:JSON.stringify(result)
+                         All:JSON.stringify(result.success)
                         });
       
       }
