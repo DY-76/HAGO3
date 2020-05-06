@@ -25,10 +25,8 @@ var connection = mysql.createConnection({
     else{
       console.log('Error while performing Query.', err);
     }
-  })
-  
-  //connection.end();
-  
+  });
+
 
 
 var input_id;
@@ -62,6 +60,10 @@ router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
 
+router.get('/about', function(req, res) {
+    res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
+});
+
  
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
@@ -80,26 +82,14 @@ router.get('/id', function(req, res) {
     else{
       console.log('Error while performing Query.', err);
     }
-  })
+  });
 });
 router.get('/login', function(req,rsp){    
 
   var tagId = req.query.id;
   
-  connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
-  
-  function(err,result){
-     
-                        
-            req.session.user_ID = tagId;
-          req.session.isLogined = true;
-          //세션 스토어가 이루어진 후 redirect를 해야함.
-          req.session.save(function(){                               
-              rsp.redirect('/');
-              console.log("세션쓰")
-          });
-      }
-  )
+  connection.query('select EXISTS (select * from User where User_Id=' +tagId+') as success');
+
 });
 router.get('/logout', function(req,rsp){  
   delete req.session.uid;
