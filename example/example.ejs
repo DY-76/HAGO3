@@ -142,24 +142,6 @@
                             var win = window.open(url, 'width=400,height=400,left=600');
                             win.focus();
                         }
-                        const getCookieValue = (key) => {
-                            let cookieKey = key + "=";
-                            let result = "";
-                            const cookieArr = document.cookie.split(";");
-
-                            for(let i = 0; i < cookieArr.length; i++) {
-                                if(cookieArr[i][0] === " ") {
-                                    cookieArr[i] = cookieArr[i].substring(1);
-                                }
-
-                                if(cookieArr[i].indexOf(cookieKey) === 0) {
-                                    result = cookieArr[i].slice(cookieKey.length, cookieArr[i].length);
-                                    return result;
-                                }
-                            }
-                            return result;
-                        }
-                        console.log(getCookieValue('JSESSIONID'))
                     </script>
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();" target="_blank">add object</button>-->
                             
