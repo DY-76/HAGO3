@@ -44,7 +44,6 @@ router.get('/all', function(req, res) {
     sess = req.session;
     res.render( 'mid' , {DBdata:'Done!',
                          All:sess
-
                         });
     
   /*
