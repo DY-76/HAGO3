@@ -56,6 +56,11 @@ router.get('/all', function(req, res) {
   */
 });
 
+router.get('/DBin', function(req, res) {
+
+
+});
+
 /** session 확인 */
 router.route('/confirmSession').get(function (req, res) {
   console.log('세션을 확인해보자!!');
@@ -96,10 +101,10 @@ router.get('/about', function(req, res) {
     res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
 
- 
+
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
-  connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
+  connection.query('select EXISTS (select hagoproject from User where User_Id='+tagId+') as success',
   function (err, result, fields) {
       if (!err){
       
@@ -120,7 +125,7 @@ router.get('/login', function(req,rsp){
 
   var tagId = req.query.id;
   
-  connection.query('select EXISTS (select * from User where User_Id=' +tagId+') as success',
+  connection.query('select EXISTS (select hagoproject from User where User_Id=' +tagId+ ') as success',
       function (err, rows, fields){
 
 });
