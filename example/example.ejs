@@ -121,10 +121,6 @@
 
                     <li>
                         <div>
-                    
-                    
-                        
-                    </script> 
 
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=1'">1 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=2'">2 Step</button>
@@ -139,10 +135,14 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openInNewTab('http://codinghago.com:85/DB/all')">DB로가기real</button>
 
                         <script>
-                        function openInNewTab(url) {
-                            var win = window.open(url, 'width=400,height=400,left=600');
-                            win.focus();
-                        }
+                            function session_in(){
+                                console.log(sessionStorage.length);
+                            }
+                            function openInNewTab(url) {
+                                var win = window.open(url, 'width=400,height=400,left=600');
+                                win.focus();
+                            }
+                            session_in()
                     </script>
                      
                  
