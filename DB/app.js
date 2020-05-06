@@ -1,5 +1,6 @@
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 const app = express();
 const api = require('./DB_router');
 var session = require('express-session');  
@@ -18,7 +19,7 @@ app.use(session({
     saveUninitialized:true,
     store: sessionStore                                       
   }))
-
+app.use(cookieParser());
 app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());

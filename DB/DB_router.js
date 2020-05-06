@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+var cookieParser = require('cookie-parser');
 
 //var get_info = require('./utils');
 
@@ -41,7 +42,8 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/all', function(req, res) {
     res.render( 'mid' , {DBdata:'Done!',
-                         All:JSON.stringify(test)
+                         All:req.cookies.JSESSIONID
+
                         });
     
   /*
