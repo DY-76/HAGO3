@@ -50,6 +50,8 @@ Entry.loadProject = function(project) {
        project = Entry.getStartProjectGS1(Entry.mediaFilePath);
        else if  (getParameterByName('stage') == 5)
        project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
+       else if  (getParameterByName('stage') == 10)
+       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
        else if  (getParameterByName('stage') == 20)
        project = Entry.getStartProject20(Entry.mediaFilePath);
          
@@ -408,7 +410,8 @@ Entry.resizeElement = function(interfaceModel) {
         interfaceModel.canvasWidth = 800;
 
         const engineContainer = Entry.engine.view_.parentElement;
-        engineContainer.style.width = `${canvasSize}px`;
+        //engineContainer.style.width = `${canvasSize}px`;
+        engineContainer.style.width = `750px`;
         Entry.engine.view_.style.width = `${canvasSize + 102}px`;
         Entry.stage.canvas.canvas.style.width = `${canvasSize + 84.5}px`;
 
@@ -429,6 +432,7 @@ Entry.resizeElement = function(interfaceModel) {
         $('.blockMenuContainer>div').css({ width: `${menuWidth + 10}px` });
         blockMenu.setWidth();
         $('.entryWorkspaceBoard').css({ left: `${menuWidth - 50}px` });
+        $('.entryWorkspaceBoard').css({ width: `${menuWidth + 650}px` });
         Entry.playground.resizeHandle_.style.left = `${menuWidth - 4}px`;
         Entry.playground.variableViewWrapper_.style.width = `${menuWidth - 4}px`;
 

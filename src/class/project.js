@@ -3691,11 +3691,11 @@ Entry.getStartProject20 = function(mediaFilePath) {
         objects: [
            
             {
-                id: '7y0y',
+                id: '7y40y',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
-                    ko: '작은도둑',
-                    en: 'thief',
+                    ko: '문',
+                    en: 'door',
                 },
                 script: [
                     [
@@ -3729,12 +3729,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}object/thief2.png`,
+                            fileurl: `${mediaFilePath}../img/door.png`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 920,
-                                height: 920,
+                                width: 640,
+                                height: 1280,
                             },
                         },
                     ],
@@ -3742,14 +3742,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 460,
-                    regY: 460,
+                    regX: 320,
+                    regY: 640,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 920,
-                    height: 920,
+                    width: 640,
+                    height: 1280,
                     visible: true,
                 },
                 lock: false,
