@@ -112,11 +112,12 @@ router.get('/input', function(req, res) {
           result_out = "저장소 확인. 데이터를 업데이트를 시도합니다.";
           connection.query('update hago_test set data = '+InputDATA+' where UserID ='+InputID,function(err,result){
             if(!err){
-              result_out = result_out+"\n 데이터 업데이트 완료.";
             }
             else{
               console.log('에러발생!_데이터 저장부분 : ',err);
             }
+
+            result_out = result_out+"<br> 데이터 업데이트 완료.";
           });
         }
 
@@ -124,14 +125,15 @@ router.get('/input', function(req, res) {
           result_out = "저장소 미확인. 저장소를 생성합니다.";
           connection.query('insert into hago_test (UserID) values ('+InputID+')',function(err,result){
             if(!err){
-              result_out = result_out+"\n 저장소 생성 완료. 데이터 업데이트를 시도합니다.";
+              result_out = result_out+"<br> 저장소 생성 완료. 데이터 업데이트를 시도합니다.";
                 connection.query('update hago_test set data = '+InputDATA+' where UserID ='+InputID,function(err,result){
                   if(!err){
-                    result_out = result_out+"\n 데이터 업데이트 완료.";
                   }
                   else{
                     console.log('에러발생!_데이터 저장부분 : ',err);
                   }
+
+                  result_out = result_out+"<br> 데이터 업데이트 완료.";
                 });
             }
             else{
@@ -139,7 +141,7 @@ router.get('/input', function(req, res) {
             }
           });
         }
-        result_out = result_out+"\n 본 화면은 아래 버튼으로 종료하거나, 자동으로 종료됩니다.";
+        result_out = result_out+"<br> 본 화면은 아래 버튼으로 종료하거나, 자동으로 종료됩니다.";
         res.render( 'mid' , {DBdata:InputID,
                             All:result_out+InputDATA
                           });
