@@ -109,18 +109,37 @@ router.get('/input', function(req, res) {
 
         var result_out;
         if (result[0]['success'] == 1){
-          result_out = "로그인에 성공하셨습니다. 데이터를 저장을 시도합니다.";
+          result_out = "저장소 확인. 데이터를 업데이트를 시도합니다.";
           connection.query('update hago_test set data = '+InputDATA+' where UserID ='+InputID,function(err,result){
-            if(err){
+            if(!err){
+              result_out = result_out+"\n 데이터 업데이트 완료.";
+            }
+            else{
               console.log('에러발생!_데이터 저장부분 : ',err);
             }
           });
         }
 
         else{
-          result_out = "로그인 실패";
+          result_out = "저장소 미확인. 저장소를 생성합니다.";
+          connection.query('insert into hago_test (UserID) values ('+InputID+')',function(err,result){
+            if(!err){
+              result_out = result_out+"\n 저장소 생성 완료. 데이터 업데이트를 시도합니다.";
+                connection.query('update hago_test set data = '+InputDATA+' where UserID ='+InputID,function(err,result){
+                  if(!err){
+                    result_out = result_out+"\n 데이터 업데이트 완료.";
+                  }
+                  else{
+                    console.log('에러발생!_데이터 저장부분 : ',err);
+                  }
+                });
+            }
+            else{
+              console.log('에러발생!_저장소생성 : ',err);
+            }
+          });
         }
-
+        result_out = result_out+"\n 본 화면은 아래 버튼으로 종료하거나, 자동으로 종료됩니다.";
         res.render( 'mid' , {DBdata:InputID,
                             All:result_out+InputDATA
                           });
