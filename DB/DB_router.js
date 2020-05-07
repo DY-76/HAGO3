@@ -77,10 +77,16 @@ router.get('/id', function(req, res) {
       console.log(tagId); // tagId 들어갔는지
       console.log(req.query.id);// 인식된 값 확인
 
-      res.render( 'mid' , {DBdata:tagId,
-                         All:result[0]['success']
-                        });
-      
+        var result_out;
+        if (result[0]['success'] == 1){
+          result_out = "로그인에 성공하셨습니다. 데이터를 저장합니다.";
+        }
+        else{
+          result_out = "로그인 실패";
+        }
+        res.render( 'mid' , {DBdata:tagId,
+                            ALL:result_out
+                          });
       }
     else{
       console.log('Error while performing Query.', err);
