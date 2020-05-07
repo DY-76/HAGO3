@@ -20,15 +20,13 @@ var connection = mysql.createConnection({
       if (!err){
       console.log('The solution is: ', rows);
       test = rows;
-      
+
       }
     else{
       console.log('Error while performing Query.', err);
     }
-  })
-  
-  //connection.end();
-  
+  });
+
 
 
 var input_id;
@@ -41,9 +39,8 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/all', function(req, res) {
-    sess = req.session;
     res.render( 'mid' , {DBdata:'Done!',
-                         All:sess
+                         All:'test'
                         });
     
   /*
@@ -58,32 +55,8 @@ router.get('/all', function(req, res) {
   */
 });
 
-/** session 확인 */
-router.route('/confirmSession').get(function (req, res) {
-  console.log('세션을 확인해보자!!');
-  let msg = `세션이 존재하지 않습니다.`
-  if (req.session.user) {
-      msg = `${req.session.user.name}님의 나이는 ${req.session.user.age}살 입니다. 세션의 생성된 시간 : ${req.session.user.createCurTime}`;
-  }
-
-  res.send(msg);
-
-});
-
-router.route('/').get(function (req, res) {
-  console.log('루트접속');
-
-  if(req.session.user){
-      console.log(`세션이 이미 존재합니다.`);
-  }else{
-      req.session.user = {
-          "name" : "Master Yunjin",
-          "age" : 25,
-          "createCurTime" : new Date()
-      }
-      console.log(`세션 저장 완료! `);
-  }
-  res.redirect(`/confirmSession`);
+router.get('/DBin', function(req, res) {
+    console.log("aaaa");
 
 });
 
@@ -94,56 +67,88 @@ router.get('/about', function(req, res) {
   res.send('About Dataㅠㅠㅠㅠㅠㅠㅠㅠㅠ');
 });
 
- 
 router.get('/id', function(req, res) {
   var tagId = req.query.id;
-  connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
+
+  connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success',
   function (err, result, fields) {
       if (!err){
       
       console.log(tagId); // tagId 들어갔는지
       console.log(req.query.id);// 인식된 값 확인
 
-      res.render( 'mid' , {DBdata:tagId,
-                         All:JSON.stringify(result)
-                        });
-      
+        var result_out;
+        if (result[0]['success'] == 1){
+          result_out = "로그인에 성공하셨습니다. 데이터를 저장합니다.";
+
+        }
+        else{
+          result_out = "로그인 실패";
+        }
+        res.render( 'mid' , {DBdata:tagId,
+                            All:result_out
+                          });
       }
     else{
       console.log('Error while performing Query.', err);
     }
-  })
-});
-router.get('/login', function(req,rsp){    
-
-  var tagId = req.query.id;
-  
-  connection.query('select EXISTS (select * from User where User_Id='+tagId+') as success', 
-  
-  function(err,result){
-     
-                        
-            req.session.user_ID = tagId;
-          req.session.isLogined = true;
-          //세션 스토어가 이루어진 후 redirect를 해야함.
-          req.session.save(function(){                               
-              rsp.redirect('/');
-              console.log("세션쓰")
-          });
-      }
-  )
-});
-router.get('/logout', function(req,rsp){  
-  delete req.session.uid;
-  delete req.session.isLogined;
-  delete req.session.user_ID;
-  
-  req.session.save(function(){
-      rsp.redirect('/');
   });
+
 });
 
-exports.solo=function(){
-  consol.log(JSON.stringify(test));
-}
+router.get('/input', function(req, res) {
+  var InputID = req.query.id;
+  var InputDATA = req.query.data;
+
+  connection.query('select EXISTS (select * from hago_test where UserID='+InputID+') as success',
+  function (err, result, fields) {
+      if (!err){
+      
+      console.log(InputID); // InputID 들어갔는지
+      console.log(req.query.id);// 인식된 값 확인
+
+        var result_out;
+        if (result[0]['success'] == 1){
+          result_out = "저장소 확인. 데이터를 업데이트를 시도합니다.";
+          connection.query('update hago_test set data = '+InputDATA+' where UserID ='+InputID,function(err,result){
+            if(!err){
+              result_out = result_out+"\n 데이터 업데이트 완료.";
+            }
+            else{
+              console.log('에러발생!_데이터 저장부분 : ',err);
+            }
+          });
+        }
+
+        else{
+          result_out = "저장소 미확인. 저장소를 생성합니다.";
+          connection.query('insert into hago_test (UserID) values ('+InputID+')',function(err,result){
+            if(!err){
+              result_out = result_out+"\n 저장소 생성 완료. 데이터 업데이트를 시도합니다.";
+                connection.query('update hago_test set data = '+InputDATA+' where UserID ='+InputID,function(err,result){
+                  if(!err){
+                    result_out = result_out+"\n 데이터 업데이트 완료.";
+                  }
+                  else{
+                    console.log('에러발생!_데이터 저장부분 : ',err);
+                  }
+                });
+            }
+            else{
+              console.log('에러발생!_저장소생성 : ',err);
+            }
+          });
+        }
+        result_out = result_out+"\n 본 화면은 아래 버튼으로 종료하거나, 자동으로 종료됩니다.";
+        res.render( 'mid' , {DBdata:InputID,
+                            All:result_out+InputDATA
+                          });
+      }
+    else{
+      console.log('Error while performing Query.', err);
+    }
+  });
+
+});
+
 module.exports = router;

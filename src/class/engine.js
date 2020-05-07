@@ -971,7 +971,7 @@ fileread(){
 
 
 loadobjectproject(){ 
-   // fileread();
+   fileread();
  
 }
 
