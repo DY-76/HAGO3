@@ -109,7 +109,12 @@ router.get('/input', function(req, res) {
 
         var result_out;
         if (result[0]['success'] == 1){
-          result_out = "로그인에 성공하셨습니다. 데이터를 저장합니다.";
+          result_out = "로그인에 성공하셨습니다. 데이터를 저장을 시도합니다.";
+          connection.query('update hago_test set data = '+InputDATA+' where UserID ='+InputID,function(err,result){
+            if(err){
+              console.log('에러발생!_데이터 저장부분 : ',err);
+            }
+          });
         }
 
         else{
