@@ -80,12 +80,44 @@ router.get('/id', function(req, res) {
         var result_out;
         if (result[0]['success'] == 1){
           result_out = "로그인에 성공하셨습니다. 데이터를 저장합니다.";
+
         }
         else{
           result_out = "로그인 실패";
         }
         res.render( 'mid' , {DBdata:tagId,
                             All:result_out
+                          });
+      }
+    else{
+      console.log('Error while performing Query.', err);
+    }
+  });
+
+});
+
+router.get('/input', function(req, res) {
+  var InputID = req.query.id;
+  var InputDATA = req.query.data;
+
+  connection.query('select EXISTS (select * from hago_test where UserID='+InputID+') as success',
+  function (err, result, fields) {
+      if (!err){
+      
+      console.log(InputID); // InputID 들어갔는지
+      console.log(req.query.id);// 인식된 값 확인
+
+        var result_out;
+        if (result[0]['success'] == 1){
+          result_out = "로그인에 성공하셨습니다. 데이터를 저장합니다.";
+        }
+
+        else{
+          result_out = "로그인 실패";
+        }
+
+        res.render( 'mid' , {DBdata:InputID,
+                            All:result_out+InputDATA
                           });
       }
     else{
