@@ -85,7 +85,7 @@ router.get('/id', function(req, res) {
           result_out = "로그인 실패";
         }
         res.render( 'mid' , {DBdata:tagId,
-                            ALL:result_out
+                            All:result_out
                           });
       }
     else{
