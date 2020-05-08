@@ -3691,11 +3691,11 @@ Entry.getStartProject20 = function(mediaFilePath) {
         objects: [
            
             {
-                id: '7y40y',
+                id: '7y41y',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
-                    ko: '문',
-                    en: 'door',
+                    ko: '계단',
+                    en: 'stairs',
                 },
                 script: [
                     [
@@ -3729,12 +3729,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}../img/door.png`,
+                            fileurl: `${mediaFilePath}../img/stairs1.png`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 640,
-                                height: 1280,
+                                width: 475,
+                                height: 475,
                             },
                         },
                     ],
@@ -3742,14 +3742,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 320,
-                    regY: 640,
+                    regX: 237.5,
+                    regY: 237.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 640,
-                    height: 1280,
+                    width: 475,
+                    height: 475,
                     visible: true,
                 },
                 lock: false,

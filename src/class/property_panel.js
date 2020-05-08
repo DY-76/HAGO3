@@ -76,7 +76,13 @@ Entry.PropertyPanel = function() {
                     $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#754F44\" face=\"Do Hyeon\">▶‘앞으로 이동’블록을 블록 꾸러미에서 블록 조립소로 옮겨보세요.</font><br/>"));
                     break;
                 case 2 :
-                    $(this).before($('<div>').html("<div class='help_size' style='overflow:auto; width:800px; top:500px; bottom:0;';><font size='6'> test1<br>test<br>test3<br>test<br>test<br>test6<br>test </font></div>"));
+                    $(this).before($('<span>').html("<style st> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"5\" color=\"#DE6449\" face=\"Black Han Sans\"> 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과19-03] <br>/ 국어 [6국05-02]</font><br/>"));
+            
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#754F44\" face=\"Do Hyeon\">▶ 도둑들이 문을 따고 들어 오려는걸 간신히 상자로 막아냈지만, 도둑들의 힘이 생각보다 강해서 문이 열리려고 해요. 도둑들의 힘보다 상자를 무겁게 하고 2층으로 도망쳐 봅시다.</font><br/>"));
+
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#754F44\" face=\"Do Hyeon\">▶ 도둑들이 학생의 집으로 못 들어 오도록 상자로 문을 막아봅시다.</font><br/>"));
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#754F44\" face=\"Do Hyeon\">▶ 도둑들이 문을 열지 못하게 하려면 상자의 질량은 몇이 되어야 할까요? (단, 도둑들의 힘은 정해져 있습니다.)</font><br/>"));
+                    $(this).before($('<span>').html("<br/><style> @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon&display=swap');</style><font size=\"4\" color=\"#754F44\" face=\"Do Hyeon\">▶ 상자의 질량을 정하고 블록 꾸러미에서 블록 조립소로 옮겨 실행 해보세요.</font><br/>"));
                     
                     break;
                 case 3 :

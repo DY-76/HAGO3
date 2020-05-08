@@ -25,8 +25,12 @@ export function addobject_box(){
                  var addobject = JSON.parse(door2);
                 Entry.Utils.addNewObject(addobject);
                  break;
-            case 'kid':
+            case 'door':
                     var addobject = JSON.parse(door);
+                   Entry.Utils.addNewObject(addobject);
+                    break;
+            case 'stairs1':
+                    var addobject = JSON.parse(stairs1);
                    Entry.Utils.addNewObject(addobject);
                     break;
             case 'test':
