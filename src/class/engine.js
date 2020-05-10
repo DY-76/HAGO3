@@ -10,9 +10,6 @@ var i = 'off';
 var test;
 export var test;
 export var i;
-export function openproject();
-console.log('test');
-
 
 /**
  * Class for a engine.
