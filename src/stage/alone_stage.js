@@ -1,8 +1,6 @@
 'use strict';
 
-export function a(){
-    console.log(alone_stage1);
-}
+
 function test(){
     document.write("js 파일내 test 함수 호출시 출력되는 문장")
   }
