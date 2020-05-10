@@ -41,5 +41,6 @@ app2.use(bodyParser.json());
 app2.use('', test_api);
   
 const port = process.env.PORT || 5050;
+const port2 = process.env.PORT || 5151;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
-app2.listen(port, () => console.log(`Listening on port ${port}...`));
+app2.listen(port2, () => console.log(`Listening on port ${port2}...`));
