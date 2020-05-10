@@ -40,8 +40,9 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 
 router.post('/post', function(req, res) {
-  var id = req.body.id;
-  res.render( 'test' , {id:id} );
+  var iiid = req.body.id;
+  console.log(req.body.id);
+  res.render( 'test' , {id:iiid} );
           });
 
 router.get('/all', function(req, res) {
