@@ -134,10 +134,13 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openInNewTab('http://codinghago.com:85/DB/all')">DB로가기</button>
                     
-                    <form name="test333">
+                    <!-- <form name="test333">
                         <input type="hidden" name="id">
                         <a href="javascript:runDataTask('12');">aaaa</a>
 
+                    </form> -->
+                    <form action="../DB/views/test.ejs" method="post">
+                        <button type="submit" name="id" value="123" class="btn-link">Go</button>
                     </form>
 
                         <script>
@@ -151,13 +154,13 @@
                             session_in()
                             
 
-                            function runDataTask(id){
-                                var test3333 = document.test333;
-                                test3333.id.value = id;
-                                test3333.action = "../DB/views/test.ejs";
-                                test3333.method = "post";
-                                test3333.submit();
-                            };
+                            // function runDataTask(id){
+                            //     var test3333 = document.test333;
+                            //     test3333.id.value = id;
+                            //     test3333.action = "../DB/views/test.ejs";
+                            //     test3333.method = "post";
+                            //     test3333.submit();
+                            // };
 
                     </script>
 
