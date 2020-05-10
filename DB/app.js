@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 const app = express();
 const api = require('./DB_router');
+const test_api = require('./test_router');
 var session = require('express-session');  
 var MySQLStore = require('express-mysql-session')(session);
 var options ={                                               
@@ -24,8 +25,7 @@ app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use('/DB', api);
-app.use('/aa', api);
-app.use('', api);
+app.use('', test_api);
   
 const port = process.env.PORT || 5050;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
