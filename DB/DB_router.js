@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+var parser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 //var get_info = require('./utils');
@@ -40,7 +41,8 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 
 router.post('/post', function(req, res) {
-  var iiid = req.body.id;
+  // var iiid = req.body.id;
+  var iiid = req.body["id"];
   console.log(req.body.id);
   res.render( 'test' , {id:iiid});
           });
