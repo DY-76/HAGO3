@@ -42,7 +42,7 @@ router.use(function timeLog(req, res, next) {
 router.post('/post', function(req, res) {
   var iiid = req.body.id;
   console.log(req.body.id);
-  res.render( 'test'  );
+  res.render( 'test' , {id:iiid});
           });
 
 router.get('/all', function(req, res) {
