@@ -23,7 +23,9 @@ app.use(cookieParser());
 app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
-app.use('/a', api);
+app.use('/DB', api);
+
+
   
 const port = process.env.PORT || 5050;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
