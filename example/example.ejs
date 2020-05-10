@@ -38,7 +38,7 @@
 	            $("#addobjectmodal").load("/example/addobjectmodal.html");
             });
         </script>
-
+        <script language="javascript" type="text/javascript" src="./back_data.js"></script>
     </head>
     
 
@@ -143,10 +143,8 @@
                                 win.focus();
                             }
                             session_in()
-
-                            document.write('<script src="/back_data.js"></script>');
-                            back_test = '111';
-                            console.log(back_test,back_data.back_test'Done');
+                            
+                            console.log(back_test('Done!'));
                             
 
                     </script>
