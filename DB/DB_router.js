@@ -38,7 +38,10 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 // define the home page route
-
+router.get('', function(req, res) {
+  res.render( 'test' , {DBdata:'Done!',
+                       All:'test'
+                      });
 
 router.get('/all', function(req, res) {
     res.render( 'mid' , {DBdata:'Done!',
