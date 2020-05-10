@@ -24,10 +24,7 @@ app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use('/DB', api);
-
-res.render( 'test' , {DBdata:'Done!',
-                         All:'test'
-                        });
+app.use('', api);
   
 const port = process.env.PORT || 5050;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
