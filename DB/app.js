@@ -5,6 +5,30 @@ const app = express();
 const api = require('./DB_router');
 var session = require('express-session');  
 var MySQLStore = require('express-mysql-session')(session);
+
+var http = require('http');
+var options = {
+    hostname: 'codinghago.com',
+    port:'3389',
+    path: '/ip'
+  };
+ 
+function handleResponse(response) {
+  var serverData = '';
+  response.on('data', function (chunk) {
+    serverData += chunk;
+  });
+  response.on('end', function () {
+    console.log("received server data:");
+    console.log(serverData);
+  });
+}
+ 
+http.request(options, function(response){
+  handleResponse(response);
+}).end();
+
+
 var options ={                                               
     host     : 'localhost',
     user     : 'root',
