@@ -40,7 +40,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 
 router.get('/post', function(req, res) {
-  res.render( 'mid' , {data:'Done!'
+  res.render( 'test' , {data:'Done!'
                       });
                     });
 
