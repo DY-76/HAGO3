@@ -5,38 +5,9 @@
     </head>
 
     <body>
-        <p>mid web</p>
-        <h1>당신의 아이디 : <%=DBdata%></h1>
-        <h4><%=All%></h4>
-        <button onclick="session_in()" >hi</button>
-        <button onclick="a()" >con</button>
-        <a id='closetab' onclick="WinClose()">확인했고 닫기</a>
-
-        <script>
-            function session_in(){
-                console.log(sessionStorage.length);
-            }
-        </script>
-
-        <script>
-            function WinClose()
-            {
-                window.open('','_self').close();
-            }
-
-        </script>
-          <script>
-            function first(){
-            location = "http://codinghago.com";
-            location.href = "http://codinghago.com:85/DB/all";
-            location.assign("http://codinghago.com:85/DB/all");
-            location.replace("http://codinghago.com:85/DB/all");
-            history.back();
-            window.location.reload();
-        break;}
-            </script>
- <script type="text/javascript" src="../../src/stage/alone_stage.js">import { a } from '../../src/stage/alone_stage.js';</script>
-
+        <p>test web</p>
+        <h1><%=data%></h1>
+        <p>ID: <?php echo $_POST["id"]; ?></p>
 
     </body>
 </html>
