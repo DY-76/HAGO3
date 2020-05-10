@@ -44,26 +44,11 @@
         <h1>당신의 아이디 : <%=DBdata%></h1>
         <h4><%=All%></h4>
         <button onclick="session_in()" >hi</button>
-        <button onclick="openproject()" >con</button>
+        <button onclick="test()" >con</button>
         <a id='closetab' onclick="WinClose()">확인했고 닫기</a>
         <p>ID: <?php echo $_POST["id"]; ?></p>
       
-<script>
-    Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.outputPath = undefined;
 
-var _path = require('path');
-
-var _path2 = _interopRequireDefault(_path);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var outputPath = _path2.default.resolve(__dirname, 'dist');
-console.log('Output path is "' + outputPath + '".');
-exports.outputPath = outputPath;
-</script>
 
 
 
