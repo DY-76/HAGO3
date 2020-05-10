@@ -12,3 +12,5 @@ router.use(function timeLog(req, res, next) {
                         });
 
 });
+
+module.exports = router;
