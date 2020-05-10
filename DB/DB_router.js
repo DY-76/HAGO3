@@ -39,9 +39,10 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 
-router.get('/post', function(req, res) {
-  res.render( 'test' );
-                    });
+router.post('/post', function(req, res) {
+  var id = req.body.id;
+  res.render( 'test' , {id:id} );
+          });
 
 router.get('/all', function(req, res) {
     res.render( 'mid' , {DBdata:'Done!',
