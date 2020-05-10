@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 
 router.post('/post', function(req, res) {
-  // var iiid = req.body.id;
-  var iiid = req.body["id"];
+   var iiid = req.body.id;
+  //var iiid = req.body["id"];
   console.log(iiid);
   res.render( 'test' , {id:iiid});
           });
