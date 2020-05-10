@@ -134,13 +134,7 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openInNewTab('http://codinghago.com:85/DB/all')">DB로가기</button>
                     
-                    <form action="../DB/views/test.ejs" method="POST">
-                        <input type="text" name="id" placeholder="Enter id here">
-                        <input type="submit" value="전송">
-                        <a href="../DB/views/test.ejs">aaaa</a>
-
-                    </form>
-
+                
                         <script>
                             function session_in(){
                                 console.log(sessionStorage.length);
@@ -152,8 +146,23 @@
                             session_in()
                             
 
+                            function runDataTask(id){
+                                var test3333 = document.test333;
+                                test3333.id.value = id
+
+                                test3333.action = "../DB/views/test.ejs"
+                                test3333.method = "post"
+                                test3333.submit();
+                            };
+
                     </script>
-                     
+
+                         <form name="test333">
+                            <input type="submit" value="id">
+                            <a href="javascript:runDataTask('12');">aaaa</a>
+    
+                        </form>
+    
                  
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();" target="_blank">add object</button>-->
                             
