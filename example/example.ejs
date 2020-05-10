@@ -3,11 +3,30 @@
 
 <html lang="kr">
     <head>
+        <form name="paging">
+            <input type="hidden" name="id"/>
+         </form>
+<script>
+        function goPage(id) {
+      // name이 paging인 태그
+      var f = document.paging;
 
+      // form 태그의 하위 태그 값 매개 변수로 대입
+      f.id.value = id;
+
+      // input태그의 값들을 전송하는 주소
+      f.action = "http://www.codinghago.com:5050/DB/input"
+
+      // 전송 방식 : post
+      f.method = "post"
+      f.submit();
+    };
+</script>
+<!-- 
         <form action='http://www.codinghago.com:5050/DB/input' method="post">
             <input type="text" name="id" placeholder="Enter id here">
             <input type="submit" value="전송">
-        </form>
+        </form> -->
 
         
 
@@ -138,6 +157,7 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openInNewTab('http://codinghago.com:85/DB/all')">DB로가기</button>
                     
+                    <a href="javascript:goPage('1');">관람</a>
                 
                         <script>
                             function session_in(){
