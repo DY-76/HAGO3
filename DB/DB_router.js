@@ -39,9 +39,9 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 
-router.post('/post', function(req, res) {
-  var iiid = req.body.f.id;
-  console.log(req.body.id);
+router.get('/post', function(req, res) {
+  var iiid = req.query.id;
+  console.log(req.query.id);
   res.render( 'test' , {id:iiid} );
           });
 
