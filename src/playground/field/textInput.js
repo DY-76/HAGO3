@@ -243,7 +243,8 @@ Entry.FieldTextInput = class FieldTextInput extends Entry.Field {
 
         inputField.on('blur', (e) => {
             console.log('blur');
-            this.destroyOption(undefined, true);
+            //this.destroyOption(undefined, true);
+            //이 함수 작동시 툴팁팝업 죽음(방향 시계 툴팁)
         });
 
         const { scale = 1 } = this.board;

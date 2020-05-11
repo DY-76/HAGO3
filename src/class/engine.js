@@ -16,6 +16,7 @@ export var i;
  * This have view for control running state.
  * @constructor
  */
+
 Entry.Engine = class Engine {
     constructor() {
         this.state = 'stop';
