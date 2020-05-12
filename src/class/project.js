@@ -3690,71 +3690,66 @@ Entry.getStartProject20 = function(mediaFilePath) {
         ],
         objects: [
            
+            
             {
-                id: '7y41y',
+                id: '7y0p3',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
-                    ko: '계단',
-                    en: 'stairs',
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
                 },
                 script: [
                     [
                         {
                             type: 'when_run_button_click',
-                            x: 50,
-                            y: 600,
+                            x: 40,
+                            y: 50,
                         },
-                        {type: 'move_xy_time3'}
-                        
+                      
+                       
                     ],
+                    
+                    
                 ],
-                selectedPictureId: 'vx80',
+                id: 'line',
+                name: '바닥',
+                selectedPictureId: 'vx85',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    sounds: [
-                        {
-                            duration: 1.3,
-                            ext: '.mp3',
-                            id: '8el5',
-                            fileurl: `${mediaFilePath}media/intro.mp3`,
-                            name: Lang.Blocks.doggi_bark,
-                            label: {
-                                ko: '강아지 짖는소리',
-                                en: "Doggi's Bark",
-                            },
-                        },
-                    ],
+                    
                     pictures: [
                         {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}../img/stairs1.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            id: 'vx85',
+                            fileurl: `${mediaFilePath}../img/kid2.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
                             scale: 100,
                             dimension: {
-                                width: 475,
-                                height: 475,
+                                width: 117,
+                                height: 234,
                             },
                         },
+                       
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 237.5,
-                    regY: 237.5,
+                    regX: 58.5,
+                    regY: 117,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
-                    direction: 90,
-                    width: 475,
-                    height: 475,
+                    direction: 0,
+                    width: 117,
+                    height: 234,
                     visible: true,
                 },
                 lock: false,
                 active: true,
             },
+           
         ],
         expansionBlocks: [],
         aiUtilizeBlocks: [],

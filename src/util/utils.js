@@ -410,7 +410,7 @@ Entry.resizeElement = function(interfaceModel) {
         interfaceModel.canvasWidth = 800;
 
         const engineContainer = Entry.engine.view_.parentElement;
-        //engineContainer.style.width = `${canvasSize}px`;
+        //engineContainer.style.width = `${canvasSize}px`; //이거는 왼쪽 밑 글 넣는곳 늘리것임
         engineContainer.style.width = `750px`;
         Entry.engine.view_.style.width = `${canvasSize + 102}px`;
         Entry.stage.canvas.canvas.style.width = `${canvasSize + 84.5}px`;
