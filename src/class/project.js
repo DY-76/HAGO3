@@ -3722,12 +3722,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx85',
-                            fileurl: `${mediaFilePath}../img/kid2.png`,
+                            fileurl: `${mediaFilePath}../img/flash_light.png`,
                             name: `${Lang.Blocks.walking_entryBot}2`,
                             scale: 100,
                             dimension: {
-                                width: 117,
-                                height: 234,
+                                width: 889,
+                                height: 2304,
                             },
                         },
                        
@@ -3736,14 +3736,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 58.5,
-                    regY: 117,
+                    regX: 444.5,
+                    regY: 1152,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 117,
-                    height: 234,
+                    width: 889,
+                    height: 2304,
                     visible: true,
                 },
                 lock: false,
