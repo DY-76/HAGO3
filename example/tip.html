@@ -1,0 +1,202 @@
+
+          <!-- HTML 표기부분 -->
+
+<div id="tipmodal_con"  class="tipmodal_con">  
+              
+                  <div class="tipmodal_con_title">
+                    <p id="tip_title"></p>
+                  </div>
+                  <div id="tip_contents" class="tipmodal_con_contents">
+                    <table border="0" style="text-align: center; margin:auto;">
+                      <tr>
+                        <td><p id="tip_top_left"></p></td><td><p id="tip_top_center"></p></td><td><p id="tip_top_right"></p></td>
+                      </tr>
+                      <tr>
+                        <td><p id="tip_bottom_left"></p></td><td><p id="tip_bottom_center"></p></td><td><p id="tip_bottom_right"></p></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="tipmodal_con_controller">
+                   <table style="text-align: center; margin:auto;">
+                    <tr>
+                      <td></td>
+                      <td>
+                        <td><button id="tip_nev_front" onclick="tip_move_page('back')"><<</button></td>
+                        <td id="tip_controller"></td>
+                        <td><button id="tip_nev_back" onclick="tip_move_page('next')">>></button></td>
+                      </td>
+                      <td></td>
+                    </tr>
+                   </table>
+                  </div>
+
+          </div>
+          
+
+          <!-- 팁 데이터 입력은 이곳에서 -->
+
+          <script>
+            var now_link = window.location.href.split("stage=");
+            var tipdata = {title:"",totalpage:1};
+            var now_page = 1;
+            switch (Number(now_page)){
+                  case 1 :
+                    //제목과 페이지
+                      tipdata = {
+                        title     : "제목 영역 입니다",
+                        totalpage : 3   };    //총 페이지
+                                              //페이지 늘릴거면 아래처럼 붙여넣기(총페이지와 갯수 맞아야함)
+                        tipdata.page1 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
+                        topleft     : "topleft_test",
+                        topcenter   : "",
+                        topright    : "aaaaaa",
+                        bottomleft  : "",
+                        bottomcenter: "aaaaa",
+                        bottomright : ""
+                                    };
+
+                        tipdata.page2 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
+                        topleft     : "ㄱㄷㄷㄷㄷㅎㅍ",
+                        topcenter   : "ㄴㅇㄹ",
+                        topright    : "ㄷㄿㄷㄹㄿㄿㅇㄹ",
+                        bottomleft  : "ㄹㅇㅇㄹㅇ",
+                        bottomcenter: "ㄿㅍㄹㄿㄿㄿ",
+                        bottomright : "ㅇㅍㄹㅇ"
+                                    };
+                        tipdata.page3 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
+                        topleft     : "",
+                        topcenter   : "만나서",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "반갑습니다",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 2 :
+                      tipdata = {
+                        title     : "제목 영역 입니다",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        topleft     : "topleft_test",
+                        topcenter   : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 3 :
+                      tipdata = {
+                        title     : "제목 영역 입니다",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        topleft     : "topleft_test",
+                        topcenter   : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 4 :
+                      tipdata = {
+                        title     : "제목 영역 입니다",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        topleft     : "topleft_test",
+                        topcenter   : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 5 :
+                      tipdata = {
+                        title     : "제목 영역 입니다",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        topleft     : "topleft_test",
+                        topcenter   : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "",
+                        bottomright : ""
+                                    };
+
+                      break;
+                      
+
+                  default :
+                      console.log("error! : tip데이터 없음");
+              };
+              //nev 버튼 생성
+              for(var i = 1 ; i <= tipdata.totalpage ; i++) {
+                $("#tip_controller").append(" <button type='button' id='pagenum"+i+"' onclick='tip_move_page("+i+")'"+i+">"+i+"</button> ");
+              }
+        tip_reload();
+
+        function tip_reload(){
+
+          document.getElementById('tip_title').innerHTML=tipdata.title;
+          // 제목대입
+          document.getElementById('tip_top_left').innerHTML=tipdata['page'+now_page].topleft;
+          document.getElementById('tip_top_center').innerHTML=tipdata['page'+now_page].topcenter;
+          document.getElementById('tip_top_right').innerHTML=tipdata['page'+now_page].topright;
+          document.getElementById('tip_bottom_left').innerHTML=tipdata['page'+now_page].bottomleft;
+          document.getElementById('tip_bottom_center').innerHTML=tipdata['page'+now_page].bottomcenter;
+          document.getElementById('tip_bottom_right').innerHTML=tipdata['page'+now_page].bottomright;
+          //콘텐츠 대입
+          
+          //페이징 대입
+          document.getElementById("tip_nev_back").setAttribute('class','');
+          document.getElementById("tip_nev_front").setAttribute('class','');
+          if(now_page == 1) {
+            document.getElementById("tip_nev_front").setAttribute('class','sel');
+          }
+          for(var i = 1 ; i <= tipdata.totalpage ; i++) {
+            document.getElementById("pagenum"+i).setAttribute('class','');
+              }
+          document.getElementById("pagenum"+now_page).setAttribute('class','sel');
+
+          if(now_page == tipdata.totalpage) {
+            document.getElementById("tip_nev_back").setAttribute('class','sel');
+          }
+        }
+
+        //페이지 이동 함수
+        function tip_move_page(v) {
+          if(v == 'next'){
+            now_page++;
+            tip_reload();
+          }
+          else if(v == 'back'){
+            now_page--;
+            tip_reload();
+          }
+          else if(v >= 1 && v <= tipdata.totalpage){
+            now_page = v;
+            tip_reload();
+          }
+          else{
+            console.log("error:페이지이동오류");
+            now_page = 1;
+            tip_reload();
+          }
+        }
+
+
+        </script>
+
