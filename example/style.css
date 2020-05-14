@@ -1,5 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500";
 
+.Paneltip {
+  font-size: 99px;
+}
 
 .OBMM .menu,.OBMM .button {
   width: 75px;
