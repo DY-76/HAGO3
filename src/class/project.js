@@ -3722,12 +3722,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx85',
-                            fileurl: `${mediaFilePath}../img/flash_light.png`,
+                            fileurl: `${mediaFilePath}../img/custom_line2.png`,
                             name: `${Lang.Blocks.walking_entryBot}2`,
                             scale: 100,
                             dimension: {
-                                width: 889,
-                                height: 2304,
+                                width: 1185,
+                                height: 949,
                             },
                         },
                        
@@ -3736,23 +3736,321 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 444.5,
-                    regY: 1152,
+                    regX: 592.5,
+                    regY: 474.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 889,
-                    height: 2304,
+                    width: 1185,
+                    height: 949,
                     visible: true,
                 },
                 lock: false,
                 active: true,
             },
+            {
+                id: '7y1p4',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                      
+                       
+                    ],
+                    
+                    
+                ],
+
+                id: 'geberator',
+                name: '발전기',
+                selectedPictureId: 'vx86',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx86',
+                            fileurl: `${mediaFilePath}../img/generator.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 100,
+                            dimension: {
+                                width: 125,
+                                height: 125,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 62.5,
+                    regY: 62.5,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 0,
+                    width: 125,
+                    height: 125,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0p5',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                      
+                       
+                    ],
+                    
+                    
+                ],
+
+                id: 'line1',
+                name: '바닥1',
+                selectedPictureId: 'vx87',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx87',
+                            fileurl: `${mediaFilePath}../img/jump_rope.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 100,
+                            dimension: {
+                                width: 115,
+                                height: 115,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 57.5,
+                    regY: 57.5,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 0,
+                    width: 115,
+                    height: 115,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0p8',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                      
+                       
+                    ],
+                    
+                    
+                ],
+
+                id: 'line2',
+                name: '바닥2',
+                selectedPictureId: 'vx88',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx88',
+                            fileurl: `${mediaFilePath}../img/rope.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 100,
+                            dimension: {
+                                width: 125,
+                                height: 125,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 62.5,
+                    regY: 62.5,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 0,
+                    width: 125,
+                    height: 125,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y0p9',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                      
+                       
+                    ],
+                    
+                    
+                ],
+
+                id: 'line3',
+                name: '바닥3',
+                selectedPictureId: 'vx89',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx89',
+                            fileurl: `${mediaFilePath}../img/stage5_door.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 100,
+                            dimension: {
+                                width: 113,
+                                height: 113,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 56.5,
+                    regY: 56.5,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 0,
+                    width: 113,
+                    height: 113,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            {
+                id: '7y010',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬4',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                      
+                       
+                    ],
+                    
+                    
+                ],
+
+                id: 'line4',
+                name: '바닥4',
+                selectedPictureId: 'vx90',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx90',
+                            fileurl: `${mediaFilePath}../img/cu.png`,
+                            name: `${Lang.Blocks.walking_entryBot}2`,
+                            scale: 100,
+                            dimension: {
+                                width: 100,
+                                height: 94,
+                            },
+                        },
+                       
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 50,
+                    regY: 47,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 0,
+                    width: 100,
+                    height: 94,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+
+            
            
         ],
         expansionBlocks: [],
         aiUtilizeBlocks: [],
         speed: 60,
     };
+    
 };
