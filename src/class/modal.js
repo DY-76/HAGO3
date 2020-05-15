@@ -4,6 +4,7 @@
         // Get the button that opens the modal
         var OBmodal = document.getElementById('addobjectmodal');
         //var btn = document.getElementById("myBtn");"
+        var tipmodal = document.getElementById('tipmodal');
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];                                         
@@ -24,6 +25,9 @@
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+            }
+            if (event.target == tipmodal) {
+                tipmodal.style.display = "none";
             }
             if (event.target == OBmodal) {
                 OBmodal.style.display = "none";
