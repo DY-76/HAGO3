@@ -49,7 +49,7 @@ Entry.loadProject = function(project) {
        else if  (getParameterByName('stage') == 4)
        project = sgm.Stage_out('alone',4);
        else if  (getParameterByName('stage') == 5)
-       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
+       project = sgm.Stage_out('alone',5);
        else if  (getParameterByName('stage') == 10)
        project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
        else if  (getParameterByName('stage') == 20)
