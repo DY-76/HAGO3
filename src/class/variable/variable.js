@@ -94,7 +94,7 @@ class Variable {
                 'alphabetic'
             );
             //변수이름 위치 지정 (변수박스)
-            this.textView_.x = 2;
+            this.textView_.x = 3.5;
             if (GEHelper.isWebGL) {
                 this.textView_.y = this.GL_VAR_POS.LABEL_Y;
             } else {
@@ -228,7 +228,7 @@ class Variable {
             .f(boxFillAndStrokeColor)
             .ss(1, 2, 0)
             .s(boxFillAndStrokeColor)
-            .rr(this._nameWidth + 8, -8, this._valueWidth + 6, 12, 2);
+            .rr(this._nameWidth + 8, -8, this._valueWidth + 6+20, 12, 2);
     }
 
     _adjustSingleViewPosition() {
