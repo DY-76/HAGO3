@@ -32,7 +32,7 @@ export function objectadd(name){
         case 'stairs1':
             Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stairs1)));
             break;
-            case 'line':
+        case 'line':
             Entry.Utils.addNewObject(JSON.parse(JSON.stringify(line)));
             break;
             case 'mirror':

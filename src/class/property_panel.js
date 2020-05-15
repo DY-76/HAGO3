@@ -66,27 +66,67 @@ Entry.PropertyPanel = function() {
 
             switch (Number(getParameterByName('stage'))){
                 case 1:
-                    $(this).before($('<span>').html("<p id='Paneltip'>▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과19-03] / 국어 [6국05-02]</p>"));
-                    $(this).before($('<span>').html("<p id='Paneltip'>▶ 빈집만 상습적으로 도둑질하는 도둑들이 빈집을 찾다가 학생네 집에 가족들이 모두 여행을 가고 학생 혼자만 있는걸 알게 되었어요. 도둑들이 학생네 집에 침투하지 못하도록 학생을 도와 도둑을 막아봅시다.</p>"));
-                    $(this).before($('<span>').html("<p id='Paneltip'>▶도둑들이 성휘 집으로 못 들어 오도록 상자로 문을 막아봅시다.</p>"));
-                    $(this).before($('<span>').html("<p id='Paneltip'>▶상자를 무사히 옮기려면 몇 번 움직여야 할까요? ( 단, 한칸 당 1M입니다. )</p>"));
-                    $(this).before($('<span>').html("<p id='Paneltip'>▶‘앞으로 이동’블록을 블록 꾸러미에서 블록 조립소로 옮겨보세요.</p>"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과19-03] / 국어 [6국05-02]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 빈집만 상습적으로 도둑질하는 도둑들이 빈집을 찾다가 학생네 집에 가족들이 모두 여행을 가고 학생 혼자만 있는걸 알게 되었어요. 도둑들이 학생네 집에 침투하지 못하도록 학생을 도와 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶도둑들이 성휘 집으로 못 들어 오도록 상자로 문을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶상자를 무사히 옮기려면 몇 번 움직여야 할까요? ( 단, 한칸 당 1M입니다. )"));
+                    $(this).before($("<p id='Paneltip'>").html("▶‘앞으로 이동’블록을 블록 꾸러미에서 블록 조립소로 옮겨보세요."));
                     break;
                 case 2 :
-                    $(this).before($('<span>').html("<p id='Paneltip'>설명입니다 설명</p>"));
-                    
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과19-03] / 국어 [6국05-02]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑들이 문을 따고 들어 오려는걸 간신히 상자로 막아냈지만, 도둑들의 힘이 생각보다 강해서 문이 열리려고 해요. 도둑들의 힘보다 상자를 무겁게 하고 2층으로 도망쳐 봅시다. "));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑들이 학생의 집으로 못 들어 오도록 상자로 문을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑들이 문을 열지 못하게 하려면 상자의 질량은 몇이 되어야 할까요? (단, 도둑들의 힘은 정해져 있습니다.)"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 상자의 질량을 정하고 블록 꾸러미에서 블록 조립소로 옮겨 실행 해보세요."));
                     break;
                 case 3 :
-                    console.log(getParameterByName('stage'));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과19-03] / 국어 [6국05-02]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑들이 1층에서 문을 열지 못해 2층 창문을 통해 들어오려고 합니다. 2층에는 마침 계란이 있네요. 계란을 이용해서 도둑이 2층으로 못 들어오게 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 2층으로 못 들어오도록 계란을 굴려서 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑을 쓰러지게 하려면 계란의 굴러가는 속도는 몇이 되어야 할까요? (단, 도둑들이 계란을 맞고 쓰러지려면 3의 일률이 필요하고, 마찰력은 존재하지 않습니다.)"));
+                    $(this).before($("<p id='Paneltip'>").html("▶블록 꾸러미에서 블록 조립소로 옮기고 실행하여 방향키를 이용해 속도를 조절 해보세요."));
                     break;
                 case 4 :
-                    console.log(getParameterByName('stage'));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과19-03] / 수학 [4수03-12]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑 한명이 계란을 맞고 아래로 떨어졌네요. 그것을 지켜보던 다른 도둑이 화가 나서 2층으로 올라오는데 남은 계란이 없네요. 학생은 미리 이것을 염두해두고 2층의 불을 다 끈 상태로 빛을 이용해 도둑을 막으려고 합니다. 빛을 이용해 도둑이 집안으로 들어오지 못하도록 친구들이 도와주세요 !"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 2층에 들어오지 못하도록 거울과 전등을 이용해 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 눈부시게 만들어 2층에 못 들어오게 하려면 거울의 각도는 몇이 되어야 할까요? (단, 전등은 고정 되어있고 거울로만 빛의 각도를 조절할 수 있습니다.)"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 블록 꾸러미에서 블록 조립소로 옮겨 거울의 각도를 조절하여 실행 해보세요."));
                     break;
                 case 5 :
-                    console.log(getParameterByName('stage'));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과09-03], [12물리Ⅰ02-03]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑을 필사적으로 막아보았지만, 결국에 도둑이 2층 집안으로 들어와버렸습니다. 학생은 2층 계단으로 향하는 문을 닫고 문 손잡이에 전류를 흐르게 하여 도둑들이 문을 못 열게 하려고 합니다. 도체를 이용해 문 손잡이에 전류를 흐르게 친구들이 도와주세요 !"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 2층 계단에 오지 못하도록 전류를 이용해 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 문 손잡이를 만졌을 때, 전류가 가장 잘 통하는 물체는 무엇일까요? (단, 전압은 고정 되어있고 전류 값만 조절할 수 있습니다.)"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 블록 꾸러미에서 블록 조립소로 옮겨 도체를 찾아 실행 해보세요."));
                     break;
-                case 0 :
-
+                case 6 :
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과09-03], [12물리Ⅰ02-03]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 친구들의 도움을 통해서 도둑을 막기위해 전기가 잘 흐르는 도체를 찾아 발전기와 문 손잡이에 연결 했어요. 이제 도둑들이 쓰러질 수 있게 친구들이 전류를 계산해 도와주세요 !"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 문 손잡이를 잡으면 쓰러지도록 전압를 이용해 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 문 손잡이를 만지면 전류를 통하게 하여 도둑이 쓰러지려면 전압은 얼만큼 되어야 할까요? (단, 도둑의 저항은 2200Ω)"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 블록 꾸러미에서 블록 조립소로 옮겨 전압값을 조절하여 실행 해보세요."));
+                    break;
+                case 7 :
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과09-03], [12물리Ⅰ02-03]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 친구들의 도움이 있어서 다행히 2층에서 시간을 벌었어요. 하지만 도둑은 포기하지 않고 학생을 끝까지 추격하려고 하네요. 학생은 미리 1층에 내려와 호스를 이용해 물 대포를 쏴서 도둑을 지하로 떨어뜨리려고 하려면 친구들이 도와줘야 해요 !"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 물 대포를 맞고 지하로 떨어지기 위해 베르누이법칙을 이용해 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 물 대포를 맞고 지하로 떨어지려면 20m/s 유속으로 분출 되어야 할 때, 도착점의 단면적은 25mm²라고 했을 때, 호스의 출발점 단면적과 출발점 유속은 얼마 였을까요? (단, 단면적과 유속은 반비례 한다. )"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 블록 꾸러미에서 블록 조립소로 옮겨 단면적과 유속을 조절하여 실행 해보세요."));
+                    break;
+                case 8 :
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과09-03], [12물리Ⅰ02-03]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 물 대포를 이용해 도둑이 지하실로 떨어진 틈을 타서 학생이 2층으로 도망가는데 성공을 했어요. 근데 생각보다 도둑이 정신을 빨리 차리고 1층으로 올라와버렸어요. 도둑이 계단을 이용해 2층으로 올라오는 동안 타이밍을 맞춰서 공을 떨어트려 도둑을 맞춰 봅시다 !"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 공을 맞고 2층으로 올라오지 못하게 하기 위해 중력에 의한 위치 에너지를 이용해 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑에게 공을 맞추기 위해선 몇 칸을 움직여야 하고 중력에 의한 위치에너지가 몇이 되어야 할까요? (단, 한 칸 당  0.5m 이다.)"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 블록 꾸러미에서 블록 조립소로 옮겨 실행 해보세요."));
+                    break;
+                case 9 :
+                    $(this).before($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과09-03], [12물리Ⅰ02-03]"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 친구들의 도움이 있어서 다행히 2층에서 시간을 벌었어요. 하지만 도둑은 포기하지 않고 학생을 끝까지 추격하려고 하네요. 학생은 미리 1층에 내려와 호스를 이용해 물 대포를 쏴서 도둑을 지하로 떨어뜨리려고 하려면 친구들이 도와줘야 해요 !"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 물 대포를 맞고 지하로 떨어지기 위해 베르누이법칙을 이용해 도둑을 막아봅시다."));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 도둑이 물 대포를 맞고 지하로 떨어지려면 호스의 도착점 단면적과 출발점 유속은 얼만큼 되어야 할까요? (단, 호스의 단면적은 50mm² 이다. )"));
+                    $(this).before($("<p id='Paneltip'>").html("▶ 블록 꾸러미에서 블록 조립소로 옮겨 단면적과 유속을 조절하여 실행 해보세요."));
                     break;
                 default :
                     console.log("도움말 case파트 현 번호 찾을 수 없음");
@@ -101,7 +141,7 @@ Entry.PropertyPanel = function() {
 
         /*  $('.propertyPanelCover').each(function() {
            
-            $(this).before($('<span>').text('골드버그란 명칭은 미국의 만화가,  루브 골드버그의 이름에서 유래되었습니다.'));
+            $(this).before($("<p id='Paneltip'>").text(',  루브 골드버그의 이름에서 유래되었습니다.'));
             $(this).text().replace(/\r?\n/g, '<br />'); 
            
            
@@ -129,7 +169,7 @@ Entry.PropertyPanel = function() {
             parent: this._contentView,
         });
 
-        const tabDom = Entry.Dom(`<div>${Lang.Menus[mode]}</div>`, {
+        const tabDom = Entry.Dom(`<p>${Lang.Menus[mode]}</div>`, {
             classes: ['propertyTabElement', `propertyTab${mode}`],
             parent: this._tabView,
         });
