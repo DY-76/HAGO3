@@ -1,6 +1,6 @@
         /* The Modal (background) */
         .sel {
-            color: aqua;
+            opacity: 0.3;
             pointer-events: none;
         }
         .modal {
@@ -57,13 +57,17 @@
             background-color:silver
         }
         .tipmodal_con {
-            height: 610px; 
-            width: 680px; 
+            height: 550px; 
+            width: 500px; 
             margin:-300px 0px 0px -315px; 
+            border-style: double;
+            border-width: 5px;
+            border-radius: 10%;
             top: 50%; 
             left: 50%; 
             position: absolute; 
-            background-color:silver
+            background-color: white;
+            border-color: lightblue;
         }
         /* The Close Button */
         .close {
