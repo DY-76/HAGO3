@@ -754,8 +754,10 @@ module.exports = {
                 func(sprite, script) {
 
                     setTimeout(function(){
-                        modal.style.display = "block";
+                        lose_modal.style.display = "block";
+                        
                     },2000)
+                    
                    
 
                   
