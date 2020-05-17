@@ -6852,6 +6852,7 @@ Lang.template = {
     "when_scene_start": "%1 장면이 시작되었을때",
     "start_scene": "%1 시작하기 %2",
     "next_popup": "클리어",
+    "fail_popup": "실패",
     "start_neighbor_scene": "%1 장면 시작하기 %2",
     "sound_something": "소리 %1 재생하기 %2",
     "sound_something_second": "소리 %1 %2 초 재생하기 %3",

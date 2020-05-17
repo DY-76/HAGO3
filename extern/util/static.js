@@ -195,6 +195,7 @@ EntryStatic.getAllBlocks2 = function() {
                 'when_scene_start',
                 'start_scene',
                 'next_popup',
+                'fail_popup',
                 'start_neighbor_scene',
                 'check_object_property',
                 'check_block_execution',
@@ -217,18 +218,17 @@ EntryStatic.getAllBlocks2 = function() {
                 'wait_second',
                 'repeat_basic',
                 'repeat_inf',
-              /*  'repeat_while_true',
+                'repeat_while_true',
                 'stop_repeat',
-                '_if', */
-                '_if2',
-              /*  'if_else',
-                'wait_until_true',*/
+                '_if',
+                'if_else',
+                'wait_until_true',
                 'stop_object',
-              /*  'restart_project',
+                'restart_project',
                 'when_clone_start',
                 'create_clone',
                 'delete_clone',
-                'remove_all_clones', */
+                'remove_all_clones', 
             ],
         },
         {

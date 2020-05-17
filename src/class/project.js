@@ -3652,7 +3652,7 @@ Entry.getStartProjectGS1_1 = function(mediaFilePath) {
         speed: 60,
     };
 };
-Entry.getStartProject20 = function(mediaFilePath) {
+Entry.getStartProject201 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3783,7 +3783,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
     
 };
 
-Entry.getStartProject201 = function(mediaFilePath) {
+Entry.getStartProject20 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3842,7 +3842,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '바닥',
+                name: '난간',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3852,12 +3852,12 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/box.png`,
-                            name: `상자`,
+                            fileurl: `${mediaFilePath}../img/handrail.png`,
+                            name: `난간`,
                             scale: 100,
                             dimension: {
-                                width: 339,
-                                height:318,
+                                width: 814,
+                                height:119,
                             },
                         },
 
@@ -3867,14 +3867,14 @@ Entry.getStartProject201 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 169.5,
-                    regY: 159,
+                    regX: 407,
+                    regY: 59.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 339,
-                    height:318,
+                    width: 814,
+                    height:119,
                     visible: true,
                 },
                 lock: false,
