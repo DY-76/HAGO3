@@ -24,7 +24,7 @@
       f.submit();
     };
 </script>
-<a href="javascript:goPage('1');">관람</a>
+<!-- <a href="javascript:goPage('1');">관람</a> -->
 
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
@@ -151,6 +151,9 @@
                               <br/>
                             </div>
                         </li>
+                        <li style="position: absolute; right: 0px; top: 0px; display: inline-block;">
+                            <p>Copyright © Connect Foundation. Some rights reserved.</p>
+                        </li>
                     </ul>
                 </div>
 
@@ -169,7 +172,7 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=9'">9 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="document.getElementById('tipmodal').style.display='block';">i</button>
-                    
+                    <button onclick="document.getElementById('myloseModal').style.display='black';">aaa</button>
                 
                         <script>
                             function session_in(){
@@ -364,20 +367,39 @@
             <div class="modal-content" style="width: 50%;height: 60%;margin-top: 10em">
                 <span class="close">&times;</span>
                 <table border="0" style="text-align: center">
-	                <tr>
-	                    <td colspan="2"><br><h1>스테이지 클리어!</h1><br></td>
-	                </tr>
-	                <tr>
-	                    <td colspan="2"><img src="/images/media/test_ing.png" alt width="420" height="auto">    </td>
-	                </tr>
+                    <tr>
+                        <td colspan="2"><br><h1>스테이지 클리어!</h1><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img src="/images/media/test_ing.png" alt width="420" height="auto">    </td>
+                    </tr>
                     <tr>
                         <td><button type="button" class="btn btn-primary" id="Btn_back" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=now_link[0]+'stage='+now_link[1]" >retry</button></td>
                         <td><button type="button" class="btn btn-primary" id="Btn_next" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=next_stage">NEXT</button></td>
-
+                    
                     </tr>
                 </table>
             </div>
- 
+        
+        </div><div id="myloseModal" class="modal">  
+            <!-- Modal content -->
+            <div class="modal-content" style="width: 50%;height: 60%;margin-top: 10em">
+                <span class="close">&times;</span>
+                <table border="0" style="text-align: center">
+                    <tr>
+                        <td colspan="2"><br><h1>스테이지 실패!</h1><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img src="/images/media/test_ing.png" alt width="420" height="auto">    </td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-primary" id="Btn_back" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=now_link[0]+'stage='+now_link[1]" >retry</button></td>
+                        <td><button type="button" class="btn btn-primary" id="Btn_next" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=next_stage">NEXT</button></td>
+                    
+                    </tr>
+                </table>
+            </div>
+        
         </div>
         <div id="addobjectmodal" class="OBmodal">  
             
