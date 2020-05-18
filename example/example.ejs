@@ -151,6 +151,9 @@
                               <br/>
                             </div>
                         </li>
+                        <li style="display: inline-block; position: relative; bottom: 2px; left: 20%;">
+                            <button class="btn btn-lg btn-outline-secondary" type="button" style="width: auto; background-color: azure;" onclick="document.getElementById('tipmodal').style.display='block';">i</button>
+                        </li>
                         <li style="position: absolute; right: 0px; top: 0px; display: inline-block;">
                             <p>Copyright © Connect Foundation. Some rights reserved.</p>
                         </li>
@@ -171,8 +174,7 @@
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=8'">8 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=9'">9 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="document.getElementById('tipmodal').style.display='block';">i</button>
-                    <button onclick="document.getElementById('myloseModal').style.display='black';">aaa</button>
+                    
                 
                         <script>
                             function session_in(){
@@ -365,7 +367,7 @@
         <div id="myModal" class="modal">  
             <!-- Modal content -->
             <div class="modal-content" style="width: 50%;height: 60%;margin-top: 10em">
-                <span class="close">&times;</span>
+                <!-- <span class="close">&times;</span> -->
                 <table border="0" style="text-align: center">
                     <tr>
                         <td colspan="2"><br><h1>스테이지 클리어!</h1><br></td>
@@ -384,7 +386,6 @@
         </div><div id="myloseModal" class="modal">  
             <!-- Modal content -->
             <div class="modal-content" style="width: 50%;height: 60%;margin-top: 10em">
-                <span class="close">&times;</span>
                 <table border="0" style="text-align: center">
                     <tr>
                         <td colspan="2"><br><h1>스테이지 실패!</h1><br></td>
