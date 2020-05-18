@@ -38,16 +38,16 @@
 <div id="tipmodal_con"  class="tipmodal_con">  
               
                   <div class="tipmodal_con_title">
-                    <p id="tip_title"></p>
+                    <span id="tip_title"></span>
                   </div>
                   <div class="tipmodal_con_contents">
                   <div id="tip_contents">
-                    <table style="margin:auto; max-width: 500px; writing-mode: horizontal-tb;">
+                    <table style="margin:auto; max-width: 500px; writing-mode: horizontal-tb; text-align: center;">
                       <tr>
-                        <td><p id="tip_top_left"></p></td><td><p id="tip_top_center"></p></td><td><p id="tip_top_right"></p></td>
+                        <td><span id="tip_top_left"></span></td><td><span id="tip_top_center"></span></td><td><span id="tip_top_right"></span></td>
                       </tr>
                       <tr>
-                        <td><p id="tip_bottom_left"></p></td><td><p id="tip_bottom_center"></p></td><td><p id="tip_bottom_right"></p></td>
+                        <td><span id="tip_bottom_left"></span></td><td><span id="tip_bottom_center"></span></td><td><span id="tip_bottom_right"></span></td>
                       </tr>
                     </table>
                   </div>
@@ -56,7 +56,7 @@
                   <div id="tipmodal_controller">
                    <table style="text-align: center; margin:auto;">
                     <tr>
-                      <td colspan="4"><p id="tip_controller" class="tip"></td>
+                      <td colspan="4"><span id="tip_controller" class="tip"></td>
                     </tr>
                     <tr>
                       <td></td>
@@ -76,47 +76,22 @@
           <!-- 팁 데이터 입력은 이곳에서 -->
 
           <script>
-            var now_link = window.location.href.split("stage=");
+
             var tipdata = {title:"",totalpage:1};
             var now_page = 1;
-            switch (Number(now_page)){
+            switch (Number(now_link[1])){
                   case 1 :
                     //제목과 페이지
                       tipdata = {
-                        title     : "제목 영역 입니다",
-                        totalpage : 4   };    //총 페이지
+                        title     : "W = Fs",
+                        totalpage : 1   };    //총 페이지
                                               //페이지 늘릴거면 아래처럼 붙여넣기(총페이지와 갯수 맞아야함)
                         tipdata.page1 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
-                        topleft     : "topleft_test",
-                        topcenter   : "",
-                        topright    : "aaaaaa",
-                        bottomleft  : "",
-                        bottomcenter: "aaaaa",
-                        bottomright : ""
-                                    };
-
-                        tipdata.page2 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
-                        topleft     : "ㄱㄷㄷㄷㄷㅎㅍ",
-                        topcenter   : "ㄴㅇㄹ",
-                        topright    : "ㄷㄿㄷㄹㄿㄿㅇㄹ",
-                        bottomleft  : "ㄹㅇㅇㄹㅇ",
-                        bottomcenter: "ㄿㅍㄹㄿㄿㄿ",
-                        bottomright : "ㅇㅍㄹㅇ"
-                                    };
-                        tipdata.page3 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
                         topleft     : "",
-                        topcenter   : "만나서",
+                        topcenter   : "<h4 style='font-weight:bold;'>W(일의양) = F(힘의 크기) x s(거리)<h4>",
                         topright    : "",
                         bottomleft  : "",
-                        bottomcenter: "반갑습니다",
-                        bottomright : ""
-                                    };
-                        tipdata.page4 = {
-                        topleft     : "<img src='/images/tip/tip_test.png'>",
-                        topcenter   : "&nbsp;      &nbsp;",
-                        topright    : "<p>설명제목</p><p>그래프입니다.</p>",
-                        bottomleft  : "(그래프01)",
-                        bottomcenter: "",
+                        bottomcenter: "<br>일의 양은 30 성휘의 힘은 10일 때,<br>상자를 무사히 옮기려면 몇 번 움직여야 할까요?<br>( 상자 1칸의 거리는 1M입니다. )",
                         bottomright : ""
                                     };
 
@@ -124,15 +99,15 @@
 
                       case 2 :
                       tipdata = {
-                        title     : "제목 영역 입니다",
+                        title     : "F = mg",
                         totalpage : 1   };
 
                         tipdata.page1 = {
-                        topleft     : "topleft_test",
-                        topcenter   : "",
+                        topleft     : "",
+                        topcenter   : "<h4 style='font-weight:bold;'>F(힘) = m(질량) x g(중력가속도)</h4>",
                         topright    : "",
                         bottomleft  : "",
-                        bottomcenter: "",
+                        bottomcenter: "<br>도둑의 힘은 50 중력가속도는 1m/𝑠^2이라고 가정할 때<br>문이 열리지않게 상자가 버티려면 질량 몇 이상이 되야 할까요?<br>( 원래 지구의 중력가속도는 9.8m/𝑠^2 입니다. )",
                         bottomright : ""
                                     };
 
@@ -140,15 +115,15 @@
 
                       case 3 :
                       tipdata = {
-                        title     : "제목 영역 입니다",
+                        title     : "P = mv",
                         totalpage : 1   };
 
                         tipdata.page1 = {
-                        topleft     : "topleft_test",
-                        topcenter   : "",
+                        topleft     : "",
+                        topcenter   : "<h3 style='font-weight:bold;'>v(속도) = P(일률) / m(질량)</h3><span style='color: red;'>속도 란? 물체가 나아가거나 일이 진행되는 빠르기</span>",
                         topright    : "",
                         bottomleft  : "",
-                        bottomcenter: "",
+                        bottomcenter: "<br>도둑이 계란을 맞고 쓰러지려면 3의 일률이 필요하고,<br>계란의 질량은 1kg이라고 가정할 때<br>도둑이 계란을 맞고 쓰러지려면 속도는 몇이 되어야 할까요?<br>( 단, 마찰력은 존재하지 않는다. )",
                         bottomright : ""
                                     };
 
@@ -156,15 +131,23 @@
 
                       case 4 :
                       tipdata = {
-                        title     : "제목 영역 입니다",
-                        totalpage : 1   };
+                        title     : "반사각 = 입사각",
+                        totalpage : 2   };
 
                         tipdata.page1 = {
-                        topleft     : "topleft_test",
-                        topcenter   : "",
+                        topleft     : "",
+                        topcenter   : "<span style='font-weight:bold;'>법선이란 ?</span> 2차원 평면의 곡선 위의 어떤 점에서 점을 지나는 접선(tangential, tangential line)에 수직인 직선이다.",
                         topright    : "",
                         bottomleft  : "",
-                        bottomcenter: "",
+                        bottomcenter: "<img src='../images/stage4tip1img.png'>",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        topleft     : "",
+                        topcenter   : "<span style='font-weight:bold;'>반사각이란 ?</span> 법선과 반사하는 빛이 이루는 각<br><span style='font-weight:bold;'>입사각이란 ?</span> 법선과 입사하는 빛이 이루는 각",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "<img src='../images/stage4tip2img.png'>",
                         bottomright : ""
                                     };
 
@@ -172,22 +155,131 @@
 
                       case 5 :
                       tipdata = {
-                        title     : "제목 영역 입니다",
+                        title     : "도체와 부도체",
                         totalpage : 1   };
 
                         tipdata.page1 = {
-                        topleft     : "topleft_test",
+                        topleft     : "",
+                        topcenter   : "<span style='font-weight:bold;'>도체란?</span> 전기 또는 열에 대한 저항이 매우 작아 <br>전기나 열을 잘 전달하는 물체<br><span style='color:red;'>ex) 은, 구리, 알루미늄 등</span><br>",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "<span style='font-weight:bold;'>부도체란?</span> 전기 또는 열에 대한 저항이 매우 커서 <br>전기나 열을 잘 전달하지 못하는 물체<br><span style='color:red;'>ex) 종이, 나무, 유리, 고무 등</span>",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 6 :
+                      tipdata = {
+                        title     : "V = IR",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        topleft     : "",
+                        topcenter   : "<span style='font-weight:bold;'>전하란?</span>  물체가 가진 전기의 양 = 전기적 성질<br><span style='font-weight:bold;'>전류란?</span>  (-)전하를 가진 자유전자의 흐름<br><span style='font-weight:bold;'>전위란?</span>  전기적 위치, 이 위치의 차이를 ‘전위차’ 라고 함.<br><span style='font-weight:bold;'>전압이란?</span> 전위차로 발생한 전기적 압력 = 전류를 흐르게 하는 힘<br><span style='font-weight:bold;'>저항이란?</span> 전류의 흐름을 방해하는 힘",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        topleft     : "",
+                        topcenter   : "<h3 style='font-weight:bold;'>R(저항)=V(전압)/I(전류)</h3>",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "<br>전압과 저항은 비례한다, 전류와 저항은 반비례한다.<br>우리에겐 발전기로 전압을 자유자재로 조절할 수 있다. <br>사람이 전류를 통해 쓰러지려면 0.05A의 전류가 필요하다. <br>도둑의 저항은 2200Ω, 전선의 저항은 1Ω이다.<br>도둑을 쓰러뜨리기에 적절한 전압은 몇인지 구하시오.",
+                        bottomright : ""
+                                    };
+                        break;    
+
+                      case 7 :
+                      tipdata = {
+                        title     : "베르누이법칙(단면적 ∝ 1/속력)",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        topleft     : "<img src='../images/stage7tip1img.png'>",
+                        topcenter   : "",
+                        topright    : "Ex) 단면적이 절반으로 줄면 물의 속력이 2배 증가한다.",
+                        bottomleft  : "<h3 style='font-weight:bold;'>A₁v₁ = A₂v₂</h3>",
+                        bottomcenter: "",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        topleft     : "",
+                        topcenter   : "<h3 style='font-weight:bold;'>A와 v 는 반비례</h3><br>A는 관의 단면적, v는 유체의 속력(유속)이다.",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "<br>도둑을 쓰러트리기 위해선 물이<br> 20m/s 유속으로 분출 되어야 한다.<br> 물이 20m/s 유속으로 분출 되려면 단면적은<br> 25mm²가 되어야한다. 호스의 분출구를 좁혀<br> 물이 20m/s 유속으로 분출되게 하려고 할 때, <br>호스의 출발점 단면적과 유속은 몇이어야 할까?",
+                        bottomright : ""
+                                    };
+                        break;                                           
+
+                      case 8 :
+                      tipdata = {
+                        title     : "J = 9.8(𝑚/𝑠^2)mh",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        topleft     : "<img src='../images/stage8tip1img.png'>",
+                        topcenter   : "",
+                        topright    : "Ep = 중력에 의한 위치에너지<br>m = 질량<br>h = 높이<br><br>m이 일정할 때, <br>Ep와 h는 정비례한다.",
+                        bottomleft  : "",
+                        bottomcenter: "",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        topleft     : "",
+                        topcenter   : "<h2 style='font-weight:bold;'>Ep = g * m * h</h2><br>(g = 중력가속도)",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "<br>도둑이 계단을 올라오지 못하도록 공을 머리위에<br>떨어트려 맞추려고 합니다. 높이와 위치에너지는<br>정비례 관계에 있습니다. 도둑이 올라오는 시간을<br>고려했을 때, 알맞은 위치에너지를 구해봅시다.<br>(단, 중력가속도는 9.8m/s²)",
+                        bottomright : ""
+                                    };
+                        break; 
+
+                      case 9 :
+                      tipdata = {
+                        title     : "마찰력 = -힘",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        topleft     : "",
+                        topcenter   : "<h4 style='font-weight:bold;'>마찰력 = -힘</h4><br>마찰력은 어떤 물체에 가해지는 힘의 반대 방향으로 작용하는 힘이다.",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "<br>창문에 미리 설치해놨던 밧줄을 타고 오두막으로 도망쳐야 합니다.<br>마찰력이 적으면 너무 빠르게 떨어지고, 많으면 내려가지 못합니다.<br>적절한 마찰력을 찾아봅시다. ( 내려가는 힘은 400N이다. )",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        topleft     : "",
+                        topcenter   : "<img src='../images/stage9tip2img.png' width=90%>",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomcenter: "<br>물체가 운동하는 것은 마찰력이 가하는 힘보다 적음을 의미",
+                        bottomright : ""
+                                    };
+                        break; 
+
+                      case 10 :
+                      tipdata = {
+                        title     : "",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        topleft     : "",
                         topcenter   : "",
                         topright    : "",
                         bottomleft  : "",
                         bottomcenter: "",
                         bottomright : ""
                                     };
-
-                      break;
-                      
+                        break; 
 
                   default :
+                  tipdata = {
+                        title     : Number(now_link[1]),
+                        totalpage : 1   };
                       console.log("error! : tip데이터 없음");
               };
               //nev 버튼 생성
