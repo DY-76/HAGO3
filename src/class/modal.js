@@ -7,7 +7,7 @@
         var tipmodal = document.getElementById('tipmodal');
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];                                         
+        
         // When the user clicks on the button, open the modal 
         /*
         btn.onclick = function() {
@@ -15,10 +15,7 @@
         }
         */
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-            lose_modal.style.display = "none";
-        }
+        
         
         
         // When the user clicks anywhere outside of the modal, close it
@@ -36,4 +33,9 @@
                 OBmodal.style.display = "none";
                 $("#DPS-tab").get(0).click();
             }
+        }
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            tipmodal.style.display = "none";
         }

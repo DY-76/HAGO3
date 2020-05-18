@@ -32,13 +32,25 @@
   }
 </style>
 
-
+<script>
+  var tipmodal = document.getElementById('tipmodal');
+  function TipModalOut(){
+    tipmodal.style.display = 'none';
+  }
+  function TipModalIn(){
+    tipmodal.style.display = 'block';
+  }
+  $(document).ready( function() {
+            TipModalIn();
+            });
+</script>
           <!-- HTML 표기부분 -->
 
-<div id="tipmodal_con"  class="tipmodal_con">  
+<div id="tipmodal_con"  class="tipmodal_con" style="font-family: 'Noto';">  
               
                   <div class="tipmodal_con_title">
                     <span id="tip_title"></span>
+                    <span class="close" style="margin-right: 5%;" onclick="TipModalOut();">&times;</span>
                   </div>
                   <div class="tipmodal_con_contents">
                   <div id="tip_contents">
@@ -163,7 +175,7 @@
                         topcenter   : "<span style='font-weight:bold;'>도체란?</span> 전기 또는 열에 대한 저항이 매우 작아 <br>전기나 열을 잘 전달하는 물체<br><span style='color:red;'>ex) 은, 구리, 알루미늄 등</span><br>",
                         topright    : "",
                         bottomleft  : "",
-                        bottomcenter: "<span style='font-weight:bold;'>부도체란?</span> 전기 또는 열에 대한 저항이 매우 커서 <br>전기나 열을 잘 전달하지 못하는 물체<br><span style='color:red;'>ex) 종이, 나무, 유리, 고무 등</span>",
+                        bottomcenter: "<br><span style='font-weight:bold;'>부도체란?</span> 전기 또는 열에 대한 저항이 매우 커서 <br>전기나 열을 잘 전달하지 못하는 물체<br><span style='color:red;'>ex) 종이, 나무, 유리, 고무 등</span>",
                         bottomright : ""
                                     };
 
@@ -336,7 +348,6 @@
             tip_reload();
           }
         }
-
 
         </script>
 

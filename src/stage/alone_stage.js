@@ -14,12 +14,18 @@ export function alone_stage_sel(i){
             return JSON.stringify(alone_stage1);
         case 2:
             return JSON.stringify(alone_stage2);
-
         case 4:
             return JSON.stringify(alone_stage4);
-
         case 5:
             return JSON.stringify(alone_stage5);
+        case 6:
+            return JSON.stringify(alone_stage6);
+        case 7:
+            return JSON.stringify(alone_stage7);
+        case 8:
+            return JSON.stringify(alone_stage8);
+        case 9:
+            return JSON.stringify(alone_stage9);
         default:
             return JSON.stringify(alone_stage2);
     }

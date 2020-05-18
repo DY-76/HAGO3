@@ -36,44 +36,44 @@ export function objectadd(name){
             Entry.Utils.addNewObject(JSON.parse(JSON.stringify(line)));
             break;
             case 'mirror':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(mirror)));
-                break;
-                case 'light':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(light)));
-                break;
-                case 'light_edge':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(light_edge)));
-                break;
-                case 'flash_light':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(flash_light)));
-                break;
-                case 'mix':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(mix)));
-                break;
-                case 'stage1':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stage1)));
-                break;
-                case 'stage2':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stage2)));
-                break;
-                case 'stage3':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stage3)));
-                break;
-                case 'kid_1':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(kid_1)));
-                break;
-                case 'handrail':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(handrail)));
-                break;
-                case 'egg':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(egg)));
-                break;
-                case 'thief1_3stage':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(thief1_3stage)));
-                break;
-                case 'thief2_3stage':
-                Entry.Utils.addNewObject(JSON.parse(JSON.stringify(thief2_3stage)));
-                break;
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(mirror)));
+            break;
+            case 'light':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(light)));
+            break;
+            case 'light_edge':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(light_edge)));
+            break;
+            case 'flash_light':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(flash_light)));
+            break;
+            case 'mix':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(mix)));
+            break;
+            case 'stage1':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stage1)));
+            break;
+            case 'stage2':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stage2)));
+            break;
+            case 'stage3':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stage3)));
+            break;
+            case 'kid_1':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(kid_1)));
+            break;
+            case 'handrail':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(handrail)));
+            break;
+            case 'egg':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(egg)));
+            break;
+            case 'thief1_3stage':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(thief1_3stage)));
+            break;
+            case 'thief2_3stage':
+            Entry.Utils.addNewObject(JSON.parse(JSON.stringify(thief2_3stage)));
+            break;
                 
         case 'stage4':
             Entry.Utils.addNewObject(JSON.parse(JSON.stringify(stage4)));
