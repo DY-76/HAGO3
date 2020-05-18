@@ -54,7 +54,11 @@
             top: 50%; 
             left: 50%; 
             position: absolute; 
-            background-color:silver
+            background-color:white;
+            border-style: double;
+            border-width: 5px;
+            border-radius: 5%;
+            border-color: lightblue;
         }
         .tipmodal_con {
             height: 550px; 

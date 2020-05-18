@@ -3,7 +3,7 @@
 .Portfolio {
     position: relative;
     margin: 5px;
-    border: 2px solid black;
+    border: 2px solid lightblue;
     float: left;
     width: 180px;
     transition-duration: 0.4s;
@@ -11,19 +11,20 @@
     animation: winanim 0.5s ;
 -webkit-backface-visibility:visible;
     backface-visibility:visible;
-    box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)
+    box-shadow:0 3px 5px -1px rgba(93, 174, 250, 0.2),0 5px 8px 0 rgba(93, 174, 250,.14),0 1px 14px 0 rgba(93, 174, 250,.12)
 }
 
 .Portfolio:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    box-shadow: 0 12px 16px 0 rgba(93, 174, 250,.24),0 17px 50px 0 rgba(93, 174, 250,.19);
 }
 
 .desc {
     padding: 5px;
     text-align: center;
     font-size: 95%;
-    background: black;
-    color:hotpink 
+    font-weight: bold;
+    background: lightblue;
+    color:
 }
 
 .nav {
@@ -34,20 +35,20 @@
     margin:5px;
     padding: 10px 30px; 
     font-size:18px; 
-    color:hotpink; 
-    background: #000;
+    color:royalblue; 
+    background: lightblue;
     transition-duration: 0.4s;
 }
 .nav a:hover { 
-    background:#333; 
+    background:skyblue; 
 }
 .nav .active { 
-    background-color:hotpink !important;
+    background-color:skyblue !important;
     color:#fff;
 }
 
 .btnbg {
-    background-color:silver;
+    background-color:white;
     border: 0px   
 }
 
