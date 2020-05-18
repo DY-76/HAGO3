@@ -3652,7 +3652,7 @@ Entry.getStartProjectGS1_1 = function(mediaFilePath) {
         speed: 60,
     };
 };
-Entry.getStartProject201 = function(mediaFilePath) {
+Entry.getStartProject20 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3721,34 +3721,23 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/kid-1.png`,
-                            name: `아이`,
+                            fileurl: `${mediaFilePath}../img/thief2_3_1.png`,
+                            name: `도둑1`,
                             scale: 100,
                             dimension: {
-                                width: 249,
-                                height:639,
+                                width: 386,
+                                height:753,
                             },
                         },
 
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/kid-2.png`,
-                            name: `아이2`,
+                            fileurl: `${mediaFilePath}../img/thief2_3_1.png`,
+                            name: `도둑2`,
                             scale: 100,
                             dimension: {
-                                width: 249,
-                                height:639,
-                            },
-
-                        },
-                        {
-                            id: 'vx23',
-                            fileurl: `${mediaFilePath}../img/kid-3.png`,
-                            name: `아이3`,
-                            scale: 100,
-                            dimension: {
-                                width: 249,
-                                height:639,
+                                width: 386,
+                                height:753,
                             },
 
                         },
@@ -3758,14 +3747,14 @@ Entry.getStartProject201 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 124.5,
-                    regY: 319.5,
+                    regX: 193,
+                    regY: 376.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 249,
-                    height:639,
+                    width: 386,
+                    height:753,
                     visible: true,
                 },
                 lock: false,
@@ -3783,7 +3772,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
     
 };
 
-Entry.getStartProject20 = function(mediaFilePath) {
+Entry.getStartProject201 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3852,12 +3841,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/handrail.png`,
+                            fileurl: `${mediaFilePath}../img/egg.png`,
                             name: `난간`,
                             scale: 100,
                             dimension: {
-                                width: 814,
-                                height:119,
+                                width: 204,
+                                height:296,
                             },
                         },
 
@@ -3867,14 +3856,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 407,
-                    regY: 59.5,
+                    regX: 102,
+                    regY: 148,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 814,
-                    height:119,
+                    width: 204,
+                    height:296,
                     visible: true,
                 },
                 lock: false,
