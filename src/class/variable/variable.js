@@ -63,7 +63,7 @@ class Variable {
             const fontFamily = 'Noto';
             this.BORDER = 4;
             this.FONT = `8pt ${fontFamily}`;
-            this.VALUE_FONT = `8pt ${fontFamily}`;
+            this.VALUE_FONT = `7pt ${fontFamily}`;
         }
 
         Entry.addEventListener('workspaceChangeMode', this.updateView.bind(this));
@@ -94,11 +94,11 @@ class Variable {
                 'alphabetic'
             );
             //변수이름 위치 지정 (변수박스)
-            this.textView_.x = 3.5;
+            this.textView_.x = 15;
             if (GEHelper.isWebGL) {
                 this.textView_.y = this.GL_VAR_POS.LABEL_Y;
             } else {
-                this.textView_.y = 2.5;
+                this.textView_.y = 0.5;
             }
             this.view_.addChild(this.textView_);
             this.valueView_ = GEHelper.textHelper.newText(
@@ -221,14 +221,15 @@ class Variable {
             .ss(1, 2, 0)
             .s(colorSet.border || '#50bcdf')
             //rr(x,y,길이,높이,라운딩)
-            .rr(0, -12, this._nameWidth + this._valueWidth + 24, 20, 8);
+            .rr(10, -14, this._nameWidth + this._valueWidth + 20, 21, 4);
         //변수박스내 변수값 디자인
         this.wrapper_.graphics
             .clear()
             .f(boxFillAndStrokeColor)
             .ss(1, 2, 0)
             .s(boxFillAndStrokeColor)
-            .rr(this._nameWidth + 8, -8, this._valueWidth + 6+20, 12, 2);
+            //.rr(this._nameWidth + 14, -9, this._valueWidth + 14, 14, this.RECT_RADIUS);
+            .rr(this._nameWidth + 14, -10, this._valueWidth + 14, 14, this.RECT_RADIUS);//좌측 상단 좌측 하단 우측 상단 우측하단
     }
 
     _adjustSingleViewPosition() {
@@ -241,7 +242,7 @@ class Variable {
         if (GEHelper.isWebGL) {
             this.valueView_.y = this.GL_VAR_POS.VALUE_Y;
         } else {
-            this.valueView_.y = 1.5;
+            this.valueView_.y = 0.5; // 우측 숫자 y좌표
         }
     }
 
