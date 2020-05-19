@@ -69,6 +69,12 @@
             function size(){
             console.log('W=',window.innerWidth);
             console.log('H=',window.innerHeight);
+                if(window.innerHeight > 900){
+                    document.body.style.zoom = '100%';
+                }
+                else if(window.innerHeight < 800){
+                    document.body.style.zoom = '65%';
+                }
             }
         </script>
         <style>
