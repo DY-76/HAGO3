@@ -3711,7 +3711,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '손전등',
+                name: '거울',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3721,41 +3721,49 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/flash_light_off.png`,
-                            name: `손전등_OFF`,
+                            fileurl: `${mediaFilePath}../img/mirror.png`,
+                            name: `거울1`,
                             scale: 100,
                             dimension: {
-                                width: 206,
-                                height:463,
+                                width: 284,
+                                height:460,
                             },
                         },
 
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/flash_light_on.png`,
-                            name: `손전등_ON`,
+                            fileurl: `${mediaFilePath}../img/mirror2.png`,
+                            name: `거울2`,
                             scale: 100,
                             dimension: {
-                                width: 206,
-                                height:463,
+                                width: 284,
+                                height:460,
                             },
-
                         },
                         
-                       
+                        {
+                            id: 'vx23',
+                            fileurl: `${mediaFilePath}../img/mirror3.png`,
+                            name: `거울3`,
+                            scale: 100,
+                            dimension: {
+                                width: 284,
+                                height:460,
+                            },
+                        },
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 103,
-                    regY: 231.5,
+                    regX: 142,
+                    regY: 230,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 206,
-                    height:436,
+                    width: 284,
+                    height:460,
                     visible: true,
                 },
                 lock: false,
