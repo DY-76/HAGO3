@@ -3711,7 +3711,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '바닥',
+                name: '손전등',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3722,7 +3722,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                         {
                             id: 'vx21',
                             fileurl: `${mediaFilePath}../img/flash_light_off.png`,
-                            name: `손전등_ON`,
+                            name: `손전등_OFF`,
                             scale: 100,
                             dimension: {
                                 width: 206,
@@ -3732,8 +3732,8 @@ Entry.getStartProject20 = function(mediaFilePath) {
 
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/flash_light_off.png`,
-                            name: `손전등_OFF`,
+                            fileurl: `${mediaFilePath}../img/flash_light_on.png`,
+                            name: `손전등_ON`,
                             scale: 100,
                             dimension: {
                                 width: 206,
@@ -3755,7 +3755,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     rotation: 0,
                     direction: 0,
                     width: 206,
-                    height:463,
+                    height:436,
                     visible: true,
                 },
                 lock: false,
@@ -3832,7 +3832,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '난간',
+                name: '밧줄',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3842,12 +3842,12 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/egg.png`,
-                            name: `난간`,
+                            fileurl: `${mediaFilePath}../img/rope.png`,
+                            name: `밧줄`,
                             scale: 100,
                             dimension: {
-                                width: 204,
-                                height:296,
+                                width: 438,
+                                height:281,
                             },
                         },
 
@@ -3857,14 +3857,14 @@ Entry.getStartProject201 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 102,
-                    regY: 148,
+                    regX: 219,
+                    regY: 140.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 204,
-                    height:296,
+                    width: 438,
+                    height:281,
                     visible: true,
                 },
                 lock: false,
