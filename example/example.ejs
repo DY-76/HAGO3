@@ -9,6 +9,7 @@
             <input type="hidden" name="id"/>
          </form>
 <script>
+    
         function goPage(id) {
       // name이 paging인 태그
       var f = document.paging;
@@ -65,6 +66,10 @@
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
                 $("#tipmodal").load("/example/tip.html");
             });
+            function size(){
+            console.log('W=',window.innerWidth);
+            console.log('H=',window.innerHeight);
+            }
         </script>
         <style>
         @font-face{font-family:'Noto'; src:local(※), url("http://127.0.0.1:3000/NotoSansKR-Regular.otf")}    
@@ -153,6 +158,7 @@
                         </li>
                         <li style="display: inline-block; position: relative; bottom: 2px; left: 20%;">
                             <button class="btn btn-lg btn-outline-secondary" type="button" style="width: auto; background-color: azure;" onclick="document.getElementById('tipmodal').style.display='block';">i</button>
+                            <button class="btn btn-lg btn-outline-secondary" type="button" onclick="size();">size</button>
                         </li>
                         <li style="position: absolute; right: 0px; top: 0px; display: inline-block;">
                             <p>Copyright © Connect Foundation. Some rights reserved.</p>
@@ -164,15 +170,15 @@
                     <li>
                         <div>
 
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=1'">1 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=2'">2 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=3'">3 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=4'">4 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=5'">5 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=6'">6 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=7'">7 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=8'">8 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=9'">9 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'1'">1 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'2'">2 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'3'">3 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'4'">4 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'5'">5 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'6'">6 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'7'">7 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'8'">8 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'9'">9 Step</button>
                     <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
                     
                 
