@@ -3721,40 +3721,41 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/thief2_3_1.png`,
-                            name: `도둑1`,
+                            fileurl: `${mediaFilePath}../img/flash_light_off.png`,
+                            name: `손전등_ON`,
                             scale: 100,
                             dimension: {
-                                width: 386,
-                                height:753,
+                                width: 206,
+                                height:463,
                             },
                         },
 
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/thief2_3_1.png`,
-                            name: `도둑2`,
+                            fileurl: `${mediaFilePath}../img/flash_light_off.png`,
+                            name: `손전등_OFF`,
                             scale: 100,
                             dimension: {
-                                width: 386,
-                                height:753,
+                                width: 206,
+                                height:463,
                             },
 
                         },
+                        
                        
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 193,
-                    regY: 376.5,
+                    regX: 103,
+                    regY: 231.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 386,
-                    height:753,
+                    width: 206,
+                    height:463,
                     visible: true,
                 },
                 lock: false,
