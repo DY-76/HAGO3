@@ -3,24 +3,62 @@
 
   .tipmodal_con_title {
     height: 80px;
-    background-color: blue;
+    background-color: lightblue;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
   }
   .tipmodal_con_contents {
+    text-align: center;
     height: 500px;
-    background-color: red;
+    width: 1100px;
+    /* background-color: red; */
+    display: table-cell;
+    vertical-align: middle;
+    font-size: x-large;
+    border-bottom: solid;
+    border-left: solid;
+    border-bottom-left-radius: 50px;
+    border-color: lightblue;
   }
   .tipmodal_con_controller {
+    padding-top: 20px;
     height: 110px;
-    background-color: green;
+    /* background-color: green; */
   }
   #tip_contents {
-
+    display: inline-block;
+    margin: auto;
+  }
+  #tip_subject {
+    font-size: 40px; 
+    position: relative; 
+    margin-left: 20px;
+    top: 8px;
   }
   #tipmodal_controller {
-    background-color: green;
+    /* background-color: green; */
   }
   .tip {
-
+    margin-left: 50px;
+  }
+  .tipnev {
+    border-radius: 15px;
+    background-color: lightblue;
+  }
+  .tipbtn {
+    border-radius: 10px;
+    margin-left: 30px;
+    height: 50px;
+    width: 150px;
+  }
+  .tip_title_1 {
+    font-size: 20px;
+    color: white;
+    border-radius: 30px;
+    background-color: lightsteelblue;
+    padding: 6px 10px 8px 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
   }
 </style>
 
@@ -41,17 +79,17 @@
 <div id="tipmodal_con"  class="tipmodal_con" style="font-family: 'Noto';">  
               
                   <div class="tipmodal_con_title">
-                    <span id="tip_title"></span>
-                    <span id="tip_subject"></span>
-                    <span class="close" style="margin-right: 2%; font-size: 70px;" onclick="TipModalOut();">&times;</span>
+                        <span class="tip_title_1">TIP. <span id="tip_title"></span></span>
+                        <span id="tip_subject"></span>
+                        <span style="position: absolute;right: 30px;"><span class="close" style="margin-right: 2%; font-size: 70px;" onclick="TipModalOut();">&times;</span></span>
                   </div>
-                  <div style="float: left;">
-                    <img src="/images/tipchar.png">
+                  <div style="float: left; width: 230px;">
+                    <img src="/images/tipchar.png" style="margin-left: 30px; margin-top: 30px; width: 180px;">
                   </div>
-                  <div>
+                  <div  style="float: right; width: 1050px;">
                   <div class="tipmodal_con_contents">
                   <div id="tip_contents">
-                    <table style="margin:auto; max-width: 500px; writing-mode: horizontal-tb; text-align: center;">
+                    <table style="writing-mode: horizontal-tb; text-align: center;">
                       <tr>
                         <td><span id="tip_top_left"></span></td><td><span id="tip_top_right"></span></td>
                       </tr>
@@ -66,12 +104,14 @@
                    <table>
                     <tr>
                       <td>
-                        <span id="tip_controller" class="tip"></span>
+                        <button id="tip_nev_front" class="btn btn-lg btn-outline-secondary tip tipbtn" style="margin-right: 50px;" onclick="tip_move_page('back')">이전</button>
                       </td>
                       <td>
-                        <button id="tip_nev_front" class="btn btn-sm btn-outline-secondary tip" onclick="tip_move_page('back')"><<</button>
-                        <button id="tip_nev_back" class="btn btn-sm btn-outline-secondary tip" onclick="tip_move_page('next')">>></button>
+                        <span id="tip_controller" class="tip" style="font-size: x-large;"></span>
                       </td>
+                      <td>
+                        <button id="tip_nev_back" class="btn btn-lg btn-outline-secondary tip tipbtn" onclick="tip_move_page('next')">다음</button>
+                      </td>  
                     </tr>
                    </table>
                   </div>
@@ -84,29 +124,31 @@
 
           <script>
 
-            var tipdata = {title:"",subject:"",totalpage:1};
+            var tipdata = {title:"",totalpage:1};
             var now_page = 1;
             switch (Number(now_link[1])){
                   case 1 :
                     //제목과 페이지
                       tipdata = {
                         title     : "W = Fs",
-                        subject   : "서브젝트",
                         totalpage : 3   };    //총 페이지
                                               //페이지 늘릴거면 아래처럼 붙여넣기(총페이지와 갯수 맞아야함)
                         tipdata.page1 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
+                        subject     : "서브젝트1",
                         topleft     : "//topleft//",
                         topright    : "1",
                         bottomleft  : "",
                         bottomright : "//bottomright//"
                                     };
                         tipdata.page2 = {
+                        subject     : "asd",
                         topleft     : "//topleft//",
                         topright    : "2",
                         bottomleft  : "",
                         bottomright : "//bottomright//"
                                     };
                         tipdata.page3 = {
+                        subject     : "111",
                         topleft     : "//topleft//",
                         topright    : "3",
                         bottomleft  : "",
@@ -115,13 +157,35 @@
 
                       break;
 
+                      case 4 :
+                      tipdata = {
+                        title     : "반사각 = 입사각",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        subject     : "법선이 뭘까요?",
+                        topleft     : "2차원 평면의 곡선 위의 어떤 점에서 <br>점을 지나는 접선(tangential, tangential line)에 수직인 직선을 말합니다.",
+                        topright    : "",
+                        bottomleft  : "<br><img src='/images/stage4tip1img.png'>",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "반사각과 입사각은 무엇인가요?",
+                        topleft     : "<img src='/images/stage4tip2img.png'>",
+                        topright    : "<span style='color:red;'>반사각이란 ? </span> : 법선과 반사하는 빛이 이루는 각을 뜻해요.<br><br><span style='color:red;'>입사각이란 ? </span> : 법선과 입사하는 빛이 이루는 각을 뜻해요.",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+
+                        break; 
+
                       case 10 :
                       tipdata = {
                         title     : "내맘대로 꾸미기",
-                        subject   : "마음대로 꾸며보세요",
                         totalpage : 1   };
 
                         tipdata.page1 = {
+                          subject     : "",
                         topleft     : "",
                         topright    : "",
                         bottomleft  : "",
@@ -137,14 +201,14 @@
               };
               //nev 버튼 생성
               for(var i = 1 ; i <= tipdata.totalpage ; i++) {
-                $("#tip_controller").append(" <button type='button' id='pagenum"+i+"' onclick='tip_move_page("+i+")'"+i+">&nbsp;"+i+"&nbsp;</button> ");
+                $("#tip_controller").append(" <button type='button' id='pagenum"+i+"' class='tipnev' onclick='tip_move_page("+i+")'"+i+">&nbsp;"+i+"&nbsp;</button> ");
               }
         tip_reload();
         
         function tip_reload(){
 
           document.getElementById('tip_title').innerHTML=tipdata.title;
-          document.getElementById('tip_subject').innerHTML=tipdata.subject;
+          document.getElementById('tip_subject').innerHTML=tipdata['page'+now_page].subject;
           // 제목대입
           document.getElementById('tip_top_left').innerHTML=tipdata['page'+now_page].topleft;
           document.getElementById('tip_top_right').innerHTML=tipdata['page'+now_page].topright;
