@@ -81,8 +81,33 @@
         @font-face{font-family:'Noto'; src:local(※), url("http://127.0.0.1:3000/NotoSansKR-Regular.otf")}    
             #Paneltip {
                 font-size: 18px;
-                margin-bottom: 2px;
+                margin-bottom: 4px;
                 font-family:'Noto';
+            }
+            .help_div {
+                position: relative;
+                bottom: 30px;
+                width: 730px;
+                height: 210px;
+                overflow: auto;
+                overflow-x: hidden;
+            }
+            .help_div::-webkit-scrollbar {
+                position: relative;
+                left: 5px;
+                width: 8px;
+                
+            }
+            .help_div::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: skyblue;
+                
+            }
+            .help_div::-webkit-scrollbar-track {
+                border-radius: 4px;
+                background-color: whitesmoke;
+                border-style: solid;
+                border-width: 0.5px;
             }
         </style>
 
