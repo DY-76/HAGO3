@@ -3711,7 +3711,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '거울',
+                name: '호스',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3721,49 +3721,40 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/mirror.png`,
-                            name: `거울1`,
+                            fileurl: `${mediaFilePath}../img/hose_off.png`,
+                            name: `호스_OFF`,
                             scale: 100,
                             dimension: {
-                                width: 284,
-                                height:460,
+                                width: 444,
+                                height:256,
                             },
                         },
 
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/mirror2.png`,
-                            name: `거울2`,
+                            fileurl: `${mediaFilePath}../img/hose_off.png`,
+                            name: `호스_ON`,
                             scale: 100,
                             dimension: {
-                                width: 284,
-                                height:460,
+                                width: 444,
+                                height:256,
                             },
                         },
                         
-                        {
-                            id: 'vx23',
-                            fileurl: `${mediaFilePath}../img/mirror3.png`,
-                            name: `거울3`,
-                            scale: 100,
-                            dimension: {
-                                width: 284,
-                                height:460,
-                            },
-                        },
+                        
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 142,
-                    regY: 230,
+                    regX: 222,
+                    regY: 128,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 284,
-                    height:460,
+                    width: 444,
+                    height:256,
                     visible: true,
                 },
                 lock: false,
@@ -3826,6 +3817,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     ko: '쇠구슬',
                     en: 'Entrybot1',
                 },
+                
                 script: [
                     [
                         {
@@ -3840,7 +3832,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '밧줄',
+                name: 'null',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3850,12 +3842,12 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/rope.png`,
-                            name: `밧줄`,
+                            fileurl: `${mediaFilePath}../img/kid_arm.png`,
+                            name: `null`,
                             scale: 100,
                             dimension: {
-                                width: 438,
-                                height:281,
+                                width: 149,
+                                height:171,
                             },
                         },
 
@@ -3865,14 +3857,14 @@ Entry.getStartProject201 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 219,
-                    regY: 140.5,
+                    regX: 74.5,
+                    regY: 85.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 438,
-                    height:281,
+                    width: 149,
+                    height:171,
                     visible: true,
                 },
                 lock: false,

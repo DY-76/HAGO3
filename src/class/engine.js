@@ -914,6 +914,7 @@ addobjectproject(n){
 saveobjectproject(){
     test = Entry.exportProject();
     var test_array = JSON.stringify(test);
+   
 
     var blobObj = new Blob([test_array], {type:'application/json'});
        var obj_LINK = URL.createObjectURL(blobObj)
