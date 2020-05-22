@@ -3711,7 +3711,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '호스',
+                name: '도둑1',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3721,23 +3721,23 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/hose_off.png`,
-                            name: `호스_OFF`,
+                            fileurl: `${mediaFilePath}../img/thief1_6_1.png`,
+                            name: `도둑_손잡이`,
                             scale: 100,
                             dimension: {
-                                width: 444,
-                                height:256,
+                                width: 658,
+                                height:862,
                             },
                         },
 
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/hose_off.png`,
-                            name: `호스_ON`,
+                            fileurl: `${mediaFilePath}../img/electric shock.png`,
+                            name: `도둑_감전`,
                             scale: 100,
                             dimension: {
-                                width: 444,
-                                height:256,
+                                width: 658,
+                                height:862,
                             },
                         },
                         
@@ -3747,14 +3747,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 222,
-                    regY: 128,
+                    regX: 329,
+                    regY: 431,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 444,
-                    height:256,
+                    width: 658,
+                    height:862,
                     visible: true,
                 },
                 lock: false,
