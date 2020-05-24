@@ -152,15 +152,15 @@ Entry.Playground = class Playground {
         tabView.appendChild(tabList);
 
         this.tabViewElements = {};
-        const codeTab = Entry.createElement('li', 'entryCodeTab')
+        const codeTab = Entry.createElement('li', 'entryCodeTab') 
             .addClass('entryTabListItemWorkspace entryTabSelected')
             .bindOnClick(() => {
                 Entry.do('playgroundChangeViewMode', 'code', that.selectedViewMode);
             })
-            .appendTo(tabList);
+            //.appendTo(tabList);//블록 탭 담당
         codeTab.innerHTML = Lang.Workspace.tab_code;
         this.tabViewElements.code = codeTab;
-        this._codeTab = codeTab;
+        this._codeTab = codeTab; 
 
         const pictureTab = Entry.createElement('li', 'entryPictureTab')
             .addClass('entryTabListItemWorkspace')
