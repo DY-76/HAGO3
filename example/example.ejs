@@ -78,8 +78,8 @@
             }
         </script>
         <style>
-        @font-face{font-family:'Noto'; src:local(※), url("http://127.0.0.1:3000/fonts/NotoSansKR-Regular.otf")}
-        @font-face{font-family:'Noto-Bold'; src:local(※), url("http://127.0.0.1:3000/fonts/NotoSansKR-Bold.otf")}
+        @font-face{font-family:'Noto'; src:local(※), url("../fonts/NotoSansKR-Regular.otf")}
+        @font-face{font-family:'Noto-Bold'; src:local(※), url("../fonts/NotoSansKR-Bold.otf")}
             #Paneltip {
                 font-size: 18px;
                 margin-bottom: 4px;
@@ -397,6 +397,7 @@
         
         <!-- The Modal & next stage_script -->
         <script>
+            var now_link_front = window.location.href.split("/")
             var now_link = window.location.href.split("stage=")
             var next_num = Number(now_link[1])+1;
             var next_stage = now_link[0]+'stage='+ next_num;
