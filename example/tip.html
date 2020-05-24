@@ -9,45 +9,40 @@
   }
   .tipmodal_con_contents {
     text-align: center;
+    margin-top: 50px;
+    padding-left: 120px;
     height: 500px;
-    width: 1100px;
+    width: 1200px;
     /* background-color: red; */
     display: table-cell;
     vertical-align: middle;
     font-size: x-large;
-    border-bottom: solid;
-    border-left: solid;
-    border-bottom-left-radius: 50px;
+    border-style: solid;
+    border-radius: 30px;
     border-color: lightblue;
   }
   .tipmodal_con_controller {
-    padding-top: 20px;
+    padding-top: 10px;
     height: 110px;
     /* background-color: green; */
   }
   #tip_contents {
-    display: inline-block;
+    display:inline-block;
     margin: auto;
   }
   #tip_subject {
+    font-family: 'Noto-Bold';
     font-size: 40px; 
     position: relative; 
     margin-left: 20px;
     top: 8px;
   }
   #tipmodal_controller {
+    width: 1200px;
     /* background-color: green; */
-  }
-  .tip {
-    margin-left: 50px;
-  }
-  .tipnev {
-    border-radius: 15px;
-    background-color: lightblue;
   }
   .tipbtn {
     border-radius: 10px;
-    margin-left: 30px;
     height: 50px;
     width: 150px;
   }
@@ -56,7 +51,7 @@
     color: white;
     border-radius: 30px;
     background-color: lightsteelblue;
-    padding: 6px 10px 8px 10px;
+    padding: 6px 18px 8px 18px;
     margin-bottom: 15px;
     margin-left: 20px;
   }
@@ -83,12 +78,12 @@
                         <span id="tip_subject"></span>
                         <span style="position: absolute;right: 30px;"><span class="close" style="margin-right: 2%; font-size: 70px;" onclick="TipModalOut();">&times;</span></span>
                   </div>
-                  <div style="float: left; width: 230px;">
-                    <img src="/images/tipchar.png" style="margin-left: 30px; margin-top: 30px; width: 180px;">
-                  </div>
-                  <div  style="float: right; width: 1050px;">
+                  <div  style="width: 1250px; margin-top: 30px; margin-left: auto;">
+                    <img src="/images/tipchar.png" style="width: 180px; position:absolute; margin-top: 25px; margin-left: 35px;">
                   <div class="tipmodal_con_contents">
+                    
                   <div id="tip_contents">
+                    
                     <table style="writing-mode: horizontal-tb; text-align: center;">
                       <tr>
                         <td><span id="tip_top_left"></span></td><td><span id="tip_top_right"></span></td>
@@ -101,16 +96,16 @@
                   </div>
                   <div class="tipmodal_con_controller">
                   <div id="tipmodal_controller">
-                   <table>
+                   <table style="margin: auto; width: 100%;">
                     <tr>
                       <td>
-                        <button id="tip_nev_front" class="btn btn-lg btn-outline-secondary tip tipbtn" style="margin-right: 50px;" onclick="tip_move_page('back')">이전</button>
+                        <button id="tip_nev_front" class="btn btn-lg btn-outline-secondary tipbtn" style="float: left;" onclick="tip_move_page('back')">이전</button>
+                      </td>
+                      <td style="text-align: center;">
+                        <span id="tip_controller" style="font-size: x-large;"></span>
                       </td>
                       <td>
-                        <span id="tip_controller" class="tip" style="font-size: x-large;"></span>
-                      </td>
-                      <td>
-                        <button id="tip_nev_back" class="btn btn-lg btn-outline-secondary tip tipbtn" onclick="tip_move_page('next')">다음</button>
+                        <button id="tip_nev_back" class="btn btn-lg btn-outline-secondary tipbtn" style="float: right;" onclick="tip_move_page('next')">다음</button>
                       </td>  
                     </tr>
                    </table>
@@ -131,28 +126,44 @@
                     //제목과 페이지
                       tipdata = {
                         title     : "W = Fs",
-                        totalpage : 3   };    //총 페이지
+                        totalpage : 1   };    //총 페이지
                                               //페이지 늘릴거면 아래처럼 붙여넣기(총페이지와 갯수 맞아야함)
                         tipdata.page1 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
-                        subject     : "서브젝트1",
-                        topleft     : "//topleft//",
-                        topright    : "1",
+                        subject     : "W(일의 양) = F(힘의 크기) s(거리)",
+                        topleft     : "일의 양은 30 성휘의 힘은 10일 때, <br>상자를 무사히 옮기려면 몇 번 움직여야 할까요?<br>( 상자 1칸의 거리는 1M입니다. )",
+                        topright    : "",
                         bottomleft  : "",
-                        bottomright : "//bottomright//"
+                        bottomright : ""
                                     };
-                        tipdata.page2 = {
-                        subject     : "asd",
-                        topleft     : "//topleft//",
-                        topright    : "2",
+
+                      break;
+
+                      case 2 :
+                      tipdata = {
+                        title     : "F = mg",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "F(힘) = m(질량) g(중력가속도)",
+                        topleft     : "도둑의 힘은 50 중력가속도는 1m/𝑠^2이라고 가정할 때<br>문이 열리지않게 상자가 버티려면 질량 몇 이상이 되야 할까요?<br>( 원래 지구의 중력가속도는 9.8m/𝑠^2 입니다. )",
+                        topright    : "",
                         bottomleft  : "",
-                        bottomright : "//bottomright//"
+                        bottomright : ""
                                     };
-                        tipdata.page3 = {
-                        subject     : "111",
-                        topleft     : "//topleft//",
-                        topright    : "3",
-                        bottomleft  : "",
-                        bottomright : "//bottomright//"
+
+                      break;
+
+                      case 3 :
+                      tipdata = {
+                        title     : "P = mv",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "v(속도) = P(일률) / m(질량)",
+                        topleft     : "<span style='color:red;'>속도 란 ? </span> : 물체가 나아가거나 일이 진행되는 빠르기",
+                        topright    : "",
+                        bottomleft  : "<br>도둑이 계란을 맞고 쓰러지려면 3의 일률이 필요하고,<br>계란의 질량은 1kg이라고 가정할 때<br>도둑이 계란을 맞고 쓰러지려면 속도는 몇이 되어야 할까요?<br>( 단, 마찰력은 존재하지 않는다. )",
+                        bottomright : ""
                                     };
 
                       break;
@@ -179,6 +190,81 @@
 
                         break; 
 
+                        case 5 :
+                      tipdata = {
+                        title     : "",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "",
+                        topleft     : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 6 :
+                      tipdata = {
+                        title     : "",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "",
+                        topleft     : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 7 :
+                      tipdata = {
+                        title     : "",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "",
+                        topleft     : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 8 :
+                      tipdata = {
+                        title     : "",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "",
+                        topleft     : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 9 :
+                      tipdata = {
+                        title     : "",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "",
+                        topleft     : "",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+
+                      break;
+
                       case 10 :
                       tipdata = {
                         title     : "내맘대로 꾸미기",
@@ -201,7 +287,7 @@
               };
               //nev 버튼 생성
               for(var i = 1 ; i <= tipdata.totalpage ; i++) {
-                $("#tip_controller").append(" <button type='button' id='pagenum"+i+"' class='tipnev' onclick='tip_move_page("+i+")'"+i+">&nbsp;"+i+"&nbsp;</button> ");
+                $("#tip_controller").append(" <button type='button' id='pagenum"+i+"'onclick='tip_move_page("+i+")'"+i+">&nbsp;"+i+"&nbsp;</button> ");
               }
         tip_reload();
         
