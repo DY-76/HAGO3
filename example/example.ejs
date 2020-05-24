@@ -405,16 +405,16 @@
         <div id="myModal" class="modal">  
             <!-- Modal content -->
             <div class="modal-con">
-                <table border="0">
+                <table border="0" style="margin-left: 25px; margin-top: 50px;">
                     <tr>
-                        <td colspan="2"><br><h1>스테이지 클리어!</h1><br></td>
+                        <td colspan="2"><br><h1 style="color: lightskyblue; font-family: 'Noto-Bold';">스테이지 클리어!</h1><br></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><img src="/images/media/test_ing.png" alt width="420" height="auto">    </td>
+                        <td colspan="2"><img src="/images/media/clear.png" alt width="420" height="auto" style="margin-bottom: 20px;">    </td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-primary" id="Btn_back" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=now_link[0]+'stage='+now_link[1]" >retry</button></td>
-                        <td><button type="button" class="btn btn-primary" id="Btn_next" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=next_stage">NEXT</button></td>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_back" onclick="location.href=now_link[0]+'stage='+now_link[1]" >retry</button></td>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_next" onclick="location.href=next_stage">NEXT</button></td>
                     
                     </tr>
                 </table>
@@ -423,16 +423,16 @@
         </div><div id="myloseModal" class="modal">  
             <!-- Modal content -->
             <div class="modal-con">
-                <table border="0">
+                <table border="0" style="margin-left: 25px; margin-top: 50px;">
                     <tr>
-                        <td colspan="2"><br><h1>스테이지 실패!</h1><br></td>
+                        <td colspan="2"><br><h1 style="color: lightskyblue; font-family: 'Noto-Bold';">스테이지 실패!</h1><br></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><img src="/images/media/test_ing.png" alt width="420" height="auto">    </td>
+                        <td colspan="2"><img src="/images/media/fail.png" alt width="420" height="auto" style="margin-bottom: 20px;">    </td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-primary" id="Btn_back" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=now_link[0]+'stage='+now_link[1]" >retry</button></td>
-                        <td><button type="button" class="btn btn-primary" id="Btn_next" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=next_stage">NEXT</button></td>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_back" onclick="location.href=now_link[0]+'stage='+now_link[1]" >RETRY</button></td>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_next" onclick="location.href=next_stage">NEXT</button></td>
                     
                     </tr>
                 </table>
