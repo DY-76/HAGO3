@@ -73,11 +73,11 @@
         .tipmodal_con {
             height: 700px;
             width: 1300px; 
-            margin:-20% 0px 0px -35%;
+            margin:auto 0px 0px -650px;
             border-style: double;
             border-width: 5px;
             border-radius: 45px;
-            top: 50%; 
+            top: 118.5px; 
             left: 50%; 
             position: absolute; 
             background-color: white;
