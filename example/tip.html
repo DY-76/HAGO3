@@ -130,9 +130,9 @@
                                               //페이지 늘릴거면 아래처럼 붙여넣기(총페이지와 갯수 맞아야함)
                         tipdata.page1 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
                         subject     : "W(일의 양) = F(힘의 크기) s(거리)",
-                        topleft     : "일의 양은 30 성휘의 힘은 10일 때, <br>상자를 무사히 옮기려면 몇 번 움직여야 할까요?<br>( 상자 1칸의 거리는 1M입니다. )",
+                        topleft     : "<img src='/images/stage1tip1img.png'>",
                         topright    : "",
-                        bottomleft  : "",
+                        bottomleft  : "일의 양은 30 성휘의 힘은 10일 때, <br>상자를 무사히 옮기려면 몇 번 움직여야 할까요?<br>( 상자 1칸의 거리는 1M입니다. )",
                         bottomright : ""
                                     };
 
@@ -207,14 +207,21 @@
 
                       case 6 :
                       tipdata = {
-                        title     : "",
-                        totalpage : 1   };
+                        title     : "V = IR",
+                        totalpage : 2   };
 
                         tipdata.page1 = {
-                        subject     : "",
-                        topleft     : "",
+                        subject     : "기본용어정리",
+                        topleft     : "<span style='color:red;'>전하란 ? </span> : 물체가 가진 전기의 양 = 전기적 성질<br><span style='color:red;'>전류란 ? </span> : (-)전하를 가진 자유전자의 흐름<br><span style='color:red;'>전위란 ? </span> : 전기적 위치, 이 위치의 차이를 ‘전위차’ 라고 함.<br><span style='color:red;'>전압이란 ? </span> : 전위차로 발생한 전기적 압력 = 전류를 흐르게 하는 힘<br><span style='color:red;'>저항이란 ? </span> : 전류의 흐름을 방해하는 힘",
                         topright    : "",
                         bottomleft  : "",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "R(저항) = V(전압) / I(전류)",
+                        topleft     : "전압과 저항은 비례한다, 전류와 저항은 반비례한다.<br>우리에겐 발전기로 전압을 자유자재로 조절할 수 있다.",
+                        topright    : "",
+                        bottomleft  : "<br>사람이 전류를 통해 쓰러지려면 0.05A의 전류가 필요하다.<br>도둑의 저항은 2200Ω, 전선의 저항은 1Ω이다.<br>도둑을 쓰러뜨리기에 적절한 전압은 몇인지 구하시오.",
                         bottomright : ""
                                     };
 
@@ -222,14 +229,21 @@
 
                       case 7 :
                       tipdata = {
-                        title     : "",
-                        totalpage : 1   };
+                        title     : "베르누이법칙",
+                        totalpage : 2   };
 
                         tipdata.page1 = {
-                        subject     : "",
-                        topleft     : "",
+                        subject     : "A₁v₁ = A₂v₂",
+                        topleft     : "<img src='/images/stage7tip1img.png' style='width:400px'>",
                         topright    : "",
-                        bottomleft  : "",
+                        bottomleft  : "Ex) 단면적이 절반으로 줄면<br>물의 속력이 2배 증가한다.",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "A와 v 는 반비례",
+                        topleft     : "<span style='color:red;'>A는 관의 단면적, v는 유체의 속력(유속)이다.</span>",
+                        topright    : "",
+                        bottomleft  : "<br>도둑을 쓰러트리기 위해선 물이 20m/s 유속으로 분출 되어야 한다.  <br>물이 20m/s 유속으로 분출 되려면 단면적은 25mm²가 되어야한다. <br>호스의 분출구를 좁혀 물이 20m/s 유속으로 분출되게 하려고 할 때, <br>호스의 출발점 단면적과 유속은 몇이어야 할까?",
                         bottomright : ""
                                     };
 
@@ -237,14 +251,21 @@
 
                       case 8 :
                       tipdata = {
-                        title     : "",
-                        totalpage : 1   };
+                        title     : "Ep(위치 에너지) = mgh",
+                        totalpage : 2   };
 
                         tipdata.page1 = {
-                        subject     : "",
-                        topleft     : "",
+                        subject     : "높이와 위치에너지",
+                        topleft     : "<img src='/images/stage8tip1img.png'>",
+                        topright    : "Ep = 중력에 의한 위치에너지<br><br>m = 질량<br><br>h = 높이",
+                        bottomleft  : "m이 일정할 때, <br>Ep와 h는 정비례한다.",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "Ep = g * m * h",
+                        topleft     : "(g = 중력가속도)",
                         topright    : "",
-                        bottomleft  : "",
+                        bottomleft  : "<br>도둑이 계단을 올라오지 못하도록 공을 머리위에<br>떨어트려 맞추려고 합니다. 높이와 위치에너지는<br>정비례 관계에 있습니다. 도둑이 올라오는 시간을<br>고려했을 때, 알맞은 위치에너지를 구해봅시다.<br>(단, 중력가속도는 9.8m/s²)",
                         bottomright : ""
                                     };
 
@@ -252,14 +273,28 @@
 
                       case 9 :
                       tipdata = {
-                        title     : "",
-                        totalpage : 1   };
+                        title     : "운동과 마찰력",
+                        totalpage : 3   };
 
                         tipdata.page1 = {
-                        subject     : "",
-                        topleft     : "",
+                        subject     : "마찰력과 운동방향",
+                        topleft     : "<img src='/images/stage9tip1img.png'>",
+                        topright    : "",
+                        bottomleft  : "물체가 운동하는 것은<br>마찰력이 가하는 힘보다 적음을 의미",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "마찰력 = 물체의 수직항력 + 마찰계수",
+                        topleft     : "<span style='color:red;'>수직항력이란?</span> : 물체의 운동방향에 수직으로 작용하는 힘<br><br><span style='color:red;'>마찰계수 란?</span> : 물체마다 가진 고유의 마찰속성",
                         topright    : "",
                         bottomleft  : "",
+                        bottomright : ""
+                                    };
+                        tipdata.page3 = {
+                        subject     : "운동  = 에너지 – 마찰력",
+                        topleft     : "운동하는 물체는 가해지는 힘에서 마찰력을 뺀 값만큼의 에너지를 가진다.",
+                        topright    : "",
+                        bottomleft  : "<br>창문에 미리 설치해놨던 밧줄을 타고 오두막으로 도망쳐야 합니다.<br>마찰력이 적으면 너무 빠르게 떨어지고, 많으면 내려가지 못합니다.<br>적절한 마찰계수를 가진 물건을 찾아, 원하는 마찰력을 만드세요.<br>( 마찰력이 없을 때 힘은 400N이고,<br> 100N의 힘으로 내려가야 한다.)",
                         bottomright : ""
                                     };
 
@@ -271,8 +306,8 @@
                         totalpage : 1   };
 
                         tipdata.page1 = {
-                          subject     : "",
-                        topleft     : "",
+                          subject     : "나만의 스탭 제작해보기",
+                        topleft     : "스스로 생각해서 원하는대로 꾸며보세요!",
                         topright    : "",
                         bottomleft  : "",
                         bottomright : ""
