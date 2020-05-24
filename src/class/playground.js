@@ -557,11 +557,24 @@ Entry.Playground = class Playground {
             },
             readOnly: Entry.readOnly,
         };
-
+{
         if (this.getParameterByName('make.stage') == 10)
             initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks2();
-           
-         
+        else if (this.getParameterByName('stage') == 1)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 2)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 3)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 4)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 5)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 6)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 7)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage7();
+        }
 
         if (Entry.textCodingEnable) {
             initOpts.vimBoard = { dom: boardView };

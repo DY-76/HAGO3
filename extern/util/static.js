@@ -177,7 +177,20 @@ EntryStatic.categoryProjectOption = [
         value: '기타',
     },
 ];
-
+EntryStatic.getAllBlocks_stage1 = function() {
+    return[
+{
+    category: 'func',
+    blocks: [],
+}]
+},
+EntryStatic.getAllBlocks_stage7 = function() {
+    return[
+{
+    category: 'func',
+    blocks: ['repeat_basic',],
+}]
+},
 EntryStatic.getAllBlocks2 = function() {
     return [
         {

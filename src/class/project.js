@@ -3652,7 +3652,7 @@ Entry.getStartProjectGS1_1 = function(mediaFilePath) {
         speed: 60,
     };
 };
-Entry.getStartProject20 = function(mediaFilePath) {
+Entry.getStartProject201 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3711,7 +3711,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '도둑1',
+                name: '아이_몸',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3721,25 +3721,27 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/thief1_6_1.png`,
-                            name: `도둑_손잡이`,
+                            fileurl: `${mediaFilePath}../img/kid_body_8_1.png`,
+                            name: `아이_몸1`,
                             scale: 100,
                             dimension: {
-                                width: 658,
-                                height:862,
+                                width: 206,
+                                height:642,
                             },
                         },
-
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/electric shock.png`,
-                            name: `도둑_감전`,
+                            fileurl: `${mediaFilePath}../img/kid_body_8_2.png`,
+                            name: `아이_몸2`,
                             scale: 100,
                             dimension: {
-                                width: 658,
-                                height:862,
+                                width: 206,
+                                height:642,
                             },
                         },
+                        
+
+                        
                         
                         
                     ],
@@ -3747,14 +3749,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 329,
-                    regY: 431,
+                    regX: 103,
+                    regY: 321,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 658,
-                    height:862,
+                    width: 206,
+                    height:642,
                     visible: true,
                 },
                 lock: false,
@@ -3772,7 +3774,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
     
 };
 
-Entry.getStartProject201 = function(mediaFilePath) {
+Entry.getStartProject20 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3832,7 +3834,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: 'null',
+                name: '쇠공',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3842,12 +3844,12 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/kid_arm.png`,
+                            fileurl: `${mediaFilePath}../img/ironball.png`,
                             name: `null`,
                             scale: 100,
                             dimension: {
-                                width: 149,
-                                height:171,
+                                width: 103,
+                                height:103,
                             },
                         },
 
@@ -3857,14 +3859,14 @@ Entry.getStartProject201 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 74.5,
-                    regY: 85.5,
+                    regX: 51.5,
+                    regY: 51.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 149,
-                    height:171,
+                    width: 103,
+                    height:103,
                     visible: true,
                 },
                 lock: false,
