@@ -221,7 +221,7 @@ class Variable {
             .ss(1, 2, 0)
             .s(colorSet.border || '#50bcdf')
             //rr(x,y,길이,높이,라운딩)
-            .rr(10, -14, this._nameWidth + this._valueWidth + 20, 21, 4);
+            .rr(10, -14, this._nameWidth + this._valueWidth + 22, 21, 4);
         //변수박스내 변수값 디자인
         this.wrapper_.graphics
             .clear()

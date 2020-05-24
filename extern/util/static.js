@@ -177,7 +177,20 @@ EntryStatic.categoryProjectOption = [
         value: '기타',
     },
 ];
-
+EntryStatic.getAllBlocks_stage1 = function() {
+    return[
+{
+    category: 'func',
+    blocks: [],
+}]
+},
+EntryStatic.getAllBlocks_stage7 = function() {
+    return[
+{
+    category: 'func',
+    blocks: ['repeat_basic',],
+}]
+},
 EntryStatic.getAllBlocks2 = function() {
     return [
         {
@@ -1004,7 +1017,7 @@ EntryStatic.colorSet = {
             HIDDEN: '#FFFFFF',
         },
     },
-    block: {
+    block: { //블록 색깔 바꾸는 곳
         default: {
             START: '#00b400',
             FLOW: '#17a6d1',
@@ -1016,10 +1029,11 @@ EntryStatic.colorSet = {
             JUDGE: '#4562f5',
             CALC: '#f4af18',
             VARIABLE: '#dd47d8',
-            FUNC: '#de5c04',
+            //FUNC: '#de5c04',
             HARDWARE: '#00b6b1',
             EXPANSION: '#ef6d6d',
             HIDDEN: '#8aa3b2',
+            FUNC:'#77AAAD',
         },
         lighten: {
             START: '#3bce3b',
@@ -1048,7 +1062,8 @@ EntryStatic.colorSet = {
             JUDGE: '#1b3ad8',
             CALC: '#ff7f00',
             VARIABLE: '#b819b3',
-            FUNC: '#a14100',
+            //FUNC: '#a14100',
+            FUNC:'#ffffff',
             HARDWARE: '#008380',
             EXPANSION: '#c63f3f',
             HIDDEN: '#728997',
