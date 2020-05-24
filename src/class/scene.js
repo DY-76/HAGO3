@@ -34,7 +34,7 @@ Entry.Scene = class {
         this.view_ = sceneView;
         this.view_.addClass('entryScene');
        if (!option || option == '') {
-       //if (!option || option == 'workspace') {  //장면 관여 이거 주석 없애고 위에꺼를 주석 처리하면 장면 쓸수 있음
+      // if (!option || option == 'workspace') {  //장면 추가 관여 이거 주석 없애고 위에꺼를 주석 처리하면 장면 쓸수 있음
             this.view_.addClass('entrySceneWorkspace');
 
             $(this.view_).on('mousedown touchstart', (e) => {

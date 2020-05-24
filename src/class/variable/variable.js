@@ -221,7 +221,7 @@ class Variable {
             .ss(1, 2, 0)
             .s(colorSet.border || '#50bcdf')
             //rr(x,y,길이,높이,라운딩)
-            .rr(10, -14, this._nameWidth + this._valueWidth + 22, 21, 4);
+            .rr(10, -14, this._nameWidth + this._valueWidth + 24, 21, 4);
         //변수박스내 변수값 디자인
         this.wrapper_.graphics
             .clear()
@@ -229,7 +229,7 @@ class Variable {
             .ss(1, 2, 0)
             .s(boxFillAndStrokeColor)
             //.rr(this._nameWidth + 14, -9, this._valueWidth + 14, 14, this.RECT_RADIUS);
-            .rr(this._nameWidth + 14, -10, this._valueWidth + 14, 14, this.RECT_RADIUS);//좌측 상단 좌측 하단 우측 상단 우측하단
+            .rr(this._nameWidth + 14, -10, this._valueWidth + 16, 14, this.RECT_RADIUS);//좌측 상단 좌측 하단 우측 상단 우측하단
     }
 
     _adjustSingleViewPosition() {
