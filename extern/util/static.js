@@ -191,6 +191,15 @@ EntryStatic.getAllBlocks_stage7 = function() {
     blocks: ['repeat_basic',],
 }]
 },
+EntryStatic.getAllBlocks_stage8 = function() {
+    return[
+{
+    category: 'func',
+    blocks: ['wait_second2',
+    'repeat_inf',
+],
+}]
+},
 EntryStatic.getAllBlocks2 = function() {
     return [
         {

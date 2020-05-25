@@ -168,6 +168,8 @@ Lang.Blocks = {
     "FLOW_stop_run": "프로그램 끝내기",
     "FLOW_wait_second_1": "",
     "FLOW_wait_second_2": "초 기다리기",
+    "FLOW_wait_second2_1": "",
+    "FLOW_wait_second2_2": "초 기다리기",
     "FLOW_wait_until_true_1": "",
     "FLOW_wait_until_true_2": "이(가) 될 때까지 기다리기",
     "FLOW_when_clone_start": "복제본이 처음 생성되었을때",
