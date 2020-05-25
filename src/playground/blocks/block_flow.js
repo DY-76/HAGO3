@@ -80,6 +80,85 @@ module.exports = {
                     ],
                 },
             },
+            wait_second2: {
+                color: EntryStatic.colorSet.block.default.FLOW,
+                outerLine: EntryStatic.colorSet.block.darken.FLOW,
+                skeleton: 'basic',
+                statements: [],
+                params: [
+                    {
+                        type: 'Block',
+                        accept: 'string',
+                        defaultType: 'number',
+                    },
+                    {
+                        type: 'Indicator',
+                        img: 'block_icon/flow_icon.svg',
+                        size: 11,
+                    },
+                ],
+                events: {},
+                def: {
+                    params: [
+                        {
+                            type: 'number',
+                            params: ['1'],
+                        },
+                        null,
+                    ],
+                    type: 'wait_second',
+                },
+                pyHelpDef: {
+                    params: [
+                        {
+                            type: 'number',
+                            params: ['A&value'],
+                        },
+                        null,
+                    ],
+                    type: 'wait_second',
+                },
+                paramsKeyMap: {
+                    SECOND: 0,
+                },
+                class: 'delay',
+                isNotFor: [],
+                func(sprite, script) {
+                    if (!script.isStart) {
+                        script.isStart = true;
+                        script.timeFlag = 1;
+                        let timeValue = script.getNumberValue('SECOND', script);
+                        const fps = Entry.FPS || 60;
+                        timeValue = 60 / fps * timeValue * 1000;
+
+                        const blockId = script.block.id;
+                        Entry.TimeWaitManager.add(
+                            blockId,
+                            function() {
+                                script.timeFlag = 0;
+                            },
+                            timeValue
+                        );
+
+                        return script;
+                    } else if (script.timeFlag == 1) {
+                        return script;
+                    } else {
+                        delete script.timeFlag;
+                        delete script.isStart;
+                        Entry.engine.isContinue = false;
+                        return script.callReturn();
+                    }
+                },
+                syntax: {
+                    js: [],
+                    py: [
+                        {
+                            syntax: 'Entry.wait_for_sec(%1)',
+                        },
+                    ],
+                },
+            },
             repeat_basic: {
                 color: EntryStatic.colorSet.block.default.FLOW,
                 outerLine: EntryStatic.colorSet.block.darken.FLOW,

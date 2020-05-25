@@ -157,7 +157,7 @@ Entry.Playground = class Playground {
             .bindOnClick(() => {
                 Entry.do('playgroundChangeViewMode', 'code', that.selectedViewMode);
             })
-            .appendTo(tabList);//블록 탭 담당
+           // .appendTo(tabList);//블록 탭 담당
         codeTab.innerHTML = Lang.Workspace.tab_code;
         this.tabViewElements.code = codeTab;
         this._codeTab = codeTab; 
@@ -574,6 +574,8 @@ Entry.Playground = class Playground {
             initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
         else if (this.getParameterByName('stage') == 7)
             initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage7();
+            else if (this.getParameterByName('stage') == 8)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage8();
         }
 
         if (Entry.textCodingEnable) {
