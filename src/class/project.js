@@ -3652,7 +3652,7 @@ Entry.getStartProjectGS1_1 = function(mediaFilePath) {
         speed: 60,
     };
 };
-Entry.getStartProject201 = function(mediaFilePath) {
+Entry.getStartProject20 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3711,7 +3711,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '아이_몸',
+                name: '아이_박스',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3721,42 +3721,59 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/kid_body_8_1.png`,
-                            name: `아이_몸1`,
+                            fileurl: `${mediaFilePath}../img/kid_box_1.png`,
+                            name: `아이_박스1`,
                             scale: 100,
                             dimension: {
-                                width: 206,
-                                height:642,
+                                width: 249,
+                                height:639,
                             },
                         },
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/kid_body_8_2.png`,
-                            name: `아이_몸2`,
+                            fileurl: `${mediaFilePath}../img/kid_box_2.png`,
+                            name: `아이_박스2`,
                             scale: 100,
                             dimension: {
-                                width: 206,
-                                height:642,
+                                width: 249,
+                                height:639,
                             },
                         },
-                        
-
-                        
-                        
+                        {
+                            id: 'vx23',
+                            fileurl: `${mediaFilePath}../img/kid_box_3.png`,
+                            name: `아이_박스3`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                        {
+                            id: 'vx24',
+                            fileurl: `${mediaFilePath}../img/kid_box_4.png`,
+                            name: `아이_박스4`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                                   
                         
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 103,
-                    regY: 321,
+                    regX: 124.5,
+                    regY: 319.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 206,
-                    height:642,
+                    width: 249,
+                    height:639,
                     visible: true,
                 },
                 lock: false,
@@ -3774,7 +3791,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
     
 };
 
-Entry.getStartProject20 = function(mediaFilePath) {
+Entry.getStartProject201 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3834,7 +3851,7 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '쇠공',
+                name: '아이_박스',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3844,12 +3861,12 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/ironball.png`,
+                            fileurl: `${mediaFilePath}../img/kid_arm_box.png`,
                             name: `null`,
                             scale: 100,
                             dimension: {
-                                width: 103,
-                                height:103,
+                                width: 135,
+                                height:169,
                             },
                         },
 
@@ -3859,14 +3876,14 @@ Entry.getStartProject20 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 51.5,
-                    regY: 51.5,
+                    regX: 67.5,
+                    regY: 84.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 103,
-                    height:103,
+                    width: 135,
+                    height:169,
                     visible: true,
                 },
                 lock: false,
