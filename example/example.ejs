@@ -82,13 +82,14 @@
         @font-face{font-family:'Noto'; src:local(※), url("../fonts/NotoSansKR-Regular.otf")}
         @font-face{font-family:'Noto-Bold'; src:local(※), url("../fonts/NotoSansKR-Bold.otf")}
             #Paneltip {
+                background-color: slategray;
                 font-size: 18px;
-                margin-bottom: 4px;
+                margin-bottom: 0px;
+                margin-top: 4px;
                 font-family:'Noto';
             }
             .help_div {
-                position: relative;
-                bottom: 30px;
+                background-color: lightskyblue;
                 width: 730px;
                 height: 210px;
                 overflow: auto;
@@ -107,7 +108,7 @@
             }
             .help_div::-webkit-scrollbar-track {
                 border-radius: 4px;
-                background-color: whitesmoke;
+                background-color: steelblue;
                 border-style: solid;
                 border-width: 0.5px;
             }
@@ -202,17 +203,31 @@
 
                     <li>
                         <div>
+                            <script>
+                                function move_stage(stage_num){
+                                    var now_link_2 = window.location.href.split("/?");
+                                    if (stage_num == 10) {
+                                        return now_link_2[0]+'?make.stage='+stage_num;
+                                    }
+                                    if (now_link_2[1]){
+                                        return now_link_2[0]+'?stage='+stage_num;
+                                    }
+                                    else {
+                                        return "http://www.codinghago.com:3389/?stage=1";
+                                    }
+                                }
+                            </script>
 
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'1'">1 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'2'">2 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'3'">3 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'4'">4 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'5'">5 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'6'">6 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'7'">7 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'8'">8 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=now_link[0]+'stage='+'9'">9 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(1)">1 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(2)">2 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(3)">3 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(4)">4 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(5)">5 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(6)">6 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(7)">7 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(8)">8 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(9)">9 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href=move_stage(10)">10 Step</button>
                     
                 
                         <script>
@@ -398,7 +413,7 @@
         
         <!-- The Modal & next stage_script -->
         <script>
-            var now_link = window.location.href.split("stage=")
+            var now_link = window.location.href.split("stage=");
             var next_num = Number(now_link[1])+1;
             var next_stage = now_link[0]+'stage='+ next_num;
         </script>

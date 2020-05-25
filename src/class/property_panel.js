@@ -63,7 +63,7 @@ Entry.PropertyPanel = function() {
                 $('.help_size').height($(window).height()-750);
            });
            $(this).before($("<div class='help_div'>"));
-           $('.help_div').before($("<p id='Paneltip' style='position:relative; bottom:40px; width:300px'>").html("<span style='font-size:27px; position:relative; top:10px;'>도움말</span><br>__________________________"));
+           $('.help_div').before($("<p id='Paneltip'>").html("<span style='font-size:27px;'>도움말</span>"));
             switch (Number(getParameterByName('stage'))){
                 case 1:
                     $('.help_div').append($("<p id='Paneltip'>").html("▶ 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과19-03] / 국어 [6국05-02]"));
