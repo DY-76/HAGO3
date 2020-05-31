@@ -62,7 +62,9 @@ Entry.PropertyPanel = function() {
                 
                 $('.help_size').height($(window).height()-750);
            });
-           $(this).before($("<div class='help_div'>"));
+           $(this).before($("<div class='help_img_div' style='padding-left:150px; background-color:#87CEEB;'>"));
+           $('.help_img_div').html("<img src='/images/mainchar_q.png' style='position:absolute; left:0px; width:150px;'>");
+           $('.help_img_div').append($("<div class='help_div'>"));
            $('.help_div').before($("<p id='Paneltip'>").html("<span style='font-size:27px;'>도움말</span>"));
             switch (Number(getParameterByName('stage'))){
                 case 1:
@@ -133,9 +135,6 @@ Entry.PropertyPanel = function() {
                     console.log("도움말 case파트 현 번호 찾을 수 없음");
             }
 
-            
-        
-            
         });
 
     
