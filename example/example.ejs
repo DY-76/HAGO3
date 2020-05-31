@@ -65,6 +65,19 @@
             $(document).ready( function() {
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
                 $("#tipmodal").load("/example/tip.html");
+                if (Number(now_link[1])==10){
+                    setTimeout(function(){
+                        $(".entryCategoryListWorkspace").css("display","inline-block");
+                        $(".blockMenuWrapper").css("top","75px");
+                        $(".entryWorkspaceBoard").css("top","75px");
+                        $(".blockMenuContainer").css("height","680px");
+                        $("#Paneltip").css("display","none");
+                        $(".help_div").css("display","none");
+                        $(".help_img_div").css("display","none");
+                        
+                        
+                    },10)
+                }
             });
             function size(){
             console.log('W=',window.innerWidth);
@@ -75,6 +88,7 @@
                 else if(window.innerHeight < 800){
                     document.body.style.zoom = '65%';
                 }
+          
             }
 
         </script>
@@ -116,7 +130,6 @@
                 background-color: white;
             }
         </style>
-
     </head>
     
 
@@ -209,8 +222,10 @@
                             <script>
                                 function move_stage(stage_num){
                                     var now_link_2 = window.location.href.split("/?");
+                                    
                                     if (stage_num == 10) {
                                         return now_link_2[0]+'?make.stage='+stage_num;
+                                        
                                     }
                                     if (now_link_2[1]){
                                         return now_link_2[0]+'?stage='+stage_num;
@@ -359,7 +374,7 @@
         <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
         <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
         <% } %>
-    
+
 
         <script>
 
@@ -385,8 +400,8 @@
         </script>
 <script>
     objectmanager1.onclick = function() {
-        propertyContent.style.display = "block";
-
+       // propertyContent.style.display = "block";
+       entryCategoryListWorkspace.style.display="inline-block";
                             
                         }
 </script>

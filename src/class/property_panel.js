@@ -130,6 +130,7 @@ Entry.PropertyPanel = function() {
                     $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 도둑이 물 대포를 맞고 지하로 떨어지려면 호스의 도착점 단면적과 출발점 유속은 얼만큼 되어야 할까요? (단, 호스의 단면적은 50mm² 이다. )"));
                     $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 블록 꾸러미에서 블록 조립소로 옮겨 단면적과 유속을 조절하여 실행 해보세요."));
                     break;
+                
                 default :
                     console.log("도움말 case파트 현 번호 찾을 수 없음");
             }
