@@ -157,7 +157,7 @@ Entry.Playground = class Playground {
             .bindOnClick(() => {
                 Entry.do('playgroundChangeViewMode', 'code', that.selectedViewMode);
             })
-            .appendTo(tabList);//블록 탭 담당
+            //.appendTo(tabList);//블록 탭 담당
         codeTab.innerHTML = Lang.Workspace.tab_code;
         this.tabViewElements.code = codeTab;
         this._codeTab = codeTab; 
