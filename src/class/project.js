@@ -605,10 +605,10 @@ Entry.getStartProject2 = function(mediaFilePath) {
         objects: [
             {
                 id: '7y0y',
-                name: Lang.Blocks.entry_bot_name,
+                name: '하_박사',
                 label: {
-                    ko: '피카츄',
-                    en: 'pikachu',
+                    ko: '하_박사',
+                    en: 'ha_doctor',
                 },
                 script: [
                     [
@@ -621,28 +621,28 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    sounds: [
-                        {
-                            duration: 1.3,
-                            ext: '.mp3',
-                            id: '8el5',
-                            fileurl: `${mediaFilePath}media/bark.mp3`,
-                            name: Lang.Blocks.doggi_bark,
-                            label: {
-                                ko: '강아지 짖는소리',
-                                en: "Doggi's Bark",
-                            },
-                        },
-                    ],
+                    // sounds: [
+                    //     {
+                    //         duration: 1.3,
+                    //         ext: '.mp3',
+                    //         id: '8el5',
+                    //         fileurl: `${mediaFilePath}media/bark.mp3`,
+                    //         name: Lang.Blocks.doggi_bark,
+                    //         label: {
+                    //             ko: '강아지 짖는소리',
+                    //             en: "Doggi's Bark",
+                    //         },
+                    //     },
+                    // ],
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}object/pikachu.gif`,
+                            fileurl: `${mediaFilePath}../img/ha_doctor.png`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 800,
-                                height: 800,
+                                width: 135,
+                                height: 336,
                             },
                         },
                     ],
@@ -650,14 +650,14 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 400,
-                    regY: 400,
+                    regX: 67.5,
+                    regY: 168,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 800,
-                    height: 800,
+                    width: 135,
+                    height: 336,
                     visible: true,
                 },
                 lock: false,
