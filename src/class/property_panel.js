@@ -62,7 +62,7 @@ Entry.PropertyPanel = function() {
                 
                 $('.help_size').height($(window).height()-750);
            });
-           $(this).before($("<div class='help_img_div' style='padding-left:150px; width:730px; background-color:#ecf5fa;'>"));
+           $(this).before($("<div class='help_img_div' style='padding-left:150px; width:730px; background-color:#ecf5fa; margin-top:10px;'>"));
            $('.help_img_div').html("<img src='/images/mainchar_q.png' style='position:absolute; left:0px; width:130px; margin-left:10px; margin-top:15px;'>");
            $('.help_img_div').append($("<div class='help_div'>"));
            $('.help_div').before($("<p id='Paneltip'>").html("<span style='font-size:27px;'>도움말</span>"));
