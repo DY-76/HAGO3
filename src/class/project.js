@@ -3652,7 +3652,7 @@ Entry.getStartProjectGS1_1 = function(mediaFilePath) {
         speed: 60,
     };
 };
-Entry.getStartProject201 = function(mediaFilePath) {
+Entry.getStartProject20 = function(mediaFilePath) {
     return {
         category: Lang.Menus.other,
         scenes: [
@@ -3711,7 +3711,7 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '아이_몸',
+                name: '아이_박스',
                 selectedPictureId: 'vx21',
                 objectType: 'sprite',
                 rotateMethod: 'free',
@@ -3721,42 +3721,59 @@ Entry.getStartProject201 = function(mediaFilePath) {
                     pictures: [
                         {
                             id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/kid_body_8_1.png`,
-                            name: `아이_몸1`,
+                            fileurl: `${mediaFilePath}../img/kid_box_1.png`,
+                            name: `아이_박스1`,
                             scale: 100,
                             dimension: {
-                                width: 206,
-                                height:642,
+                                width: 249,
+                                height:639,
                             },
                         },
                         {
                             id: 'vx22',
-                            fileurl: `${mediaFilePath}../img/kid_body_8_2.png`,
-                            name: `아이_몸2`,
+                            fileurl: `${mediaFilePath}../img/kid_box_2.png`,
+                            name: `아이_박스2`,
                             scale: 100,
                             dimension: {
-                                width: 206,
-                                height:642,
+                                width: 249,
+                                height:639,
                             },
                         },
-                        
-
-                        
-                        
+                        {
+                            id: 'vx23',
+                            fileurl: `${mediaFilePath}../img/kid_box_3.png`,
+                            name: `아이_박스3`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                        {
+                            id: 'vx24',
+                            fileurl: `${mediaFilePath}../img/kid_box_4.png`,
+                            name: `아이_박스4`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                                   
                         
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 103,
-                    regY: 321,
+                    regX: 124.5,
+                    regY: 319.5,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 206,
-                    height:642,
+                    width: 249,
+                    height:639,
                     visible: true,
                 },
                 lock: false,
@@ -3811,15 +3828,15 @@ Entry.getStartProject20 = function(mediaFilePath) {
         ],
         objects: [
            
-            
+
+
             {
-                id: '7y0p3',
+                id: '7y0pe',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
                     ko: '쇠구슬',
                     en: 'Entrybot1',
                 },
-                
                 script: [
                     [
                         {
@@ -3834,8 +3851,8 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                 ],
                 id: 'line',
-                name: '쇠공',
-                selectedPictureId: 'vx21',
+                name: '아이_팔',
+                selectedPictureId: 've31',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
@@ -3843,36 +3860,38 @@ Entry.getStartProject20 = function(mediaFilePath) {
                     
                     pictures: [
                         {
-                            id: 'vx21',
-                            fileurl: `${mediaFilePath}../img/ironball.png`,
-                            name: `null`,
+                            id: 've31',
+                            fileurl: `${mediaFilePath}../img/kid_arm_9.png`,
+                            name: `아이1`,
                             scale: 100,
                             dimension: {
-                                width: 103,
-                                height:103,
+                                width: 720,
+                                height:646,
                             },
                         },
-
-                       
+                        
+                        
+                                   
+                        
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 51.5,
-                    regY: 51.5,
+                    regX: 360,
+                    regY: 323,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 0,
-                    width: 103,
-                    height:103,
+                    width: 720,
+                    height:646,
                     visible: true,
                 },
                 lock: false,
                 active: true,
             },
-            
+
 
             
            
