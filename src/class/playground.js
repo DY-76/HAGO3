@@ -576,6 +576,8 @@ Entry.Playground = class Playground {
             initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage7();
             else if (this.getParameterByName('stage') == 8)
             initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage8();
+            else if (this.getParameterByName('stage') == 9)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
         }
 
         if (Entry.textCodingEnable) {
