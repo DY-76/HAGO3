@@ -47,25 +47,10 @@ router.post('/post', function(req, res) {
   res.render( 'test' , {id:iiid});
           });
 
-router.get('/all', function(req, res) {
-    res.render( 'mid' , {DBdata:'Done!',
-                         All:'test'
+router.get('/control', function(req, res) {
+    res.render( 'admin_main_control' , {state:'Done!'
                         });
 
-
-
-                        
-    
-  /*
-  connection.query('SELECT * FROM user', (err, rows) => {
-    connection.release(); // 연결세션 반환.
-    if (err) {
-      throw err;
-    }
-
-    return res.send({ data: rows }); // 결과는 rows에 담아 전송
-  });
-  */
 });
 
 
