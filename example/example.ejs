@@ -3,11 +3,13 @@
 
 <html lang="kr">
     <head>
+        
         <script type="text/javascript" src="https://playentry.org/lib/entry-tool/dist/entry-tool.js"></script>
         <form name="paging">
             <input type="hidden" name="id"/>
          </form>
 <script>
+    
         function goPage(id) {
       // name이 paging인 태그
       var f = document.paging;
@@ -23,7 +25,7 @@
       f.submit();
     };
 </script>
-<a href="javascript:goPage('1');">관람</a>
+<!-- <a href="javascript:goPage('1');">관람</a> -->
 
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
@@ -61,11 +63,127 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript">
             $(document).ready( function() {
-	            $("#addobjectmodal").load("/example/addobjectmodal.html");
-                $("#tip_modal_ejs").load("/example/tipmodal.html");
+                $("#addobjectmodal").load("/example/addobjectmodal.html");
+                $("#tipmodal").load("/example/tip.html");
+                if (Number(now_link[1])==10){
+                    setTimeout(function(){
+                        $(".entryCategoryListWorkspace").css("display","inline-block");
+                        $(".blockMenuWrapper").css("top","75px");
+                        $(".entryWorkspaceBoard").css("top","75px");
+                        $(".blockMenuContainer").css("height","680px");
+                        $("#Paneltip").css("display","none");
+                        $(".help_div").css("display","none");
+                        $(".help_img_div").css("display","none");
+                        
+                        
+                    },10)
+                   
+                }
+               
+                if (Number(now_link[1])==1){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary1").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==2){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary2").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==3){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary3").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==4){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary4").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==5){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary5").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==6){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary6").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==7){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary7").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==8){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary8").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==9){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary9").css("background-color","#3A3E40");
+                        
+                    },10)}
+                    if (Number(now_link[1])==10){
+                    setTimeout(function(){
+                        $(".btn-outline-secondary10").css("background-color","#3A3E40");
+                        
+                    },10)}
+                
             });
-        </script>
+            
+            function size(){
+            console.log('W=',window.innerWidth);
+            console.log('H=',window.innerHeight);
+                if(window.innerHeight > 900){
+                    document.body.style.zoom = '100%';
+                }
+                else if(window.innerHeight < 800){
+                    document.body.style.zoom = '65%';
+                }
+          
+            }
 
+        </script>
+        <style>
+        @font-face{font-family:'Noto'; src:local(※), url("../fonts/NotoSansKR-Regular.otf")}
+        @font-face{font-family:'Noto-Bold'; src:local(※), url("../fonts/NotoSansKR-Bold.otf")}
+            #Paneltip {
+                background-color: #ecf5fa;
+                font-size: 14px;
+                padding-top: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                width: 580px;
+                margin-bottom: 0px;
+                margin-top: 8px;
+                color: #3A3E40;
+                font-family:'Noto';
+            }
+            .help_div {
+                background-color: #ecf5fa;
+                width: 580px;
+                height: 210px;
+                overflow: auto;
+                overflow-x: hidden;
+            }
+            .help_div::-webkit-scrollbar {
+                position: relative;
+                left: 5px;
+                width: 8px;
+                
+            }
+            .help_div::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: skyblue;
+                
+            }
+            .help_div::-webkit-scrollbar-track {
+                border-radius: 4px;
+                background-color: white;
+            }
+        </style>
     </head>
     
 
@@ -104,6 +222,128 @@
                             border-radius: 40px;
                             border-color: rgba(79, 196, 243, 0.9);
                             color: rgba(79, 196, 243, 0.9);
+                           /* background-color: #3A3E40;*/
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary1 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                           /* background-color: #3A3E40;*/
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary2 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary3 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary4 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary5 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary6 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary7 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary8 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary9 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .btn-outline-secondary10 {
+                            height: 40px;
+                            width: 130px;
+                            margin-left: 5px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-radius: 40px;
+                            border-color: rgba(79, 196, 243, 0.9);
+                            color: rgba(79, 196, 243, 0.9);
                             font-size: 15px;
                             font-style: normal;
                         }
@@ -116,14 +356,14 @@
                                 주제
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=1">1Step 일과 에너지(W = Fs)</a>
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=2">2Step 힘과 무게(F = ma)</a>
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=3">3Step 속도(P = mv)</a>
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=4">4Step </a>
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=5">5Step </a>
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=6">6Step </a>
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=7">7Step </a>
-                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=8">8Step </a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=1">1Step = W(일의 양) = F(힘의 크기) s(거리)</a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=2">2Step = F(힘) = m(질량) g(중력가속도)</a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=3">3Step = v(속도) = P(일률) / m(질량)</a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=4">4Step = 반사각 = 입사각</a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=5">5Step = 도체와 부도체</a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=6">6Step  = V(전압) = I(전류)R(저항)</a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=7">7Step = A₁(단면적1)v₁(유속1) = A₂(단면적2)v₂(유속2)</a>
+                              <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=8">8Step = Ep(위치 에너지) = m(질량)g(중력)h(높이)</a>
                               <a class="dropdown-item" href="http://34.64.86.210:3389/?stage=9">9Step </a>
                               <a class="dropdown-item" href="http://34.64.86.210:3389/?make.stage=10">10Step</a>
                             </div>
@@ -142,24 +382,46 @@
                               <br/>
                             </div>
                         </li>
+                        <li style="display: inline-block; position: relative; bottom: 2px; left: 20%;">
+                            <button class="btn btn-lg btn-outline-secondary" type="button" style="width: auto; background-color: azure;" onclick="document.getElementById('tipmodal').style.display='block';">i</button>
+                            <button class="btn btn-lg btn-outline-secondary" type="button" onclick="size();">size</button>
+                        </li>
+                        <li style="position: absolute; right: 0px; top: 0px; display: inline-block;">
+                            <p>Copyright © Connect Foundation. Some rights reserved.</p>
+                        </li>
                     </ul>
                 </div>
 
 
                     <li>
                         <div>
+                            <script>
+                                function move_stage(stage_num){
+                                    var now_link_2 = window.location.href.split("/?");
+                                    
+                                    if (stage_num == 10) {
+                                        return now_link_2[0]+'?make.stage='+stage_num;
+                                        
+                                    }
+                                    if (now_link_2[1]){
+                                        return now_link_2[0]+'?stage='+stage_num;
+                                    }
+                                    else {
+                                        return "http://www.codinghago.com:3389/?stage=1";
+                                    }
+                                }
+                            </script>
 
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=1'">1 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=2'">2 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=3'">3 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=4'">4 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=5'">5 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=6'">6 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=7'">7 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=8'">8 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?stage=9'">9 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="location.href='http://34.64.86.210:3389/?make.stage=10'">10 Step</button>
-                    <button class="btn btn-lg btn-outline-secondary" type="button" onclick="tip.style.display='block';">info</button>
+                    <button class="btn btn-lg btn-outline-secondary1" type="button" onclick="location.href=move_stage(1)">1 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary2" type="button" onclick="location.href=move_stage(2)">2 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary3" type="button" onclick="location.href=move_stage(3)">3 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary4" type="button" onclick="location.href=move_stage(4)">4 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary5" type="button" onclick="location.href=move_stage(5)">5 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary6" type="button" onclick="location.href=move_stage(6)">6 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary7" type="button" onclick="location.href=move_stage(7)">7 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary8" type="button" onclick="location.href=move_stage(8)">8 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary9" type="button" onclick="location.href=move_stage(9)">9 Step</button>
+                    <button class="btn btn-lg btn-outline-secondary10" type="button" onclick="location.href=move_stage(10)">10 Step</button>
                     
                 
                         <script>
@@ -288,7 +550,7 @@
         <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
         <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
         <% } %>
-    
+
 
         <script>
 
@@ -314,8 +576,8 @@
         </script>
 <script>
     objectmanager1.onclick = function() {
-        propertyContent.style.display = "block";
-
+       // propertyContent.style.display = "block";
+       entryCategoryListWorkspace.style.display="inline-block";
                             
                         }
 </script>
@@ -345,39 +607,54 @@
         
         <!-- The Modal & next stage_script -->
         <script>
-            var now_link = window.location.href.split("stage=")
+            var now_link = window.location.href.split("stage=");
             var next_num = Number(now_link[1])+1;
             var next_stage = now_link[0]+'stage='+ next_num;
         </script>
 
         <div id="myModal" class="modal">  
             <!-- Modal content -->
-            <div class="modal-content" style="width: 50%;height: 60%;margin-top: 10em">
-                <span class="close">&times;</span>
-                <table border="0" style="text-align: center">
-	                <tr>
-	                    <td colspan="2"><br><h1>스테이지 클리어!</h1><br></td>
-	                </tr>
-	                <tr>
-	                    <td colspan="2"><img src="/images/media/test_ing.png" alt width="420" height="auto">    </td>
-	                </tr>
+            <div class="modal-con">
+                <table border="0" style="margin-left: 25px; margin-top: 50px;">
                     <tr>
-                        <td><button type="button" class="btn btn-primary" id="Btn_back" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=now_link[0]+'stage='+now_link[1]" >retry</button></td>
-                        <td><button type="button" class="btn btn-primary" id="Btn_next" style="font-weight: 600;padding: 0.4em;width: 150px;height: 50px" onclick="location.href=next_stage">NEXT</button></td>
-
+                        <td colspan="2"><br><h1 style="color: lightskyblue; font-family: 'Noto-Bold';">스테이지 클리어!</h1><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img src="/images/media/clear.png" alt width="420" height="auto" style="margin-bottom: 20px;">    </td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_back" onclick="location.href=now_link[0]+'stage='+now_link[1]" >retry</button></td>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_next" onclick="location.href=next_stage">NEXT</button></td>
+                    
                     </tr>
                 </table>
             </div>
- 
+        
+        </div><div id="myloseModal" class="modal">  
+            <!-- Modal content -->
+            <div class="modal-con">
+                <table border="0" style="margin-left: 25px; margin-top: 50px;">
+                    <tr>
+                        <td colspan="2"><br><h1 style="color: lightskyblue; font-family: 'Noto-Bold';">스테이지 실패!</h1><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img src="/images/media/fail.png" alt width="420" height="auto" style="margin-bottom: 20px;">    </td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_back" onclick="location.href=now_link[0]+'stage='+now_link[1]" >RETRY</button></td>
+                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_next" onclick="location.href=next_stage">NEXT</button></td>
+                    
+                    </tr>
+                </table>
+            </div>
+        
         </div>
         <div id="addobjectmodal" class="OBmodal">  
             
         </div>
-
-        <div id="tip_modal_ejs" class="TipModal">
-
+        <div id="tipmodal" class="tipmodal">  
+            
         </div>
-
         <script type="text/javascript">
             function fileinfo(){
                    var file = document.getElementById("file").files[0];
@@ -385,8 +662,7 @@
                document.getElementById("table").innerHTML += "<tr><td>파일크기</td><td>"+file.size+"</td></tr>";
                document.getElementById("table").innerHTML += "<tr><td>파일타입</td><td>"+file.type+"</td></tr>";
                document.getElementById("table").innerHTML += "<tr><td>파일수정날짜</td><td>"+file.lastModifiedDate+"</td></tr>";
-        
-        
+    
             }
             function fileread(){
                var file = document.getElementById("file").files[0];

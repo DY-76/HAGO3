@@ -605,10 +605,10 @@ Entry.getStartProject2 = function(mediaFilePath) {
         objects: [
             {
                 id: '7y0y',
-                name: Lang.Blocks.entry_bot_name,
+                name: '하_박사',
                 label: {
-                    ko: '피카츄',
-                    en: 'pikachu',
+                    ko: '하_박사',
+                    en: 'ha_doctor',
                 },
                 script: [
                     [
@@ -621,28 +621,28 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    sounds: [
-                        {
-                            duration: 1.3,
-                            ext: '.mp3',
-                            id: '8el5',
-                            fileurl: `${mediaFilePath}media/bark.mp3`,
-                            name: Lang.Blocks.doggi_bark,
-                            label: {
-                                ko: '강아지 짖는소리',
-                                en: "Doggi's Bark",
-                            },
-                        },
-                    ],
+                    // sounds: [
+                    //     {
+                    //         duration: 1.3,
+                    //         ext: '.mp3',
+                    //         id: '8el5',
+                    //         fileurl: `${mediaFilePath}media/bark.mp3`,
+                    //         name: Lang.Blocks.doggi_bark,
+                    //         label: {
+                    //             ko: '강아지 짖는소리',
+                    //             en: "Doggi's Bark",
+                    //         },
+                    //     },
+                    // ],
                     pictures: [
                         {
                             id: 'vx80',
-                            fileurl: `${mediaFilePath}object/pikachu.gif`,
+                            fileurl: `${mediaFilePath}../img/ha_doctor.png`,
                             name: `${Lang.Blocks.walking_entryBot}1`,
                             scale: 100,
                             dimension: {
-                                width: 800,
-                                height: 800,
+                                width: 135,
+                                height: 336,
                             },
                         },
                     ],
@@ -650,14 +650,14 @@ Entry.getStartProject2 = function(mediaFilePath) {
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 400,
-                    regY: 400,
+                    regX: 67.5,
+                    regY: 168,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
                     direction: 90,
-                    width: 800,
-                    height: 800,
+                    width: 135,
+                    height: 336,
                     visible: true,
                 },
                 lock: false,
@@ -3652,6 +3652,144 @@ Entry.getStartProjectGS1_1 = function(mediaFilePath) {
         speed: 60,
     };
 };
+Entry.getStartProject20 = function(mediaFilePath) {
+    return {
+        category: Lang.Menus.other,
+        scenes: [
+            {
+                name: `${Lang.Blocks.SCENE} `,
+                id: '7dwq',
+            },
+        ],
+        variables: [
+            {
+                name: Lang.Workspace.Variable_Timer,
+                id: 'brih',
+                visible: false,
+                value: '0',
+                variableType: 'timer',
+                x: 134,
+                y: -70,
+                array: [],
+                object: null,
+                isCloud: false,
+            },
+            {
+                name: Lang.Blocks.VARIABLE_get_canvas_input_value,
+                id: '1vu8',
+                visible: false,
+                value: '0',
+                variableType: 'answer',
+                x: 150,
+                y: -100,
+                array: [],
+                object: null,
+                isCloud: false,
+            },
+        ],
+        objects: [
+           
+            
+            {
+                id: '7y0p3',
+                name: Lang.Blocks.entry_bot_name,
+                label: {
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
+                },
+                script: [
+                    [
+                        {
+                            type: 'when_run_button_click',
+                            x: 40,
+                            y: 50,
+                        },
+                      
+                       
+                    ],
+                    
+                    
+                ],
+                id: 'line',
+                name: '아이_박스',
+                selectedPictureId: 'vx21',
+                objectType: 'sprite',
+                rotateMethod: 'free',
+                scene: '7dwq',
+                sprite: {
+                    
+                    pictures: [
+                        {
+                            id: 'vx21',
+                            fileurl: `${mediaFilePath}../img/kid_box_1.png`,
+                            name: `아이_박스1`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                        {
+                            id: 'vx22',
+                            fileurl: `${mediaFilePath}../img/kid_box_2.png`,
+                            name: `아이_박스2`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                        {
+                            id: 'vx23',
+                            fileurl: `${mediaFilePath}../img/kid_box_3.png`,
+                            name: `아이_박스3`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                        {
+                            id: 'vx24',
+                            fileurl: `${mediaFilePath}../img/kid_box_4.png`,
+                            name: `아이_박스4`,
+                            scale: 100,
+                            dimension: {
+                                width: 249,
+                                height:639,
+                            },
+                        },
+                                   
+                        
+                    ],
+                },
+                entity: {
+                    x: 0,
+                    y: 0,
+                    regX: 124.5,
+                    regY: 319.5,
+                    scaleX: 0.3154574132492113,
+                    scaleY: 0.3154574132492113,
+                    rotation: 0,
+                    direction: 0,
+                    width: 249,
+                    height:639,
+                    visible: true,
+                },
+                lock: false,
+                active: true,
+            },
+            
+
+            
+           
+        ],
+        expansionBlocks: [],
+        aiUtilizeBlocks: [],
+        speed: 60,
+    };
+    
+};
 
 Entry.getStartProject20 = function(mediaFilePath) {
     return {
@@ -3690,74 +3828,77 @@ Entry.getStartProject20 = function(mediaFilePath) {
         ],
         objects: [
            
+
+
             {
-                id: '7y41y',
+                id: '7y0pe',
                 name: Lang.Blocks.entry_bot_name,
                 label: {
-                    ko: '계단',
-                    en: 'stairs',
+                    ko: '쇠구슬',
+                    en: 'Entrybot1',
                 },
                 script: [
                     [
                         {
                             type: 'when_run_button_click',
-                            x: 50,
-                            y: 600,
+                            x: 40,
+                            y: 50,
                         },
-                        {type: 'move_xy_time3'}
-                        
+                      
+                       
                     ],
+                    
+                    
                 ],
-                selectedPictureId: 'vx80',
+                id: 'line',
+                name: '아이_팔',
+                selectedPictureId: 've31',
                 objectType: 'sprite',
                 rotateMethod: 'free',
                 scene: '7dwq',
                 sprite: {
-                    sounds: [
-                        {
-                            duration: 1.3,
-                            ext: '.mp3',
-                            id: '8el5',
-                            fileurl: `${mediaFilePath}media/intro.mp3`,
-                            name: Lang.Blocks.doggi_bark,
-                            label: {
-                                ko: '강아지 짖는소리',
-                                en: "Doggi's Bark",
-                            },
-                        },
-                    ],
+                    
                     pictures: [
                         {
-                            id: 'vx80',
-                            fileurl: `${mediaFilePath}../img/stairs1.png`,
-                            name: `${Lang.Blocks.walking_entryBot}1`,
+                            id: 've31',
+                            fileurl: `${mediaFilePath}../img/kid_arm_9.png`,
+                            name: `아이1`,
                             scale: 100,
                             dimension: {
-                                width: 475,
-                                height: 475,
+                                width: 720,
+                                height:646,
                             },
                         },
+                        
+                        
+                                   
+                        
                     ],
                 },
                 entity: {
                     x: 0,
                     y: 0,
-                    regX: 237.5,
-                    regY: 237.5,
+                    regX: 360,
+                    regY: 323,
                     scaleX: 0.3154574132492113,
                     scaleY: 0.3154574132492113,
                     rotation: 0,
-                    direction: 90,
-                    width: 475,
-                    height: 475,
+                    direction: 0,
+                    width: 720,
+                    height:646,
                     visible: true,
                 },
                 lock: false,
                 active: true,
             },
+
+
+            
+           
         ],
         expansionBlocks: [],
         aiUtilizeBlocks: [],
         speed: 60,
     };
+    
 };

@@ -42,14 +42,22 @@ Entry.loadProject = function(project) {
        
        else if  (getParameterByName('stage') == 2)
        project = sgm.Stage_out('alone',2);
-       else if  (getParameterByName('stage') == 1)
-       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath); 
+       else if  (getParameterByName('stage') == 3)
+       project = sgm.Stage_out('alone',3);
        else if  (getParameterByName('stage') == 0)
        project = Entry.getStartProject2(Entry.mediaFilePath);
        else if  (getParameterByName('stage') == 4)
-       project = Entry.getStartProjectGS1(Entry.mediaFilePath);
+       project = sgm.Stage_out('alone',4);
        else if  (getParameterByName('stage') == 5)
-       project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
+       project = sgm.Stage_out('alone',5);
+       else if  (getParameterByName('stage') == 6)
+       project = sgm.Stage_out('alone',6);
+       else if  (getParameterByName('stage') == 7)
+       project = sgm.Stage_out('alone',7);
+       else if  (getParameterByName('stage') == 8)
+       project = sgm.Stage_out('alone',8);
+       else if  (getParameterByName('stage') == 9)
+       project = sgm.Stage_out('alone',9);
        else if  (getParameterByName('stage') == 10)
        project = Entry.getStartProjectGS1_1(Entry.mediaFilePath);
        else if  (getParameterByName('stage') == 20)
@@ -410,7 +418,7 @@ Entry.resizeElement = function(interfaceModel) {
         interfaceModel.canvasWidth = 800;
 
         const engineContainer = Entry.engine.view_.parentElement;
-        //engineContainer.style.width = `${canvasSize}px`;
+        //engineContainer.style.width = `${canvasSize}px`; //이거는 왼쪽 밑 글 넣는곳 늘리것임
         engineContainer.style.width = `750px`;
         Entry.engine.view_.style.width = `${canvasSize + 102}px`;
         Entry.stage.canvas.canvas.style.width = `${canvasSize + 84.5}px`;

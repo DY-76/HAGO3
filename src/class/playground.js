@@ -152,15 +152,15 @@ Entry.Playground = class Playground {
         tabView.appendChild(tabList);
 
         this.tabViewElements = {};
-        const codeTab = Entry.createElement('li', 'entryCodeTab')
+        const codeTab = Entry.createElement('li', 'entryCodeTab') 
             .addClass('entryTabListItemWorkspace entryTabSelected')
             .bindOnClick(() => {
                 Entry.do('playgroundChangeViewMode', 'code', that.selectedViewMode);
             })
-            .appendTo(tabList);
+            //.appendTo(tabList);//블록 탭 담당
         codeTab.innerHTML = Lang.Workspace.tab_code;
         this.tabViewElements.code = codeTab;
-        this._codeTab = codeTab;
+        this._codeTab = codeTab; 
 
         const pictureTab = Entry.createElement('li', 'entryPictureTab')
             .addClass('entryTabListItemWorkspace')
@@ -557,11 +557,28 @@ Entry.Playground = class Playground {
             },
             readOnly: Entry.readOnly,
         };
-
+{
         if (this.getParameterByName('make.stage') == 10)
             initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks2();
-           
-         
+        else if (this.getParameterByName('stage') == 1)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 2)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 3)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 4)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 5)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage7();
+        else if (this.getParameterByName('stage') == 6)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        else if (this.getParameterByName('stage') == 7)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage7();
+            else if (this.getParameterByName('stage') == 8)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage8();
+            else if (this.getParameterByName('stage') == 9)
+            initOpts.blockMenu.categoryData  = EntryStatic.getAllBlocks_stage1();
+        }
 
         if (Entry.textCodingEnable) {
             initOpts.vimBoard = { dom: boardView };

@@ -1,0 +1,378 @@
+          <!-- css표기부분 -->
+<style>
+
+  .tipmodal_con_title {
+    height: 80px;
+    background-color: lightblue;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+  .tipmodal_con_contents {
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 120px;
+    height: 500px;
+    width: 1200px;
+    /* background-color: red; */
+    display: table-cell;
+    vertical-align: middle;
+    font-size: x-large;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: lightblue;
+  }
+  .tipmodal_con_controller {
+    padding-top: 10px;
+    height: 110px;
+    /* background-color: green; */
+  }
+  #tip_contents {
+    display:inline-block;
+    margin: auto;
+  }
+  #tip_subject {
+    font-family: 'Noto-Bold';
+    font-size: 40px; 
+    position: relative; 
+    margin-left: 20px;
+    top: 8px;
+  }
+  #tipmodal_controller {
+    width: 1200px;
+    /* background-color: green; */
+  }
+  .tipbtn {
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+  }
+  .tip_title_1 {
+    font-size: 20px;
+    color: white;
+    border-radius: 30px;
+    background-color: lightsteelblue;
+    padding: 6px 18px 8px 18px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+</style>
+
+<script>
+  var tipmodal = document.getElementById('tipmodal');
+  function TipModalOut(){
+    tipmodal.style.display = 'none';
+  }
+  function TipModalIn(){
+    tipmodal.style.display = 'block';
+  }
+  $(document).ready( function() {
+            TipModalIn();
+            });
+</script>
+          <!-- HTML 표기부분 -->
+
+<div id="tipmodal_con"  class="tipmodal_con" style="font-family: 'Noto';">  
+              
+                  <div class="tipmodal_con_title">
+                        <span class="tip_title_1">TIP. <span id="tip_title"></span></span>
+                        <span id="tip_subject"></span>
+                        <span style="position: absolute;right: 30px;"><span class="close" style="margin-right: 2%; font-size: 70px;" onclick="TipModalOut();">&times;</span></span>
+                  </div>
+                  <div  style="width: 1250px; margin-top: 30px; margin-left: auto;">
+                    <img src="/images/tipchar.png" style="width: 180px; position:absolute; margin-top: 25px; margin-left: 35px;">
+                  <div class="tipmodal_con_contents">
+                    
+                  <div id="tip_contents">
+                    
+                    <table style="writing-mode: horizontal-tb; text-align: center;">
+                      <tr>
+                        <td><span id="tip_top_left"></span></td><td><span id="tip_top_right"></span></td>
+                      </tr>
+                      <tr>
+                        <td><span id="tip_bottom_left"></span></td><td><span id="tip_bottom_right"></span></td>
+                      </tr>
+                    </table>
+                  </div>
+                  </div>
+                  <div class="tipmodal_con_controller">
+                  <div id="tipmodal_controller">
+                   <table style="margin: auto; width: 100%;">
+                    <tr>
+                      <td>
+                        <button id="tip_nev_front" class="btn btn-lg btn-outline-secondary tipbtn" style="float: left;" onclick="tip_move_page('back')">이전</button>
+                      </td>
+                      <td style="text-align: center;">
+                        <span id="tip_controller" style="font-size: x-large;"></span>
+                      </td>
+                      <td>
+                        <button id="tip_nev_back" class="btn btn-lg btn-outline-secondary tipbtn" style="float: right;" onclick="tip_move_page('next')">다음</button>
+                      </td>  
+                    </tr>
+                   </table>
+                  </div>
+                  </div>
+                </div>
+          </div>
+          
+
+          <!-- 팁 데이터 입력은 이곳에서 -->
+
+          <script>
+
+            var tipdata = {title:"",totalpage:1};
+            var now_page = 1;
+            switch (Number(now_link[1])){
+                  case 1 :
+                    //제목과 페이지
+                      tipdata = {
+                        title     : "W = Fs",
+                        totalpage : 1   };    //총 페이지
+                                              //페이지 늘릴거면 아래처럼 붙여넣기(총페이지와 갯수 맞아야함)
+                        tipdata.page1 = {         //페이지 데이터 입력 (안쓰는 레이아웃은 비워둘것)
+                        subject     : "W(일의 양) = F(힘의 크기) s(거리)",
+                        topleft     : "<img src='/images/stage1tip1img.png'>",
+                        topright    : "",
+                        bottomleft  : "일의 양은 30 성휘의 힘은 10일 때, <br>상자를 무사히 옮기려면 몇 번 움직여야 할까요?<br>( 상자 1칸의 거리는 1M입니다. )",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 2 :
+                      tipdata = {
+                        title     : "F = mg",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "F(힘) = m(질량) g(중력가속도)",
+                        topleft     : "<img src='/images/stage2tip1img.png'>",
+                        topright    : "",
+                        bottomleft  : "도둑의 힘은 50 중력가속도는 1m/𝑠²이라고 가정할 때<br>문이 열리지않게 상자가 버티려면 질량 몇 이상이 되야 할까요?<br>( 원래 지구의 중력가속도는 9.8m/𝑠² 입니다. )",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 3 :
+                      tipdata = {
+                        title     : "P = mv",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "v(속도) = P(일률) / m(질량)",
+                        topleft     : "<span style='color:red;'>속도 란 ? </span> : 물체가 나아가거나 일이 진행되는 빠르기",
+                        topright    : "",
+                        bottomleft  : "<br>도둑이 계란을 맞고 쓰러지려면 3의 일률이 필요하고,<br>계란의 질량은 1kg이라고 가정할 때<br>도둑이 계란을 맞고 쓰러지려면 속도는 몇이 되어야 할까요?<br>( 단, 마찰력은 존재하지 않는다. )",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 4 :
+                      tipdata = {
+                        title     : "반사각 = 입사각",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        subject     : "법선이 뭘까요?",
+                        topleft     : "2차원 평면의 곡선 위의 어떤 점에서 <br>점을 지나는 접선(tangential, tangential line)에 수직인 직선을 말합니다.",
+                        topright    : "",
+                        bottomleft  : "<br><img src='/images/stage4tip1img.png'>",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "반사각과 입사각은 무엇인가요?",
+                        topleft     : "<img src='/images/stage4tip2img.png'>",
+                        topright    : "<span style='color:red;'>반사각이란 ? </span> : 법선과 반사하는 빛이 이루는 각을 뜻해요.<br><br><span style='color:red;'>입사각이란 ? </span> : 법선과 입사하는 빛이 이루는 각을 뜻해요.",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+
+                        break; 
+
+                        case 5 :
+                      tipdata = {
+                        title     : "도체,부도체",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                        subject     : "도체와 부도체란?",
+                        topleft     : "<span style='color:red;'>도체란 ? </span> : 전기 또는 열에 대한 저항이 매우 작아 <br>전기나 열을 잘 전달하는 물체<br>ex) 은, 구리, 알루미늄 등",
+                        topright    : "",
+                        bottomleft  : "<br><span style='color:red;'>부도체란 ? </span> : 전기 또는 열에 대한 저항이 매우 커서 <br>전기나 열을 잘 전달하지 못하는 물체<br>ex) 종이, 나무, 유리, 고무 등",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 6 :
+                      tipdata = {
+                        title     : "V = IR",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        subject     : "기본용어정리",
+                        topleft     : "<span style='color:red;'>전하란 ? </span> : 물체가 가진 전기의 양 = 전기적 성질<br><span style='color:red;'>전류란 ? </span> : (-)전하를 가진 자유전자의 흐름<br><span style='color:red;'>전위란 ? </span> : 전기적 위치, 이 위치의 차이를 ‘전위차’ 라고 함.<br><span style='color:red;'>전압이란 ? </span> : 전위차로 발생한 전기적 압력 = 전류를 흐르게 하는 힘<br><span style='color:red;'>저항이란 ? </span> : 전류의 흐름을 방해하는 힘",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "R(저항) = V(전압) / I(전류)",
+                        topleft     : "전압과 저항은 비례한다, 전류와 저항은 반비례한다.<br>우리에겐 발전기로 전압을 자유자재로 조절할 수 있다.",
+                        topright    : "",
+                        bottomleft  : "<br>사람이 전류를 통해 쓰러지려면 0.05A의 전류가 필요하다.<br>도둑의 저항은 2200Ω, 전선의 저항은 1Ω이다.<br>도둑을 쓰러뜨리기에 적절한 전압은 몇인지 구하시오.",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 7 :
+                      tipdata = {
+                        title     : "베르누이법칙",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        subject     : "A₁v₁ = A₂v₂",
+                        topleft     : "<img src='/images/stage7tip1img.png' style='width:400px'>",
+                        topright    : "",
+                        bottomleft  : "Ex) 단면적이 절반으로 줄면<br>물의 속력이 2배 증가한다.",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "A와 v 는 반비례",
+                        topleft     : "<span style='color:red;'>A는 관의 단면적, v는 유체의 속력(유속)이다.</span>",
+                        topright    : "",
+                        bottomleft  : "<br>도둑을 쓰러트리기 위해선 물이 20m/s 유속으로 분출 되어야 한다.  <br>물이 20m/s 유속으로 분출 되려면 단면적은 25mm²가 되어야한다. <br>호스의 분출구를 좁혀 물이 20m/s 유속으로 분출되게 하려고 할 때, <br>호스의 출발점 단면적과 유속은 몇이어야 할까?",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 8 :
+                      tipdata = {
+                        title     : "Ep(위치 에너지) = mgh",
+                        totalpage : 2   };
+
+                        tipdata.page1 = {
+                        subject     : "높이와 위치에너지",
+                        topleft     : "<img src='/images/stage8tip1img.png'>",
+                        topright    : "Ep = 중력에 의한 위치에너지<br><br>m = 질량<br><br>h = 높이",
+                        bottomleft  : "m이 일정할 때, <br>Ep와 h는 정비례한다.",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "Ep = hmg",
+                        topleft     : "(g = 중력가속도)",
+                        topright    : "",
+                        bottomleft  : "<br>도둑이 계단을 올라오지 못하도록 공을 머리위에<br>떨어트려 맞추려고 합니다. 높이와 위치에너지는<br>정비례 관계에 있습니다. 도둑이 올라오는 시간을<br>고려했을 때, 알맞은 위치에너지를 구해봅시다.<br>(단, 중력가속도는 9.8m/s²)",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 9 :
+                      tipdata = {
+                        title     : "운동과 마찰력",
+                        totalpage : 3   };
+
+                        tipdata.page1 = {
+                        subject     : "마찰력과 운동방향",
+                        topleft     : "<img src='/images/stage9tip1img.png'>",
+                        topright    : "",
+                        bottomleft  : "물체가 운동하는 것은<br>마찰력이 가하는 힘보다 적음을 의미",
+                        bottomright : ""
+                                    };
+                        tipdata.page2 = {
+                        subject     : "마찰력 = 물체의 수직항력 + 마찰계수",
+                        topleft     : "<span style='color:red;'>수직항력이란?</span> : 물체의 운동방향에 수직으로 작용하는 힘<br><br><span style='color:red;'>마찰계수 란?</span> : 물체마다 가진 고유의 마찰속성",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+                        tipdata.page3 = {
+                        subject     : "운동  = 에너지 – 마찰력",
+                        topleft     : "운동하는 물체는 가해지는 힘에서 마찰력을 뺀 값만큼의 에너지를 가진다.",
+                        topright    : "",
+                        bottomleft  : "<br>창문에 미리 설치해놨던 밧줄을 타고 오두막으로 도망쳐야 합니다.<br>마찰력이 적으면 너무 빠르게 떨어지고, 많으면 내려가지 못합니다.<br>적절한 마찰계수를 가진 물건을 찾아, 원하는 마찰력을 만드세요.<br>( 마찰력이 없을 때 힘은 400N이고,<br> 100N의 힘으로 내려가야 한다.)",
+                        bottomright : ""
+                                    };
+
+                      break;
+
+                      case 10 :
+                      tipdata = {
+                        title     : "내맘대로 꾸미기",
+                        totalpage : 1   };
+
+                        tipdata.page1 = {
+                          subject     : "나만의 스탭 제작해보기",
+                        topleft     : "스스로 생각해서 원하는대로 꾸며보세요!",
+                        topright    : "",
+                        bottomleft  : "",
+                        bottomright : ""
+                                    };
+                        break; 
+
+                  default :
+                  tipdata = {
+                        title     : Number(now_link[1]),
+                        totalpage : 1   };
+                      console.log("error! : tip데이터 없음");
+              };
+              //nev 버튼 생성
+              for(var i = 1 ; i <= tipdata.totalpage ; i++) {
+                $("#tip_controller").append(" <button type='button' id='pagenum"+i+"'onclick='tip_move_page("+i+")'"+i+">&nbsp;"+i+"&nbsp;</button> ");
+              }
+        tip_reload();
+        
+        function tip_reload(){
+
+          document.getElementById('tip_title').innerHTML=tipdata.title;
+          document.getElementById('tip_subject').innerHTML=tipdata['page'+now_page].subject;
+          // 제목대입
+          document.getElementById('tip_top_left').innerHTML=tipdata['page'+now_page].topleft;
+          document.getElementById('tip_top_right').innerHTML=tipdata['page'+now_page].topright;
+          document.getElementById('tip_bottom_left').innerHTML=tipdata['page'+now_page].bottomleft;
+          document.getElementById('tip_bottom_right').innerHTML=tipdata['page'+now_page].bottomright;
+          //콘텐츠 대입
+          
+          //페이징 대입
+          document.getElementById("tip_nev_back").classList.toggle('sel',false);
+          document.getElementById("tip_nev_front").classList.toggle('sel',false);
+          if(now_page == 1) {
+            document.getElementById("tip_nev_front").classList.toggle('sel',true);
+          }
+          for(var i = 1 ; i <= tipdata.totalpage ; i++) {
+            document.getElementById("pagenum"+i).classList.toggle('sel',false);
+              }
+          document.getElementById("pagenum"+now_page).classList.toggle('sel',true);
+
+          if(now_page == tipdata.totalpage) {
+            document.getElementById("tip_nev_back").classList.toggle('sel',true);
+          }
+        }
+        //페이지 이동 함수
+        function tip_move_page(v) {
+          if(v == 'next'){
+            now_page++;
+            tip_reload();
+          }
+          else if(v == 'back'){
+            now_page--;
+            tip_reload();
+          }
+          else if(v >= 1 && v <= tipdata.totalpage){
+            now_page = v;
+            tip_reload();
+          }
+          else{
+            console.log("error:페이지이동오류");
+            now_page = 1;
+            tip_reload();
+          }
+        }
+        
+
+        </script>
+

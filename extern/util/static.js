@@ -177,7 +177,29 @@ EntryStatic.categoryProjectOption = [
         value: '기타',
     },
 ];
-
+EntryStatic.getAllBlocks_stage1 = function() {
+    return[
+{
+    category: 'func',
+    blocks: [],
+}]
+},
+EntryStatic.getAllBlocks_stage7 = function() {
+    return[
+{
+    category: 'func',
+    blocks: ['repeat_basic',],
+}]
+},
+EntryStatic.getAllBlocks_stage8 = function() {
+    return[
+{
+    category: 'func',
+    blocks: ['wait_second2',
+    'repeat_inf',
+],
+}]
+},
 EntryStatic.getAllBlocks2 = function() {
     return [
         {
@@ -195,6 +217,7 @@ EntryStatic.getAllBlocks2 = function() {
                 'when_scene_start',
                 'start_scene',
                 'next_popup',
+                'fail_popup',
                 'start_neighbor_scene',
                 'check_object_property',
                 'check_block_execution',
@@ -217,18 +240,17 @@ EntryStatic.getAllBlocks2 = function() {
                 'wait_second',
                 'repeat_basic',
                 'repeat_inf',
-              /*  'repeat_while_true',
+                'repeat_while_true',
                 'stop_repeat',
-                '_if', */
-                '_if2',
-              /*  'if_else',
-                'wait_until_true',*/
+                '_if',
+                'if_else',
+                'wait_until_true',
                 'stop_object',
-              /*  'restart_project',
+                'restart_project',
                 'when_clone_start',
                 'create_clone',
                 'delete_clone',
-                'remove_all_clones', */
+                'remove_all_clones', 
             ],
         },
         {
@@ -1004,7 +1026,7 @@ EntryStatic.colorSet = {
             HIDDEN: '#FFFFFF',
         },
     },
-    block: {
+    block: { //블록 색깔 바꾸는 곳
         default: {
             START: '#00b400',
             FLOW: '#17a6d1',
@@ -1016,10 +1038,11 @@ EntryStatic.colorSet = {
             JUDGE: '#4562f5',
             CALC: '#f4af18',
             VARIABLE: '#dd47d8',
-            FUNC: '#de5c04',
+            //FUNC: '#de5c04',
             HARDWARE: '#00b6b1',
             EXPANSION: '#ef6d6d',
             HIDDEN: '#8aa3b2',
+            FUNC:'#77AAAD',
         },
         lighten: {
             START: '#3bce3b',
@@ -1048,7 +1071,8 @@ EntryStatic.colorSet = {
             JUDGE: '#1b3ad8',
             CALC: '#ff7f00',
             VARIABLE: '#b819b3',
-            FUNC: '#a14100',
+            //FUNC: '#a14100',
+            FUNC:'#ffffff',
             HARDWARE: '#008380',
             EXPANSION: '#c63f3f',
             HIDDEN: '#728997',

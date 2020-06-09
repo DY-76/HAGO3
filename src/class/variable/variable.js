@@ -51,7 +51,7 @@ class Variable {
         } else {
             this.value_ = variable.value;
         }
-
+        //변수박스 폰트 설정 관련
         if (!variable.isClone) {
             /** @type {boolean} */
             this.visible_ =
@@ -60,10 +60,10 @@ class Variable {
             this.x_ = variable.x ? variable.x : null;
             /** @type {number} */
             this.y_ = variable.y ? variable.y : null;
-            const fontFamily = EntryStatic.fontFamily || 'NanumGothic';
-            this.BORDER = 6;
-            this.FONT = `10pt ${fontFamily}`;
-            this.VALUE_FONT = `9pt ${fontFamily}`;
+            const fontFamily = 'Noto';
+            this.BORDER = 4;
+            this.FONT = `8pt ${fontFamily}`;
+            this.VALUE_FONT = `7pt ${fontFamily}`;
         }
 
         Entry.addEventListener('workspaceChangeMode', this.updateView.bind(this));
@@ -93,11 +93,12 @@ class Variable {
                 '#000000',
                 'alphabetic'
             );
-            this.textView_.x = 4;
+            //변수이름 위치 지정 (변수박스)
+            this.textView_.x = 15;
             if (GEHelper.isWebGL) {
                 this.textView_.y = this.GL_VAR_POS.LABEL_Y;
             } else {
-                this.textView_.y = 2.5;
+                this.textView_.y = 0.5;
             }
             this.view_.addChild(this.textView_);
             this.valueView_ = GEHelper.textHelper.newText(
@@ -115,7 +116,7 @@ class Variable {
                 this.setX(10 - 240 + Math.floor((variableLength % 66) / 11) * 80);
                 this.setY(variableIndex * 28 + 20 - 135 - Math.floor(variableLength / 11) * 264);
             }
-
+            //변수박스
             this.view_.addChild(this.valueView_);
             if (Entry.type === 'workspace') {
                 this.view_.cursor = 'move';
@@ -124,6 +125,7 @@ class Variable {
                 if (Entry.type !== 'workspace') {
                     return;
                 }
+                //변수박스 잡았을때 좌표
                 this.offset = {
                     x: this.x - (evt.stageX * 0.75 - 240),
                     y: this.y - (evt.stageY * 0.75 - 135),
@@ -212,18 +214,22 @@ class Variable {
     _adjustSingleViewBox(boxFillAndStrokeColor) {
         // TODO slider updateView 만 rect_.graphics 를 따로 씀. rr 인자 constants 로 묶을 것.
         const colorSet = EntryStatic.colorSet.canvas || {};
+        // 변수박스 그래픽 디자인 부분
         this.rect_.graphics
             .clear()
             .f('#ffffff')
             .ss(1, 2, 0)
-            .s(colorSet.border || '#aac5d5')
-            .rr(0, -14, this._nameWidth + this._valueWidth + 35, 24, 4);
+            .s(colorSet.border || '#50bcdf')
+            //rr(x,y,길이,높이,라운딩)
+            .rr(10, -14, this._nameWidth + this._valueWidth + 24, 21, 4);
+        //변수박스내 변수값 디자인
         this.wrapper_.graphics
             .clear()
             .f(boxFillAndStrokeColor)
             .ss(1, 2, 0)
             .s(boxFillAndStrokeColor)
-            .rr(this._nameWidth + 14, -10, this._valueWidth + 15, 16, this.RECT_RADIUS);
+            //.rr(this._nameWidth + 14, -9, this._valueWidth + 14, 14, this.RECT_RADIUS);
+            .rr(this._nameWidth + 14, -10, this._valueWidth + 16, 14, this.RECT_RADIUS);//좌측 상단 좌측 하단 우측 상단 우측하단
     }
 
     _adjustSingleViewPosition() {
@@ -236,7 +242,7 @@ class Variable {
         if (GEHelper.isWebGL) {
             this.valueView_.y = this.GL_VAR_POS.VALUE_Y;
         } else {
-            this.valueView_.y = 1.5;
+            this.valueView_.y = 0.5; // 우측 숫자 y좌표
         }
     }
 

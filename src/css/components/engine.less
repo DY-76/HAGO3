@@ -63,12 +63,12 @@
 .entryPopupWindow > .entryEngineWorkspace_w > .entryStopButtonWorkspace_w2 {
     display: block;
     background-image: url('@{image_url}stop_btn.png');
+    background-position: 40px center;
     background-repeat: no-repeat;
     left: 20px;
     color: transparent;
     bottom: -10px;
-    width: 90px;
-    background-position: left;
+    width: 111px;
     color: @bora;
 }
 
@@ -249,8 +249,9 @@
 .entryEngineButtonWorkspace_w {
     border: none;
     outline: none;
+    margin-top: 8px;
     width: 25px;
-    height: 24px;
+    height: 35px;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -574,19 +575,22 @@
     background-size: 150px auto;
     font-size: 0;
     text-align: center;
-    .backgroundImage('retry.png');
+    .backgroundImage('AddObject.png'); //오브젝트 추가 이미지
 }
 
 .entryRunButtonWorkspace_w {
     flex: 1;
     position: relative;
+    //margin-top: 6px;
+    //margin-bottom: 2px;
+    // 버튼 띄우기
     // top: 192px;
     // left: 155px;
     width: 80px;
     height: 50px;
     padding: 0;
    // border: 1px solid @baseblue;
-    border-left: 0;
+    //border-left: 0;
    // border-radius: 0 0 5px 0;
     background: #fff no-repeat 50% 50%;
     background-size: 150px auto;

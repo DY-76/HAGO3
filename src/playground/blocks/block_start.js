@@ -755,7 +755,45 @@ module.exports = {
 
                     setTimeout(function(){
                         modal.style.display = "block";
-                    },2000)
+                    },1000)
+                   
+
+                  
+                    
+                    return script.callReturn();
+                },
+                
+                
+            },
+
+            fail_popup: {
+                color: EntryStatic.colorSet.block.default.START,
+                outerLine: EntryStatic.colorSet.block.darken.START,
+                skeleton: 'basic',
+                statements: [],
+                params: [
+                    {
+                        type: 'DropdownDynamic',
+                        value: null,
+                        menuName: 'scenes',
+                        fontSize: 10,
+                        textColor: '#fff',
+                        bgColor: EntryStatic.colorSet.block.darken.START,
+                        arrowColor: EntryStatic.colorSet.arrow.default.START,
+                    },
+                    {
+                        type: 'Indicator',
+                        img: 'block_icon/start_icon.svg',
+                        size: 11,
+                    },
+                ],
+                
+                func(sprite, script) {
+
+                    setTimeout(function(){
+                        lose_modal.style.display = "block";
+
+                    },1000)
                    
 
                   
