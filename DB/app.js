@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 const app = express();
 const api = require('./DB_router');
+const admin_api = require('./admin_router');
 var session = require('express-session');  
 var MySQLStore = require('express-mysql-session')(session);
 var options ={                                               
@@ -25,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
 app.use('/DB', api);
-
+app.use('/admin', admin_api);
 
   
 const port = process.env.PORT || 5050;
