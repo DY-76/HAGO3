@@ -10,16 +10,48 @@
                 border-color: aqua;
                 padding: 10px;
             }
+            #table_name1 {
+                font-size: 12px;
+                font-style: oblique;
+            }
+            #table_subname {
+                font-size: 8px;
+            }
         </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $('#table').ready(function() {
+                $(this).append($("<option value='"+<%=test_value%>+"'>").html("test"));
+            })
+        </script>
     </head>
     <body>
         <p>접속상태 = <%=state%></p>
         <div class="box">
-            <select name="category" size="1">
-                <option value="insert">추가</option>
-                <option value="update">변경</option>
-                <option value="delete">삭제</option>
-            </select>
+            <table>
+                <th>
+                    <span id="table_name1">DB컨트롤러</span>
+                </th>
+                <tr id="table_subname">
+                    <td>
+                        목적
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="category" size="1">
+                            <option value="insert">추가</option>
+                            <option value="update">변경</option>
+                            <option value="delete">삭제</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="table" size="1" id="table">
+
+                        </select>
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>

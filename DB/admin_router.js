@@ -4,7 +4,6 @@ var mysql = require('mysql');
 var parser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-//var get_info = require('./utils');
 
 
 var connection = mysql.createConnection({
@@ -14,6 +13,7 @@ var connection = mysql.createConnection({
     database : 'hagoproject',
     port     : 3306
   });
+
   //connection.connect();
   var test;
   connection.query('SELECT * FROM user', 
@@ -29,10 +29,6 @@ var connection = mysql.createConnection({
   });
 
 
-
-var input_id;
-
-
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
@@ -40,16 +36,16 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 
-router.post('/post', function(req, res) {
+router.post('/DB_in', function(req, res) {
    var iiid = req.body.id;
   //var iiid = req.body["id"];
   console.log(iiid);
-  res.render( 'test' , {id:iiid});
+  res.render( 'admin_main_control' , {state:'Done!'});
           });
 
 router.get('/control', function(req, res) {
-    res.render( 'admin_main_control' , {state:'Done!'
-                        });
+    res.render( 'admin_main_control' , {state:'ready...',
+                                        test_value:'test_value_001'});
 
 });
 
