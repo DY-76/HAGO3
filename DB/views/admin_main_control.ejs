@@ -20,9 +20,10 @@
         </style>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script>
+            var value = <%=test_value%>;
             $('#table').ready(function() {
-                $(this).append("<option value='"<%=test_value%>"'>"<%=test_value%>"</option>");
-            })
+                $(this).append("<option value='"+value+"'>"+<%=test_value%>+"</option>");
+            });
         </script>
     </head>
     <body>
