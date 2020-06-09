@@ -3,13 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>HAGO_ADMIN_PAGE</title>
+        <style>
+            .box {
+                border-radius: 1px;
+                border-style: solid;
+                border-color: aqua;
+                padding: 10px;
+            }
+        </style>
     </head>
     <body>
         <p>접속상태 = <%=state%></p>
-        <select name="category" size="1">
-            <option value="insert">추가</option>
-            <option value="update">변경</option>
-            <option value="delete">삭제</option>
-        </select>
+        <div class="box">
+            <select name="category" size="1">
+                <option value="insert">추가</option>
+                <option value="update">변경</option>
+                <option value="delete">삭제</option>
+            </select>
+        </div>
     </body>
 </html>
