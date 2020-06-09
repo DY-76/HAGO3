@@ -4,7 +4,7 @@
         // Get the button that opens the modal
         var OBmodal = document.getElementById('addobjectmodal');
         //var btn = document.getElementById("myBtn");"
-
+        var tip = document.getElementById('tip_modal_ejs');
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];                                         
         // When the user clicks on the button, open the modal 
@@ -28,5 +28,8 @@
             if (event.target == OBmodal) {
                 OBmodal.style.display = "none";
                 $("#DPS-tab").get(0).click();
+            }
+            if (event.target == tip) {
+                tip.style.display = "none";
             }
         }
