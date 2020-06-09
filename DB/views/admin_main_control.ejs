@@ -19,12 +19,6 @@
             }
         </style>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script>
-            var value = <%=test_value%>;
-            $('#table').ready(function() {
-                $(this).append("<option value='1'>1</option>");
-            });
-        </script>
     </head>
     <body>
         <p>접속상태 = <%=state%></p>
@@ -55,7 +49,7 @@
             </table>
         </div>
         <script>
-            $('#table').append("<option value='1'>1</option>");
+            $('#table').append("<option value='1'>"+<%=test_value%>+"</option>");
         </script>
     </body>
 </html>
