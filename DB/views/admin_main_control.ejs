@@ -44,12 +44,13 @@
                         </select>
                     </td>
                     <td>
-                        <%console.log($("select[name=category]").val());%>
+                        <%console.log(category_sel);%>
                         <select name="table" size="1" id="table">
 
                         </select>
                         <script>
                             $('#table').append("<option value='<%=test_value%>'><%=test_value%></option>");
+                            var category_sel = $("select[name=category]").val();
                         </script>
                     </td>
                 </tr>
