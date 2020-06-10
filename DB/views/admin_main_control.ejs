@@ -37,20 +37,19 @@
                 </tr>
                 <tr>
                     <td>
-                        <select name="category" size="1">
+                        <select name="category" size="1" id="category">
                             <option value="insert">추가</option>
                             <option value="update">변경</option>
                             <option value="delete">삭제</option>
                         </select>
                     </td>
                     <td>
-                        <script>var category_sel = $("select[name=category]").val();</script>
-                        <%console.log(%><%=category_sel%><%)%>
-                        <select name="table" size="1" id="table">
-
-                        </select>
+                        <div id="table_div"></div>
                         <script>
-                            $('#table').append("<option value='<%=test_value%>'><%=test_value%></option>");
+                            $("#category").change(function() {
+                                $('#table_div').append("<select name='table' size='1' id='table'></select>");
+                                $('#table').append("<option value='<%=test_value%>'><%=test_value%></option>");
+                            });
                         </script>
                     </td>
                 </tr>
