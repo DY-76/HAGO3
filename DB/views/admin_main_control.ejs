@@ -47,8 +47,11 @@
                         <div id="table_div"></div>
                         <script>
                             $("#category").change(function() {
-                                $('#table_div').append("<select name='table' size='1' id='table'></select>");
-                                $('#table').append("<option value='<%=test_value%>'><%=test_value%></option>");
+                                $('#table').detach();
+                                if($("select[name=category]").val() == "update"){
+                                    $('#table_div').append("<select name='table' size='1' id='table'></select>");
+                                    $('#table').append("<option value='<%=test_value%>'><%=test_value%></option>");
+                                }
                             });
                         </script>
                     </td>
