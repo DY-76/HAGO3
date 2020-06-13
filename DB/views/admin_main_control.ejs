@@ -89,7 +89,11 @@
             <script>
                 document.querySelector('.ajax_test_btn').addEventListener('click',function(){
                     var send_data = document.forms[0].elements[0].value;
-                    sendAjax('http://localhost:5050/admin/ajax_test01', send_data)
+
+                    // 위는 로컬 테스트용 아래는 배포용
+                    // sendAjax('http://localhost:5050/admin/ajax_test01', send_data)
+                    sendAjax('http://codinghago.com:5050/admin/ajax_test01', send_data)
+                    
                 })
             </script>
             <!-- 데이터 받는 부분 -->
