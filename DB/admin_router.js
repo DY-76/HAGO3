@@ -52,19 +52,11 @@ router.get('/control', function(req, res) {
 
         contents_cnt = result[0]['cnt'];
 
-        connection.query('SELECT * FROM contents where Contents_No = 1',
-        function (err, result, fields) {
-          if (!err){
 
-            res.render( 'admin_main_control' , {state:'ready...',
+
+        res.render( 'admin_main_control' , {state:'ready...',
                                             test_value:'test_value_001',
-                                            table:contents_cnt,
-                                            table_list:result[0]['Contents_No']});
-          }
-          else{
-            console.log('Error while performing Query.', err);
-          }
-  });
+                                            table:contents_cnt});
 
       }
     else{
