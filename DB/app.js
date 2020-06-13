@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var cors = require('cors');
 const app = express();
 const api = require('./DB_router');
 const admin_api = require('./admin_router');
@@ -21,6 +22,7 @@ app.use(session({
     store: sessionStore                                       
   }))
 app.use(cookieParser());
+app.use(cors());
 app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:false}))
