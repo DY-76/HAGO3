@@ -36,16 +36,41 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 
-router.post('/DB_in', function(req, res) {
-   var iiid = req.body.id;
-  //var iiid = req.body["id"];
-  console.log(iiid);
-  res.render( 'admin_main_control' , {state:'Done!'});
+router.post('/ajax_test01', function(req, res) {
+  var responseData = {'result' : 'ok', 'test' : req.body.test}
+  res.json(responseData);
           });
 
+
 router.get('/control', function(req, res) {
-    res.render( 'admin_main_control' , {state:'ready...',
-                                        test_value:'test_value_001'});
+
+  var contents_cnt;
+
+  connection.query('SELECT COUNT(*) as cnt FROM contents',
+  function (err, result, fields) {
+      if (!err){
+
+        contents_cnt = result[0]['cnt'];
+
+        connection.query('SELECT * FROM contents where Contents_No = 1',
+        function (err, result, fields) {
+          if (!err){
+
+            res.render( 'admin_main_control' , {state:'ready...',
+                                            test_value:'test_value_001',
+                                            table:contents_cnt,
+                                            table_list:result[0]['Contents_Contents']});
+          }
+          else{
+            console.log('Error while performing Query.', err);
+          }
+  });
+
+      }
+    else{
+      console.log('Error while performing Query.', err);
+    }
+  });
 
 });
 
