@@ -59,7 +59,7 @@ router.get('/control', function(req, res) {
             res.render( 'admin_main_control' , {state:'ready...',
                                             test_value:'test_value_001',
                                             table:contents_cnt,
-                                            table_list:result[0]['Contents_Contents']});
+                                            table_list:result[0]['Contents_No']});
           }
           else{
             console.log('Error while performing Query.', err);
