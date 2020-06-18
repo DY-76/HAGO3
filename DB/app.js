@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 const app = express();
+var cors = require('cors');
 const api = require('./DB_router');
+const admin_api = require('./admin_router');
 var session = require('express-session');  
 var MySQLStore = require('express-mysql-session')(session);
 var options ={                                               
@@ -20,12 +22,13 @@ app.use(session({
     store: sessionStore                                       
   }))
 app.use(cookieParser());
+app.use(cors());
 app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
 app.use('/DB', api);
-
+app.use('/admin', admin_api);
 
   
 const port = process.env.PORT || 5050;

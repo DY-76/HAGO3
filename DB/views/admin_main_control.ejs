@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HAGO_ADMIN_PAGE</title>
+        <style>
+            .box {
+                border-radius: 1px;
+                border-style: solid;
+                border-color: aqua;
+                padding: 10px;
+            }
+            #table_name1 {
+                font-size: 20px;
+                font-style: oblique;
+            }
+            #table_subname {
+                font-size: 15px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <p>접속상태 = <%=state%></p>
+        <div class="box">
+            <table>
+                <th>
+                    <span id="table_name1">DB컨트롤러</span>
+                </th>
+                <tr id="table_subname">
+                    <td>
+                        목적
+                    </td>
+                    <td>
+                        table
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="category" size="1" id="category">
+                            <option value="insert">추가</option>
+                            <option value="update">변경</option>
+                            <option value="delete">삭제</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div id="table_div"></div>
+                        <script>
+                            $("#category").change(function() {
+                                $('#table').detach();
+                                if($("select[name=category]").val() == "update"){
+                                    $('#table_div').append("<select name='table' size='1' id='table'></select>");
+                                    $('#table').append("<option value='contents'>contents</option>");
+                                }
+                            });
+                        </script>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- ajax 통신 -->
+            <form method="post">
+                data : <input type="text" name="data">
+              </form>
+            <button class="ajax_test_btn">post_ajax_test</button>
+            <div class="box ajax_result"></div>
+            <script>
+                function sendAjax(url, data){
+  
+                    var data = {'test' : data};
+                    data = JSON.stringify(data);
+
+                      // content-type을 설정하고 데이터 송신
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', url);
+                    xhr.setRequestHeader('Content-type', "application/json");
+                    xhr.send(data);
+  
+                      // 데이터 수신이 완료되면 표시
+                    xhr.addEventListener('load', function(){
+                        var result = JSON.parse(xhr.responseText);
+                        if(result.result !== 'ok') return;
+                        // 데이터가 있으면 결과값 표시
+                        document.querySelector(".ajax_result").innerHTML = xhr.responseText;
+                     });
+                }
+            </script>
+            <!-- 이벤트 리스너 스크립트 = ajax_result에 ajax방식으로 값 받는 부분 -->
+            <script>
+                document.querySelector('.ajax_test_btn').addEventListener('click',function(){
+                    var send_data = document.forms[0].elements[0].value;
+
+                    // 위는 로컬 테스트용 아래는 배포용
+                    // 수정- 링크 따와서 자체적으로 판단 할 수 있게 함
+                    var now_link = window.location.href.split("admin/");
+                    now_link = now_link[0]+"admin/ajax_test01";
+                    sendAjax(now_link, send_data)
+
+                })
+            </script>
+            <!-- 데이터 받는 부분 -->
+        </div>
+        <%=table%>
+    </body>
+</html>
