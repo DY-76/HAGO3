@@ -1,5 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-    <g fill="none" fill-rule="evenodd">
-        <path fill="#FFF" fill-rule="nonzero" d="M11.242 18.486l7.25-.964a1 1 0 0 1 1.132.991v2.732a1 1 0 0 1-1.132.99l-7.25-.963.592 2.367a.5.5 0 0 1-.763.537L5.25 20.295a.5.5 0 0 1 0-.832l5.822-3.882a.5.5 0 0 1 .763.537l-.592 2.368zm9.516-5.67l-7.25.964a1 1 0 0 1-1.132-.992v-2.731a1 1 0 0 1 1.132-.991l7.25.964-.592-2.368a.5.5 0 0 1 .763-.537l5.822 3.882a.5.5 0 0 1 0 .832L20.93 15.72a.5.5 0 0 1-.763-.537l.592-2.367z"/>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="31.715px" height="31.656px" viewBox="0 0 31.715 31.656" enable-background="new 0 0 31.715 31.656"
+	 xml:space="preserve">
+<g id="movement" transform="translate(0 -0.28)">
+	<path id="패스_4350" fill="#FFFFFF" d="M22.277,7.689v4.145l9.438-5.694l-9.438-5.86v3.985H9.978
+		C4.469,4.294,0.019,8.769,0.02,14.278v5.4h3.424v-5.4C3.441,10.658,6.361,7.716,9.98,7.69h12.299"/>
+	<path id="패스_4351" fill="#FFFFFF" d="M28.271,17.938c0.016,1.735-0.657,3.406-1.871,4.645
+		c-1.199,1.229-2.846,1.919-4.563,1.912H9.437v-4.111L0,26.074l9.437,5.861v-4.021h12.4c2.634,0.01,5.159-1.049,7-2.932
+		c1.846-1.879,2.872-4.412,2.853-7.045v-5.434h-3.418V17.938L28.271,17.938z"/>
+</g>
 </svg>

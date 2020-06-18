@@ -1,5 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-    <g fill="none" fill-rule="evenodd">
-        <path fill="#FFF" fill-rule="nonzero" d="M14 16.344l8.1-8.11a1 1 0 0 1 1.414-.001l.202.203a1 1 0 0 1 0 1.414l-8.982 8.995c-.06.059-.124.11-.193.15a1 1 0 0 1-1.254-.13l-5.053-5.054a1 1 0 0 1 0-1.414l.202-.203a1 1 0 0 1 1.414 0l4.15 4.15zm-3.857 5.376h8.29a1 1 0 0 1 1 1v.287a1 1 0 0 1-1 1h-8.29a1 1 0 0 1-1-1v-.287a1 1 0 0 1 1-1z"/>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="34.684px" height="25.469px" viewBox="0 0 34.684 25.469" enable-background="new 0 0 34.684 25.469"
+	 xml:space="preserve">
+<g id="tick" transform="translate(0 -67.997)">
+	<g id="그룹_2605" transform="translate(0 67.997)">
+		<path id="패스_4352" fill="#FFFFFF" d="M34.174,0.508c-0.677-0.677-1.774-0.677-2.451,0L10.946,21.286L2.96,13.303
+			c-0.701-0.652-1.799-0.612-2.45,0.09c-0.617,0.664-0.618,1.692-0.003,2.357l9.214,9.213c0.677,0.676,1.774,0.676,2.451,0l22-22
+			c0.679-0.676,0.681-1.773,0.005-2.452C34.176,0.51,34.175,0.509,34.174,0.508z"/>
+	</g>
+</g>
 </svg>
