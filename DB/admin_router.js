@@ -37,10 +37,18 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 
 router.post('/ajax_test01', function(req, res) {
-  var responseData = {'result' : 'ok', 'test' : req.body.test};
   connection.query("UPDATE contents set Contents_data = '"+req.body.test+"' WHERE Contents_No = 10",
   function (err, result, fields) {
       if (!err){
+      }
+    else{
+      console.log('Error while performing Query.', err);
+    }
+  });
+  connection.query("SELECT * FROM contents WHERE Contents_No = 10",
+  function (err, result, fields) {
+      if (!err){
+        var responseData = {'result' : 'ok', 'test' : result};
         res.json(responseData);
       }
     else{
