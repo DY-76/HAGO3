@@ -25,7 +25,7 @@
       f.submit();
     };
 </script>
-<!-- <a href="javascript:goPage('1');">관람</a> -->
+<a href="javascript:goPage('1');">관람</a>
 
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
@@ -63,6 +63,11 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript">
             $(document).ready( function() {
+
+                <%
+                    String test_post = request.getParameter("posttest");
+                %>
+                console.log("<%=test_post %>");
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
                 $("#tipmodal").load("/example/tip.html");
                 if (Number(now_link[1])==10){
