@@ -59,8 +59,55 @@ router.post('/ajax_test01', function(req, res) {
           });
 
 router.post('/save', function(req, res) {
+
   if (req.body.UserNo != null && req.body.data != null){
-    var responseData = {'result' : 'ok', 'test' : 'None'};
+
+    connection.query('select EXISTS (select * from dummy_data where User_No='+req.body.UserNo+') as success',
+  function (err, result, fields) {
+      if (!err){
+
+        var result_out;
+        if (result[0]['success'] == 1){
+          result_out = "임시저장소 확인 저장 시도 . . .";
+
+          connection.query('update dummy_data set Data = '+req.body.data+' where User_No ='+req.body.UserNo,function(err,result){
+            if(!err){
+            }
+            else{
+              console.log('에러발생!_데이터 저장부분 : ',err);
+            }
+
+            result_out = result_out+"<br> 저장완료.";
+          });
+        }
+
+        else{
+          result_out = "임시저장소 미확인. 저장소를 생성합니다.";
+          connection.query('insert into dummy_data (User_No) values ('+req.body.UserNo+')',function(err,result){
+            if(!err){
+              result_out = result_out+"<br> 임시저장소 생성 완료. 데이터 업데이트를 시도합니다.";
+                connection.query('update dummy_data set data = '+req.body.data+' where UserID ='+req.body.UserNo,function(err,result){
+                  if(!err){
+                  }
+                  else{
+                    console.log('에러발생!_데이터 저장부분 : ',err);
+                  }
+
+                  result_out = result_out+"<br> 데이터 업데이트 완료.";
+                });
+            }
+            else{
+              console.log('에러발생!_저장소생성 : ',err);
+            }
+          });
+        }
+      }
+      else{
+        console.log('Error while performing Query.', err);
+      }
+    });
+
+    var responseData = {'result' : 'ok', 'test' : req.body.UserNo};
   }
   else{
     var responseData = {'result' : 'ok', 'test' : 'fail'};

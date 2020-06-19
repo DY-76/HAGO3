@@ -26,14 +26,14 @@
     // };
     function gopost(data){
         var now_link = window.location.href.split("admin/");
-                    now_link = "http://www.codinghago.com:5050/"+"admin/ajax_test01";
+                    now_link = "http://www.codinghago.com:5050/"+"admin/save";
         sendAjax(now_link,data);
     }
 </script>
 <script>
     function sendAjax(url, data){
 
-        var data = {'test' : data};
+        var data = {'User_No' : data, 'data' : 'test_data_001'};
         data = JSON.stringify(data);
 
           // content-type을 설정하고 데이터 송신
@@ -51,7 +51,7 @@
          });
     }
 </script>
-<a href="javascript:gopost('DONE');">관람</a>
+<a href="javascript:gopost(1);">관람</a>
 <div class="ajax_result">11</div>
 
 <!-- 
