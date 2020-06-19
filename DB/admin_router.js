@@ -88,7 +88,7 @@ router.get('/about', function(req, res) {
   res.send('admin_page_test');
 });
 
-router.get('/about', function(req, res) {
+router.get('/post', function(req, res) {
   res.render( 'test' , {test:'Done!'});
 });
 
