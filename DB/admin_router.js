@@ -86,7 +86,7 @@ router.post('/save', function(req, res) {
           connection.query('insert into dummy_data (User_No) values ('+req.body.UserNo+')',function(err,result){
             if(!err){
               result_out = result_out+"<br> 임시저장소 생성 완료. 데이터 업데이트를 시도합니다.";
-                connection.query('update dummy_data set data = '+req.body.data+' where UserID ='+req.body.UserNo,function(err,result){
+                connection.query('update dummy_data set Data = '+req.body.data+' where UserID ='+req.body.UserNo,function(err,result){
                   if(!err){
                   }
                   else{
