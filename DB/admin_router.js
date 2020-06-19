@@ -58,6 +58,16 @@ router.post('/ajax_test01', function(req, res) {
   });
           });
 
+router.post('/save', function(req, res) {
+  if (req.body.UserNo != null && req.body.data != null){
+    var responseData = {'result' : 'ok', 'test' : 'None'};
+  }
+  else{
+    var responseData = {'result' : 'ok', 'test' : 'fail'};
+  }
+  res.json(responseData);
+});
+
 
 router.get('/control', function(req, res) {
 
