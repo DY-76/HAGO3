@@ -45,7 +45,8 @@ router.post('/ajax_test01', function(req, res) {
       console.log('Error while performing Query.', err);
     }
   });
-  connection.query("SELECT * FROM contents WHERE Contents_No = 10",
+  connection.query("SELECT Contents_data FROM contents WHERE Contents_No = 10",
+  // select Contents_data from contents where Contents_No=10
   function (err, result, fields) {
       if (!err){
         var responseData = {'result' : 'ok', 'test' : result};

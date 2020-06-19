@@ -10,22 +10,49 @@
          </form>
 <script>
     
-        function goPage(id) {
-      // name이 paging인 태그
-      var f = document.paging;
+    //     function goPage(id) {
+    //   // name이 paging인 태그
+    //   var f = document.paging;
 
-      // form 태그의 하위 태그 값 매개 변수로 대입
-      f.id.value = id;
+    //   // form 태그의 하위 태그 값 매개 변수로 대입
+    //   f.id.value = id;
 
-      // input태그의 값들을 전송하는 주소
-      f.action = "http://www.codinghago.com:5050/DB/post"
+    //   // input태그의 값들을 전송하는 주소
+    //   f.action = "http://www.codinghago.com:5050/DB/post"
 
-      // 전송 방식 : post
-      f.method = "post"
-      f.submit();
-    };
+    //   // 전송 방식 : post
+    //   f.method = "post"
+    //   f.submit();
+    // };
+    function gopost(data){
+        var now_link = window.location.href.split("admin/");
+                    now_link = "http://www.codinghago.com:5050/"+"admin/ajax_test01";
+        sendAjax(now_link,data);
+    }
 </script>
-<a href="javascript:goPage('1');">관람</a>
+<script>
+    function sendAjax(url, data){
+
+        var data = {'test' : data};
+        data = JSON.stringify(data);
+
+          // content-type을 설정하고 데이터 송신
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.setRequestHeader('Content-type', "application/json");
+        xhr.send(data);
+
+          // 데이터 수신이 완료되면 표시
+        xhr.addEventListener('load', function(){
+            var result = JSON.parse(xhr.responseText);
+            if(result.result !== 'ok') return;
+            // 데이터가 있으면 결과값 표시
+            document.querySelector(".ajax_result").innerHTML = xhr.responseText;
+         });
+    }
+</script>
+<a href="javascript:gopost('DONE');">관람</a>
+<div class="ajax_result">11</div>
 
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
@@ -64,10 +91,6 @@
         <script type="text/javascript">
             $(document).ready( function() {
 
-                // <%
-                //     String test_post = request.getParameter("posttest");
-                // %>
-                // console.log("<%=test_post %>");
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
                 $("#tipmodal").load("/example/tip.html");
                 if (Number(now_link[1])==10){
