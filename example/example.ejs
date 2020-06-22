@@ -49,6 +49,8 @@
             now_link = "http://www.codinghago.com:5050/"+"admin/save";
         } else if (type == "contents"){
             now_link = "http://www.codinghago.com:5050/"+"admin/contents";
+        } else if (type == "update"){
+            now_link = "http://www.codinghago.com:5050/"+"admin/update";
         } else{
             return;
         }
@@ -79,7 +81,8 @@
          });
     }
 </script>
-<button id="post_btn" onclick="gopost(receive_get_data('go_user'),'save')">관람</button>
+<button onclick="gopost(receive_get_data('go_user'),'save')">관람</button>
+<button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button>
 <div class="ajax_result">11</div>
 <script>setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');</script>
 <!-- 

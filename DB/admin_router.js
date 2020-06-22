@@ -156,7 +156,6 @@ router.get('/control', function(req, res) {
 });
 
 router.post('/contents', function(req, res) {
-  console.log('contents_in',req.body.ContentsNo);
   if(req.body.ContentsNo != null){
 
 
@@ -164,8 +163,7 @@ router.post('/contents', function(req, res) {
   // select Contents_data from contents where Contents_No=10
   function (err, result, fields) {
       if (!err){
-        console.log('contents_in',result);
-        var responseData = {'result' : 'ok', 'test' : result};
+        var responseData = {'result' : 'ok', 'test' : result[0]['Contents_Json']};
       }
     else{
       var responseData = {'result' : 'ok', 'test' : 'fail'};
@@ -181,6 +179,71 @@ router.post('/contents', function(req, res) {
   }
   
   });
+
+
+
+
+
+
+  router.post('/update', function(req, res) {
+
+    if (req.body.UserNo != null && req.body.data != null){
+  
+      connection.query('select EXISTS (select * from condetails where ConDetails_No='+req.body.ContentsNo+') as success',
+    function (err, result, fields) {
+        if (!err){
+  
+          var result_out;
+          if (result[0]['success'] == 1){
+            result_out = "저장소 확인 저장 시도 . . .";
+  
+            connection.query("update condetails set Contents_Json = (SELECT Data FROM dummy_data WHERE User_No = "+req.body.UserNo+") where ConDetails_No ="+req.body.ContentsNo,function(err,result){
+              if(!err){
+              }
+              else{
+                console.log('에러발생!_데이터 저장부분 : ',err);
+              }
+  
+              result_out = result_out+"<br> 저장완료.";
+            });
+          }
+  
+          else{
+            result_out = "저장소 미확인. 저장소를 생성합니다.";
+            connection.query('insert into condetails (ConDetails_No) values ('+req.body.ContentsNo+')',function(err,result){
+              if(!err){
+                result_out = result_out+"<br> 임시저장소 생성 완료. 데이터 업데이트를 시도합니다.";
+                  connection.query("update condetails set Contents_Json = (SELECT Data FROM dummy_data WHERE User_No = "+req.body.UserNo+") where ConDetails_No ="+req.body.ContentsNo,function(err,result){
+                    if(!err){
+                    }
+                    else{
+                      console.log('에러발생!_데이터 저장부분 : ',err);
+                    }
+  
+                    result_out = result_out+"<br> 데이터 업데이트 완료.";
+                  });
+              }
+              else{
+                console.log('에러발생!_저장소생성 : ',err);
+              }
+            });
+          }
+        }
+        else{
+          console.log('Error while performing Query.', err);
+        }
+      });
+  
+      var responseData = {'result' : 'ok', 'test' : req.body.UserNo};
+  
+    }
+    else{
+      var responseData = {'result' : 'ok', 'test' : 'fail'};
+    }
+    res.json(responseData);
+  });
+  
+
 
 // define the about route
 router.get('/about', function(req, res) {
