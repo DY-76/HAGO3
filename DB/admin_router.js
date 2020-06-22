@@ -154,7 +154,7 @@ router.get('/control', function(req, res) {
 
 });
 
-router.post('/start_contents', function(req, res) {
+router.post('/contents', function(req, res) {
   if(req.body.go_user != null){
     res.render( 'test' , {test:req.body.go_user});
   }

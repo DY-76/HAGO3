@@ -16,6 +16,7 @@
             }
             if(receive_get_data("go_user") != null){
                 alert(receive_get_data("go_user"));
+
                 gopost(receive_get_data("go_user"));
             }
             else{
@@ -44,9 +45,15 @@
     //   f.method = "post"
     //   f.submit();
     // };
-    function gopost(data){
-        var now_link = window.location.href.split("admin/");
-                    now_link = "http://www.codinghago.com:5050/"+"admin/save";
+    function gopost(data,type){
+        var now_link;
+        if (type == "save"){
+            now_link = "http://www.codinghago.com:5050/"+"admin/save";
+        } else if (type == "contents"){
+            now_link = "http://www.codinghago.com:5050/"+"admin/contents";
+        } else{
+            return;
+        }
         sendAjax(now_link,data);
     }
 </script>
