@@ -118,19 +118,19 @@ router.post('/save', function(req, res) {
   res.json(responseData);
 });
 
-    connection.query('update contents set Contents_Contents = '+req.body.test,
-    function(err,result,fields) {
-      if (!err){
-        res.json(responseData);
-      }
-      else{
-        console.log('쿼리 업데이트 오류',err);
-      }
-    });
+//     connection.query('update contents set Contents_Contents = '+req.body.test,
+//     function(err,result,fields) {
+//       if (!err){
+//         res.json(responseData);
+//       }
+//       else{
+//         console.log('쿼리 업데이트 오류',err);
+//       }
+//     });
 
-  }
-  else {}
-});
+//   }
+//   else {}
+// });
 
 router.get('/control', function(req, res) {
 
