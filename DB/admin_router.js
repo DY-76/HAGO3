@@ -112,22 +112,6 @@ router.post('/save', function(req, res) {
 
     var responseData = {'result' : 'ok', 'test' : req.body.UserNo};
 
-
-
-    connection.query("SELECT Contents_Json FROM condetails WHERE ConDetails_No = "+req.body.ContentsNo,
-  // select Contents_data from contents where Contents_No=10
-  function (err, result, fields) {
-      if (!err){
-        console.log('contents_in',result);
-        responseData = {'result' : 'ok', 'test' : req.body.ContentsNo+'conde'};
-      }
-    else{
-      console.log('Error while performing Query.', err);
-    }
-  });
-
-
-
   }
   else{
     var responseData = {'result' : 'ok', 'test' : 'fail'};
@@ -174,7 +158,9 @@ router.get('/control', function(req, res) {
 router.post('/contents', function(req, res) {
   console.log('contents_in',req.body.ContentsNo);
   if(req.body.ContentsNo != null){
-    connection.query("SELECT Contents_Json FROM condetails WHERE ConDetails_No = "+req.body.ContentsNo,
+
+
+  connection.query("SELECT Contents_Json FROM condetails WHERE ConDetails_No = "+req.body.ContentsNo,
   // select Contents_data from contents where Contents_No=10
   function (err, result, fields) {
       if (!err){
@@ -187,12 +173,14 @@ router.post('/contents', function(req, res) {
     }
     res.json(responseData);
   });
+
+
   }
   else{
-    var responseData = {'result' : 'ok', 'test' : 'fail'};
+    console.log('Error while performing Query.', err);
   }
-  res.json(responseData);
-          });
+  
+  });
 
 // define the about route
 router.get('/about', function(req, res) {
