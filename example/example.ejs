@@ -33,7 +33,7 @@
 <script>
     function sendAjax(url, data){
 
-        var data = {'UserNo' : data, 'data' : 'test_data_001'};
+        var data = {'UserNo' : data, 'data' : post_project()};
         data = JSON.stringify(data);
 
           // content-type을 설정하고 데이터 송신
@@ -495,7 +495,7 @@
                         function post_project(){
                             var post1=Entry.engine.project_post();
                             var post2 = JSON.stringify(post1);
-                            console.log(post2);
+                            return post2;
                         }
                         
                     </script>
