@@ -74,6 +74,7 @@
             if(result.result !== 'ok') return;
             // 데이터가 있으면 결과값 표시
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
+            alert(xhr.responseText);
          });
     }
     gopost(receive_get_data("go_user"),"save");
