@@ -65,9 +65,9 @@
             <button class="ajax_test_btn">post_ajax_test</button>
             <div class="box ajax_result"></div>
             <script>
-                function sendAjax(url, data){
+                function sendAjax(url, data, q_type){
   
-                    var data = {'test' : data};
+                    var data = {'test' : data , 'type' : q_type};
                     data = JSON.stringify(data);
 
                       // content-type을 설정하고 데이터 송신
@@ -89,12 +89,11 @@
             <script>
                 document.querySelector('.ajax_test_btn').addEventListener('click',function(){
                     var send_data = document.forms[0].elements[0].value;
-
                     // 위는 로컬 테스트용 아래는 배포용
                     // 수정- 링크 따와서 자체적으로 판단 할 수 있게 함
                     var now_link = window.location.href.split("admin/");
                     now_link = now_link[0]+"admin/ajax_test01";
-                    sendAjax(now_link, send_data)
+                    sendAjax(now_link, send_data, 'update');
 
                 })
             </script>
