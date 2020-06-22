@@ -397,7 +397,9 @@
                                 불러오기
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
-                              <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a>
+                              <!-- <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a> -->
+                              <!-- <a class="dropdown-item" onclick="Entry.engine.testdataexport()">내 컴퓨터에 저장하기</a> -->
+                              <a class="dropdown-item" onclick="post_project()">내 컴퓨터에 저장하기</a>
                               <div style="display: none;">
                               <input id="file" type="file" onchange="Entry.engine.loadobjectproject()" accept=".HAGO">
                               <textarea id="content" readonly ></textarea>
@@ -460,6 +462,16 @@
                             
 
                     </script>
+                    <script>
+                        
+                        function post_project(){
+                            var post1=Entry.engine.project_post();
+                            var post2 = JSON.stringify(post1);
+                            console.log(post2);
+                        }
+                        
+                    </script>
+                  
                      
                  
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();" target="_blank">add object</button>-->

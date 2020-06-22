@@ -11,6 +11,7 @@ var test;
 export var test;
 export var i;
 
+
 /**
  * Class for a engine.
  * This have view for control running state.
@@ -911,9 +912,36 @@ addobjectproject(n){
     add.objectadd(n);
 
 }
+
+project_post=function(project) {
+    
+    if (!project) {
+        project = {};
+    }
+
+    if (!Entry.engine.isState('stop')) {
+        Entry.engine.toggleStop();
+    }
+    project.objects = Entry.container.toJSON();
+    const objects = project.objects;
+    project.scenes = Entry.scene.toJSON();
+    project.variables = Entry.variableContainer.getVariableJSON();
+    project.messages = Entry.variableContainer.getMessageJSON();
+    project.functions = Entry.variableContainer.getFunctionJSON();
+    project.speed = Entry.FPS;
+    project.interface = Entry.captureInterfaceState();
+    project.expansionBlocks = Entry.expansionBlocks;
+    project.externalModules = Entry.EXTERNAL_MODULE_LIST;
+
+    if (!objects || !objects.length) {
+        return false;
+    }
+    
+    return project;
+}
 saveobjectproject(){
     test = Entry.exportProject();
-    var test_array = JSON.stringify(test);
+   var test_array = JSON.stringify(test);
    
 
     var blobObj = new Blob([test_array], {type:'application/json'});
@@ -925,6 +953,7 @@ saveobjectproject(){
        //window.open(window.URL.createObjectURL(blobObj))
        
 }
+
 fileinfo(){
     var file = document.getElementById("file").files[0];
 document.getElementById("table").innerHTML += "<tr><td>파일이름</td><td>"+file.name+"</td></tr>";
