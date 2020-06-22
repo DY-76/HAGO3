@@ -15,6 +15,7 @@
                 return result;
             }
             if(receive_get_data("go_user") != null){
+                
             }
             else{
                 alert("잘못된 접근입니다.");
@@ -79,7 +80,7 @@
 </script>
 <button id="post_btn" onclick="gopost(receive_get_data('go_user'),'save')">관람</button>
 <div class="ajax_result">11</div>
-<script>document.getElementById("post_btn").click();</script>
+<script>setTimeout(gopost, 500, receive_get_data('go_user'),'save');</script>
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
             <input type="text" name="id" placeholder="Enter id here">
@@ -523,7 +524,6 @@
                             var post2 = JSON.stringify(post1);
                             return post2;
                         }
-                        gopost(receive_get_data("go_user"),"save");
                     </script>
                   
                      
