@@ -80,8 +80,7 @@
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             if(result.contents != null){
                 alert("불러옵니다! :"+result.contents);
-                Entry.clearProject();
-                Entry.loadProject(result.contents);
+                load_contents(result.contents);
             }
          });
     }
@@ -797,6 +796,10 @@
                    }
               
                };
+            }
+            function load_contents(data){
+                Entry.clearProject();
+                Entry.loadProject(data);
             }
          </script>
          <!--
