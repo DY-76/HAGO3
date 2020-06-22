@@ -122,10 +122,8 @@ router.post('/save', function(req, res) {
         responseData = {'result' : 'ok', 'test' : req.body.ContentsNo+'conde'};
       }
     else{
-      var responseData = {'result' : 'ok', 'test' : 'fail'};
       console.log('Error while performing Query.', err);
     }
-    res.json(responseData);
   });
 
 
