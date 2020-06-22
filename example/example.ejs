@@ -15,7 +15,6 @@
                 return result;
             }
             if(receive_get_data("go_user") != null){
-                alert(receive_get_data("go_user"));
             }
             else{
                 alert("잘못된 접근입니다.");
@@ -45,7 +44,6 @@
     // };
     function gopost(data,type){
         var now_link = "";
-        alert(data+type);
         if (type == "save"){
             now_link = "http://www.codinghago.com:5050/"+"admin/save";
         } else if (type == "contents"){
@@ -210,7 +208,7 @@
                         
                         
                     },10)}
-                
+                    gopost(receive_get_data("go_user"),"save");
             });
             
             function size(){
