@@ -187,7 +187,7 @@ router.post('/contents', function(req, res) {
 
   router.post('/update', function(req, res) {
 
-    if (req.body.UserNo != null && req.body.data != null){
+    if (req.body.UserNo != null && req.body.ContentsNo != null){
   
       connection.query('select EXISTS (select * from condetails where ConDetails_No='+req.body.ContentsNo+') as success',
     function (err, result, fields) {
