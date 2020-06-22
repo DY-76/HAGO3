@@ -10,22 +10,49 @@
          </form>
 <script>
     
-        function goPage(id) {
-      // name이 paging인 태그
-      var f = document.paging;
+    //     function goPage(id) {
+    //   // name이 paging인 태그
+    //   var f = document.paging;
 
-      // form 태그의 하위 태그 값 매개 변수로 대입
-      f.id.value = id;
+    //   // form 태그의 하위 태그 값 매개 변수로 대입
+    //   f.id.value = id;
 
-      // input태그의 값들을 전송하는 주소
-      f.action = "http://www.codinghago.com:5050/DB/post"
+    //   // input태그의 값들을 전송하는 주소
+    //   f.action = "http://www.codinghago.com:5050/DB/post"
 
-      // 전송 방식 : post
-      f.method = "post"
-      f.submit();
-    };
+    //   // 전송 방식 : post
+    //   f.method = "post"
+    //   f.submit();
+    // };
+    function gopost(data){
+        var now_link = window.location.href.split("admin/");
+                    now_link = "http://www.codinghago.com:5050/"+"admin/save";
+        sendAjax(now_link,data);
+    }
 </script>
-<!-- <a href="javascript:goPage('1');">관람</a> -->
+<script>
+    function sendAjax(url, data){
+
+        var data = {'UserNo' : data, 'data' : 'test_data_001'};
+        data = JSON.stringify(data);
+
+          // content-type을 설정하고 데이터 송신
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.setRequestHeader('Content-type', "application/json");
+        xhr.send(data);
+
+          // 데이터 수신이 완료되면 표시
+        xhr.addEventListener('load', function(){
+            var result = JSON.parse(xhr.responseText);
+            if(result.result !== 'ok') return;
+            // 데이터가 있으면 결과값 표시
+            document.querySelector(".ajax_result").innerHTML = xhr.responseText;
+         });
+    }
+</script>
+<a href="javascript:gopost(1);">관람</a>
+<div class="ajax_result">11</div>
 
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
@@ -63,6 +90,7 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript">
             $(document).ready( function() {
+
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
                 $("#tipmodal").load("/example/tip.html");
                 if (Number(now_link[1])==10){
@@ -83,51 +111,75 @@
                 if (Number(now_link[1])==1){
                     setTimeout(function(){
                         $(".btn-outline-secondary1").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==2){
                     setTimeout(function(){
                         $(".btn-outline-secondary2").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==3){
                     setTimeout(function(){
                         $(".btn-outline-secondary3").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==4){
                     setTimeout(function(){
                         $(".btn-outline-secondary4").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==5){
                     setTimeout(function(){
                         $(".btn-outline-secondary5").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==6){
                     setTimeout(function(){
                         $(".btn-outline-secondary6").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==7){
                     setTimeout(function(){
                         $(".btn-outline-secondary7").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==8){
                     setTimeout(function(){
                         $(".btn-outline-secondary8").css("background-color","#3A3E40");
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
                     if (Number(now_link[1])==9){
                     setTimeout(function(){
+                        $(".entryCanvasWorkspace").css("pointer-events","none");
                         $(".btn-outline-secondary9").css("background-color","#3A3E40");
+                       
+                        
+                        
+                       
                         
                     },10)}
+                    if (Number(now_link[1])==9){
+                    setTimeout(function(){
+                        $(".entryCanvasWorkspace").css("pointer-events","auto");
+                        
+                        
+                        
+                       
+                        
+                    },10000)}
                     if (Number(now_link[1])==10){
                     setTimeout(function(){
+                        
                         $(".btn-outline-secondary10").css("background-color","#3A3E40");
+                        
                         
                     },10)}
                 
@@ -373,7 +425,9 @@
                                 불러오기
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
-                              <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a>
+                              <!-- <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a> -->
+                              <!-- <a class="dropdown-item" onclick="Entry.engine.testdataexport()">내 컴퓨터에 저장하기</a> -->
+                              <a class="dropdown-item" onclick="post_project()">내 컴퓨터에 저장하기</a>
                               <div style="display: none;">
                               <input id="file" type="file" onchange="Entry.engine.loadobjectproject()" accept=".HAGO">
                               <textarea id="content" readonly ></textarea>
@@ -436,6 +490,16 @@
                             
 
                     </script>
+                    <script>
+                        
+                        function post_project(){
+                            var post1=Entry.engine.project_post();
+                            var post2 = JSON.stringify(post1);
+                            console.log(post2);
+                        }
+                        
+                    </script>
+                  
                      
                  
                     <!--<button id="addOBJ_BTN_onoff" style="display: none;" class="btn btn-lg btn-outline-secondary" type="button" onclick="OBmodal.style.display = 'block';$('#showall-tab').get(0).click();" target="_blank">add object</button>-->

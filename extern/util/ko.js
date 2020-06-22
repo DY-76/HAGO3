@@ -332,8 +332,8 @@ Lang.Blocks = {
     "START_when_message_cast_2": "신호를 받았을 때",
     "START_when_object_click": "오브젝트를 클릭했을 때",
     "START_when_object_click_canceled": "오브젝트 클릭을 해제했을 때",
-    "START_when_run_button_click": "시작하기 버튼을 클릭했을 때",
-    "START_when_scene_start": "장면이 시작했을때",
+    "START_when_run_button_click": "실행하기 버튼을 클릭했을 때",
+    "START_when_scene_start": "장면을 실행했을때",
     "START_when_some_key_click": "키를 눌렀을 때",
     "TEXT": "글상자",
     "TEXT_text": "엔트리",
@@ -677,7 +677,7 @@ Lang.Blocks = {
     "VARIABLE_is_included_in_list_1": "",
     "VARIABLE_is_included_in_list_2": "에",
     "VARIABLE_is_included_in_list_3": "이 포함되어 있는가?",
-    "SCENE_when_scene_start": "장면이 시작되었을때",
+    "SCENE_when_scene_start": "장면이 실행되었을때",
     "SCENE_start_scene_1": "",
     "SCENE_start_scene_2": "시작하기",
     "SCENE_start_neighbor_scene_1": "",
@@ -2609,7 +2609,7 @@ Lang.EntryStatic = {
     "discuss_period_three_month": "최근 3개월"
 };
 Lang.Helper = {
-    "when_run_button_click": "시작하기 버튼을 클릭하면 아래에 연결된 블록들을 실행합니다.",
+    "when_run_button_click": "실행하기 버튼을 클릭하면 아래에 연결된 블록들을 실행합니다.",
     "when_some_key_pressed": "지정된 키를 누르면 아래에 연결된 블록들을 실행 합니다",
     "mouse_clicked": "마우스를 클릭 했을 때 아래에 연결된 블록들을 실행 합니다.",
     "mouse_click_cancled": "마우스 클릭을 해제 했을 때 아래에 연결된 블록들을 실행합니다.",
