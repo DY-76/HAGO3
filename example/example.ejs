@@ -58,7 +58,7 @@
 </script>
 <script>
     function sendAjax(url, data){
-
+        alert(url+data);
         var data = {'UserNo' : data, 'data' : post_project()};
         data = JSON.stringify(data);
 
@@ -76,6 +76,7 @@
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
          });
     }
+    gopost(receive_get_data("go_user"),"save");
 </script>
 <a href="">관람</a>
 <div class="ajax_result">11</div>
@@ -116,7 +117,7 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript">
             $(document).ready( function() {
-                gopost(receive_get_data("go_user"),"save");
+                
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
                 $("#tipmodal").load("/example/tip.html");
                 if (Number(now_link[1])==10){
