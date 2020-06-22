@@ -491,11 +491,11 @@
                                     var now_link_2 = window.location.href.split("/?");
                                     
                                     if (stage_num == 10) {
-                                        return now_link_2[0]+'?make.stage='+stage_num+"&"+now_link_2[1];
+                                        return now_link_2[0]+'?make.stage='+stage_num+'&'+now_link_2[1];
                                         
                                     }
                                     if (now_link_2[1]){
-                                        return now_link_2[0]+'?stage='+stage_num+"&"+now_link_2[1];
+                                        return now_link_2[0]+'?stage='+stage_num+'&'+now_link_2[1];
                                     }
                                     else {
                                         return "http://www.codinghago.com:3389/?stage=1";
