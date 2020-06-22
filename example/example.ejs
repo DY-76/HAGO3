@@ -81,6 +81,7 @@
             if(result.contents == null){
                 alert("불러옵니다! :"+result.test);
                 load_contents(result.test);
+                Entry.loadProject(load_data);
                 document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
