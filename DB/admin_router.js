@@ -36,11 +36,26 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 
+//contents_contents 내용 양식
+//{"learn":[{"title":"D1","detail":"D_N1"},{"title":"D2","detail":"D_N21"}]}
+//ajax_DB컨트롤 부분
 router.post('/ajax_test01', function(req, res) {
-  var responseData = {'result' : 'ok', 'test' : req.body.test}
-  res.json(responseData);
-          });
+  var responseData = {'result' : 'ok', 'test' : req.body.test};
+  if (req.body.type == 'update'){
 
+    connection.query('update contents set Contents_Contents = '+req.body.test,
+    function(err,result,fields) {
+      if (!err){
+        res.json(responseData);
+      }
+      else{
+        console.log('쿼리 업데이트 오류',err);
+      }
+    });
+
+  }
+  else {}
+});
 
 router.get('/control', function(req, res) {
 
@@ -51,8 +66,6 @@ router.get('/control', function(req, res) {
       if (!err){
 
         contents_cnt = result[0]['cnt'];
-
-
 
         res.render( 'admin_main_control' , {state:'ready...',
                                             test_value:'test_value_001',
