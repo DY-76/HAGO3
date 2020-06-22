@@ -78,10 +78,15 @@
             alert(xhr.responseText);
             console.log(xhr.responseText);
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
+            if(result.contents != null){
+                alert("불러옵니다! :"+result.contents);
+                Entry.clearProject();
+                Entry.loadProject(result.contents);
+            }
          });
     }
 </script>
-<button onclick="gopost(receive_get_data('go_user'),'save')">관람</button>
+<button onclick="gopost(receive_get_data('go_user'),'contents')">관람</button>
 <button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button>
 <div class="ajax_result">11</div>
 <script>setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');</script>
