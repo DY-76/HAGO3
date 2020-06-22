@@ -165,7 +165,7 @@ router.post('/contents', function(req, res) {
   function (err, result, fields) {
       if (!err){
         console.log('contents_in',result);
-        var responseData = {'result' : 'ok', 'test' : req.body.ContentsNo+'conde'};
+        var responseData = {'result' : 'ok', 'test' : result};
       }
     else{
       var responseData = {'result' : 'ok', 'test' : 'fail'};
