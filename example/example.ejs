@@ -46,8 +46,9 @@
     //   f.submit();
     // };
     function gopost(data,type){
-        var now_link;
+        var now_link = "";
         if (type == "save"){
+            alert(type);
             now_link = "http://www.codinghago.com:5050/"+"admin/save";
         } else if (type == "contents"){
             now_link = "http://www.codinghago.com:5050/"+"admin/contents";
