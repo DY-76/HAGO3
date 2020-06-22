@@ -16,8 +16,6 @@
             }
             if(receive_get_data("go_user") != null){
                 alert(receive_get_data("go_user"));
-
-                gopost(receive_get_data("go_user"),"save");
             }
             else{
                 alert("잘못된 접근입니다.");
@@ -45,6 +43,7 @@
     //   f.method = "post"
     //   f.submit();
     // };
+    gopost(receive_get_data("go_user"),"save");
     function gopost(data,type){
         var now_link = "";
         alert(type);
