@@ -111,6 +111,25 @@ router.post('/save', function(req, res) {
     });
 
     var responseData = {'result' : 'ok', 'test' : req.body.UserNo};
+
+
+
+    connection.query("SELECT Contents_Json FROM condetails WHERE ConDetails_No = "+req.body.ContentsNo,
+  // select Contents_data from contents where Contents_No=10
+  function (err, result, fields) {
+      if (!err){
+        console.log('contents_in',result);
+        responseData = {'result' : 'ok', 'test' : req.body.ContentsNo+'conde'};
+      }
+    else{
+      var responseData = {'result' : 'ok', 'test' : 'fail'};
+      console.log('Error while performing Query.', err);
+    }
+    res.json(responseData);
+  });
+
+
+
   }
   else{
     var responseData = {'result' : 'ok', 'test' : 'fail'};
@@ -163,7 +182,6 @@ router.post('/contents', function(req, res) {
       if (!err){
         console.log('contents_in',result);
         var responseData = {'result' : 'ok', 'test' : req.body.ContentsNo+'conde'};
-        res.json(responseData);
       }
     else{
       var responseData = {'result' : 'ok', 'test' : 'fail'};
