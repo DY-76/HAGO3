@@ -163,6 +163,7 @@ router.post('/contents', function(req, res) {
         var responseData = {'result' : 'ok', 'test' : result};
       }
     else{
+      var responseData = {'result' : 'ok', 'test' : 'fail'};
       console.log('Error while performing Query.', err);
     }
   });
