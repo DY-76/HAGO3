@@ -46,7 +46,7 @@
     gopost(receive_get_data("go_user"),"save");
     function gopost(data,type){
         var now_link = "";
-        alert(type);
+        alert(data+type);
         if (type == "save"){
             now_link = "http://www.codinghago.com:5050/"+"admin/save";
         } else if (type == "contents"){
