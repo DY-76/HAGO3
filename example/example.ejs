@@ -78,9 +78,9 @@
             alert(xhr.responseText);
             console.log(xhr.responseText);
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
-            if(result.contents != null){
-                alert("불러옵니다! :"+result.contents);
-                load_contents(result.contents);
+            if(result.contents == null){
+                alert("불러옵니다! :"+result.test);
+                load_contents(result.test);
             }
          });
     }
