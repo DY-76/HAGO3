@@ -155,17 +155,21 @@ router.get('/control', function(req, res) {
 });
 
 router.post('/contents', function(req, res) {
+  console.log('contents_in',req.body.ContentsNo);
   if(req.body.ContentsNo != null){
     connection.query("SELECT Contents_Json FROM condetails WHERE ConDetails_No = "+req.body.ContentsNo,
   // select Contents_data from contents where Contents_No=10
   function (err, result, fields) {
       if (!err){
-        var responseData = {'result' : 'ok', 'test' : result};
+        console.log('contents_in',result);
+        var responseData = {'result' : 'ok', 'test' : req.body.ContentsNo+'conde'};
+        res.json(responseData);
       }
     else{
       var responseData = {'result' : 'ok', 'test' : 'fail'};
       console.log('Error while performing Query.', err);
     }
+    res.json(responseData);
   });
   }
   else{
