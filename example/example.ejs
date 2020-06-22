@@ -77,9 +77,9 @@
          });
     }
 </script>
-<button onclick="gopost(receive_get_data('go_user'),'save')">관람</button>
+<button id="post_btn" onclick="gopost(receive_get_data('go_user'),'save')">관람</button>
 <div class="ajax_result">11</div>
-<script>gopost(receive_get_data("go_user"),"save");</script>
+<script>document.getElementById("post_btn").click();</script>
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
             <input type="text" name="id" placeholder="Enter id here">
