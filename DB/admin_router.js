@@ -154,6 +154,14 @@ router.get('/control', function(req, res) {
 
 });
 
+router.post('/start_contents', function(req, res) {
+  if(req.body.UserNo != null){
+    res.render( 'test' , {test:req.body.UserNo});
+  }
+  else{
+    res.render( 'test' , {test:'fail'});
+  }
+          });
 
 // define the about route
 router.get('/about', function(req, res) {
