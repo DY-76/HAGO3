@@ -80,7 +80,7 @@
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             if(result.type == "save"){
                 alert("이동합니다!");
-                location.href="http://codinghago.com/detailCreate.do?";
+                window.open("http://codinghago.com/detailCreate.do?","저장하기");
             }
             if(result.contents != null){
                 alert("불러옵니다! :"+result.test);
