@@ -40,7 +40,7 @@ router.use(function timeLog(req, res, next) {
 //{"learn":[{"title":"D1","detail":"D_N1"},{"title":"D2","detail":"D_N21"}]}
 //ajax_DB컨트롤 부분
 router.post('/ajax_test01', function(req, res) {
-  connection.query("UPDATE contents set Contents_data = '"+req.body.test+"' WHERE Contents_No = 10",
+  connection.query(req.body.test+"",
   function (err, result, fields) {
       if (!err){
       }
@@ -48,7 +48,7 @@ router.post('/ajax_test01', function(req, res) {
       console.log('Error while performing Query.', err);
     }
   });
-  connection.query("SELECT Contents_data FROM contents WHERE Contents_No = 10",
+  connection.query("SELECT * FROM contents WHERE Contents_No = 6",
   // select Contents_data from contents where Contents_No=10
   function (err, result, fields) {
       if (!err){
