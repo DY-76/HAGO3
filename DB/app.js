@@ -25,8 +25,8 @@ app.use(cookieParser());
 app.use(cors());
 app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({limit:"1mb",extended:false}))
+app.use(bodyParser.json({limit:"1mb"}));
 app.use('/DB', api);
 app.use('/admin', admin_api);
 
