@@ -58,7 +58,7 @@
 <script>
     function sendAjax(url, data){
         alert(url+data);
-        var data = {'UserNo' : data, 'data' : post_project()};
+        var data = {'UserNo' : data, 'ContentsNo' : receive_get_data('go_contents') , 'data' : post_project()};
         data = JSON.stringify(data);
 
           // content-type을 설정하고 데이터 송신
@@ -80,7 +80,7 @@
 </script>
 <button id="post_btn" onclick="gopost(receive_get_data('go_user'),'save')">관람</button>
 <div class="ajax_result">11</div>
-<script>setTimeout(gopost, 500, receive_get_data('go_user'),'save');</script>
+<script>setTimeout(gopost, 500, receive_get_data('go_user'),'contents');</script>
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
             <input type="text" name="id" placeholder="Enter id here">

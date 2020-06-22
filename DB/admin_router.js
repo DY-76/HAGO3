@@ -155,12 +155,22 @@ router.get('/control', function(req, res) {
 });
 
 router.post('/contents', function(req, res) {
-  if(req.body.go_user != null){
-    res.render( 'test' , {test:req.body.go_user});
+  if(req.body.ContentsNo != null){
+    connection.query("SELECT Contents_Json FROM condetails WHERE Condetails_No = "+req.body.ContentsNo,
+  // select Contents_data from contents where Contents_No=10
+  function (err, result, fields) {
+      if (!err){
+        var responseData = {'result' : 'ok', 'test' : result};
+      }
+    else{
+      console.log('Error while performing Query.', err);
+    }
+  });
   }
   else{
-    res.render( 'test' , {test:'fail'});
+    var responseData = {'result' : 'ok', 'test' : 'fail'};
   }
+  res.json(responseData);
           });
 
 // define the about route
