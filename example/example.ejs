@@ -73,6 +73,7 @@
             var result = JSON.parse(xhr.responseText);
             if(result.result !== 'ok') return;
             // 데이터가 있으면 결과값 표시
+            alert(xhr.responseText);
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             alert(xhr.responseText);
          });
