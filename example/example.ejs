@@ -75,14 +75,12 @@
             // 데이터가 있으면 결과값 표시
             alert(xhr.responseText);
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
-            alert(xhr.responseText);
          });
     }
-    gopost(receive_get_data("go_user"),"save");
 </script>
 <button onclick="gopost(1,'save')">관람</button>
 <div class="ajax_result">11</div>
-
+<script>gopost(receive_get_data("go_user"),"save");</script>
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
             <input type="text" name="id" placeholder="Enter id here">
