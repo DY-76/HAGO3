@@ -110,7 +110,7 @@ router.post('/save', function(req, res) {
       }
     });
 
-    var responseData = {'result' : 'ok', 'test' : req.body.UserNo};
+    var responseData = {'result' : 'ok', 'test' : req.body.UserNo, 'type' : 'save'};
 
   }
   else{

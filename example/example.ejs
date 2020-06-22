@@ -78,7 +78,11 @@
             alert(xhr.responseText);
             console.log(xhr.responseText);
             document.querySelector(".ajax_result").innerHTML = xhr.responseText;
-            if(result.contents == null){
+            if(result.type == 'save'){
+                alert("이동합니다!");
+                location.href="http://codinghago.com/detailCreate.do?";
+            }
+            if(result.contents != null){
                 alert("불러옵니다! :"+result.test);
                 load_contents(result.test);
                 document.querySelector(".ajax_result").innerHTML = result.test;
