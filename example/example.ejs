@@ -824,7 +824,7 @@
             }
             function load_contents(data){
                 console.log('111'+data);
-                data = JSON.parse(data);
+                data = JSON.parse(JSON.stringify(data));
                 Entry.clearProject();
                 // alert("load_contents실행됨 :"+data);
                 Entry.loadProject(data);
