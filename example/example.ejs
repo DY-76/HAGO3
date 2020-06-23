@@ -94,7 +94,13 @@
 <button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button><br>
 <button onclick="gopost(receive_get_data('go_user'),'save')">저장</button>
 <div class="ajax_result">11</div>
-<script>setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');</script>
+<script>
+    if(receive_get_data("go_contents")==6){
+
+    } else{
+        setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');
+    }
+</script>
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
             <input type="text" name="id" placeholder="Enter id here">
