@@ -553,9 +553,9 @@
                     <script>
                         
                         function post_project(){
-                            var post1=Entry.engine.project_post();
+                            var post1 = Entry.engine.project_post2();
                             var post2 = JSON.stringify(post1);
-                            return post2;
+                            return post1;
                         }
                     </script>
                   
@@ -824,7 +824,7 @@
             }
             function load_contents(data){
                 
-                data = JSON.parse(JSON.stringify(data));
+                data = JSON.parse(data);
                 console.log('111'+data);
                 Entry.clearProject();
                 // alert("load_contents실행됨 :"+data);

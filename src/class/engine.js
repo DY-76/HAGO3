@@ -939,6 +939,13 @@ project_post=function(project) {
     
     return project;
 }
+
+project_post2=function(project) {
+   
+    project = Entry.exportProject();
+    return project;
+}
+
 saveobjectproject(){
     test = Entry.exportProject();
    var test_array = JSON.stringify(test);
