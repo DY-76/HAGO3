@@ -72,7 +72,7 @@
 
           // 데이터 수신이 완료되면 표시
         xhr.addEventListener('load', function(){
-            var result = JSON.parse(xhr.responseText);
+            var result = JSON.stringify(xhr.responseText);
             if(result.result !== 'ok') return;
             // 데이터가 있으면 결과값 표시
             // alert(xhr.responseText);
