@@ -76,9 +76,9 @@
             if(result.result !== 'ok') return;
             // 데이터가 있으면 결과값 표시
             alert(xhr.responseText);
-            data = JSON.parse(xhr.responseText);
+            var datas = JSON.parse(xhr.responseText);
                 Entry.clearProject();
-                Entry.loadProject(data);
+                Entry.loadProject(datas);
            // console.log(xhr.responseText);
             // document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             if(result.type == "save"){
