@@ -34,7 +34,7 @@
     <jsp:include page="../../../common/ajaxs.jsp" flush="false"/>
     <style>
         .opacity-full {
-            font-size: 12px !important;
+            font-size: 13px !important;
             background-color: #FFF !important;
             color: #000 !important;
         }
@@ -361,7 +361,7 @@
     function goHago() {
         if (${not empty user}) {
             // 로그인 상태
-                alert('${user.no}');
+            <%--    alert('${user.no}');--%>
 
             var form = document.createElement("form");
             form.setAttribute("method", "get");
