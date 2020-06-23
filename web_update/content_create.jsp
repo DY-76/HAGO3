@@ -43,7 +43,7 @@
 
             var data = {'UserNo' : user, 'ContentsNo' : con};
             data = JSON.stringify(data);
-            alert(data);
+            // alert(data);
 
             // content-type을 설정하고 데이터 송신
             var xhr = new XMLHttpRequest();
@@ -56,12 +56,12 @@
                 var result = JSON.parse(xhr.responseText);
                 if(result.result !== 'ok') return;
                 // 데이터가 있으면 결과값 표시
-                alert(xhr.responseText);
+                // alert(xhr.responseText);
             });
         }
         if (${not empty user}) {
             if("${content.no}" != "" && "${user.no}" != ""){
-            alert("저장완료 update개시 : ${content.no} : ${user.no}");
+            <%--alert("저장완료 update개시 : ${content.no} : ${user.no}");--%>
                 sendAjax("http://www.codinghago.com:5050/admin/update","${user.no}","${content.no}")
             }
         } else {
