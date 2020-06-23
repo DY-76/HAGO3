@@ -139,8 +139,12 @@
             $(document).ready( function() {
                 
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
-                $("#tipmodal").load("/example/tip.html");
-                if (Number(now_link[1])==10){
+
+                
+                if (Number(receive_get_data("stage"))!=null){
+                    $("#tipmodal").load("/example/tip.html");
+                }
+                if (Number(receive_get_data("stage"))==10){
                     setTimeout(function(){
                         $(".entryCategoryListWorkspace").css("display","inline-block");
                         $(".blockMenuWrapper").css("top","75px");
@@ -155,55 +159,55 @@
                    
                 }
                
-                if (Number(now_link[1])==1){
+                if (Number(receive_get_data("stage"))==1){
                     setTimeout(function(){
                         $(".btn-outline-secondary1").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==2){
+                    if (Number(receive_get_data("stage"))==2){
                     setTimeout(function(){
                         $(".btn-outline-secondary2").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==3){
+                    if (Number(receive_get_data("stage"))==3){
                     setTimeout(function(){
                         $(".btn-outline-secondary3").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==4){
+                    if (Number(receive_get_data("stage"))==4){
                     setTimeout(function(){
                         $(".btn-outline-secondary4").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==5){
+                    if (Number(receive_get_data("stage"))==5){
                     setTimeout(function(){
                         $(".btn-outline-secondary5").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==6){
+                    if (Number(receive_get_data("stage"))==6){
                     setTimeout(function(){
                         $(".btn-outline-secondary6").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==7){
+                    if (Number(receive_get_data("stage"))==7){
                     setTimeout(function(){
                         $(".btn-outline-secondary7").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==8){
+                    if (Number(receive_get_data("stage"))==8){
                     setTimeout(function(){
                         $(".btn-outline-secondary8").css("background-color","#3A3E40");
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         
                     },10)}
-                    if (Number(now_link[1])==9){
+                    if (Number(receive_get_data("stage"))==9){
                     setTimeout(function(){
                         $(".entryCanvasWorkspace").css("pointer-events","none");
                         $(".btn-outline-secondary9").css("background-color","#3A3E40");
@@ -213,7 +217,7 @@
                        
                         
                     },10)}
-                    if (Number(now_link[1])==9){
+                    if (Number(receive_get_data("stage"))==9){
                     setTimeout(function(){
                         $(".entryCanvasWorkspace").css("pointer-events","auto");
                         
@@ -222,7 +226,7 @@
                        
                         
                     },10000)}
-                    if (Number(now_link[1])==10){
+                    if (Number(receive_get_data("stage"))==10){
                     setTimeout(function(){
                         
                         $(".btn-outline-secondary10").css("background-color","#3A3E40");
@@ -730,7 +734,7 @@
         <!-- The Modal & next stage_script -->
         <script>
             var now_link = window.location.href.split("stage=");
-            var next_num = Number(now_link[1])+1;
+            var next_num = Number(receive_get_data("stage"))+1;
             var next_stage = now_link[0]+'stage='+ next_num;
         </script>
 
@@ -867,7 +871,7 @@ function test() {
 -->
 
          <script>
-            if(Number(now_link[1]) == 10){
+            if(Number(receive_get_data("stage")) == 10){
                 $('#steponoff').css('display', 'block');
             }
             else{
