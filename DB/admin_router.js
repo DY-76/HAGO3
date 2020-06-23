@@ -161,7 +161,8 @@ router.post('/contents', function(req, res) {
   connection.query("SELECT Contents_Json FROM condetails WHERE ConDetails_No = "+req.body.ContentsNo,
   function (err, result, fields) {
       if (!err){
-        var responseData = {'result' : 'ok', 'test' : result[0]['Contents_Json'], 'type' : 'load'};
+        var test_go = result[0]['Contents_Json'];
+        var responseData = {'result' : 'ok', 'test' : test_go, 'type' : 'load'};
         console.log(result);
       }
     else{
