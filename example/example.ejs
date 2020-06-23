@@ -823,8 +823,9 @@
                };
             }
             function load_contents(data){
-                console.log('111'+data);
+                
                 data = JSON.parse(JSON.stringify(data));
+                console.log('111'+data);
                 Entry.clearProject();
                 // alert("load_contents실행됨 :"+data);
                 Entry.loadProject(data);
