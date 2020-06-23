@@ -77,7 +77,7 @@
             // 데이터가 있으면 결과값 표시
             alert(xhr.responseText);
             console.log(xhr.responseText);
-            // document.querySelector(".ajax_result").innerHTML = xhr.responseText;
+            document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             if(result.type == "save"){
                 alert("이동합니다!");
                 window.open("http://codinghago.com/detailCreate.do?","저장하기");
@@ -85,7 +85,7 @@
             if(result.contents != null){
                 alert("불러옵니다! :"+result.test);
                 load_contents(result.test);
-                // document.querySelector(".ajax_result").innerHTML = result.test;
+                document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
     }
@@ -94,14 +94,7 @@
 <button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button><br>
 <button onclick="gopost(receive_get_data('go_user'),'save')">저장</button>
 <div class="ajax_result">11</div>
-<script>
-    if(receive_get_data("go_contents")==6){
-
-    }
-    else{
-        setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');
-    }
-</script>
+<script>setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');</script>
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
             <input type="text" name="id" placeholder="Enter id here">
@@ -500,14 +493,13 @@
                             <script>
                                 function move_stage(stage_num){
                                     var now_link_2 = window.location.href.split("/?");
-                                    var now_link_back = '&'+'go_user='+receive_get_data("go_user")+'&go_contents='+receive_get_data("go_contents");
-
+                                    
                                     if (stage_num == 10) {
-                                        return now_link_2[0]+'?make.stage='+stage_num+now_link_back;
+                                        return now_link_2[0]+'?make.stage='+stage_num+'&'+now_link_2[1];
                                         
                                     }
                                     if (now_link_2[1]){
-                                        return now_link_2[0]+'?stage='+stage_num+now_link_back;
+                                        return now_link_2[0]+'?stage='+stage_num+'&'+now_link_2[1];
                                     }
                                     else {
                                         return "http://www.codinghago.com:3389/?stage=1";
