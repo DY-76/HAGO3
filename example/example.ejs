@@ -84,16 +84,16 @@
             }
             if(result.type == 'load'){
                 // alert("불러옵니다! :"+result.test);
-                load_contents(JSON.stringify(result.test));
+                load_contents(result.test);
                 // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
     }
 </script>
-<button onclick="gopost(receive_get_data('go_user'),'contents')">관람</button><br>
+<!-- <button onclick="gopost(receive_get_data('go_user'),'contents')">관람</button><br>
 <button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button><br>
 <button onclick="gopost(receive_get_data('go_user'),'save')">저장</button>
-<div class="ajax_result">11</div>
+<div class="ajax_result">11</div> -->
 <script>
     if(receive_get_data("go_contents")==6){
 
@@ -451,6 +451,12 @@
                             font-style: normal;
                         }
                     </style>
+                    <script> function save(){
+                        Entry.engine.saveobjectproject();
+                         gopost(receive_get_data('go_user'),'save');
+                    }
+                       
+                    </script>
                 <div>
                     <ul style="text-align: center; margin-bottom: 20px; margin-top: 10px;">
                         <li></li>
@@ -473,24 +479,24 @@
                         </li>
                           <li class="nav-item dropdown" style="display: inline-block;">
                             <button class="nav-link dropdown-toggle btn-lg btn-outline-secondary" href="#" id="subject_DD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                불러오기
+                                자료
                               </button>
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
                               <!-- <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a> -->
                               <!-- <a class="dropdown-item" onclick="Entry.engine.testdataexport()">내 컴퓨터에 저장하기</a> -->
-                              <a class="dropdown-item" onclick="post_project()">내 컴퓨터에 저장하기</a>
+                              <a class="dropdown-item" onclick="save()">저장하기</a>
                               <div style="display: none;">
                               <input id="file" type="file" onchange="Entry.engine.loadobjectproject()" accept=".HAGO">
                               <textarea id="content" readonly ></textarea>
                             </div>
-                              <label for="file">이곳을 누르세요</label>
+                              <label for="file"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;불러오기</label>
                               <br/>
                             </div>
                         </li>
-                        <li style="display: inline-block; position: relative; bottom: 2px; left: 20%;">
+                        <!-- <li style="display: inline-block; position: relative; bottom: 2px; left: 20%;">
                             <button class="btn btn-lg btn-outline-secondary" type="button" style="width: auto; background-color: azure;" onclick="document.getElementById('tipmodal').style.display='block';">i</button>
                             <button class="btn btn-lg btn-outline-secondary" type="button" onclick="size();">size</button>
-                        </li>
+                        </li> -->
                         <li style="position: absolute; right: 0px; top: 0px; display: inline-block;">
                             <p>Copyright © Connect Foundation. Some rights reserved.</p>
                         </li>
@@ -718,10 +724,10 @@
                 data2 = JSON.parse(JSON.stringify(data));
                // data3=JSON.parse(data2);
                  // alert("load_contents실행됨 :"+data2);
-                 console.log('111111');
-                  console.log(data2);
-                //   Entry.clearProject();
-                //   Entry.loadProject(data3);
+               //  console.log('111111');
+                 // console.log(data2);
+                   Entry.clearProject();
+                   Entry.loadProject(data3);
              }
         </script>
 

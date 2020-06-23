@@ -125,12 +125,13 @@ Entry.PropertyPanel = function() {
                     break;
                 case 9 :
                     $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 성취기준 : 정보 [9정03-01], [9정04-04] / 과학 [9과09-03], [12물리Ⅰ02-03]"));
-                    $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 친구들의 도움이 있어서 다행히 2층에서 시간을 벌었어요. 하지만 도둑은 포기하지 않고 코빈을 끝까지 추격하려고 하네요. 코빈은 미리 1층에 내려와 호스를 이용해 물 대포를 쏴서 도둑을 지하로 떨어뜨리려고 하려면 친구들이 도와줘야 해요 !"));
-                    $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 도둑이 물 대포를 맞고 지하로 떨어지기 위해 베르누이법칙을 이용해 도둑을 막아봅시다."));
-                    $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 도둑이 물 대포를 맞고 지하로 떨어지려면 호스의 도착점 단면적과 출발점 유속은 얼만큼 되어야 할까요? (단, 호스의 단면적은 50mm² 이다. )"));
-                    $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 블록 꾸러미에서 블록 조립소로 옮겨 단면적과 유속을 조절하여 실행 해보세요."));
+                    $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 다행히 친구들 덕분에 2층에서 공을 떨어트려 도둑을 쓰러트리는데 성공을 했어요. 도둑이 쓰러진 틈을 타서 코빈이 방으로 들어와 반대편 전봇대와 창문에 연결된 줄을 타고 내려가려고 해요. 하지만 마찰력이 너무 낮으면 너무 빨리 내려가 다치고, 마찰력이 너무 높으면 멈춰버려요. 코빈이 안전하게 착지할 수 있는 마찰력을 찾아봅시다 !"));
+                    $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 코빈이 무사히 착지 하려면 몇 마찰력이 되어야 하여야 할까요? (단, 마찰력이 없을 때 힘은 400N이고, 100N의 힘으로 내려가야 한다."));
+                    $('.help_div').append($("<p id='Paneltip'>").html("<img src='/images/help_dot.png'> 블록 꾸러미에서 블록 조립소로 옮겨 마찰력을 찾아 실행 해보세요.)"));
+                   
                     break;
-                
+                    
+                   
                 default :
                     console.log("도움말 case파트 현 번호 찾을 수 없음");
             }
