@@ -38,6 +38,9 @@
             background-color: #FFF !important;
             color: #000 !important;
         }
+        .size {
+            font-size: 15pt;
+        }
     </style>
 </head>
 <body>
@@ -114,7 +117,7 @@
                                  src="../../../resources/images/detail_profile.svg"/>
                         </c:otherwise>
                     </c:choose>
-                    <div class="ml-4 my-auto content-subtitle-text">
+                    <div class="ml-4 my-auto content-subtitle-text size">
                         ${content.user.nickname}
                     </div>
                 </div>
@@ -175,7 +178,7 @@
                 수학의 기본 개념 이해
             </div>
         </div>
-        <div class="row col-8 text-left ml-4 mt-1 content-my-subtitle-text" id="detail1">
+        <div class="row col-8 text-left ml-4 mt-1 content-my-subtitle-text size" id="detail1">
             교육용 프로그래밍 언어(EPL) 입니다.
             응용프로그램을 설계하기 위해 만들어진 프로그래밍 언어가 아닌
             컴퓨팅 사고력과 알고리즘 학습을 하기 위한 목적으로 만들어진 프로그래밍 언어입니다.교육용 프로그래밍 언어(EPL) 입니다.
@@ -190,7 +193,7 @@
                 수학의 기본 개념 이해
             </div>
         </div>
-        <div class="row col-8 text-left ml-4 mt-1 content-my-subtitle-text" id="detail2">
+        <div class="row col-8 text-left ml-4 mt-1 content-my-subtitle-text size" id="detail2">
             교육용 프로그래밍 언어(EPL) 입니다.
             응용프로그램을 설계하기 위해 만들어진 프로그래밍 언어가 아닌
             컴퓨팅 사고력과 알고리즘 학습을 하기 위한 목적으로 만들어진 프로그래밍 언어입니다.교육용 프로그래밍 언어(EPL) 입니다.
@@ -205,7 +208,7 @@
                 수학의 기본 개념 이해
             </div>
         </div>
-        <div class="row col-8 text-left ml-4 mt-1 content-my-subtitle-text" id="detail3">
+        <div class="row col-8 text-left ml-4 mt-1 content-my-subtitle-text size" id="detail3">
             교육용 프로그래밍 언어(EPL) 입니다.
             응용프로그램을 설계하기 위해 만들어진 프로그래밍 언어가 아닌
             컴퓨팅 사고력과 알고리즘 학습을 하기 위한 목적으로 만들어진 프로그래밍 언어입니다.교육용 프로그래밍 언어(EPL) 입니다.
