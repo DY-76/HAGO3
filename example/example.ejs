@@ -147,7 +147,7 @@
                 if (Number(receive_get_data("make.stage"))==10){
                     setTimeout(function(){
                         alert("10스테이지 작동");
-                        $(".entryCategoryListWorkspace").css("display","block");
+                        $(".entryCategoryListWorkspace").css("display","inline-block");
                         $(".blockMenuWrapper").css("top","75px");
                         $(".entryWorkspaceBoard").css("top","75px");
                         $(".blockMenuContainer").css("height","680px");
@@ -155,6 +155,8 @@
                         $(".help_div").css("display","none");
                         $(".help_img_div").css("display","none");
                         $(".entryAddButtonWorkspace_w").css("display","block");
+                        $(".propertyPanel").css("display","block");
+                        
                         
                         
                     },1000)
