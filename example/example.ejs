@@ -84,7 +84,11 @@
             }
             if(result.contents != null){
                 alert("불러옵니다! :"+result.test);
-                load_contents(result.test);
+                data = JSON.parse(result.test);
+                Entry.clearProject();
+                Entry.loadProject(data);
+
+                //load_contents(result.test);
                 document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
