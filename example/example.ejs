@@ -84,12 +84,12 @@
             }
             if(result.type == 'load'){
                 alert("불러옵니다! :"+result.test);
-                data = JSON.parse(result.test);
-                Entry.clearProject();
-                Entry.loadProject(data);
-                console.log("성공");
+                // data = JSON.parse(result.test);
+                // Entry.clearProject();
+                // Entry.loadProject(data);
+                console.log(result.test);
 
-                load_contents(result.test);
+               // load_contents(result.test);
                // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });

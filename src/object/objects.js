@@ -1,5 +1,3 @@
-export var box;
-
 
 export function objectadd(name){
     switch(name) {
