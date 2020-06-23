@@ -158,12 +158,12 @@ router.get('/control', function(req, res) {
 router.post('/contents', function(req, res) {
   if(req.body.ContentsNo != null){
 
-
   connection.query("SELECT Contents_Json FROM condetails WHERE ConDetails_No = "+req.body.ContentsNo,
   // select Contents_data from contents where Contents_No=10
   function (err, result, fields) {
       if (!err){
         var responseData = {'result' : 'ok', 'test' : result[0]['Contents_Json'], 'type' : 'load'};
+        console.log(responseData);
       }
     else{
       var responseData = {'result' : 'ok', 'test' : 'fail'};
