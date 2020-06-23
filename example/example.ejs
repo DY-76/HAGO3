@@ -453,6 +453,12 @@
                             font-style: normal;
                         }
                     </style>
+                    <script> function save(){
+                        Entry.engine.saveobjectproject();
+                         gopost(receive_get_data('go_user'),'save');
+                    }
+                       
+                    </script>
                 <div>
                     <ul style="text-align: center; margin-bottom: 20px; margin-top: 10px;">
                         <li></li>
@@ -480,7 +486,7 @@
                             <div class="dropdown-menu" aria-labelledby="subject_DD">
                               <!-- <a class="dropdown-item" onclick="Entry.engine.saveobjectproject()">내 컴퓨터에 저장하기</a> -->
                               <!-- <a class="dropdown-item" onclick="Entry.engine.testdataexport()">내 컴퓨터에 저장하기</a> -->
-                              <a class="dropdown-item" onclick="post_project()">내 컴퓨터에 저장하기</a>
+                              <a class="dropdown-item" onclick="save()">내 컴퓨터에 저장하기</a>
                               <div style="display: none;">
                               <input id="file" type="file" onchange="Entry.engine.loadobjectproject()" accept=".HAGO">
                               <textarea id="content" readonly ></textarea>
