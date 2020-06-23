@@ -85,12 +85,12 @@
             if(result.type == 'load'){
                 alert("불러옵니다! :"+result.test);
                // var tdata = JSON.parse(JSON.stringify(result.test));
-                console.log(result.test);
+              
                 //  Entry.clearProject();
                 //  Entry.loadProject(tdata2);
                 //console.log(result.test);
 
-               // load_contents(result.test);
+                load_contents(result.test);
                // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
@@ -815,7 +815,8 @@
                };
             }
             function load_contents(data){
-                data = JSON.parse(data);
+                
+                data2 = JSON.parse(JSON.stringify(data));
                 Entry.clearProject();
                 alert("load_contents실행됨 :"+data);
                 Entry.loadProject(data);
