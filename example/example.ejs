@@ -57,7 +57,7 @@
         sendAjax(now_link,data);
     }
 </script>
-<!-- <script>
+<script>
     function sendAjax(url, data){
         
         var data = {'UserNo' : data, 'ContentsNo' : receive_get_data('go_contents') , 'data' : post_project()};
@@ -76,10 +76,7 @@
             if(result.result !== 'ok') return;
             // 데이터가 있으면 결과값 표시
             alert(xhr.responseText);
-            var datas = JSON.parse(xhr.responseText);
-                Entry.clearProject();
-                Entry.loadProject(datas);
-           // console.log(xhr.responseText);
+            console.log(xhr.responseText);
             // document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             if(result.type == "save"){
                 alert("이동합니다!");
@@ -87,14 +84,17 @@
             }
             if(result.type == 'load'){
                 alert("불러옵니다! :"+result.test);
-                
+                data = JSON.parse(result.test);
+                Entry.clearProject();
+                Entry.loadProject(data);
+                console.log("성공");
 
                 load_contents(result.test);
                // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
     }
-</script> -->
+</script>
 <button onclick="gopost(receive_get_data('go_user'),'contents')">관람</button><br>
 <button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button><br>
 <button onclick="gopost(receive_get_data('go_user'),'save')">저장</button>
@@ -717,47 +717,6 @@
         </script>
 
         <!-- Trigger/Open The Modal -->
-        <script>
-            function sendAjax(url, data){
-                
-                var data = {'UserNo' : data, 'ContentsNo' : receive_get_data('go_contents') , 'data' : post_project()};
-                data = JSON.stringify(data);
-                alert(data);
-        
-                  // content-type을 설정하고 데이터 송신
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', url);
-                xhr.setRequestHeader('Content-type', "application/json");
-                xhr.send(data);
-        
-                  // 데이터 수신이 완료되면 표시
-                xhr.addEventListener('load', function(){
-                    var result = JSON.parse(xhr.responseText);
-                    if(result.result !== 'ok') return;
-                    // 데이터가 있으면 결과값 표시
-                    alert(xhr.responseText);
-                    var datas = JSON.parse(xhr.responseText);
-                        Entry.clearProject();
-                        Entry.loadProject(datas);
-                   // console.log(xhr.responseText);
-                    // document.querySelector(".ajax_result").innerHTML = xhr.responseText;
-                    if(result.type == "save"){
-                        alert("이동합니다!");
-                        window.open("http://codinghago.com/detailCreate.do?","저장하기");
-                    }
-                    if(result.type == 'load'){
-                        alert("불러옵니다! :"+result.test);
-                        var data3 = JSON.parse(result.test);
-                        Entry.clearProject();
-                        Entry.loadProject(data3);
-                        
-        
-                        load_contents(result.test);
-                       // document.querySelector(".ajax_result").innerHTML = result.test;
-                    }
-                 });
-            }
-        </script>
     
         
         
