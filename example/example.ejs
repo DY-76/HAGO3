@@ -62,7 +62,7 @@
         
         var data = {'UserNo' : data, 'ContentsNo' : receive_get_data('go_contents') , 'data' : post_project()};
         data = JSON.stringify(data);
-        alert(data);
+        // alert(data);
 
           // content-type을 설정하고 데이터 송신
         var xhr = new XMLHttpRequest();
@@ -75,16 +75,16 @@
             var result = JSON.parse(xhr.responseText);
             if(result.result !== 'ok') return;
             // 데이터가 있으면 결과값 표시
-            alert(xhr.responseText);
+            // alert(xhr.responseText);
             console.log(xhr.responseText);
             // document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             if(result.type == "save"){
-                alert("이동합니다!");
+                // alert("이동합니다!");
                 window.open("http://codinghago.com/detailCreate.do?","저장하기");
             }
             if(result.type == 'load'){
-                alert("불러옵니다! :"+result.test);
-                load_contents(JSON.parse(result.test));
+                // alert("불러옵니다! :"+result.test);
+                load_contents(JSON.stringify(result.test));
                 // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
@@ -823,7 +823,7 @@
             function load_contents(data){
                 // data = JSON.parse(data);
                 Entry.clearProject();
-                alert("load_contents실행됨 :"+data);
+                // alert("load_contents실행됨 :"+data);
                 Entry.loadProject(data);
             }
          </script>
