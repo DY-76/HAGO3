@@ -110,7 +110,7 @@
                             <img class="img-fluid" style="border-radius:28px; width: 56px; height: 56px;"
                                  src="<%=request.getContextPath()%>${content.user.img}"/>
 <%--                                 src="../../../resources/images/logo.svg"--%>
-                            />
+                            
                         </c:when>
                         <c:otherwise>
                             <img class="img-fluid" style="border-radius:28px; width: 56px; height: 56px;"
