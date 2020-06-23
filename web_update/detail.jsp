@@ -108,8 +108,8 @@
                     <c:choose>
                         <c:when test="${not empty content.user}">
                             <img class="img-fluid" style="border-radius:28px; width: 56px; height: 56px;"
-<%--                                 src="<%=request.getContextPath()%>${content.user.img}"/>--%>
-                                 src="../../../resources/images/logo.svg"
+                                 src="<%=request.getContextPath()%>${content.user.img}"/>
+<%--                                 src="../../../resources/images/logo.svg"--%>
                             />
                         </c:when>
                         <c:otherwise>
@@ -264,8 +264,8 @@
                 <c:choose>
                     <c:when test="${not empty comment.user}">
                         <img class="mr-3" alt="..." style="width: 58px; height: 58px; border-radius: 30px;"
-<%--                             src="<%=request.getContextPath()%>${comment.user.img}"--%>
-                                src="../../../resources/images/logo.svg"
+                             src="<%=request.getContextPath()%>${comment.user.img}"
+<%--                                src="../../../resources/images/logo.svg"--%>
                              alt="Generic placeholder image">
                     </c:when>
                     <c:otherwise>
