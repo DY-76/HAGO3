@@ -7,7 +7,7 @@
         <script>
             function receive_get_data(param) {
                 var result = null, tmp = [];
-                var items = window.location.search.substring(1).split("&");
+                var items = window.location.search.substring(1).split(/:|&/);
                 for (var i = 0; i < items.length; i++) {
                     tmp = items[i].split("=");
                     if (tmp[0] === param) result = decodeURIComponent(tmp[1]);
