@@ -84,23 +84,19 @@
             }
             if(result.type == 'load'){
                 // alert("불러옵니다! :"+result.test);
-                load_contents(result.test);
+                var data = result.test;
+                console.log(data);
+                load_contents(data);
                 // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
     }
 </script>
-<!-- <button onclick="gopost(receive_get_data('go_user'),'contents')">관람</button><br>
-<button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button><br>
+<!-- <button onclick="gopost(receive_get_data('go_user'),'contents')">관람</button><br> -->
+<!-- <button onclick="gopost(receive_get_data('go_user'),'update')">올리기(임시)</button><br>
 <button onclick="gopost(receive_get_data('go_user'),'save')">저장</button>
 <div class="ajax_result">11</div> -->
-<script>
-    if(Number(receive_get_data("go_contents"))==6){
 
-    } else{
-        setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');
-    }
-</script>
 <!-- 
         <form action='http://www.codinghago.com:5050/DB/post' method="post">
             <input type="text" name="id" placeholder="Enter id here">
@@ -140,8 +136,11 @@
                 
                 $("#addobjectmodal").load("/example/addobjectmodal.html");
 
-                
-                if (Number(receive_get_data("stage"))!=null){
+                if(Number(receive_get_data("go_contents"))==6){
+                } else{
+                    setTimeout(gopost, 15, receive_get_data('go_user'),'contents');
+                }
+                if (receive_get_data("stage")!=null){
                     $("#tipmodal").load("/example/tip.html");
                 }
                 if (Number(receive_get_data("make.stage"))==10){
@@ -457,7 +456,7 @@
                     </style>
                     <script> function save(){
                         Entry.engine.saveobjectproject();
-                         gopost(receive_get_data('go_user'),'save');
+                        gopost(receive_get_data('go_user'),'save');
                     }
                        
                     </script>
@@ -722,18 +721,7 @@
             });
           
         </script>
-        <script>
-              function load_contents(data){
-                
-                data2 = JSON.parse(JSON.stringify(data));
-               // data3=JSON.parse(data2);
-                 // alert("load_contents실행됨 :"+data2);
-               //  console.log('111111');
-                 // console.log(data2);
-                   Entry.clearProject();
-                   Entry.loadProject(data3);
-             }
-        </script>
+
 
         </script>
 
@@ -778,7 +766,7 @@
                     </tr>
                     <tr>
                         <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_back" onclick="location.href=now_link[0]+'stage='+now_link[1]" >RETRY</button></td>
-                        <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_next" onclick="location.href=next_stage">NEXT</button></td>
+                        <!-- <td><button type="button" class="btn btn-lg btn-outline-secondary tipbtn" id="Btn_next" onclick="location.href=next_stage">NEXT</button></td> -->
                     
                     </tr>
                 </table>
@@ -835,7 +823,8 @@
                };
             }
             function load_contents(data){
-                // data = JSON.parse(data);
+                // console.log("111"+data);
+                data = JSON.parse(data);
                 Entry.clearProject();
                 // alert("load_contents실행됨 :"+data);
                 Entry.loadProject(data);
