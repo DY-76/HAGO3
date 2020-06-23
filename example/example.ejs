@@ -82,7 +82,7 @@
                 alert("이동합니다!");
                 window.open("http://codinghago.com/detailCreate.do?","저장하기");
             }
-            if(result.contents != null){
+            if(result.type == 'load'){
                 alert("불러옵니다! :"+result.test);
                 load_contents(result.test);
                 // document.querySelector(".ajax_result").innerHTML = result.test;

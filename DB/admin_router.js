@@ -163,7 +163,7 @@ router.post('/contents', function(req, res) {
   // select Contents_data from contents where Contents_No=10
   function (err, result, fields) {
       if (!err){
-        var responseData = {'result' : 'ok', 'test' : result[0]['Contents_Json']};
+        var responseData = {'result' : 'ok', 'test' : result[0]['Contents_Json'], 'type' : 'load'};
       }
     else{
       var responseData = {'result' : 'ok', 'test' : 'fail'};
