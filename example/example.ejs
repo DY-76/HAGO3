@@ -144,7 +144,7 @@
                 if (Number(receive_get_data("stage"))!=null){
                     $("#tipmodal").load("/example/tip.html");
                 }
-                if (Number(receive_get_data("stage"))==10){
+                if (Number(receive_get_data("make.stage"))==10){
                     setTimeout(function(){
                         $(".entryCategoryListWorkspace").css("display","inline-block");
                         $(".blockMenuWrapper").css("top","75px");
@@ -741,7 +741,7 @@
         <script>
             var now_link = window.location.href.split("stage=");
             var next_num = Number(receive_get_data("stage"))+1;
-            var next_stage = now_link[0]+'stage='+ next_num;
+            var next_stage = move_stage(next_num);
         </script>
 
         <div id="myModal" class="modal">  
