@@ -84,7 +84,7 @@
             }
             if(result.type == 'load'){
                 alert("불러옵니다! :"+result.test);
-                load_contents(result.test);
+                load_contents(JSON.parse(result.test));
                 // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
@@ -809,7 +809,7 @@
                };
             }
             function load_contents(data){
-                data = JSON.parse(data);
+                // data = JSON.parse(data);
                 Entry.clearProject();
                 alert("load_contents실행됨 :"+data);
                 Entry.loadProject(data);
