@@ -76,7 +76,10 @@
             if(result.result !== 'ok') return;
             // 데이터가 있으면 결과값 표시
             alert(xhr.responseText);
-            console.log(xhr.responseText);
+            data = JSON.parse(xhr.responseText);
+                Entry.clearProject();
+                Entry.loadProject(data);
+           // console.log(xhr.responseText);
             // document.querySelector(".ajax_result").innerHTML = xhr.responseText;
             if(result.type == "save"){
                 alert("이동합니다!");
@@ -84,11 +87,9 @@
             }
             if(result.type == 'load'){
                 alert("불러옵니다! :"+result.test);
-                data = JSON.parse(result.test);
-                Entry.clearProject();
-                Entry.loadProject(data);
+                
 
-                //load_contents(result.test);
+                load_contents(result.test);
                // document.querySelector(".ajax_result").innerHTML = result.test;
             }
          });
