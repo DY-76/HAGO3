@@ -121,7 +121,7 @@
 
             var tipdata = {title:"",totalpage:1};
             var now_page = 1;
-            switch (Number(now_link[1])){
+            switch (Number(receive_get_data('stage'))){
                   case 1 :
                     //제목과 페이지
                       tipdata = {
@@ -316,7 +316,7 @@
 
                   default :
                   tipdata = {
-                        title     : Number(now_link[1]),
+                        title     : Number(receive_get_data('stage')),
                         totalpage : 1   };
                       console.log("error! : tip데이터 없음");
               };
