@@ -95,7 +95,7 @@
 <button onclick="gopost(receive_get_data('go_user'),'save')">저장</button>
 <div class="ajax_result">11</div> -->
 <script>
-    if(receive_get_data("go_contents")==6){
+    if(Number(receive_get_data("go_contents"))==6){
 
     } else{
         setTimeout(gopost, 1000, receive_get_data('go_user'),'contents');
@@ -155,7 +155,7 @@
                         $(".help_img_div").css("display","none");
                         
                         
-                    },10)
+                    },1000)
                    
                 }
                
