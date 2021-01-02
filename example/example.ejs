@@ -512,7 +512,7 @@
                             <script>
                                 function move_stage(stage_num){
                                     var now_link_2 = window.location.href.split("/?");
-                                    var now_link_back = '&'+'go_user='+receive_get_data("go_user")+'&go_contents='+receive_get_data("go_contents");
+                                    //var now_link_back = '&'+'go_user='+receive_get_data("go_user")+'&go_contents='+receive_get_data("go_contents"); //21.01.02 스테이지 클릭에 로그인이 관여하여 주석처리 함
                                     if (stage_num == 10) {
                                         return now_link_2[0]+'?make.stage='+stage_num+now_link_back;
                                         
