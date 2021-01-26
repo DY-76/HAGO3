@@ -359,42 +359,52 @@
     }
 
     function goHago() {
-        if (${not empty user}) {
-            // 로그인 상태
-            <%--    alert('${user.no}');--%>
 
-            var form = document.createElement("form");
-            form.setAttribute("method", "get");
-            form.setAttribute("action", "http://www.codinghago.com:3389");
+        location.replace("www.codinghago.com::3389/?stage=1");
 
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("name", "go_user");
-            hiddenField.setAttribute("value", "${user.no}");
-            var hiddenField1 = document.createElement("input");
-            hiddenField1.setAttribute("type", "hidden");
-            hiddenField1.setAttribute("name", "go_contents");
-            hiddenField1.setAttribute("value", "${content.no}");
+        // 아래 코드는 사용자의 로그인 데이터를 에디터로 보내서 외부 사용자들이 직접 만든 컨텐츠도
+        // 즐길 수 있게 하기 위함 이었음.
+        //     아래 $ 를 포함한 덩어리는 jsp문법으로, backend에서 DB내부에 데이터를 가져옴
+        // 즉, DB에 있는 유저정보와, 컨텐츠번호를 대조해서 각 사용자들만의 컨텐츠를 로드하려고 했음
+        //
+        // 아래 코드를 사용하려면 주석을 풀고, 에디터부분에서 아래에 보내주는 데이터들을 받고 처리하는 부분들
+        // 따로 작성해야 동작함.
+        <%--if (${not empty user}) {--%>
+        <%--    // 로그인 상태--%>
+        <%--    &lt;%&ndash;    alert('${user.no}');&ndash;%&gt;--%>
 
-            if(Number("${content.no}") == 6){
-                var hiddenField2 = document.createElement("input");
-                hiddenField2.setAttribute("type", "hidden");
-                hiddenField2.setAttribute("name", "stage");
-                hiddenField2.setAttribute("value", "1");
-                form.appendChild(hiddenField2);
-            }
+        <%--    var form = document.createElement("form");--%>
+        <%--    form.setAttribute("method", "get");--%>
+        <%--    form.setAttribute("action", "http://www.codinghago.com:3389");--%>
+
+        <%--    var hiddenField = document.createElement("input");--%>
+        <%--    hiddenField.setAttribute("type", "hidden");--%>
+        <%--    hiddenField.setAttribute("name", "go_user");--%>
+        <%--    hiddenField.setAttribute("value", "${user.no}");--%>
+        <%--    var hiddenField1 = document.createElement("input");--%>
+        <%--    hiddenField1.setAttribute("type", "hidden");--%>
+        <%--    hiddenField1.setAttribute("name", "go_contents");--%>
+        <%--    hiddenField1.setAttribute("value", "${content.no}");--%>
+
+        <%--    if(Number("${content.no}") == 6){--%>
+        <%--        var hiddenField2 = document.createElement("input");--%>
+        <%--        hiddenField2.setAttribute("type", "hidden");--%>
+        <%--        hiddenField2.setAttribute("name", "stage");--%>
+        <%--        hiddenField2.setAttribute("value", "1");--%>
+        <%--        form.appendChild(hiddenField2);--%>
+        <%--    }--%>
 
 
-            form.appendChild(hiddenField);
-            form.appendChild(hiddenField1);
+        <%--    form.appendChild(hiddenField);--%>
+        <%--    form.appendChild(hiddenField1);--%>
 
-            document.body.appendChild(form);
-            form.submit();
-        } else {
-            /*비로그인 상태*/
-            alert('로그인을 해주세요~!');
-        }
-        location.reload();
+        <%--    document.body.appendChild(form);--%>
+        <%--    form.submit();--%>
+        <%--} else {--%>
+        <%--    /*비로그인 상태*/--%>
+        <%--    alert('로그인을 해주세요~!');--%>
+        <%--}--%>
+        <%--location.reload();--%>
     }
 </script>
 </body>
