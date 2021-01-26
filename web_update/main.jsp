@@ -113,7 +113,7 @@
                 </div>
             </div>
         </div>
-<%--        인기컨텐츠, 캐러셀 좌우버튼이 컨텐츠를 가려서 style줌, 차후 수정시 제거하면 됩니다.--%>
+<%--        인기컨텐츠, 캐러셀 좌우버튼이 컨텐츠를 가려서 class : carousel-control-prev 에 있는 style:none들, 차후 수정시 제거하면 됩니다.--%>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" data-slide="prev" style="display:none;">
             <img src="../../resources/images/main_banner_left_button.svg">
         </a>
@@ -322,10 +322,10 @@
                                     <div class="content-subtitle-text mt-1">과학교구를 통한 학습</div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev" style="display:none;">
                                 <img src="../../resources/images/arrow_left.svg">
                             </a>
-                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <a class="carousel-control-next" href="#demo" data-slide="next" style="display:none;">
                                 <img src="../../resources/images/arrow_right.svg">
                             </a>
                         </div>
@@ -716,10 +716,10 @@
         </c:otherwise>
         </c:choose>
         </c:forEach>
-        html += '                            <a class="carousel-control-prev" href="#demo" data-slide="prev">\n' +
+        html += '                            <a class="carousel-control-prev" href="#demo" data-slide="prev" style="display:none;">\n' +
             '                                <img src="../../resources/images/arrow_left.svg">\n' +
             '                            </a>\n' +
-            '                            <a class="carousel-control-next" href="#demo" data-slide="next">\n' +
+            '                            <a class="carousel-control-next" href="#demo" data-slide="next" style="display:none;">\n' +
             '                                <img src="../../resources/images/arrow_right.svg">\n' +
             '                            </a>';
         $('#hit1').html(html);
