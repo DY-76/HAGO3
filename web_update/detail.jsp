@@ -157,7 +157,8 @@
             <div class="row mt-4">
                 <div class="col-12 row">
                     <div class="col-12 text-center">
-                        <img class="cursor-pointer" src="../../../resources/images/detail_go.svg" onclick="goHago()"
+<%--                        goHago 함수 온클릭 있던 부분 아래 코드 --%>
+                        <img class="cursor-pointer" src="../../../resources/images/detail_go.svg" onclick="location.href='http://www.codinghago.com:3389/?stage=1'"
                              style="border-radius: 30px;">
                     </div>
                 </div>
@@ -360,7 +361,7 @@
 
     function goHago() {
 
-        location.replace("www.codinghago.com::3389/?stage=1");
+        //goHago안쓰기로함, 위에 온클릭 찾으세요.
 
         // 아래 코드는 사용자의 로그인 데이터를 에디터로 보내서 외부 사용자들이 직접 만든 컨텐츠도
         // 즐길 수 있게 하기 위함 이었음.
