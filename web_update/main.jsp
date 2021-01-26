@@ -113,7 +113,7 @@
                 </div>
             </div>
         </div>
-<%--        인기컨텐츠, 캐러셀 좌우버튼이 컨텐츠를 가려서 class : carousel-control-prev 에 있는 style:none들, 차후 수정시 제거하면 됩니다.--%>
+<%--2021-01-26인기컨텐츠, 캐러셀 좌우버튼(컨텐츠 좌우 이동하는 버튼)이 컨텐츠를 가려서 class : carousel-control-prev 에 있는 style:none들, 차후 수정시 제거하면 됩니다.--%>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" data-slide="prev" style="display:none;">
             <img src="../../resources/images/main_banner_left_button.svg">
         </a>
